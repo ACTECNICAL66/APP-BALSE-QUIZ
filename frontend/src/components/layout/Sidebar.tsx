@@ -57,7 +57,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isCol
                 }`}
                 title={isCollapsed ? item.label : undefined}
               >
-                <Icon className={`w-6 h-6 shrink-0 ${isActive ? '' : 'text-slate-400'}`} />
+                <Icon className={`w-6 h-6 shrink-0 transition-all ${isActive ? 'fill-current' : 'text-slate-400'}`} />
                 {!isCollapsed && <span className="tracking-wide text-left truncate">{item.label}</span>}
               </button>
             );
@@ -95,7 +95,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isCol
                 isActive ? 'text-[#58cc02] scale-110 font-black' : 'text-slate-400 hover:text-slate-200 font-bold'
               }`}
             >
-              <Icon className="w-6 h-6 mb-1" />
+              <Icon className={`w-6 h-6 mb-1 transition-all ${isActive ? 'fill-current' : ''}`} />
               <span className="text-[10px]">{item.label}</span>
             </button>
           );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame, Crown, HeartCrack, CheckCircle2, RefreshCw } from 'lucide-react';
+import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame, Crown, HeartCrack, CheckCircle2 } from 'lucide-react';
 import { Lesson, Question, MASCOT_INFO } from '../../data/curriculumData';
 import { soundEffects } from '../../utils/sound';
 import { triggerConfetti } from '../../utils/confetti';
@@ -39,7 +39,6 @@ export const LessonModal: React.FC<LessonModalProps> = ({
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [showNoHeartsModal, setShowNoHeartsModal] = useState(false);
   const [isLessonFinished, setIsLessonFinished] = useState(false);
-  const [isLessonFailed, setIsLessonFailed] = useState(false);
 
   // Live combo streak tracking inside lesson
   const [liveCombo, setLiveCombo] = useState<number>(comboStreak);
@@ -55,7 +54,6 @@ export const LessonModal: React.FC<LessonModalProps> = ({
       setIsChecked(false);
       setIsCorrect(false);
       setIsLessonFinished(false);
-      setIsLessonFailed(false);
       setLiveCombo(comboStreak);
       setXpBonus(0);
     }
@@ -69,7 +67,13 @@ export const LessonModal: React.FC<LessonModalProps> = ({
   const handleCheck = () => {
     if (isChecked) {
       if (!isCorrect) {
-        setIsLessonFailed(true);
+        // Force restart the entire lesson
+        setCurrentIndex(0);
+        setSelectedOption(null);
+        setMatchedPairs([]);
+        setSelectedLeft(null);
+        setSelectedRight(null);
+        setIsChecked(false);
         return;
       }
 
@@ -134,19 +138,6 @@ export const LessonModal: React.FC<LessonModalProps> = ({
     }
   };
 
-  const handleRetryLesson = () => {
-    setCurrentIndex(0);
-    setSelectedOption(null);
-    setMatchedPairs([]);
-    setSelectedLeft(null);
-    setSelectedRight(null);
-    setIsChecked(false);
-    setIsCorrect(false);
-    setIsLessonFailed(false);
-    setLiveCombo(0);
-    setXpBonus(0);
-  };
-
   const handlePairSelection = (item: string, side: 'left' | 'right') => {
     if (side === 'left') {
       setSelectedLeft(item);
@@ -203,9 +194,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
         {/* Progress bar */}
         <div className="flex-1 max-w-lg bg-slate-950 h-5 rounded-full overflow-hidden p-1 shadow-inner border border-slate-800">
           <div
-            className={`h-full rounded-full transition-all duration-300 shadow-md ${
-              isChecked && !isCorrect && !isLessonFailed ? 'bg-[#ff4b4b]' : 'bg-[#58cc02]'
-            }`}
+            className="bg-[#58cc02] h-full rounded-full transition-all duration-300 shadow-md"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
@@ -228,55 +217,8 @@ export const LessonModal: React.FC<LessonModalProps> = ({
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto px-6 py-8 max-w-3xl mx-auto w-full flex flex-col justify-between">
         
-        {/* Failed Screen */}
-        {isLessonFailed ? (
-          <div className="my-auto text-center space-y-8 animate-in zoom-in-95 duration-300">
-            <div className="w-32 h-32 mx-auto rounded-3xl bg-gradient-to-tr from-rose-600 to-red-500 flex items-center justify-center text-7xl shadow-2xl shadow-rose-500/40 border border-rose-400/40">
-              <X className="w-16 h-16 text-white drop-shadow-lg" />
-            </div>
-            <div className="space-y-2">
-              <div className="text-xs font-black text-rose-400 uppercase tracking-widest">
-                ¡Nivel {lesson.level} No Superado!
-              </div>
-              <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
-                {subjectName} requiere más práctica
-              </h2>
-            </div>
-            
-            <p className="text-sm text-slate-400 font-bold max-w-sm mx-auto">
-              Has fallado una pregunta. No se otorgarán puntos ni se completará la lección. ¡Sigue practicando para dominar {subjectName}!
-            </p>
-
-            <div className="max-w-sm mx-auto space-y-3">
-              <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl p-4 text-center shadow-xl">
-                <div className="text-xs font-bold text-slate-400 uppercase mb-1">XP Ganada</div>
-                <div className="text-2xl font-black text-rose-400">+0</div>
-              </div>
-
-              <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl p-4 text-center shadow-xl">
-                <div className="text-xs font-bold text-slate-400 uppercase mb-1">Combo Alcanzado</div>
-                <div className="text-2xl font-black text-orange-400 flex items-center justify-center gap-1">
-                  <Flame className="w-6 h-6 fill-orange-500 text-orange-500" />
-                  <span>{liveCombo}</span>
-                </div>
-              </div>
-            </div>
-
-            <button
-              onClick={handleRetryLesson}
-              className="w-full max-w-sm mx-auto btn-3d-blue text-white font-black py-4 rounded-2xl text-base uppercase tracking-wider shadow-2xl shadow-blue-500/30 flex items-center justify-center gap-2"
-            >
-              <RefreshCw className="w-5 h-5" />
-              <span>Reintentar Lección</span>
-            </button>
-            <button
-              onClick={() => onCompleteLesson(0, false, 0)}
-              className="w-full max-w-sm mx-auto btn-3d-gray text-slate-200 font-black py-3 rounded-2xl text-sm uppercase tracking-wider block"
-            >
-              Volver al menú
-            </button>
-          </div>
-        ) : isLessonFinished ? (
+        {/* Finished Screen */}
+        {isLessonFinished ? (
           <div className="my-auto text-center space-y-8 animate-in zoom-in-95 duration-300">
             <div className="w-32 h-32 mx-auto rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-7xl shadow-2xl shadow-emerald-500/40 border border-emerald-300/40">
               <Crown className="w-16 h-16 text-white drop-shadow-lg" />
@@ -456,7 +398,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
       </main>
 
       {/* Bottom Footer Action Bar */}
-      {!isLessonFinished && !isLessonFailed && (
+      {!isLessonFinished && (
         <footer className={`border-t p-6 shrink-0 transition-colors duration-150 shadow-2xl ${
           isChecked 
             ? isCorrect 
@@ -477,10 +419,10 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                   </div>
                   <div>
                     <div className={`font-black text-xl ${isCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
-                      {isCorrect ? '¡Correcto! Combo +1' : 'Respuesta incorrecta'}
+                      {isCorrect ? '¡Correcto! Combo +1 🔥' : 'Respuesta incorrecta'}
                     </div>
                     <p className="text-xs text-slate-200 font-bold max-w-md mt-1 leading-relaxed">
-                      {currentQuestion.explanation}
+                      {isCorrect ? currentQuestion.explanation : 'Has fallado. Debes empezar la actividad de nuevo.'}
                     </p>
                   </div>
                 </div>
@@ -506,7 +448,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                   : 'btn-3d-blue text-white shadow-xl shadow-blue-500/30'
               }`}
             >
-              <span>{isChecked ? (isCorrect ? 'Continuar' : 'Fallaste') : 'Comprobar'}</span>
+              <span>{isChecked ? (isCorrect ? 'Continuar' : 'Empezar de nuevo') : 'Comprobar'}</span>
               <ArrowRight className="w-5 h-5 font-black" />
             </button>
 
@@ -568,7 +510,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                 }}
                 className="w-full btn-3d-green text-white font-black py-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/30"
               >
-                Recargar 5 <Heart className="w-5 h-5 text-rose-400 fill-rose-400 inline-block" /> con Tuercas
+                Recargar 5 ❤️ con Tuercas
               </button>
               <button
                 onClick={() => {
