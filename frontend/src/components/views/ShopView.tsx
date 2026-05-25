@@ -64,7 +64,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
             <span className="drop-shadow-lg">{currentAvatar.emoji}</span>
             {hasSafetyOutfit && (
               <div className="absolute -top-3 -right-3 w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center text-lg shadow-lg border-2 border-slate-950">
-                🥽
+                <Sparkles className="w-5 h-5 text-amber-400" />
               </div>
             )}
             {hasGoldFrame && (
@@ -84,7 +84,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
       <div className="liquid-glass-strong border border-amber-500/30 rounded-3xl p-5 flex items-center justify-between shadow-2xl">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-500 flex items-center justify-center text-3xl shadow-xl border-2 border-amber-300/50">
-            🪙
+            <Gem className="w-7 h-7 text-amber-400 fill-amber-400" />
           </div>
           <div>
             <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest">Tu Balance</div>

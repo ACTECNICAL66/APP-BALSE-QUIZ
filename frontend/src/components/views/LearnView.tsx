@@ -3,7 +3,8 @@ import {
   Wrench, PencilRuler, Calculator, Cpu, Zap, Box, Cog, Flame, 
   Layers, BatteryCharging, Terminal, Activity, Binary, Code, 
   Radio, ShieldCheck, Server, TrendingUp, Wifi, Settings, 
-  Lock, Check, Star, Play, Sparkles, AlertTriangle
+  Lock, Check, Star, Play, Sparkles, AlertTriangle,
+  Crown, Gem, Unlock
 } from 'lucide-react';
 import { CURRICULUM_DATA, SubjectUnit, Lesson } from '../../data/curriculumData';
 import { soundEffects } from '../../utils/sound';
@@ -98,7 +99,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
               </div>
               <div className="flex items-center justify-between text-[11px] font-black text-slate-400 uppercase tracking-widest">
                 <span>{currentCurriculum.subjects.filter(s => s.lessons.every(l => completedLessons.includes(l.id))).length} / {currentCurriculum.subjects.length} Materias Dominadas</span>
-                <span>👑 {Math.round((completedLessons.filter(l => currentCurriculum.subjects.some(s => s.lessons.some(les => les.id === l))).length / (currentCurriculum.subjects.length * 5)) * 100)}%</span>
+                <span><Crown className="w-3.5 h-3.5 inline-block text-amber-400 -mt-0.5" /> {Math.round((completedLessons.filter(l => currentCurriculum.subjects.some(s => s.lessons.some(les => les.id === l))).length / (currentCurriculum.subjects.length * 5)) * 100)}%</span>
               </div>
             </div>
           )}
@@ -116,8 +117,8 @@ export const LearnView: React.FC<LearnViewProps> = ({
       {isCurrentYearLocked && (
         <div className="bg-slate-800/90 liquid-glass rounded-3xl p-6 border border-amber-500/40 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-2xl shrink-0">
-              🔓
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+              <Unlock className="w-6 h-6" />
             </div>
             <div>
               <div className="font-black text-base text-white">¿Eres estudiante de este año o examen libre?</div>
@@ -164,7 +165,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
                     />
                   </div>
                   <div className="text-xs font-black text-white/95 shrink-0">
-                    {unit.lessons.filter(l => completedLessons.includes(l.id)).length} / 5 👑
+                    {unit.lessons.filter(l => completedLessons.includes(l.id)).length} / 5 <Crown className="w-3.5 h-3.5 inline-block text-amber-400 -mt-0.5" />
                   </div>
                 </div>
               </div>
@@ -223,8 +224,8 @@ export const LearnView: React.FC<LearnViewProps> = ({
 
                       {/* Crown / Star Badge */}
                       {isCompleted && (
-                        <div className="absolute -top-2 -right-2 w-9 h-9 bg-amber-400 rounded-full border-2 border-slate-950 flex items-center justify-center text-sm font-black text-slate-950 shadow-lg z-20">
-                          👑
+                        <div className="absolute -top-2 -right-2 w-9 h-9 bg-amber-400 rounded-full border-2 border-slate-950 flex items-center justify-center shadow-lg z-20">
+                          <Crown className="w-5 h-5 fill-slate-950 text-slate-950" />
                         </div>
                       )}
                     </button>
@@ -269,7 +270,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
             <div className="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between shadow-inner">
               <span className="text-xs font-black text-slate-400 uppercase">Recompensa Estimada</span>
               <span className="text-sm font-black text-amber-400 flex items-center gap-1">
-                🪙 +15 Tuercas | ⭐ +{selectedLessonInfo.lesson.xp} XP
+                <Gem className="w-4 h-4 inline-block text-amber-400 fill-amber-400" /> +15 Tuercas | <Star className="w-4 h-4 inline-block text-amber-400 fill-amber-400 -mt-0.5" /> +{selectedLessonInfo.lesson.xp} XP
               </span>
             </div>
 
