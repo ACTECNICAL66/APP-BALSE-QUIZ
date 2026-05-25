@@ -78,8 +78,8 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
           </p>
         </div>
 
-        <div className="w-28 h-28 rounded-3xl liquid-glass-emerald flex items-center justify-center shadow-2xl z-10 shrink-0 border border-amber-400/40 animate-pulse-glow">
-          <Trophy className="w-10 h-10 text-amber-400" />
+        <div className="w-28 h-28 rounded-3xl liquid-glass-emerald flex items-center justify-center text-6xl shadow-2xl z-10 shrink-0 border border-amber-400/40 animate-pulse-glow">
+          🏆
         </div>
       </div>
 
@@ -258,21 +258,24 @@ const PodiumCard: React.FC<PodiumCardProps> = ({ user, position }) => {
       gradient: 'from-amber-400 to-yellow-500',
       border: 'border-amber-300/50',
       icon: <Crown className="w-8 h-8 fill-white text-white" />,
-      avatarSize: 'w-20 h-20 sm:w-24 sm:h-24 text-5xl'
+      avatarSize: 'w-20 h-20 sm:w-24 sm:h-24 text-5xl',
+      medal: '🥇'
     },
     2: {
       height: 'h-32 sm:h-40',
       gradient: 'from-slate-300 to-slate-400',
       border: 'border-slate-300/50',
       icon: <Medal className="w-7 h-7 fill-white text-white" />,
-      avatarSize: 'w-16 h-16 sm:w-20 sm:h-20 text-4xl'
+      avatarSize: 'w-16 h-16 sm:w-20 sm:h-20 text-4xl',
+      medal: '🥈'
     },
     3: {
       height: 'h-28 sm:h-36',
       gradient: 'from-orange-600 to-amber-700',
       border: 'border-orange-500/50',
       icon: <Award className="w-7 h-7 fill-white text-white" />,
-      avatarSize: 'w-16 h-16 sm:w-20 sm:h-20 text-4xl'
+      avatarSize: 'w-16 h-16 sm:w-20 sm:h-20 text-4xl',
+      medal: '🥉'
     }
   };
 
@@ -288,8 +291,8 @@ const PodiumCard: React.FC<PodiumCardProps> = ({ user, position }) => {
         } ${isUser ? 'ring-4 ring-emerald-400/50' : ''}`}>
           <span className="drop-shadow-lg">{user.avatar}</span>
         </div>
-        <div className="absolute -top-2 -right-2 drop-shadow-lg">
-          {c.icon}
+        <div className="absolute -top-2 -right-2 text-2xl sm:text-3xl drop-shadow-lg">
+          {c.medal}
         </div>
         {isUser && (
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[9px] font-black uppercase px-2 py-0.5 rounded-full border-2 border-slate-950 whitespace-nowrap">

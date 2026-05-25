@@ -168,7 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="font-black text-base">{comboStreak}</span>
             </button>
             <div className="absolute right-0 top-full mt-2 w-48 bg-slate-900/95 liquid-glass rounded-2xl p-2 z-50 hidden group-hover:block text-xs text-center border border-slate-700/80 shadow-2xl">
-              <div className="font-extrabold text-orange-400">Combo de Aciertos</div>
+              <div className="font-extrabold text-orange-400">🔥 Combo de Aciertos</div>
               <div className="text-slate-300 text-[11px] mt-1">Ganas más XP al encadenar respuestas correctas.</div>
             </div>
           </div>

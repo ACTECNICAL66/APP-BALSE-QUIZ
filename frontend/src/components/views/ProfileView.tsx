@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trophy, GraduationCap, Flame, Sparkles, LogOut, AlertTriangle, Target, Zap, Star, Crown, Medal, Award } from 'lucide-react';
+import { Trophy, GraduationCap, Flame, Sparkles, LogOut, AlertTriangle, Target } from 'lucide-react';
 import { ACHIEVEMENTS_DATA, SCHOOL_INFO } from '../../data/curriculumData';
 import { soundEffects } from '../../utils/sound';
 
@@ -86,7 +86,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
           <div className="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-2 font-black text-xl border border-amber-500/30 shadow-inner">
-            <Zap className="w-7 h-7 fill-amber-400 text-amber-400" />
+            ⚡
           </div>
           <div className="text-3xl font-black text-white">{maxCombo}</div>
           <div className="text-[11px] font-black text-amber-400 uppercase tracking-wider mt-1">Mayor Racha</div>
@@ -94,7 +94,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
           <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-2 font-black text-xl border border-emerald-500/30 shadow-inner">
-            <Star className="w-7 h-7 fill-emerald-400 text-emerald-400" />
+            ⭐
           </div>
           <div className="text-3xl font-black text-white">{completedLessonsCount}</div>
           <div className="text-[11px] font-black text-emerald-400 uppercase tracking-wider mt-1">Niveles Superados</div>
@@ -102,7 +102,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
           <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center mx-auto mb-2 font-black text-xl border border-blue-500/30 shadow-inner">
-            <Trophy className="w-7 h-7 text-blue-400" />
+            🏆
           </div>
           <div className="text-3xl font-black text-white">{perfectLessons}</div>
           <div className="text-[11px] font-black text-blue-400 uppercase tracking-wider mt-1">Perfectas (100%)</div>
@@ -147,7 +147,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <div className="grid grid-cols-3 gap-3">
             <div className="liquid-glass p-3 rounded-2xl text-center border border-white/10 shadow-inner">
               <div className="text-2xl font-black text-emerald-400">
-                {completedLessonsCount >= 20 ? <Crown className="w-6 h-6 text-emerald-400" /> : completedLessonsCount >= 10 ? <Star className="w-6 h-6 text-emerald-400 fill-emerald-400" /> : <Zap className="w-6 h-6 text-emerald-400" />}
+                {completedLessonsCount >= 20 ? '👑' : completedLessonsCount >= 10 ? '⭐' : '🌱'}
               </div>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">
                 {completedLessonsCount >= 20 ? 'Experto' : completedLessonsCount >= 10 ? 'Avanzado' : 'Novato'}
@@ -155,7 +155,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </div>
             <div className="liquid-glass p-3 rounded-2xl text-center border border-white/10 shadow-inner">
               <div className="text-2xl font-black text-amber-400">
-                {maxCombo >= 10 ? <Flame className="w-6 h-6 text-amber-400 fill-amber-400" /> : maxCombo >= 5 ? <Zap className="w-6 h-6 text-amber-400 fill-amber-400" /> : <Sparkles className="w-6 h-6 text-amber-400" />}
+                {maxCombo >= 10 ? '🔥' : maxCombo >= 5 ? '⚡' : '💪'}
               </div>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">
                 {maxCombo >= 10 ? 'Imparable' : maxCombo >= 5 ? 'En Racha' : 'Constancia'}
@@ -163,7 +163,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </div>
             <div className="liquid-glass p-3 rounded-2xl text-center border border-white/10 shadow-inner">
               <div className="text-2xl font-black text-blue-400">
-                {userXp >= 1000 ? <Trophy className="w-6 h-6 text-blue-400" /> : userXp >= 500 ? <Medal className="w-6 h-6 text-blue-400" /> : <Award className="w-6 h-6 text-blue-400" />}
+                {userXp >= 1000 ? '🏆' : userXp >= 500 ? '🥈' : '🥉'}
               </div>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">
                 {userXp >= 1000 ? 'Oro' : userXp >= 500 ? 'Plata' : 'Bronce'}
