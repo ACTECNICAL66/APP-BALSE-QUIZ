@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Trophy, ShoppingBag, Sparkles, User, PanelLeftClose, PanelLeft } from 'lucide-react';
+import { BookOpen, Trophy, ShoppingBag, Sparkles, User, PanelLeftClose, PanelLeft, Bot } from 'lucide-react';
 import { soundEffects } from '../../utils/sound';
 
 interface SidebarProps {
@@ -67,7 +67,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isCol
         {!isCollapsed && (
           <div className="mt-auto pt-6 border-t border-slate-800/80 w-full animate-in fade-in duration-200">
             <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/60 liquid-glass p-4 rounded-3xl border border-slate-700/80 text-center shadow-inner">
-              <div className="text-2xl mb-1">🤖</div>
+              <div className="mb-2 flex justify-center"><Bot className="w-8 h-8 text-emerald-400" /></div>
               <div className="text-xs font-black text-emerald-400 uppercase tracking-widest mb-1">
                 IPET 66 PWA
               </div>

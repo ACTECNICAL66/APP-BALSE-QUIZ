@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flame, Gem, Heart, ChevronDown, Sparkles, AlertCircle, Lock } from 'lucide-react';
+import { Flame, Gem, Heart, ChevronDown, Sparkles, AlertCircle, Lock, Bot } from 'lucide-react';
 import { soundEffects } from '../../utils/sound';
 import { CURRICULUM_DATA } from '../../data/curriculumData';
 
@@ -66,8 +66,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('learn')}
             className="flex items-center gap-2 group focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/30 group-hover:scale-105 transition-transform border border-emerald-400/40">
-              🤖
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-105 transition-transform border border-emerald-400/40">
+              <Bot className="w-6 h-6 text-white" />
             </div>
             <div className="hidden sm:block text-left">
               <span className="font-extrabold text-xl tracking-wider bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent block">

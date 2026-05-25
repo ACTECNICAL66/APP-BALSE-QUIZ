@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Sidebar } from './components/layout/Sidebar';
+import { AuroraBackground } from './components/layout/AuroraBackground';
 import { LandingPage } from './components/auth/LandingPage';
 import { AuthModal } from './components/auth/AuthModal';
 import { LearnView } from './components/views/LearnView';
@@ -223,7 +224,8 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#070d18] text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-[#070d18] text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans relative">
+      <AuroraBackground intensity="low" />
       
       <Navbar
         currentYear={currentYear}

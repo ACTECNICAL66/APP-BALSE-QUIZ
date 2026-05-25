@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame } from 'lucide-react';
+import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame, Crown, HeartCrack, CheckCircle2 } from 'lucide-react';
 import { Lesson, Question, MASCOT_INFO } from '../../data/curriculumData';
 import { soundEffects } from '../../utils/sound';
 import { triggerConfetti } from '../../utils/confetti';
@@ -66,6 +66,16 @@ export const LessonModal: React.FC<LessonModalProps> = ({
 
   const handleCheck = () => {
     if (isChecked) {
+      if (!isCorrect) {
+        // Force retry the current question
+        setSelectedOption(null);
+        setMatchedPairs([]);
+        setSelectedLeft(null);
+        setSelectedRight(null);
+        setIsChecked(false);
+        return;
+      }
+
       // Proceed to next question or finish
       if (currentIndex + 1 < lesson.questions.length) {
         setCurrentIndex((prev) => prev + 1);
@@ -210,7 +220,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
         {isLessonFinished ? (
           <div className="my-auto text-center space-y-8 animate-in zoom-in-95 duration-300">
             <div className="w-32 h-32 mx-auto rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-7xl shadow-2xl shadow-emerald-500/40 border border-emerald-300/40">
-              👑
+              <Crown className="w-16 h-16 text-white drop-shadow-lg" />
             </div>
             <div className="space-y-2">
               <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">
@@ -347,7 +357,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                             : 'bg-slate-900/80 border-slate-700 hover:bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {pair.left} {isMatched && '✅'}
+                        {pair.left} {isMatched && <CheckCircle2 className="inline-block w-4 h-4 ml-1 text-emerald-400" />}
                       </button>
                     );
                   })}
@@ -372,7 +382,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                             : 'bg-slate-900/80 border-slate-700 hover:bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {pair.right} {isMatched && '✅'}
+                        {pair.right} {isMatched && <CheckCircle2 className="inline-block w-4 h-4 ml-1 text-emerald-400" />}
                       </button>
                     );
                   })}
@@ -437,7 +447,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                   : 'btn-3d-blue text-white shadow-xl shadow-blue-500/30'
               }`}
             >
-              <span>{isChecked ? 'Continuar' : 'Comprobar'}</span>
+              <span>{isChecked ? (isCorrect ? 'Continuar' : 'Reintentar') : 'Comprobar'}</span>
               <ArrowRight className="w-5 h-5 font-black" />
             </button>
 
@@ -481,8 +491,8 @@ export const LessonModal: React.FC<LessonModalProps> = ({
       {showNoHeartsModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
           <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl max-w-sm w-full p-6 text-center space-y-6 shadow-2xl">
-            <div className="w-16 h-16 rounded-2xl bg-[#ff4b4b] flex items-center justify-center text-white mx-auto text-4xl shadow-lg shadow-rose-500/40 animate-pulse border border-rose-400/40">
-              💔
+            <div className="w-16 h-16 rounded-2xl bg-[#ff4b4b] flex items-center justify-center text-white mx-auto shadow-lg shadow-rose-500/40 animate-pulse border border-rose-400/40">
+              <HeartCrack className="w-8 h-8 text-white drop-shadow-md" />
             </div>
             <div>
               <h3 className="text-2xl font-black text-white mb-2">¡Te quedaste sin corazones!</h3>
