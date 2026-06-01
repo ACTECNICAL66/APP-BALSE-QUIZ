@@ -13,7 +13,7 @@ interface LandingPageProps {
 export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) => {
   return (
     <div className="min-h-screen text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans relative overflow-hidden">
-      
+
       {/* Animated Aurora Background */}
       <AuroraBackground intensity="high" />
 
@@ -43,15 +43,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
             >
               Ya tengo cuenta
             </button>
-              <button
-                onClick={() => {
-                  soundEffects.playClick();
-                  onStart();
-                }}
-                className="btn-3d-navy text-white font-black px-6 py-3 rounded-2xl text-xs uppercase tracking-wider shadow-xl shadow-blue-900/40"
-              >
-                Empezar
-              </button>
+            <button
+              onClick={() => {
+                soundEffects.playClick();
+                onStart();
+              }}
+              className="btn-3d-navy text-white font-black px-6 py-3 rounded-2xl text-xs uppercase tracking-wider shadow-xl shadow-blue-900/40"
+            >
+              Empezar
+            </button>
           </div>
         </div>
       </header>
@@ -59,13 +59,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
       {/* Hero Section with Year Selector */}
       <section className="relative overflow-hidden pt-16 pb-24 px-6 lg:pt-24 lg:pb-32 z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          
+
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full liquid-glass-navy text-blue-200 text-xs font-black uppercase tracking-widest mb-8 shadow-xl">
               <Sparkles className="w-4 h-4 text-cyan-300 animate-spin" />
               Plataforma Oficial de {SCHOOL_INFO.name}
             </div>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-8 leading-[1.05] drop-shadow-2xl">
               Domina la técnica <span className="bg-gradient-to-r from-[#7db5ff] via-[#1cb0f6] to-[#c9e6ff] bg-clip-text text-transparent animate-pulse">jugando</span>.
             </h1>
@@ -82,13 +82,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   <div className="text-xl font-black text-white drop-shadow-md">7 Años de Especialización</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 {[1, 2, 3, 4, 5, 6, 7].map((year) => (
                   <div key={year} className="flex-1 flex flex-col items-center gap-2.5 relative group">
-                    <div className={`w-full h-2.5 rounded-full ${
-                      year <= 3 ? 'bg-amber-400' : year <= 5 ? 'bg-blue-400' : 'bg-purple-400'
-                    } shadow-md opacity-90 transition-transform group-hover:scale-y-150`} />
+                    <div className={`w-full h-2.5 rounded-full ${year <= 3 ? 'bg-amber-400' : year <= 5 ? 'bg-blue-400' : 'bg-purple-400'
+                      } shadow-md opacity-90 transition-transform group-hover:scale-y-150`} />
                     <span className="text-sm font-black text-white drop-shadow-md">{year}º</span>
                   </div>
                 ))}
@@ -171,7 +170,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   <div className="inline-block px-4 py-1.5 rounded-full liquid-glass-emerald text-emerald-300 text-xs font-black uppercase tracking-widest mb-3 shadow-lg">
                     {MASCOT_INFO.role}
                   </div>
-                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy {MASCOT_INFO.name}!</h3>
+                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy Testi!</h3>
                   <p className="text-sm text-slate-300 italic mb-8 leading-relaxed font-bold">
                     "{MASCOT_INFO.description}"
                   </p>
@@ -195,7 +194,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
       {/* Curriculum Breakdown with Liquid Glass Cards */}
       <section className="py-24 px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
               Un sendero para cada ciclo
@@ -206,7 +205,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Ciclo Basico */}
             <div className="liquid-glass-strong rounded-3xl p-8 border border-white/15 hover:border-emerald-500/50 transition-all flex flex-col justify-between shadow-2xl group hover:scale-105 duration-300">
               <div>
