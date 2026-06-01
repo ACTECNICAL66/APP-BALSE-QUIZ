@@ -75,7 +75,7 @@ export const SHOP_ITEMS: ShopItem[] = [
   { id: 'refill', name: 'Recarga Total de Corazones', description: 'Restaura tus 5 corazones para seguir practicando.', cost: 50, icon: '❤️', type: 'heart_refill' },
   { id: 'freeze', name: 'Escudo Anti-Fallo', description: 'Mantiene tu combo de racha intacto ante un error de respuesta.', cost: 150, icon: '🛡️', type: 'streak_freeze' },
   { id: 'frame_gold', name: 'Marco Liquid Gold', description: 'Un marco de vidrio líquido dorado brillante para tu perfil.', cost: 300, icon: '✨', type: 'avatar_frame' },
-  { id: 'outfit_safety', name: 'Casco y Antiparras de Taller', description: 'Viste a Voltio con el equipo reglamentario de IPET 66.', cost: 500, icon: '🥽', type: 'outfit' },
+  { id: 'badge_tester', name: 'Insignia Tester', description: 'Logro demostrativo del dominio del Tester. Se muestra en tu perfil y avatar como insignia oficial.', cost: 500, icon: '/assets/badges/tester-badge.png', type: 'outfit' },
 ];
 
 export const LEADERBOARD_USERS = [

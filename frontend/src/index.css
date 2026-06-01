@@ -61,7 +61,7 @@
       inset 0 2px 4px 0 rgba(255, 255, 255, 0.25);
   }
 
-  /* Duolingo 3D Bubbly Buttons */
+  /* Interactive 3D Bubbly Buttons */
   .btn-3d-green {
     background-color: #58cc02;
     color: #ffffff;
@@ -157,6 +157,31 @@
   .btn-3d-gray:active {
     border-bottom-width: 0px;
     transform: translateY(5px);
+  }
+
+  .btn-3d-navy {
+    background-color: #1d4f91;
+    color: #ffffff;
+    border-bottom: 5px solid #163d71;
+    border-radius: 1rem;
+    font-weight: 800;
+    transition: transform 0.1s ease, filter 0.1s ease;
+  }
+  .btn-3d-navy:hover {
+    filter: brightness(1.08);
+  }
+  .btn-3d-navy:active {
+    border-bottom-width: 0px;
+    transform: translateY(5px);
+  }
+
+  .liquid-glass-navy {
+    background: linear-gradient(135deg, rgba(29, 79, 145, 0.28) 0%, rgba(15, 35, 68, 0.52) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(125, 181, 255, 0.28);
+    box-shadow:
+      0 12px 32px 0 rgba(15, 35, 68, 0.35),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.18);
   }
 }
 

@@ -1,19 +1,30 @@
 # APP-BALSE-QUIZ 🤖⚡
 
-**Plataforma educativa gamificada estilo Duolingo para el IPET 66**
+**Plataforma educativa interactiva y gamificada para el IPET 66**
 
 Una Progressive Web App (PWA) interactiva diseñada para que los estudiantes del IPET 66 aprendan y dominen las materias técnicas desde 1º hasta 7º año, con sistema de gamificación completo: combos, rachas, ligas, tienda y logros.
 
 ---
 
-## 🏗️ Estructura del Proyecto
+## 🚀 Características
+
+- 🎮 **Sistema Gamificado**: Combos de aciertos, vidas (corazones), XP, gemas y ligas semanales.
+- 📚 **Currículo completo IPET 66**: 7 años con materias técnicas específicas, cada una con 5 niveles de dificultad.
+- 🔒 **Progresión bloqueada**: Los años se desbloquean secuencialmente al completar niveles.
+- 🆓 **Modo Examen Libre**: Opción de desbloquear todos los años.
+- 🪟 **Diseño Liquid Glass**: Interfaz moderna con efectos de vidrio esmerilado y aurora animada.
+- 📱 **PWA**: Instalable en dispositivos móviles.
+- 🎨 **Avatares temáticos**: 10 identidades visuales del taller técnico.
+- 🔐 **Autenticación**: Login con Google o apodo personalizado.
+
+## 📁 Estructura del Proyecto
 
 ```
 APP-BALSE-QUIZ/
 ├── frontend/                   # Cliente React + Vite + TailwindCSS
-│   ├── public/                 # Activos estáticos (favicon, iconos PWA)
+│   ├── public/                 # Activos estáticos
 │   ├── src/
-│   │   ├── components/         # Componentes React reutilizables
+│   │   ├── components/
 │   │   │   ├── layout/         # Navbar, Sidebar, AuroraBackground
 │   │   │   ├── auth/           # AuthModal, OnboardingSuccess
 │   │   │   ├── views/          # LearnView, LeaderboardView, ShopView, etc.
@@ -24,79 +35,60 @@ APP-BALSE-QUIZ/
 │   │   ├── App.tsx             # Componente raíz
 │   │   ├── main.tsx            # Punto de entrada
 │   │   └── index.css           # Estilos globales + Liquid Glass
-│   ├── index.html              # HTML principal
+│   ├── index.html
 │   ├── package.json
 │   ├── vite.config.ts
 │   └── tsconfig.json
 │
-├── backend/                    # Servidor Node.js (preparado para API futura)
+├── backend/                    # Servidor Node.js (API futura)
 │   ├── src/
-│   │   ├── server.ts           # Servidor Express
-│   │   ├── routes/             # Rutas API
-│   │   └── config/             # Configuración
+│   │   ├── server.ts
+│   │   ├── routes/
+│   │   └── config/
 │   ├── package.json
 │   └── tsconfig.json
 │
-├── docs/                       # Documentación del proyecto
-│   └── ARCHITECTURE.md         # Diagrama de arquitectura
+├── docs/
+│   └── ARCHITECTURE.md
 │
 ├── .gitignore
 └── README.md
 ```
 
-## 🎮 Características
+## 🛠️ Instalación
 
-### Gamificación
-- 🔥 **Combo de Aciertos**: Encadena respuestas correctas para multiplicar XP
-- ❤️ **Vidas de Taller**: 5 corazones, pierdes uno al fallar
-- 🪙 **Tuercas Doradas (Gemas)**: Moneda interna para la tienda
-- 🏆 **Ligas Semanales**: Compite con tus compañeros por año o general
-- ⭐ **Logros**: Sistema de medallas y progresión
-- 🛡️ **Escudo Anti-Fallo**: Protege tu combo al responder mal
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/APP-BALSE-QUIZ.git
+cd APP-BALSE-QUIZ
 
-### Materias por Ciclo
+# Instalar dependencias del frontend
+cd frontend
+npm install
+
+# Iniciar en modo desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+```
+
+## 🎯 Materias por Ciclo
 
 | Ciclo | Años | Materias |
 |-------|------|----------|
-| **Básico** | 1º - 3º | Matemática, Taller, Tecnología, Dibujo Técnico |
-| **Superior I** | 4º - 5º | Electrotecnia I/II, Informática I/II, Electrónica Analógica I/II, Electrónica Digital I/II, Matemática |
-| **Superior II** | 6º - 7º | Telecomunicaciones I/II, Electrónica Industrial I/II, Instalaciones Industriales I/II, Digitales III, Análisis Matemático |
+| **Básico** | 1º - 3º | Matemática, Taller General, Tecnología, Dibujo Técnico |
+| **Superior** | 4º - 5º | Electrotecnia I/II, Informática I/II, Electrónica Analógica I/II, Electrónica Digital I/II, Matemática |
+| **Avanzado** | 6º - 7º | Telecomunicaciones I/II, Electrónica Industrial I/II, Instalaciones Industriales I/II, Digitales III, Análisis Matemático |
 
-### Tipos de Ejercicios
-- ✅ Opción múltiple
-- ✅ Verdadero / Falso
-- ✅ Completar fórmulas (fill-blanks)
-- ✅ Emparejar conceptos (match-pairs)
+## 🎮 Sistema de Gamificación
 
-## 🚀 Instalación y Desarrollo
+- **🔥 Combo de Aciertos**: Respuestas correctas consecutivas multiplican tu XP.
+- **❤️ Vidas**: 5 corazones por nivel. Fallar cuesta uno.
+- **🪙 Tuercas Doradas**: Moneda para la tienda (recargar vidas, escudos, marcos).
+- **🏆 Ligas**: Compite semanalmente en tu año o en la general.
+- **👑 Logros**: Desbloquea trofeos al alcanzar metas.
 
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## 📄 Licencia
 
-### Backend (preparado para futuro)
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-## 🛠️ Tecnologías
-
-- **Frontend**: React 19, TypeScript, Vite 7, TailwindCSS 4
-- **Estilo Visual**: Liquid Glass (iOS 26), Aurora Backgrounds, 3D Buttons
-- **Sonido**: Web Audio API (efectos correcta/incorrecta/victoria)
-- **Animaciones**: Canvas Confetti, CSS Animations
-- **Backend**: Node.js, Express (preparado)
-- **PWA**: Service Worker ready, instalable
-
-## 📱 PWA
-
-La app es instalable en dispositivos móviles como app nativa. Se abrirá en modo standalone sin barra del navegador.
-
-## 📝 Licencia
-
-Proyecto educativo para la comunidad del IPET 66, Córdoba, Argentina.
+Proyecto educativo desarrollado para la comunidad del IPET 66, Córdoba, Argentina.

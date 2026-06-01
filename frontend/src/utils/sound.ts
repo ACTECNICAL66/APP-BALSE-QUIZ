@@ -1,4 +1,4 @@
-// Web Audio API Sound Generator for Duolingo vibes
+// Web Audio API Sound Generator for Interactive UI vibes
 
 class SoundEffects {
   private ctx: AudioContext | null = null;

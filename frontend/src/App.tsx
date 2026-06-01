@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Sidebar } from './components/layout/Sidebar';
-import { AuroraBackground } from './components/layout/AuroraBackground';
-import { LandingPage } from './components/auth/LandingPage';
+import { LandingPage } from './components/views/LandingPage';
 import { AuthModal } from './components/auth/AuthModal';
 import { LearnView } from './components/views/LearnView';
 import { LessonModal } from './components/lesson/LessonModal';
@@ -133,14 +132,12 @@ export function App() {
     setAuthModalOpen(false);
     
     if (isNewUser && authMode === 'register') {
-      // Show onboarding animation for new users
       setShowOnboarding(true);
       setTimeout(() => {
         setIsAuthenticated(true);
         setActiveTab('learn');
       }, 3500);
     } else {
-      // Direct login for existing users
       setIsAuthenticated(true);
       setActiveTab('learn');
     }
@@ -178,6 +175,8 @@ export function App() {
       if (activeLesson.level === 5) {
         setUnlockedYear((prev) => Math.min(7, Math.max(prev, currentYear + 1)));
       }
+    } else if (!passed) {
+      setComboStreak(0);
     }
     setActiveLesson(null);
   };
@@ -224,8 +223,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#070d18] text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans relative">
-      <AuroraBackground intensity="low" />
+    <div className="min-h-screen bg-[#070d18] text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans">
       
       <Navbar
         currentYear={currentYear}
@@ -303,7 +301,7 @@ export function App() {
               maxCombo={maxCombo}
               perfectLessons={perfectLessons}
               completedLessonsCount={completedLessons.length}
-              goal={userGoal}
+              hasTesterBadge={hasSafetyOutfit}
               onLogout={handleLogout}
             />
           )}
@@ -332,7 +330,6 @@ export function App() {
         />
       )}
 
-      {/* Onboarding Success Animation */}
       {showOnboarding && (
         <OnboardingSuccess
           userName={userName}

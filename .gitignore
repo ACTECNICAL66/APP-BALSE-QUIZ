@@ -1,7 +1,9 @@
 # Dependencies
 node_modules/
+
+# Build output
 dist/
-build/
+backend/dist/
 
 # Environment
 .env
@@ -17,22 +19,7 @@ build/
 # OS
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# Debug
+# Logs
+*.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Agents / Skills (local only)
-.agents/
-skills-lock.json
-
-# Misc
-*.tsbuildinfo
-server.cjs
-server.js
-style.css
-main.js
-vite.config.js
-public/mascot.png
