@@ -3,6 +3,7 @@ import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame
 import { Lesson, Question, MASCOT_INFO } from '../data/curriculumData';
 import { soundEffects } from '../utils/sound';
 import { triggerConfetti } from '../utils/confetti';
+import { MathRenderer } from './MathRenderer';
 
 interface LessonModalProps {
   lesson: Lesson | null;
@@ -312,7 +313,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                     ¿Qué pasó?
                   </div>
                   <p className="text-sm text-slate-200 font-bold leading-relaxed">
-                    {currentQuestion.explanation}
+                    <MathRenderer text={currentQuestion.explanation} />
                   </p>
                 </div>
               </div>
@@ -354,7 +355,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-black text-white leading-snug">
-              {currentQuestion.question}
+              <MathRenderer text={currentQuestion.question} />
             </h2>
 
             {/* Multiple Choice & Fill in the Blanks */}
@@ -376,7 +377,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                           : 'bg-slate-900/80 border-slate-700/80 hover:border-slate-600 text-slate-200'
                       }`}
                     >
-                      <span>{option}</span>
+                      <MathRenderer text={option} />
                       {isSelected && <Check className="w-5 h-5 text-emerald-400 shrink-0 stroke-[3]" />}
                     </button>
                   );
@@ -441,7 +442,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                             : 'bg-slate-900/80 border-slate-700 hover:bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {pair.left} {isMatched && '✅'}
+                        <MathRenderer text={pair.left} /> {isMatched && '✅'}
                       </button>
                     );
                   })}
@@ -466,7 +467,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                             : 'bg-slate-900/80 border-slate-700 hover:bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {pair.right} {isMatched && '✅'}
+                        <MathRenderer text={pair.right} /> {isMatched && '✅'}
                       </button>
                     );
                   })}
@@ -505,7 +506,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                       {isCorrect ? '¡Correcto! Combo +1' : 'Respuesta incorrecta'}
                     </div>
                     <p className="text-xs text-slate-200 font-bold max-w-md mt-1 leading-relaxed">
-                      {currentQuestion.explanation}
+                      <MathRenderer text={currentQuestion.explanation} />
                     </p>
                   </div>
                 </div>

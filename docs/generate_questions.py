@@ -1,0 +1,1513 @@
+#!/usr/bin/env python3
+"""Generate curriculum data for years 2, 4, 6 from PDF extractions."""
+
+import json
+
+# ─── 2DO AÑO ───────────────────────────────────────────────────────────────────
+
+Y2_DIBUJO_LESSONS = [
+    {
+        "id": "2-dib-1", "level": 1,
+        "title": "Normas IRAM/ISO en Dibujo Técnico",
+        "description": "Unificación de criterios de representación.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qd21", "type": "multiple-choice",
+                "question": "¿Para qué sirven las normas IRAM/ISO en dibujo técnico?",
+                "options": [
+                    "Para unificar la representación técnica",
+                    "Mejorar la estética de los planos industriales",
+                    "Reemplazar completamente el uso de instrumentos de dibujo técnico",
+                    "Para permitir que cada técnico utilice su propio sistema gráfico"
+                ],
+                "correctAnswer": "Para unificar la representación técnica",
+                "explanation": "Las normas IRAM/ISO buscan unificar criterios de representación para que cualquier plano técnico pueda ser entendido correctamente por distintas personas, empresas o países."
+            }
+        ]
+    },
+    {
+        "id": "2-dib-2", "level": 2,
+        "title": "Proyecciones Ortogonales",
+        "description": "Vistas planas relacionadas.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qd22", "type": "multiple-choice",
+                "question": "¿Qué función cumplen las proyecciones ortogonales?",
+                "options": [
+                    "Representar un objeto mediante vistas planas relacionadas entre sí",
+                    "Generar una representación tridimensional artística del objeto",
+                    "Mostrar únicamente las dimensiones exteriores de la pieza",
+                    "Sustituir completamente las perspectivas isométricas"
+                ],
+                "correctAnswer": "Representar un objeto mediante vistas planas relacionadas entre sí",
+                "explanation": "Las proyecciones ortogonales permiten representar un objeto desde planta, alzada y perfil para entender completamente su forma."
+            }
+        ]
+    },
+    {
+        "id": "2-dib-3", "level": 3,
+        "title": "Acotaciones en Planos",
+        "description": "Dimensiones y medidas normalizadas.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qd23", "type": "multiple-choice",
+                "question": "¿Para qué sirven las acotaciones en un plano técnico?",
+                "options": [
+                    "Definir las dimensiones necesarias para fabricar o interpretar una pieza",
+                    "Mejorar la presentación visual del plano",
+                    "Establecer el tipo de material utilizado en cada componente",
+                    "Diferenciar las vistas principales de las secundarias"
+                ],
+                "correctAnswer": "Definir las dimensiones necesarias para fabricar o interpretar una pieza",
+                "explanation": "Las acotaciones indican tamaños, distancias y medidas exactas necesarias para fabricar o interpretar correctamente una pieza."
+            }
+        ]
+    },
+    {
+        "id": "2-dib-4", "level": 4,
+        "title": "Símbolos en Esquemas Electrónicos",
+        "description": "Elementos normalizados de componentes.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qd24", "type": "multiple-choice",
+                "question": "¿Qué representan los símbolos en un esquema electrónico?",
+                "options": [
+                    "Elementos normalizados que identifican componentes y conexiones eléctricas",
+                    "Referencias gráficas para indicar profundidad y perspectiva",
+                    "Indicaciones exclusivas sobre el tamaño físico de los componentes",
+                    "Recursos gráficos para organizar visualmente el plano"
+                ],
+                "correctAnswer": "Elementos normalizados que identifican componentes y conexiones eléctricas",
+                "explanation": "Los símbolos electrónicos son representaciones normalizadas que permiten reconocer componentes como resistencias, capacitores y transistores en cualquier circuito."
+            }
+        ]
+    },
+    {
+        "id": "2-dib-5", "level": 5,
+        "title": "Evaluación de Dibujo: Normas y Proyecciones",
+        "description": "Examen final de normas y simbolización.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qd25", "type": "multiple-choice",
+                "question": "Las normas IRAM/ISO buscan unificar criterios de representación para que cualquier plano pueda ser entendido internacionalmente. ¿Cuál es su principal beneficio?",
+                "options": [
+                    "Que cualquier técnico del mundo pueda interpretar el mismo plano sin ambigüedades",
+                    "Que los planos sean más coloridos",
+                    "Que solo se usen lápices HB",
+                    "Que no sea necesario usar escuadras"
+                ],
+                "correctAnswer": "Que cualquier técnico del mundo pueda interpretar el mismo plano sin ambigüedades",
+                "explanation": "La normalización garantiza que un dibujo técnico creado en Argentina sea interpretado correctamente en cualquier otro país sin necesidad de aclaraciones adicionales."
+            }
+        ]
+    }
+]
+
+Y2_MATE_LESSONS = [
+    {
+        "id": "2-mat-1", "level": 1,
+        "title": "Números Enteros Negativos en la Vida Cotidiana",
+        "description": "Aplicaciones de negativos en taller.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qm21", "type": "multiple-choice",
+                "question": "¿Para qué sirven los números enteros negativos en la vida cotidiana?",
+                "options": [
+                    "Para representar cantidades menores que cero (temperatura, deudas, profundidad)",
+                    "Solo para geometría",
+                    "Para medir gases",
+                    "Para escribir operaciones"
+                ],
+                "correctAnswer": "Para representar cantidades menores que cero (temperatura, deudas, profundidad)",
+                "explanation": "Los números enteros negativos permiten expresar situaciones cotidianas como temperaturas bajo cero, deudas económicas o altitudes por debajo del nivel del mar."
+            }
+        ]
+    },
+    {
+        "id": "2-mat-2", "level": 2,
+        "title": "Proporcionalidad Directa",
+        "description": "Relación entre magnitudes.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qm22", "type": "multiple-choice",
+                "question": "La relación de proporcionalidad directa indica que cuando una magnitud aumenta, la otra ____________ en la misma proporción.",
+                "options": ["Aumenta", "Disminuye", "Desaparece", "Se divide"],
+                "correctAnswer": "Aumenta",
+                "explanation": "En una proporcionalidad directa, ambas magnitudes cambian en el mismo sentido: si una aumenta, la otra también aumenta proporcionalmente."
+            }
+        ]
+    },
+    {
+        "id": "2-mat-3", "level": 3,
+        "title": "Números Racionales",
+        "description": "Fracciones y expresiones decimales.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qm23", "type": "multiple-choice",
+                "question": "¿Cuál de las siguientes opciones describe correctamente a los números racionales?",
+                "options": [
+                    "Son números que pueden expresarse como una fracción de números enteros",
+                    "Son números que solo pueden ser enteros positivos",
+                    "Son números que no pueden escribirse como fracción",
+                    "Son únicamente los números decimales infinitos no periódicos"
+                ],
+                "correctAnswer": "Son números que pueden expresarse como una fracción de números enteros",
+                "explanation": "Los números racionales incluyen enteros, fracciones y decimales finitos o periódicos que pueden expresarse como cociente de dos números enteros."
+            }
+        ]
+    },
+    {
+        "id": "2-mat-4", "level": 4,
+        "title": "Resolución de Ecuaciones",
+        "description": "Despeje de variables.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qm24", "type": "fill-blanks",
+                "question": "Al resolver la ecuación $2x + 10 = 30$, despejamos $x$ restando 10 y luego dividiendo entre ____.",
+                "options": ["2", "10", "5", "20"],
+                "correctAnswer": "2",
+                "explanation": "$2x + 10 = 30 \\rightarrow 2x = 20 \\rightarrow x = 10$."
+            }
+        ]
+    },
+    {
+        "id": "2-mat-5", "level": 5,
+        "title": "Evaluación de Matemática",
+        "description": "Aplicación de proporcionalidad y racionales.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qm25", "type": "multiple-choice",
+                "question": "Si en el taller 3 metros de cable cuestan $450, ¿cuánto costarán 8 metros del mismo cable?",
+                "options": ["$1200", "$900", "$1500", "$600"],
+                "correctAnswer": "$1200",
+                "explanation": "Por proporcionalidad directa: $450 \\div 3 = 150$ por metro; $150 \\times 8 = 1200$."
+            }
+        ]
+    }
+]
+
+Y2_TALLER_LESSONS = [
+    {
+        "id": "2-tal-1", "level": 1,
+        "title": "Código de Colores de Resistencias",
+        "description": "Lectura del valor óhmico.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "q21", "type": "multiple-choice",
+                "question": "El código de color de una resistencia es: naranja, verde, marrón. ¿Qué valor indican estos colores?",
+                "options": ["350 $\\Omega$", "650 $\\Omega$", "150 $\\Omega$", "530 $\\Omega$"],
+                "correctAnswer": "350 $\\Omega$",
+                "explanation": "Naranja = 3, Verde = 5, Marrón = ×10 → 35 × 10 = 350 $\\Omega$."
+            },
+            {
+                "id": "q21b", "type": "multiple-choice",
+                "question": "¿En qué magnitud eléctrica se mide la resistencia?",
+                "options": ["Ohmios ($\\Omega$)", "Amperes (A)", "Volts (V)", "Watts (W)"],
+                "correctAnswer": "Ohmios ($\\Omega$)",
+                "explanation": "La resistencia eléctrica se mide en Ohmios, representados por la letra griega Omega ($\\Omega$)."
+            }
+        ]
+    },
+    {
+        "id": "2-tal-2", "level": 2,
+        "title": "Circuitos: Serie, Paralelo y Mixto",
+        "description": "Identificación de asociaciones.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "q22", "type": "multiple-choice",
+                "question": "¿Qué es un circuito mixto?",
+                "options": [
+                    "Combinación de resistencias en serie y paralelo",
+                    "Resistencias conectadas en serie",
+                    "Resistencias conectadas en paralelo",
+                    "Un circuito sin resistencias"
+                ],
+                "correctAnswer": "Combinación de resistencias en serie y paralelo",
+                "explanation": "Un circuito mixto contiene resistencias conectadas tanto en serie como en paralelo dentro del mismo circuito."
+            },
+            {
+                "id": "q22b", "type": "multiple-choice",
+                "question": "En un circuito en serie, la corriente que circula por cada resistencia es:",
+                "options": ["La misma en todas", "Diferente en cada una", "Siempre cero", "Alterna"],
+                "correctAnswer": "La misma en todas",
+                "explanation": "En serie solo hay un camino para los electrones, por lo tanto la corriente es idéntica en cada componente."
+            }
+        ]
+    },
+    {
+        "id": "2-tal-3", "level": 3,
+        "title": "El Multímetro (Tester)",
+        "description": "Medición de magnitudes eléctricas.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "q23", "type": "multiple-choice",
+                "question": "¿A qué dispositivo electrónico corresponde la función de medir voltios, ohmios y amperios?",
+                "options": ["Multímetro (tester)", "Osciloscopio", "Fuente de alimentación", "Generador de funciones"],
+                "correctAnswer": "Multímetro (tester)",
+                "explanation": "El multímetro es un instrumento que permite medir distintas magnitudes eléctricas como tensión (V), corriente (A) y resistencia ($\\Omega$)."
+            }
+        ]
+    },
+    {
+        "id": "2-tal-4", "level": 4,
+        "title": "Ley de Ohm y Potencia",
+        "description": "Relación entre V, I, R y P.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "q24", "type": "multiple-choice",
+                "question": "¿Qué relaciona la Ley de Ohm?",
+                "options": [
+                    "Voltaje, corriente y resistencia",
+                    "Potencia y calor",
+                    "Tiempo y frecuencia",
+                    "Voltaje, corriente y potencia"
+                ],
+                "correctAnswer": "Voltaje, corriente y resistencia",
+                "explanation": "La Ley de Ohm establece que $V = I \\times R$, relacionando voltaje, intensidad de corriente y resistencia eléctrica."
+            }
+        ]
+    },
+    {
+        "id": "2-tal-5", "level": 5,
+        "title": "Evaluación de Taller Eléctrico",
+        "description": "Circuitos, mediciones y leyes fundamentales.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "q25", "type": "multiple-choice",
+                "question": "Las leyes de Kirchhoff ayudan a:",
+                "options": [
+                    "Analizar circuitos complejos",
+                    "Crear componentes",
+                    "Reparar baterías",
+                    "Resolver placas"
+                ],
+                "correctAnswer": "Analizar circuitos complejos",
+                "explanation": "Las leyes de Kirchhoff (nodos y mallas) permiten analizar y calcular tensiones y corrientes en circuitos eléctricos complejos."
+            }
+        ]
+    }
+]
+
+Y2_TECNO_LESSONS = [
+    {
+        "id": "2-tec-1", "level": 1,
+        "title": "El Relé como Componente Electrónico",
+        "description": "Activación por bobina.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qt21", "type": "multiple-choice",
+                "question": "El relé es un componente electrónico que se activa cuando:",
+                "options": [
+                    "La bobina recibe corriente",
+                    "Se calienta",
+                    "Se desconecta la batería",
+                    "Baja la resistencia"
+                ],
+                "correctAnswer": "La bobina recibe corriente",
+                "explanation": "El relé funciona mediante un electroimán (bobina) que al recibir corriente atrae un contacto conmutador."
+            }
+        ]
+    },
+    {
+        "id": "2-tec-2", "level": 2,
+        "title": "Circuitos Integrados: CI 555",
+        "description": "Temporizador, oscilador y generador.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qt22", "type": "multiple-choice",
+                "question": "El CI 555 se puede usar como:",
+                "options": [
+                    "Todas las anteriores",
+                    "Temporizador",
+                    "Oscilador",
+                    "Generador de pulsos"
+                ],
+                "correctAnswer": "Todas las anteriores",
+                "explanation": "El CI 555 es un circuito integrado versátil que puede funcionar como temporizador, oscilador o generador de pulsos según su configuración."
+            }
+        ]
+    },
+    {
+        "id": "2-tec-3", "level": 3,
+        "title": "Capacitores: Almacenamiento de Energía",
+        "description": "Función principal del capacitor.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qt23", "type": "multiple-choice",
+                "question": "¿Cuál es la función principal de un capacitor?",
+                "options": [
+                    "Almacenar energía eléctrica",
+                    "Generar corriente",
+                    "Aumentar la resistencia",
+                    "Accionar motores"
+                ],
+                "correctAnswer": "Almacenar energía eléctrica",
+                "explanation": "Los capacitores almacenan energía en forma de campo eléctrico entre sus placas y la liberan cuando el circuito lo requiere."
+            }
+        ]
+    },
+    {
+        "id": "2-tec-4", "level": 4,
+        "title": "Ley de Watt",
+        "description": "Relación entre potencia, voltaje y corriente.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qt24", "type": "multiple-choice",
+                "question": "¿Qué relaciona la Ley de Watt?",
+                "options": [
+                    "Potencia, voltaje y corriente, creada por James Watt",
+                    "Una ley sobre temperatura creada por Alessandro Volta",
+                    "Una ley de movimiento creada por Watt",
+                    "Voltaje y resistencia únicamente"
+                ],
+                "correctAnswer": "Potencia, voltaje y corriente, creada por James Watt",
+                "explanation": "La Ley de Watt establece que $P = V \\times I$, donde P es potencia en watts, V es voltaje y I es corriente."
+            }
+        ]
+    },
+    {
+        "id": "2-tec-5", "level": 5,
+        "title": "Programación por Bloques",
+        "description": "Instrucciones conectadas visualmente.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qt25", "type": "multiple-choice",
+                "question": "Los bloques en la programación visual, ¿para qué se usan?",
+                "options": [
+                    "Representan instrucciones conectadas para crear algoritmos",
+                    "Apagar circuitos",
+                    "Reiniciar la PC o notebooks",
+                    "Medir magnitudes"
+                ],
+                "correctAnswer": "Representan instrucciones conectadas para crear algoritmos",
+                "explanation": "La programación por bloques une visualmente instrucciones como piezas de rompecabezas para crear algoritmos sin escribir código textual."
+            }
+        ]
+    }
+]
+
+# ─── 4TO AÑO ───────────────────────────────────────────────────────────────────
+
+Y4_INFO_LESSONS = [
+    {
+        "id": "4-inf-1", "level": 1,
+        "title": "Memoria RAM y CPU",
+        "description": "Componentes fundamentales de una PC.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qi41", "type": "multiple-choice",
+                "question": "¿Cuál es la función principal de la memoria RAM?",
+                "options": [
+                    "Almacenar datos y programas temporalmente mientras se usan",
+                    "Guardar archivos permanentes",
+                    "Ejecutar operaciones matemáticas",
+                    "Controlar dispositivos externos"
+                ],
+                "correctAnswer": "Almacenar datos y programas temporalmente mientras se usan",
+                "explanation": "La memoria RAM guarda información de manera temporal para que el procesador pueda acceder rápidamente mientras la computadora está funcionando."
+            },
+            {
+                "id": "qi41b", "type": "multiple-choice",
+                "question": "¿Cuál es la función principal del procesador (CPU) en una computadora?",
+                "options": [
+                    "Ejecutar instrucciones y procesar datos",
+                    "Almacenar archivos permanentemente",
+                    "Mostrar imágenes en pantalla",
+                    "Conectar dispositivos externos"
+                ],
+                "correctAnswer": "Ejecutar instrucciones y procesar datos",
+                "explanation": "El procesador es el componente encargado de realizar cálculos y ejecutar las instrucciones necesarias para el funcionamiento de la computadora."
+            }
+        ]
+    },
+    {
+        "id": "4-inf-2", "level": 2,
+        "title": "Diagramas de Flujo",
+        "description": "Simbología de algoritmos.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qi42", "type": "multiple-choice",
+                "question": "¿Para qué se utilizan los símbolos y flechas en un diagrama de flujo?",
+                "options": [
+                    "Para representar el paso a paso del algoritmo",
+                    "Para decorar el algoritmo",
+                    "Para guardar información en la memoria",
+                    "Para reiniciar el algoritmo"
+                ],
+                "correctAnswer": "Para representar el paso a paso del algoritmo",
+                "explanation": "Para hacer un diagrama de flujo se usan símbolos y flechas mostrando el paso a paso de un algoritmo."
+            }
+        ]
+    },
+    {
+        "id": "4-inf-3", "level": 3,
+        "title": "Lenguaje C: Sintaxis Básica",
+        "description": "Punto y coma y estructura.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qi43", "type": "multiple-choice",
+                "question": "¿Qué símbolo se usa para finalizar una instrucción en lenguaje C?",
+                "options": [";", ".", ":", ","],
+                "correctAnswer": ";",
+                "explanation": "En C, cada instrucción debe terminar con punto y coma (;) para indicar el final de la línea de código."
+            }
+        ]
+    },
+    {
+        "id": "4-inf-4", "level": 4,
+        "title": "Estructuras de Repetición: Bucles",
+        "description": "Repetir instrucciones varias veces.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qi44", "type": "multiple-choice",
+                "question": "¿Qué estructura se utiliza para repetir instrucciones varias veces en un programa?",
+                "options": ["Bucle", "Variable", "Clase", "Librería"],
+                "correctAnswer": "Bucle",
+                "explanation": "Un bucle permite ejecutar varias veces un bloque de instrucciones mientras se cumpla una condición determinada."
+            }
+        ]
+    },
+    {
+        "id": "4-inf-5", "level": 5,
+        "title": "Evaluación de Informática I",
+        "description": "Conceptos de hardware y algoritmos.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qi45", "type": "multiple-choice",
+                "question": "¿Qué tipo de dato usarías en C para almacenar un valor lógico de verdadero o falso?",
+                "options": ["int", "float", "char", "double"],
+                "correctAnswer": "int",
+                "explanation": "En C no existe el tipo bool nativo; se usa int (0 = falso, cualquier otro valor = verdadero)."
+            }
+        ]
+    }
+]
+
+Y4_ELECTRO_LESSONS = [
+    {
+        "id": "4-ele-1", "level": 1,
+        "title": "Ley de Ohm",
+        "description": "Tensión, corriente y resistencia.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "q41", "type": "multiple-choice",
+                "question": "¿Cuál es la ley que relaciona tensión, corriente y resistencia?",
+                "options": ["Ley de Ohm", "Ley de Kirchhoff", "Ley de Faraday", "Ley de Joule"],
+                "correctAnswer": "Ley de Ohm",
+                "explanation": "La Ley de Ohm establece que $V = I \\times R$, relacionando voltaje, intensidad de corriente y resistencia."
+            }
+        ]
+    },
+    {
+        "id": "4-ele-2", "level": 2,
+        "title": "Medición de Potencia Eléctrica",
+        "description": "El vatímetro.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "q42", "type": "multiple-choice",
+                "question": "¿Qué instrumento se utiliza para medir potencia eléctrica?",
+                "options": ["Vatímetro", "Voltímetro", "Amperímetro", "Capacitor"],
+                "correctAnswer": "Vatímetro",
+                "explanation": "El vatímetro es el instrumento diseñado para medir potencia eléctrica activa en watts (W)."
+            }
+        ]
+    },
+    {
+        "id": "4-ele-3", "level": 3,
+        "title": "Leyes de Kirchhoff",
+        "description": "Nodos y mallas.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "q43", "type": "multiple-choice",
+                "question": "¿Qué establece una de las leyes de Kirchhoff en un nodo?",
+                "options": [
+                    "La suma de corrientes que entran es igual a la suma que salen",
+                    "La suma de voltajes es siempre cero",
+                    "La resistencia total es la suma de todas",
+                    "La corriente se divide por igual"
+                ],
+                "correctAnswer": "La suma de corrientes que entran es igual a la suma que salen",
+                "explanation": "La primera ley de Kirchhoff (Ley de Nodos) establece que la suma de las corrientes que entran a un nodo es igual a la suma de las corrientes que salen."
+            }
+        ]
+    },
+    {
+        "id": "4-ele-4", "level": 4,
+        "title": "Capacitores e Inducción",
+        "description": "Almacenamiento de energía y campos.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "q44", "type": "multiple-choice",
+                "question": "¿Qué componente almacena energía en forma de campo eléctrico?",
+                "options": ["Capacitor", "Resistor", "Bobina", "Transformador"],
+                "correctAnswer": "Capacitor",
+                "explanation": "Los capacitores almacenan energía electrostática en forma de campo eléctrico entre sus placas."
+            },
+            {
+                "id": "q44b", "type": "multiple-choice",
+                "question": "¿Cuál de las siguientes leyes explica la inducción electromagnética?",
+                "options": [
+                    "Leyes de Faraday y Lenz",
+                    "Ley de Ohm",
+                    "Ley de Coulomb",
+                    "Ley de Joule"
+                ],
+                "correctAnswer": "Leyes de Faraday y Lenz",
+                "explanation": "Faraday descubrió que un campo magnético variable induce una corriente; Lenz determinó el sentido de esa corriente inducida."
+            }
+        ]
+    },
+    {
+        "id": "4-ele-5", "level": 5,
+        "title": "Evaluación de Electrotecnia I",
+        "description": "Leyes fundamentales de la electricidad.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "q45", "type": "multiple-choice",
+                "question": "Si por un resistor de 10 $\\Omega$ circulan 2 A, ¿cuál es la potencia disipada?",
+                "options": ["40 W", "20 W", "10 W", "5 W"],
+                "correctAnswer": "40 W",
+                "explanation": "$P = I^2 \\times R = 2^2 \\times 10 = 4 \\times 10 = 40$ W."
+            }
+        ]
+    }
+]
+
+Y4_ANALOG_LESSONS = [
+    {
+        "id": "4-ana-1", "level": 1,
+        "title": "El Multímetro Digital",
+        "description": "Medición de tensión, corriente y resistencia.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qa41", "type": "multiple-choice",
+                "question": "¿Qué instrumento se utiliza para medir tensión, corriente y resistencia eléctrica?",
+                "options": ["Multímetro", "Osciloscopio", "Generador de funciones", "Transformador"],
+                "correctAnswer": "Multímetro",
+                "explanation": "El multímetro permite medir distintas magnitudes eléctricas como tensión, corriente y resistencia en un circuito."
+            }
+        ]
+    },
+    {
+        "id": "4-ana-2", "level": 2,
+        "title": "El Diodo Semiconductor",
+        "description": "Polarización y conducción.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qa42", "type": "multiple-choice",
+                "question": "¿Cuál es la función principal de un diodo?",
+                "options": [
+                    "Permitir el paso de corriente en un solo sentido",
+                    "Amplificar señales",
+                    "Almacenar energía",
+                    "Medir tensión"
+                ],
+                "correctAnswer": "Permitir el paso de corriente en un solo sentido",
+                "explanation": "El diodo conduce corriente cuando está polarizado correctamente (directa) y bloquea el paso en sentido contrario."
+            },
+            {
+                "id": "qa42b", "type": "multiple-choice",
+                "question": "¿Para qué se utiliza comúnmente un diodo Zener?",
+                "options": [
+                    "Regular tensión (mantener voltaje constante)",
+                    "Generar sonido",
+                    "Aumentar corriente",
+                    "Encender motores"
+                ],
+                "correctAnswer": "Regular tensión (mantener voltaje constante)",
+                "explanation": "El diodo Zener se utiliza como regulador de voltaje manteniendo una tensión estable en el circuito cuando se polariza en inversa."
+            }
+        ]
+    },
+    {
+        "id": "4-ana-3", "level": 3,
+        "title": "Transistores BJT",
+        "description": "PNP y NPN.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qa43", "type": "multiple-choice",
+                "question": "¿Qué tipos principales de transistor BJT existen?",
+                "options": ["PNP y NPN", "AC y DC", "Serie y paralelo", "Digital y analógico"],
+                "correctAnswer": "PNP y NPN",
+                "explanation": "Los transistores BJT se clasifican principalmente en PNP y NPN según la disposición de sus materiales semiconductores."
+            }
+        ]
+    },
+    {
+        "id": "4-ana-4", "level": 4,
+        "title": "Amplificación de Señales",
+        "description": "El transistor como amplificador.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qa44", "type": "multiple-choice",
+                "question": "¿Qué componente se utiliza para amplificar señales eléctricas?",
+                "options": ["Transistor", "Resistor", "Capacitor", "Fusible"],
+                "correctAnswer": "Transistor",
+                "explanation": "El transistor puede funcionar como amplificador, aumentando la intensidad de una señal eléctrica en un circuito."
+            }
+        ]
+    },
+    {
+        "id": "4-ana-5", "level": 5,
+        "title": "Evaluación de Analógica I",
+        "description": "Semiconductores y componentes.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qa45", "type": "multiple-choice",
+                "question": "¿Cuál es la caída de tensión típica de un diodo de silicio polarizado en directa?",
+                "options": ["0.7 V", "0.3 V", "1.5 V", "5 V"],
+                "correctAnswer": "0.7 V",
+                "explanation": "Los diodos de silicio tienen una barrera de potencial de aproximadamente 0.7 V a temperatura ambiente cuando conducen en directa."
+            }
+        ]
+    }
+]
+
+Y4_DIGITAL_LESSONS = [
+    {
+        "id": "4-dig-1", "level": 1,
+        "title": "Tablas de Verdad y Compuertas",
+        "description": "Identificación de compuertas lógicas.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qdi41", "type": "multiple-choice",
+                "question": "Observá la siguiente tabla de verdad: A=0,B=0→0; A=0,B=1→1; A=1,B=0→1; A=1,B=1→1. ¿Qué compuerta representa?",
+                "options": ["OR", "AND", "NAND", "XOR"],
+                "correctAnswer": "OR",
+                "explanation": "La compuerta OR da salida 1 cuando al menos una entrada es 1. Solo da 0 cuando ambas entradas son 0."
+            }
+        ]
+    },
+    {
+        "id": "4-dig-2", "level": 2,
+        "title": "Mapas de Karnaugh",
+        "description": "Simplificación de funciones lógicas.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qdi42", "type": "multiple-choice",
+                "question": "¿Para qué sirve un mapa de Karnaugh?",
+                "options": [
+                    "Simplificar funciones lógicas",
+                    "Convertir números binarios a decimales",
+                    "Sumar señales eléctricas",
+                    "Amplificar voltaje"
+                ],
+                "correctAnswer": "Simplificar funciones lógicas",
+                "explanation": "Permite reducir la cantidad de compuertas necesarias en un circuito agrupando combinaciones de valores iguales, logrando circuitos más simples y económicos."
+            }
+        ]
+    },
+    {
+        "id": "4-dig-3", "level": 3,
+        "title": "Álgebra de Boole",
+        "description": "Comportamiento lógico de variables binarias.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qdi43", "type": "multiple-choice",
+                "question": "¿Qué estudia el Álgebra de Boole?",
+                "options": [
+                    "El comportamiento lógico de variables binarias",
+                    "Circuitos eléctricos de potencia",
+                    "Operaciones matemáticas con números complejos",
+                    "El movimiento de electrones"
+                ],
+                "correctAnswer": "El comportamiento lógico de variables binarias",
+                "explanation": "Se utiliza para analizar y diseñar circuitos digitales mediante operaciones lógicas como AND, OR y NOT. Es la base matemática de la electrónica digital."
+            }
+        ]
+    },
+    {
+        "id": "4-dig-4", "level": 4,
+        "title": "Compuertas Lógicas y Nivel Lógico",
+        "description": "Aplicación de compuertas y estados.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qdi44", "type": "multiple-choice",
+                "question": "¿Para qué se utilizan las compuertas lógicas?",
+                "options": [
+                    "Para realizar operaciones lógicas en circuitos digitales",
+                    "Para almacenar energía",
+                    "Para aumentar corriente eléctrica",
+                    "Para medir tensión"
+                ],
+                "correctAnswer": "Para realizar operaciones lógicas en circuitos digitales",
+                "explanation": "Las compuertas lógicas procesan señales binarias de entrada y generan una salida según una operación lógica determinada."
+            },
+            {
+                "id": "qdi44b", "type": "multiple-choice",
+                "question": "¿Qué representa un '1' lógico en electrónica digital?",
+                "options": [
+                    "Un estado alto o activado",
+                    "Ausencia de señal",
+                    "Estado indefinido",
+                    "Circuito desconectado"
+                ],
+                "correctAnswer": "Un estado alto o activado",
+                "explanation": "El '1' lógico representa normalmente la presencia de tensión o un nivel alto de voltaje. Indica que una señal está activada."
+            }
+        ]
+    },
+    {
+        "id": "4-dig-5", "level": 5,
+        "title": "Evaluación de Digitales I",
+        "description": "Compuertas y simplificación.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qdi45", "type": "multiple-choice",
+                "question": "¿Qué compuerta tiene la forma de una AND con un círculo en la salida (inversión)?",
+                "options": ["NAND", "NOR", "NOT", "XOR"],
+                "correctAnswer": "NAND",
+                "explanation": "La compuerta NAND se reconoce porque tiene la forma de una AND y un pequeño círculo en la salida que representa la inversión lógica."
+            }
+        ]
+    }
+]
+
+Y4_MATE_LESSONS = [
+    {
+        "id": "4-mat4-1", "level": 1,
+        "title": "Números Irracionales",
+        "description": "Decimales infinitos no periódicos.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qm41", "type": "multiple-choice",
+                "question": "¿Cuál de los siguientes números es irracional?",
+                "options": ["$\\sqrt{3}$ (raíz de 3)", "0.75", "$\\frac{4}{5}$", "-2"],
+                "correctAnswer": "$\\sqrt{3}$ (raíz de 3)",
+                "explanation": "$\\sqrt{3}$ posee infinitas cifras decimales no periódicas, por eso es un número irracional."
+            }
+        ]
+    },
+    {
+        "id": "4-mat4-2", "level": 2,
+        "title": "Números Complejos: Unidad Imaginaria",
+        "description": "La unidad imaginaria i.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qm42", "type": "multiple-choice",
+                "question": "¿Qué representa la letra 'i' en números complejos?",
+                "options": ["La unidad imaginaria ($i^2 = -1$)", "Un número natural", "Un número irracional", "Una variable cualquiera"],
+                "correctAnswer": "La unidad imaginaria ($i^2 = -1$)",
+                "explanation": "La unidad imaginaria cumple que $i^2 = -1$. En electrónica se usa 'j' para no confundir con corriente."
+            }
+        ]
+    },
+    {
+        "id": "4-mat4-3", "level": 3,
+        "title": "Propiedades de Radicales",
+        "description": "Producto de raíces.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qm43", "type": "multiple-choice",
+                "question": "¿Qué propiedad de los radicales permite escribir $\\sqrt{a} \\times \\sqrt{b} = \\sqrt{a \\times b}$?",
+                "options": ["Propiedad del producto", "Propiedad distributiva", "Propiedad asociativa", "Propiedad del cociente"],
+                "correctAnswer": "Propiedad del producto",
+                "explanation": "La raíz de un producto es igual al producto de las raíces: $\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}$."
+            }
+        ]
+    },
+    {
+        "id": "4-mat4-4", "level": 4,
+        "title": "Combinatoria y Logaritmación",
+        "description": "Conteo y exponentes.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qm44", "type": "multiple-choice",
+                "question": "¿Qué técnica se utiliza para contar diferentes formas de ordenar elementos?",
+                "options": ["Combinatoria", "Factorización", "Radicación", "Potenciación"],
+                "correctAnswer": "Combinatoria",
+                "explanation": "La combinatoria estudia las diferentes formas de ordenar y agrupar elementos sin tener que enumerarlos uno por uno."
+            },
+            {
+                "id": "qm44b", "type": "multiple-choice",
+                "question": "¿Qué operación permite encontrar el valor de un exponente?",
+                "options": ["Logaritmación", "Radicación", "Potenciación", "Factorización"],
+                "correctAnswer": "Logaritmación",
+                "explanation": "Si $b^x = y$, entonces $\\log_b(y) = x$. La logaritmación permite hallar el exponente desconocido."
+            }
+        ]
+    },
+    {
+        "id": "4-mat4-5", "level": 5,
+        "title": "Evaluación de Matemática IV",
+        "description": "Complejos, radicales y logaritmos.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qm45", "type": "multiple-choice",
+                "question": "Al sumar dos números complejos $(3 + j4) + (2 + j2)$, el resultado es:",
+                "options": ["$5 + j6$", "$6 + j8$", "$1 + j2$", "$5 + j2$"],
+                "correctAnswer": "$5 + j6$",
+                "explanation": "Se suman partes reales $(3+2)$ y partes imaginarias $(4+2)$, dando $5 + j6$."
+            }
+        ]
+    }
+]
+
+# ─── 6TO AÑO ───────────────────────────────────────────────────────────────────
+
+Y6_TELECO_LESSONS = [
+    {
+        "id": "6-tel-1", "level": 1,
+        "title": "Longitud de Onda y Frecuencia",
+        "description": "Relación entre $\\lambda$, c y f.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qt61", "type": "multiple-choice",
+                "question": "¿Qué es la longitud de onda ($\\lambda$) en una señal de telecomunicaciones?",
+                "options": [
+                    "La distancia entre dos crestas consecutivas de la onda ($\\lambda = c / f$)",
+                    "La altura máxima de la onda",
+                    "El tiempo que tarda un ciclo",
+                    "La potencia de la señal"
+                ],
+                "correctAnswer": "La distancia entre dos crestas consecutivas de la onda ($\\lambda = c / f$)",
+                "explanation": "La longitud de onda es la distancia física entre dos puntos equivalentes de una onda, calculada como $\\lambda = c / f$, donde c es la velocidad de la luz y f la frecuencia."
+            }
+        ]
+    },
+    {
+        "id": "6-tel-2", "level": 2,
+        "title": "Ruido Térmico y SNR",
+        "description": "Relación señal/ruido en receptores.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qt62", "type": "multiple-choice",
+                "question": "¿Qué es el ruido térmico (ruido blanco) y cómo afecta a la relación señal/ruido (SNR)?",
+                "options": [
+                    "Es el ruido generado por la agitación molecular; a mayor temperatura, menor SNR",
+                    "Es el ruido de las antenas; no afecta al SNR",
+                    "Es la interferencia de radio FM; mejora el SNR",
+                    "Es el ruido de las fuentes conmutadas; duplica la SNR"
+                ],
+                "correctAnswer": "Es el ruido generado por la agitación molecular; a mayor temperatura, menor SNR",
+                "explanation": "El ruido térmico es producido por la agitación aleatoria de los electrones. Cuanto mayor es la temperatura, más ruido y peor relación señal/ruido."
+            }
+        ]
+    },
+    {
+        "id": "6-tel-3", "level": 3,
+        "title": "Modulación AM y BLU/SSB",
+        "description": "Índice de modulación y banda lateral única.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qt63", "type": "multiple-choice",
+                "question": "En modulación AM, ¿qué ocurre si el índice de modulación supera el 100% (sobremodulación)?",
+                "options": [
+                    "Se produce distorsión por sobremodulación (la envolvente se corta)",
+                    "La señal se amplifica al doble",
+                    "La portadora desaparece",
+                    "Aumenta la frecuencia"
+                ],
+                "correctAnswer": "Se produce distorsión por sobremodulación (la envolvente se corta)",
+                "explanation": "Cuando el índice de modulación supera el 100%, la envolvente de la señal AM se distorsiona, generando armónicos no deseados."
+            },
+            {
+                "id": "qt63b", "type": "multiple-choice",
+                "question": "¿Qué ventaja tiene la Banda Lateral Única (BLU/SSB) frente a AM convencional?",
+                "options": [
+                    "Menor ancho de banda y mayor eficiencia de potencia",
+                    "Mayor calidad de sonido estéreo",
+                    "No necesita antena",
+                    "Funciona sin electricidad"
+                ],
+                "correctAnswer": "Menor ancho de banda y mayor eficiencia de potencia",
+                "explanation": "BLU/SSB transmite solo una banda lateral, ocupando la mitad del espectro y concentrando toda la potencia en la información útil."
+            }
+        ]
+    },
+    {
+        "id": "6-tel-4", "level": 4,
+        "title": "Receptor Superheterodino y FM",
+        "description": "Principio de funcionamiento y pre-énfasis.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qt64", "type": "multiple-choice",
+                "question": "Explica el principio del Receptor Superheterodino. ¿Qué rol cumple el oscilador local?",
+                "options": [
+                    "Genera una frecuencia que se mezcla con la señal recibida para convertirla a una Frecuencia Intermedia (FI) fija",
+                    "Amplifica el audio directamente",
+                    "Sintoniza las estaciones manualmente",
+                    "Apaga el receptor cuando no hay señal"
+                ],
+                "correctAnswer": "Genera una frecuencia que se mezcla con la señal recibida para convertirla a una Frecuencia Intermedia (FI) fija",
+                "explanation": "El oscilador local genera una frecuencia que, al mezclarse con la señal recibida, produce una Frecuencia Intermedia fija que es más fácil de amplificar y filtrar."
+            },
+            {
+                "id": "qt64b", "type": "multiple-choice",
+                "question": "¿Para qué se utilizan las redes de pre-énfasis en FM y de-énfasis en el receptor?",
+                "options": [
+                    "Para mejorar la relación señal/ruido amplificando las frecuencias altas antes de transmitir",
+                    "Para eliminar los graves",
+                    "Para aumentar la potencia de salida",
+                    "Para reducir el tamaño de la antena"
+                ],
+                "correctAnswer": "Para mejorar la relación señal/ruido amplificando las frecuencias altas antes de transmitir",
+                "explanation": "El pre-énfasis amplifica las frecuencias altas en el transmisor y el de-énfasis las atenúa en el receptor, mejorando la relación señal/ruido."
+            }
+        ]
+    },
+    {
+        "id": "6-tel-5", "level": 5,
+        "title": "Evaluación de Telecomunicaciones I",
+        "description": "Antenas, detector de envuelta y figura de ruido.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qt65", "type": "multiple-choice",
+                "question": "¿De qué depende la longitud física ideal de una antena dipolo de media onda ($\\lambda/2$)?",
+                "options": [
+                    "De la frecuencia de operación ($L = c / 2f$)",
+                    "Del color del aislante",
+                    "Del material del mástil",
+                    "De la potencia del transmisor"
+                ],
+                "correctAnswer": "De la frecuencia de operación ($L = c / 2f$)",
+                "explanation": "La longitud de una antena dipolo de media onda es $L = \\lambda/2 = c / (2f)$. A mayor frecuencia, más corta la antena."
+            }
+        ]
+    }
+]
+
+Y6_INSTAL_LESSONS = [
+    {
+        "id": "6-ins-1", "level": 1,
+        "title": "Protección Térmica vs Magnética",
+        "description": "Interruptor termomagnético.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qis61", "type": "multiple-choice",
+                "question": "¿Qué diferencia hay entre la protección térmica y la magnética dentro de un interruptor termomagnético?",
+                "options": [
+                    "Térmica protege contra sobrecargas lentas; magnética contra cortocircuitos rápidos",
+                    "Térmica protege contra cortocircuitos; magnética contra sobrecargas",
+                    "Ambas protegen contra lo mismo",
+                    "Térmica desconecta instantáneamente; magnética es lenta"
+                ],
+                "correctAnswer": "Térmica protege contra sobrecargas lentas; magnética contra cortocircuitos rápidos",
+                "explanation": "La protección térmica usa un bimetal que se calienta lentamente con sobrecargas. La magnética usa una bobina que reacciona instantáneamente ante cortocircuitos."
+            },
+            {
+                "id": "qis61b", "type": "multiple-choice",
+                "question": "¿Cómo funciona un interruptor diferencial y por qué es vital para la seguridad?",
+                "options": [
+                    "Compara la corriente de fase y neutro; desconecta si hay diferencia (fuga a tierra)",
+                    "Mide la temperatura del cable",
+                    "Regula el voltaje de la red",
+                    "Indica el consumo eléctrico"
+                ],
+                "correctAnswer": "Compara la corriente de fase y neutro; desconecta si hay diferencia (fuga a tierra)",
+                "explanation": "El interruptor diferencial (DISYUNTOR) compara la corriente que entra por fase con la que vuelve por neutro. Si hay diferencia, significa que hay fuga a tierra y desconecta."
+            }
+        ]
+    },
+    {
+        "id": "6-ins-2", "level": 2,
+        "title": "Enclavamientos y Relés de Protección",
+        "description": "Seguridad en circuitos de mando.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qis62", "type": "multiple-choice",
+                "question": "Al diseñar la inversión de giro de un motor trifásico mediante contactores, ¿por qué es obligatorio hacer un 'enclavamiento eléctrico'?",
+                "options": [
+                    "Para impedir que ambos contactores se activen simultáneamente (cortocircuito entre fases)",
+                    "Para ahorrar energía",
+                    "Para que el motor gire más rápido",
+                    "Para reducir el ruido"
+                ],
+                "correctAnswer": "Para impedir que ambos contactores se activen simultáneamente (cortocircuito entre fases)",
+                "explanation": "El enclavamiento eléctrico usa contactos NC cruzados que impiden que los dos contactores de inversión se cierren al mismo tiempo, evitando un cortocircuito."
+            },
+            {
+                "id": "qis62b", "type": "multiple-choice",
+                "question": "¿Qué daño evita un Relé de Falta de Fase en un motor trifásico?",
+                "options": [
+                    "El sobrecalentamiento y destrucción del bobinado al funcionar con solo dos fases",
+                    "El exceso de velocidad",
+                    "La vibración excesiva",
+                    "El ruido eléctrico"
+                ],
+                "correctAnswer": "El sobrecalentamiento y destrucción del bobinado al funcionar con solo dos fases",
+                "explanation": "Si falta una fase, el motor sigue girando pero con sobrecorriente que quema los bobinados. El relé de falta de fase desconecta antes de que ocurra el daño."
+            }
+        ]
+    },
+    {
+        "id": "6-ins-3", "level": 3,
+        "title": "Arrancadores y Conductores",
+        "description": "Soft Starter y normativas eléctricas.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qis63", "type": "multiple-choice",
+                "question": "¿Qué ventaja ofrece un Arrancador Suave (Soft Starter) frente a un arranque directo?",
+                "options": [
+                    "Reduce el pico de corriente de arranque y evita golpes mecánicos",
+                    "Duplica la velocidad del motor",
+                    "Elimina la necesidad de contactores",
+                    "Funciona sin cableado"
+                ],
+                "correctAnswer": "Reduce el pico de corriente de arranque y evita golpes mecánicos",
+                "explanation": "El Soft Starter incrementa la tensión gradualmente, evitando los picos de corriente y los golpes mecánicos del arranque directo."
+            },
+            {
+                "id": "qis63b", "type": "multiple-choice",
+                "question": "¿Para qué se utilizan los ábacos y tablas de conductores según normativas eléctricas?",
+                "options": [
+                    "Para dimensionar correctamente la sección del cable según corriente y distancia",
+                    "Para decorar los planos",
+                    "Para medir la temperatura ambiente",
+                    "Para calcular el peso del cable"
+                ],
+                "correctAnswer": "Para dimensionar correctamente la sección del cable según corriente y distancia",
+                "explanation": "Las tablas de conductores (basadas en normas IRAM) indican la sección mínima de cable necesaria para una corriente y longitud dadas, evitando sobrecalentamientos."
+            }
+        ]
+    },
+    {
+        "id": "6-ins-4", "level": 4,
+        "title": "Automatismos y PLC",
+        "description": "Lógica de contactos NC/NA en Ladder.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qis64", "type": "multiple-choice",
+                "question": "En automatismos por PLC (Ladder), ¿qué diferencia hay entre usar un contacto NA y NC en una parada de emergencia?",
+                "options": [
+                    "NC (Normal Cerrado) es más seguro porque si se corta el cable, el circuito se abre y detiene la máquina",
+                    "NA siempre es más seguro",
+                    "No hay diferencia",
+                    "NC se usa solo para motores chicos"
+                ],
+                "correctAnswer": "NC (Normal Cerrado) es más seguro porque si se corta el cable, el circuito se abre y detiene la máquina",
+                "explanation": "Las paradas de emergencia usan contactos NC por seguridad: si el cable se corta, el circuito se abre y la máquina se detiene (falla segura)."
+            }
+        ]
+    },
+    {
+        "id": "6-ins-5", "level": 5,
+        "title": "Evaluación de Instalaciones I",
+        "description": "Energía solar y CADE SIMU.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qis65", "type": "multiple-choice",
+                "question": "¿Qué diferencia fundamental existe entre un sistema solar fotovoltaico Off-Grid y On-Grid?",
+                "options": [
+                    "Off-Grid usa baterías y no está conectado a la red; On-Grid inyecta excedentes a la red eléctrica",
+                    "Off-Grid es más caro; On-Grid es más barato",
+                    "Off-Grid usa paneles azules; On-Grid usa paneles negros",
+                    "No hay diferencia"
+                ],
+                "correctAnswer": "Off-Grid usa baterías y no está conectado a la red; On-Grid inyecta excedentes a la red eléctrica",
+                "explanation": "Off-Grid es autónomo con baterías. On-Grid está conectado a la red y puede vender excedentes según la Ley de Generación Distribuida."
+            }
+        ]
+    }
+]
+
+Y6_DIGITAL3_LESSONS = [
+    {
+        "id": "6-dig3-1", "level": 1,
+        "title": "Registros TRIS y Memoria en Microcontroladores",
+        "description": "Configuración de direcciones de datos.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qdg61", "type": "multiple-choice",
+                "question": "¿Qué función cumplen los registros de configuración de dirección de datos (como TRIS en micros PIC)?",
+                "options": [
+                    "Configuran cada pin como entrada o salida digital",
+                    "Almacenan el programa principal",
+                    "Generan la frecuencia de reloj",
+                    "Controlan la comunicación USB"
+                ],
+                "correctAnswer": "Configuran cada pin como entrada o salida digital",
+                "explanation": "El registro TRIS determina si cada pin del microcontrolador funciona como entrada (1) o como salida (0)."
+            },
+            {
+                "id": "qdg61b", "type": "multiple-choice",
+                "question": "¿Qué diferencia hay entre la memoria Flash y la EEPROM en un microcontrolador?",
+                "options": [
+                    "Flash almacena el programa (no volátil); EEPROM guarda datos que se modifican en ejecución",
+                    "Flash es volátil; EEPROM no",
+                    "Ambas almacenan lo mismo",
+                    "Flash es más lenta que EEPROM"
+                ],
+                "correctAnswer": "Flash almacena el programa (no volátil); EEPROM guarda datos que se modifican en ejecución",
+                "explanation": "La memoria Flash guarda el firmware del microcontrolador. La EEPROM permite leer/escribir datos variables que deben conservarse al apagar."
+            }
+        ]
+    },
+    {
+        "id": "6-dig3-2", "level": 2,
+        "title": "USART: Comunicación Serie",
+        "description": "Modo síncrono vs asíncrono.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qdg62", "type": "multiple-choice",
+                "question": "En el módulo USART, ¿cuál es la diferencia clave entre modo Síncrono y Asíncrono?",
+                "options": [
+                    "Síncrono usa una línea de reloj compartida; Asíncrono no necesita reloj (usa baud rate)",
+                    "Síncrono es más lento",
+                    "Asíncrono necesita más cables",
+                    "No hay diferencia"
+                ],
+                "correctAnswer": "Síncrono usa una línea de reloj compartida; Asíncrono no necesita reloj (usa baud rate)",
+                "explanation": "En modo síncrono, el maestro genera el reloj. En asíncrono, ambos dispositivos deben estar configurados a la misma velocidad (baud rate)."
+            }
+        ]
+    },
+    {
+        "id": "6-dig3-3", "level": 3,
+        "title": "PWM y ADC",
+        "description": "Modulación por ancho de pulso y conversión analógica.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qdg63", "type": "multiple-choice",
+                "question": "¿Cómo funciona la modulación PWM para simular una salida analógica usando un pin digital?",
+                "options": [
+                    "Conmutando muy rápido entre 0 y 1; el promedio depende del ciclo de trabajo (duty cycle)",
+                    "Variando el voltaje máximo",
+                    "Usando una resistencia variable",
+                    "Conectando múltiples pines en paralelo"
+                ],
+                "correctAnswer": "Conmutando muy rápido entre 0 y 1; el promedio depende del ciclo de trabajo (duty cycle)",
+                "explanation": "PWM conmuta el pin entre HIGH y LOW a alta frecuencia. El valor promedio depende del duty cycle: 50% da 2.5V, 100% da 5V."
+            },
+            {
+                "id": "qdg63b", "type": "multiple-choice",
+                "question": "En un ADC de 10 bits, ¿cuántos niveles de cuantificación tiene y cómo se calcula el paso?",
+                "options": [
+                    "1024 niveles; paso = V_ref / 1024",
+                    "256 niveles; paso = V_ref / 256",
+                    "10 niveles; paso = V_ref / 10",
+                    "1000 niveles; paso = V_ref / 1000"
+                ],
+                "correctAnswer": "1024 niveles; paso = V_ref / 1024",
+                "explanation": "Un ADC de 10 bits tiene $2^{10} = 1024$ niveles. El paso de cuantificación es $V_{ref} / 1024$ volts por división."
+            }
+        ]
+    },
+    {
+        "id": "6-dig3-4", "level": 4,
+        "title": "Programación C/C++ vs Assembler",
+        "description": "Ventajas del alto nivel.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qdg64", "type": "multiple-choice",
+                "question": "¿Qué ventajas tiene programar microcontroladores en C/C++ comparado con Assembler?",
+                "options": [
+                    "Mayor portabilidad, legibilidad y productividad; el compilador optimiza el código máquina",
+                    "Es más rápido siempre",
+                    "Ocupa menos memoria",
+                    "No necesita compilador"
+                ],
+                "correctAnswer": "Mayor portabilidad, legibilidad y productividad; el compilador optimiza el código máquina",
+                "explanation": "C/C++ permite escribir código más legible y portable entre distintos microcontroladores, delegando la optimización al compilador."
+            }
+        ]
+    },
+    {
+        "id": "6-dig3-5", "level": 5,
+        "title": "Evaluación de Digitales III",
+        "description": "Analizador lógico, CCP y registro W.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qdg65", "type": "multiple-choice",
+                "question": "¿Para qué sirve un Analizador Lógico y en qué situaciones es indispensable?",
+                "options": [
+                    "Captura señales digitales en múltiples canales para analizar protocolos serie (I2C, SPI, UART)",
+                    "Mide voltajes analógicos de alta precisión",
+                    "Genera señales de audio",
+                    "Solda componentes SMD"
+                ],
+                "correctAnswer": "Captura señales digitales en múltiples canales para analizar protocolos serie (I2C, SPI, UART)",
+                "explanation": "El analizador lógico captura simultáneamente muchas señales digitales, ideal para depurar buses de comunicación donde un osciloscopio no basta."
+            }
+        ]
+    }
+]
+
+Y6_INDUSTRIAL_LESSONS = [
+    {
+        "id": "6-ind-1", "level": 1,
+        "title": "Diodo de Potencia vs SCR",
+        "description": "Tiristores y conmutación.",
+        "xp": 25,
+        "questions": [
+            {
+                "id": "qin61", "type": "multiple-choice",
+                "question": "¿Cuál es la principal diferencia operativa entre un diodo común de potencia y un Tiristor (SCR)?",
+                "options": [
+                    "El SCR necesita un pulso en el Gate para activarse; el diodo conduce cuando está polarizado en directa",
+                    "El diodo necesita Gate; el SCR no",
+                    "Ambos funcionan igual",
+                    "El SCR solo conduce en CA"
+                ],
+                "correctAnswer": "El SCR necesita un pulso en el Gate para activarse; el diodo conduce cuando está polarizado en directa",
+                "explanation": "El diodo conduce automáticamente en directa. El SCR requiere un pulso de disparo en el Gate y una vez activado sigue conduciendo hasta que la corriente principal se anule."
+            },
+            {
+                "id": "qin61b", "type": "multiple-choice",
+                "question": "¿Por qué se daña un transistor si no se coloca un diodo de carrera libre en paralelo a una bobina?",
+                "options": [
+                    "La bobina genera un pico de tensión inversa al desconectarse que puede superar la tensión máxima del transistor",
+                    "La bobina explota",
+                    "El transistor se sobrecalienta por la corriente continua",
+                    "El diodo evita que la bobina se queme"
+                ],
+                "correctAnswer": "La bobina genera un pico de tensión inversa al desconectarse que puede superar la tensión máxima del transistor",
+                "explanation": "Al cortar la corriente de una bobina, el campo magnético colapsa generando un pico de alta tensión (Ley de Lenz). El diodo flyback recircula esa energía protegiendo el transistor."
+            }
+        ]
+    },
+    {
+        "id": "6-ind-2", "level": 2,
+        "title": "Rectificadores Controlados y Fuentes SMPS",
+        "description": "Ángulo de disparo y fuentes conmutadas.",
+        "xp": 30,
+        "questions": [
+            {
+                "id": "qin62", "type": "multiple-choice",
+                "question": "En un rectificador controlado por tiristores, ¿qué es el 'ángulo de disparo' ($\\alpha$) y cómo modifica la tensión media?",
+                "options": [
+                    "Es el retardo en la activación del SCR dentro del ciclo; a mayor $\\alpha$, menor tensión media",
+                    "Es la frecuencia de conmutación; no afecta la tensión",
+                    "Es el voltaje de alimentación",
+                    "Es la corriente de puerta"
+                ],
+                "correctAnswer": "Es el retardo en la activación del SCR dentro del ciclo; a mayor $\\alpha$, menor tensión media",
+                "explanation": "El ángulo de disparo $\\alpha$ es el tiempo que se espera antes de activar el SCR. Cuanto más se retrasa el disparo, menor es la tensión media entregada a la carga."
+            },
+            {
+                "id": "qin62b", "type": "multiple-choice",
+                "question": "¿Cuál es la ventaja fundamental de una Fuente Conmutada (SMPS) frente a una lineal?",
+                "options": [
+                    "Mayor eficiencia (menos pérdidas) y menor peso/volumen",
+                    "Es más silenciosa",
+                    "Genera menos ruido electromagnético",
+                    "Es más simple de construir"
+                ],
+                "correctAnswer": "Mayor eficiencia (menos pérdidas) y menor peso/volumen",
+                "explanation": "Las SMPS conmutan a alta frecuencia, lo que permite transformadores más pequeños y menor disipación de calor, alcanzando eficiencias del 85-95%."
+            }
+        ]
+    },
+    {
+        "id": "6-ind-3", "level": 3,
+        "title": "Topología Flyback y VSI",
+        "description": "Fuentes conmutadas Flyback e inversores.",
+        "xp": 35,
+        "questions": [
+            {
+                "id": "qin63", "type": "multiple-choice",
+                "question": "En una fuente Flyback, ¿cuándo se almacena la energía y cuándo se entrega a la carga?",
+                "options": [
+                    "Se almacena cuando el transistor conduce (en el primario); se entrega cuando el transistor corta (al secundario)",
+                    "Se almacena al cortar; se entrega al conducir",
+                    "Siempre está entregando energía",
+                    "Almacena en el secundario y entrega en el primario"
+                ],
+                "correctAnswer": "Se almacena cuando el transistor conduce (en el primario); se entrega cuando el transistor corta (al secundario)",
+                "explanation": "En Flyback, cuando el MOSFET conduce, la corriente circula por el primario almacenando energía. Al cortar, el campo colapsa y la energía se transfiere al secundario."
+            },
+            {
+                "id": "qin63b", "type": "multiple-choice",
+                "question": "¿Qué es un Inversor de Fuente de Tensión (VSI) y para qué se usa en la industria?",
+                "options": [
+                    "Convierte CC en CA variable para controlar motores o inyectar energía a la red",
+                    "Convierte CA en CC para fuentes de alimentación",
+                    "Mide la velocidad del motor",
+                    "Protege contra cortocircuitos"
+                ],
+                "correctAnswer": "Convierte CC en CA variable para controlar motores o inyectar energía a la red",
+                "explanation": "Un VSI convierte corriente continua en alterna con frecuencia y voltaje variables, usado en variadores de velocidad (VFD) y sistemas solares fotovoltaicos."
+            }
+        ]
+    },
+    {
+        "id": "6-ind-4", "level": 4,
+        "title": "SVPWM y Transistores IGBT",
+        "description": "Modulación vectorial y semiconductores híbridos.",
+        "xp": 40,
+        "questions": [
+            {
+                "id": "qin64", "type": "multiple-choice",
+                "question": "¿Qué es un IGBT y por qué combina las mejores características del MOSFET y BJT?",
+                "options": [
+                    "Entrada aislada por voltaje (MOSFET) con alta capacidad de corriente de salida (BJT)",
+                    "Es un diodo de alta potencia",
+                    "Es un capacitor variable",
+                    "Es un relé de estado sólido"
+                ],
+                "correctAnswer": "Entrada aislada por voltaje (MOSFET) con alta capacidad de corriente de salida (BJT)",
+                "explanation": "El IGBT tiene la alta impedancia de entrada del MOSFET (control por voltaje) y la baja caída de saturación del BJT (alta corriente)."
+            }
+        ]
+    },
+    {
+        "id": "6-ind-5", "level": 5,
+        "title": "Evaluación de Electrónica Industrial I",
+        "description": "Resistencia térmica y circuitos Snubber.",
+        "xp": 50,
+        "questions": [
+            {
+                "id": "qin65", "type": "multiple-choice",
+                "question": "En las hojas de datos de componentes de potencia, ¿qué representa la resistencia térmica juntura-carcasa ($R_{\\theta JC}$)?",
+                "options": [
+                    "La oposición al flujo de calor entre el chip semiconductor y la carcasa del componente",
+                    "La resistencia eléctrica del componente",
+                    "La temperatura máxima de operación",
+                    "La capacidad de corriente"
+                ],
+                "correctAnswer": "La oposición al flujo de calor entre el chip semiconductor y la carcasa del componente",
+                "explanation": "$R_{\\theta JC}$ indica cuántos grados Celsius se eleva la juntura por cada watt disipado, permitiendo calcular el disipador térmico necesario."
+            }
+        ]
+    }
+]
+
+
+# ─── OUTPUT ────────────────────────────────────────────────────────────────────
+
+def js_str(s):
+    return json.dumps(s, ensure_ascii=False)
+
+def gen_lessons(lessons):
+    out = "          lessons: [\n"
+    for les in lessons:
+        out += "            {\n"
+        out += f'              id: {js_str(les["id"])}, level: {les["level"]}, title: {js_str(les["title"])}, description: {js_str(les["description"])}, xp: {les["xp"]},\n'
+        out += "              questions: [\n"
+        for q in les["questions"]:
+            out += "                {\n"
+            extra = ""
+            if q["type"] == "multiple-choice":
+                extra = f'                  options: {js_str(q["options"])},\n                  correctAnswer: {js_str(q["correctAnswer"])},\n'
+            elif q["type"] == "fill-blanks":
+                extra = f'                  options: {js_str(q["options"])},\n                  correctAnswer: {js_str(q["correctAnswer"])},\n'
+            elif q["type"] == "true-false":
+                extra = f'                  correctAnswer: {("true" if q["correctAnswer"] else "false")},\n'
+            out += f'                  id: {js_str(q["id"])}, type: {js_str(q["type"])},\n                  question: {js_str(q["question"])},\n'
+            out += extra
+            out += f'                  explanation: {js_str(q["explanation"])},\n'
+            out += "                },\n"
+        out += "              ]\n"
+        out += "            },\n"
+    out += "          ]\n"
+    return out
+
+def gen_subject(subj_id, name, desc, color, icon, lessons):
+    out = "      {\n"
+    out += f'        id: {js_str(subj_id)},\n'
+    out += f'        name: {js_str(name)},\n'
+    out += f'        description: {js_str(desc)},\n'
+    out += f'        color: {js_str(color)},\n'
+    out += f'        iconName: {js_str(icon)},\n'
+    out += gen_lessons(lessons)
+    out += "      },\n"
+    return out
+
+def gen_year(year, title, subtitle, subjects):
+    out = "  {\n"
+    out += f"    year: {year},\n"
+    out += f'    title: {js_str(title)},\n'
+    out += f'    subtitle: {js_str(subtitle)},\n'
+    out += "    subjects: [\n"
+    for subj in subjects:
+        out += subj
+    out += "    ]\n"
+    out += "  },\n"
+    return out
+
+y2 = gen_year(2, "2do Año - Ciclo Básico", "Taller eléctrico, dibujo técnico y matemática aplicada", [
+    gen_subject("m-2-taller", "Taller: Electricidad y Laboratorio", "Código de colores, circuitos serie/paralelo/mixto, multímetro y leyes fundamentales.", "from-amber-500 to-orange-600", "Zap", Y2_TALLER_LESSONS),
+    gen_subject("m-2-dibujo", "Dibujo Técnico II", "Normas IRAM/ISO, proyecciones ortogonales, acotaciones y símbolos electrónicos.", "from-blue-500 to-indigo-600", "Box", Y2_DIBUJO_LESSONS),
+    gen_subject("m-2-mate", "Matemática II", "Números enteros negativos, proporcionalidad directa, racionales y resolución de ecuaciones.", "from-emerald-500 to-teal-600", "Calculator", Y2_MATE_LESSONS),
+    gen_subject("m-2-tecno", "Tecnología II", "Relés, CI 555, capacitores, Ley de Watt y programación por bloques.", "from-purple-500 to-pink-600", "Cog", Y2_TECNO_LESSONS),
+])
+
+y4 = gen_year(4, "4to Año - Ciclo Superior", "Electrotecnia, Informática y Electrónica", [
+    gen_subject("m-4-electrotecnia1", "Electrotecnia I", "Leyes de Ohm y Kirchhoff, vatímetro, capacitores e inducción electromagnética.", "from-red-500 to-amber-600", "Zap", Y4_ELECTRO_LESSONS),
+    gen_subject("m-4-info1", "Informática I", "Hardware (RAM, CPU), diagramas de flujo, lenguaje C y bucles.", "from-blue-600 to-cyan-500", "Terminal", Y4_INFO_LESSONS),
+    gen_subject("m-4-analog1", "Electrónica Analógica I", "Multímetro, diodos, Zener, transistores BJT y amplificación.", "from-emerald-600 to-green-500", "Activity", Y4_ANALOG_LESSONS),
+    gen_subject("m-4-digital1", "Electrónica Digital I", "Álgebra de Boole, compuertas lógicas, mapas de Karnaugh y tablas de verdad.", "from-purple-600 to-indigo-500", "Binary", Y4_DIGITAL_LESSONS),
+    gen_subject("m-4-mate4", "Matemática IV", "Números irracionales, complejos, radicales, combinatoria y logaritmación.", "from-teal-500 to-emerald-600", "Calculator", Y4_MATE_LESSONS),
+])
+
+y6 = gen_year(6, "6to Año - Ciclo Superior Avanzado", "Telecomunicaciones, Automatización Industrial y Digitales Avanzados", [
+    gen_subject("m-6-teleco1", "Telecomunicaciones I", "Longitud de onda, ruido térmico, modulación AM/FM, BLU, receptor superheterodino y antenas.", "from-indigo-500 to-blue-600", "Radio", Y6_TELECO_LESSONS),
+    gen_subject("m-6-industrial1", "Electrónica Industrial I", "Tiristores, SCR, rectificadores controlados, fuentes SMPS, Flyback, IGBT y snubber.", "from-amber-600 to-yellow-500", "Cpu", Y6_INDUSTRIAL_LESSONS),
+    gen_subject("m-6-instalaciones1", "Instalaciones Industriales I", "Protecciones termomagnéticas, diferencial, enclavamientos, Soft Starter, PLC y energía solar.", "from-emerald-600 to-teal-500", "ShieldCheck", Y6_INSTAL_LESSONS),
+    gen_subject("m-6-digital3", "Digitales III (Microcontroladores)", "Registros TRIS, USART, PWM, ADC, programación C/C++ y analizador lógico.", "from-purple-600 to-pink-500", "Server", Y6_DIGITAL3_LESSONS),
+])
+
+output = f"""// ─── GENERATED CURRICULUM DATA FOR YEARS 2, 4, 6 FROM PDFs ───
+
+const GENERATED_CURRICULUM: YearCurriculum[] = [
+{y2}
+{y4}
+{y6}
+];
+"""
+
+with open("docs/generated_curriculum.txt", "w", encoding="utf-8") as f:
+    f.write(output)
+
+print("Generated curriculum data written to docs/generated_curriculum.txt")
+print(f"Total: 2nd year ({len(Y2_TALLER_LESSONS)+len(Y2_DIBUJO_LESSONS)+len(Y2_MATE_LESSONS)+len(Y2_TECNO_LESSONS)} lessons), 4th year ({len(Y4_ELECTRO_LESSONS)+len(Y4_INFO_LESSONS)+len(Y4_ANALOG_LESSONS)+len(Y4_DIGITAL_LESSONS)+len(Y4_MATE_LESSONS)} lessons), 6th year ({len(Y6_TELECO_LESSONS)+len(Y6_INDUSTRIAL_LESSONS)+len(Y6_INSTAL_LESSONS)+len(Y6_DIGITAL3_LESSONS)} lessons)")

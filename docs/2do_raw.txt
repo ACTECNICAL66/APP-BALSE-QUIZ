@@ -1,0 +1,64 @@
+Lengua y Literatura
+Dylan: Taller - Laboratorio 1. El codigo de color de la siguiente Resistencia es: naranja,verde,marron a) 350 b) 650 c) 150 - ¿En qué magnitud electrónica se mide? a) Amperes b) ohmios c) volts 2. El siguiente circuito ¿ A qué asociación pertenece?
+a) circuito en serie b) circuito mixto c) circuito paralelo
+- ¿ A qué asociación pertenece este circuito?
+a) circuito mixto b) circuito paralelo c) circuito en serie
+- ¿ Qué es un circuito mixto? a) resistencias conectadas en serie b) combinación de resistencias en serie y paralelo c) resistencias conectadas en paralelo
+
+3. ¿ A qué dispositivo electrónico corresponde la siguiente imagen?
+a) multímetro (tester) b) oscilador c) fuente de alimentación
+- ¿Cuál es su funcionamiento? a) medir temperatura b) medir magnitudes eléctricas c) medir el agua
+- ¿Qué magnitudes eléctricas puede medir? a) temperatura, ohmios y voltios b) voltios y amperios c) voltios, ohmios y amperios d) todas son correctas
+Matemáticas 4. ¿Cual de las siguientes opciones describe correctamente a los números racionales?
+a) Son números que solo pueden ser enteros positivos. b) Son números que pueden expresarse como una fracción de los números
+enteros. c) Son números que no pueden escribirse como fracción. d) Son únicamente los números decimales infinitos no periódicos. respuesta correcta: B
+
+Nahuel
+Preguntas:
+ Educación Tecnológica
+1. Qué relaciona la ley de Ohms?
+a) Voltaje, corriente y resistencia. b) Potencia, calor. c) Tiempo, frecuencia. d) Voltaje, corriente y potencia.
+2. Las leyes de Kirchhoff ayudan a:
+a) Analizar circuitos complejos. b) Crear componentes. c) Reparar baterías. d) Resolver placas.
+ Componentes vistos en clase
+Relé
+El relé es un componente electrónico que se activa cuando:
+a) La bobina recibe corriente. b) Se calienta. c) Se desconecta la batería. d) Baja la resistencia.
+ CI 555
+El CI 555 se puede usar como:
+a) Temporizador. b) Oscilador. c) Generador de pulsos. d) Todas las anteriores.
+ Capacitores
+¿Cuál es su principal función?
+a) Generar corriente. b) Almacenar energía eléctrica. c) Aumentar la resistencia. d) Accionar motores.
+
+ Ley de Watt
+¿Qué es y para qué se utiliza?
+a) Una ley sobre temperatura creada por Alessandro Volta. b) Una ley de movimiento creada por Watt. c) Una ley que relaciona potencia, voltaje y corriente, creada por James Watt.
+ Programación por bloques
+Los bloques en la programación, ¿para qué se usan?
+a) Representan instrucciones conectadas. b) Apagar circuitos. c) Reiniciar/apagar la PC o notebooks. d) Medir magnitudes.
+ Matemáticas
+¿Para qué sirven los números enteros negativos en la vida cotidiana?
+a) Solo para geometría. b) Para representar cantidades menores que cero. c) Para medir gases. d) Para escribir operaciones.
+
+Giampietro Jeremias - Dibujo técnico
+1) ¿Para qué sirven las normas IRAM/ISO en dibujo técnico? A) Mejorar la estética de los planos industriales. B) Para unificar la representación técnica. C) Reemplazar completamente el uso de instrumentos de dibujo técnico. D) Para permitir que cada técnico utilice su propio sistema gráfico.
+Opción correcta: B)
+Las normas IRAM/ISO buscan unificar criterios de representación para que cualquier plano técnico pueda ser entendido correctamente para distintas personas, empresas o países.
+2) ¿Qué función cumplen las proyecciones ortogonales?
+A) Generar una representación tridimensional artística del objeto. B) Representar un objeto mediante vistas planas relacionadas entre sí. C) Mostrar únicamente las dimensiones exteriores de la pieza. D) Sustituir completamente las perspectivas isométricas.
+Opción correcta: B
+Las proyecciones ortogonales permiten representar un objeto desde planta, alzada y perfil para entender completamente su forma.
+3) ¿Para qué sirven las acotaciones en un plano técnico?
+A) Definir proporcionalmente las dimensiones necesarias para fabricar o interpretar una pieza.
+B) Mejorar la presentación visual del plano mediante referencias gráficas. C) Establecer el tipo de material utilizado en cada componente. D) diferenciar las vistas principales de las secundarias.
+Opción correcta: A
+Las acotaciones indican tamaños, distancias y medidas exactas necesarias para fabricar o interpretar correctamente una pieza.
+
+4) ¿Qué representan los símbolos en un esquema electrónico? A) Referencias gráficas utilizadas para indicar profundidad y perspectiva. B) Elementos normalizados que identifican componentes y conexiones eléctricas. C) Indicaciones exclusivas sobre el tamaño físico de los componentes D) Recursos gráficos utilizados para organizar visualmente el plano.
+Opción correcta: B Los símbolos electrónicos son representaciones normalizadas que permiten reconocer componentes como resistencias, capacitores y transistores en cualquier circuito.
+Matemática
+La relación de proporcionalidad directa indica que cuando una magnitud aumenta, la otra ____________ en la misma proporción.
+A) Disminuye. B) Desaparece. C) Aumenta. D) Se divide. Opción correcta: C En una proporcionalidad directa, ambas magnitudes cambian en el mismo sentido: si una aumenta, la otra también aumenta proporcionalmente.
+
+

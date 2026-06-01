@@ -1,0 +1,72 @@
+1
+Preguntas y respuestas para 4to año
+Integrantes: Olmos Thiago, Albarracin Sheila, Rodriguez Joaquin.
+Informática:
+1- ¿Cuál es la función principal de la memoria ram? a) Guardar archivos permanentes. b) Ejecutar operaciones matemáticas. c) Almacenar datos/programas temporalmente mientras se usan. d) Controlar dispositivos externos.
+Respuesta correcta: C. La memoria RAM guarda información de manera temporal para que el procesador pueda acceder rápidamente mientras la computadora está funcionando.
+2- ¿Cuál es la función principal del procesador (CPU) en una computadora? a) Almacenar archivos permanentemente b) Ejecutar instrucciones y procesar datos c) Mostrar imágenes en pantalla d) Conectar dispositivos externos
+Respuesta correcta: B. El procesador es el componente encargado de realizar cálculos y ejecutar las instrucciones necesarias para el funcionamiento de la computadora
+3- ¿Para qué se utilizan los símbolos y flechas en un diagrama de flujo? a) Para decorar el algoritmo b) Para representar el paso a paso del algoritmo c) Para guardar información en la memoria d) Para reiniciar el algoritmo
+Respuesta correcta: B. Para hacer un diagrama de flujo se usan símbolos y flechas mostrando el paso a paso de un algoritmo.
+4- ¿Qué símbolo se usa para finalizar una instrucción en lenguaje C? a) . b) : c) . d) ;
+Respuesta correcta: D. En C, cada instrucción debe terminar con punto y coma para indicar el final de la línea de código
+5- ¿Qué estructura se utiliza para repetir instrucciones varias veces en un programa? a) Variable b) Clase c) Librería d) Bucle
+Respuesta correcta: D. Un bucle permite ejecutar varias veces un bloque de instrucciones mientras se cumpla una condición determinada.
+
+2
+Electrotecnia:
+1- ¿Cuál es la ley que relaciona tensión, corriente, resistencia? A) Ley de Kirchhoff. B) Ley de Faraday. C) Ley de Ohm.
+Respuesta correcta: B. Ley de Ohm.
+2- ¿Qué instrumento se utiliza para medir potencia eléctrica? A) Voltímetro. B) Amperímetro. C) Vatímetro. D) Capacitor.
+Respuesta correcta: C. Vatímetro.
+3- ¿Qué establece una de las leyes de Kirchhoff en un nodo? Respuesta correcta: Que la suma de las corrientes que entran a un nodo es igual a la suma de las corrientes que salen.
+4- ¿Qué componentes almacenan energía en forma de campo eléctrico? Respuesta correcta: Capacitores.
+5- ¿Cuál de las siguientes leyes explica la inducción electromagnética? A) Ley de Ohm. B) Ley de Coulomb. C) Leyes de Faraday y Lenz. D) Ley de Joule.
+Respuesta correcta:C. Leyes de Faraday y Lenz.
+
+3
+Analógica:
+1- ¿Qué instrumento se utiliza para medir tensión, corriente y resistencia eléctrica? A) Osciloscopio B) Multímetro C) Generador de funciones D) Transformador Respuesta correcta: B. El multímetro permite medir distintas magnitudes eléctricas como tensión, corriente y resistencia en un circuito.  2- ¿Cuál es la función principal de un diodo? A) Amplificar señales B) Almacenar energía C) Permitir el paso de corriente en un solo sentido D) Medir tensión Respuesta correcta: C. El diodo conduce corriente cuando está polarizado correctamente y bloquea el paso en sentido contrario.
+3- ¿Para qué se utiliza comúnmente un diodo Zener? A) Generar sonido B) Regular tensión C) Aumentar corriente D) Encender motores Respuesta correcta: B. El diodo Zener se utiliza como regulador de voltaje manteniendo una tensión estable en el circuito.  4- ¿Qué tipos principales de transistor BJT existen? A) AC y DC B) Serie y paralelo C) PNP y NPN D) Digital y analógico Respuesta correcta: C. Los transistores BJT se clasifican principalmente en PNP y NPN según la disposición de sus materiales semiconductores.
+5-¿Qué componente se utiliza para amplificar señales eléctricas? A) Resistor B) Capacitor C) Transistor D) Fusible Respuesta correcta: C. El transistor puede funcionar como amplificador, aumentando la intensidad de una señal eléctrica en un circuito
+
+4
+Digitales I
+1.Observá la siguiente tabla de verdad:
+A B Salida 000 011 101 111
+¿Qué compuerta representa?
+A) AND B) NAND C) OR D) XOR
+Respuesta correcta: C) OR, ya que solamente da "0" cuando ambas entradas son "0".
+2. ¿Qué hace un mapa de Karnaugh?
+A) Convierte números binarios en decimales B) Simplificar funciones lógicas C) Suma señales eléctricas D) Amplifica voltaje
+Respuesta correcta: B) Simplificar funciones lógicas. Permite reducir la cantidad de compuertas necesarias en un circuito, agrupando combinaciones de valores iguales. Gracias a esto, los circuitos son más simples, económicos y eficientes.
+3. ¿Qué estudia el álgebra de Boole?
+A) Circuitos eléctricos de potencia B) Operaciones matemáticas con números complejos C) El comportamiento lógico de variables binarias D) El movimiento de electrones
+Respuesta correcta: C) El comportamiento lógico de variables binarias. Se utiliza para analizar y diseñar circuitos digitales mediante operaciones lógicas como AND, OR y NOT. Es la base matemática de la electrónica digital y de las computadoras.
+
+5
+4. ¿Para qué se utilizan las compuertas lógicas?
+A) Para almacenar energía B) Para realizar operaciones lógicas en circuitos digitales C) Para aumentar corriente eléctrica D) Para medir tensión Respuesta correcta: B) Para realizar operaciones lógicas en circuitos digitales. Las compuertas lógicas procesan señales binarias de entrada y generan una salida según una operación lógica determinada.
+5. ¿Qué representa un "1" lógico en electrónica digital?
+A) Ausencia de señal B) Estado indefinido C) Un estado alto o activado D) Circuito desconectado Respuesta correcta: C) Un estado alto o activado. el "1" lógico representa normalmente la presencia de tensión o un nivel alto de voltaje. También indica que una señal está activada o encendida. 6) ¿Qué compuerta está graficada en la siguiente imagen?
+A)NOT B) NAND C) AND D) NOR Respuesta correcta: B) NAND. Su símbolo se reconoce porque tiene la forma de una AND y un pequeño círculo en la salida, que representa la inversión lógica.
+
+6
+Matemáticas
+1. ¿Cuál de los siguientes números es irracional? A) 0,75 B) 4/5 C) 3 D) -2
+Respuesta correcta: C) 3, 3 posee infinitas cifras decimales no periódicas, por eso es un número irracional.
+2. ¿Qué representa la letra "i" en números complejos? A) Un número natural B) La unidad imaginaria C) Un número irracional D) Una variable cualquiera
+ Respuesta correcta: B) La unidad imaginaria
+Justificación: La unidad imaginaria cumple que i² = -1.
+3.¿Qué propiedad de los radicales permite escribir: a · b = ab? A) Propiedad distributiva B) Propiedad del producto C) Propiedad asociativa D) Propiedad del cociente
+Respuesta correcta: B) Propiedad del producto.
+4. ¿Qué técnica se utiliza para contar diferentes formas de ordenar elementos? A) Factorización B) Combinatoria C) Radicación D) Potenciación
+Respuesta correcta: B) Combinatoria.
+5.¿Qué operación permite encontrar el valor de un exponente? A) Radicación B) Potenciación C) Logaritmación D) Factorización
+Respuesta correcta: C) Logaritmación.
+6. ¿Qué técnica se utiliza para contar diferentes formas de ordenar elementos? A) Factorización B) Combinatoria
+
+7
+C) Radicación D) Potenciación Respuesta correcta: B) Combinatoria.
+
+
