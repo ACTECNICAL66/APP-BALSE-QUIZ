@@ -53,8 +53,8 @@ export const OnboardingSuccess: React.FC<OnboardingSuccessProps> = ({
           stage >= 1 ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
         }`}>
           <div className="absolute -inset-8 rounded-full bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 opacity-40 blur-3xl animate-pulse" />
-          <div className={`relative w-40 h-40 mx-auto rounded-3xl bg-gradient-to-tr ${avatar.gradient} flex items-center justify-center text-7xl shadow-2xl border-4 ${avatar.borderColor} animate-bounce-subtle`}>
-            <span className="drop-shadow-2xl">{avatar.emoji}</span>
+          <div className={`relative w-40 h-40 mx-auto rounded-3xl bg-gradient-to-tr ${avatar.gradient} flex items-center justify-center shadow-2xl border-4 ${avatar.borderColor} animate-bounce-subtle`}>
+            <img src={avatar.image} alt={avatar.name} className="w-full h-full object-cover rounded-[22px]" />
           </div>
           
           {stage >= 2 && (

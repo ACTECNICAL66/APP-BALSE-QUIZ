@@ -59,10 +59,10 @@ export const ShopView: React.FC<ShopViewProps> = ({
 
         {/* Vista Previa del Avatar con Equipamiento */}
         <div className="relative z-10 shrink-0">
-          <div className={`w-28 h-28 rounded-3xl bg-gradient-to-tr ${currentAvatar.gradient} flex items-center justify-center text-6xl shadow-2xl border-4 ${currentAvatar.borderColor} relative ${
+          <div className={`w-28 h-28 rounded-3xl bg-gradient-to-tr ${currentAvatar.gradient} flex items-center justify-center shadow-2xl border-4 ${currentAvatar.borderColor} relative ${
             hasGoldFrame ? 'ring-4 ring-amber-400/60 animate-pulse-glow' : ''
           }`}>
-            <span className="drop-shadow-lg">{currentAvatar.emoji}</span>
+            <img src={currentAvatar.image} alt={currentAvatar.name} className="w-full h-full object-cover rounded-[20px]" />
             {hasSafetyOutfit && (
               <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-slate-950 flex items-center justify-center shadow-lg border-2 border-cyan-400/60 overflow-hidden">
                 <img src={APP_ASSETS.badges.tester} alt="Insignia Tester" className="w-full h-full object-contain p-0.5" />

@@ -230,8 +230,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
             title={`Perfil de ${userName}`}
           >
-            <div className={`w-8 h-8 rounded-xl bg-gradient-to-tr ${currentAvatarObj.gradient} flex items-center justify-center text-base shadow-md border ${currentAvatarObj.borderColor}`}>
-              <span className="drop-shadow">{userAvatar}</span>
+            <div className={`w-8 h-8 rounded-xl bg-gradient-to-tr ${currentAvatarObj.gradient} flex items-center justify-center shadow-md border ${currentAvatarObj.borderColor} overflow-hidden`}>
+              <img src={currentAvatarObj.image} alt={currentAvatarObj.name} className="w-full h-full object-cover" />
             </div>
             <span className="hidden sm:inline text-xs font-black text-white truncate max-w-[100px]">{userName}</span>
           </button>

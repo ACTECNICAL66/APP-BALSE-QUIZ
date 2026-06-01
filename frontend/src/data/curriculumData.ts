@@ -80,42 +80,42 @@ export const SHOP_ITEMS: ShopItem[] = [
 
 export const LEADERBOARD_USERS = [
   // 1er Año
-  { id: '1-1', name: 'Tomás Álvarez', avatar: '👦', xp: 890, isUser: false, year: 1 },
-  { id: '1-2', name: 'Milagros López', avatar: '👧', xp: 820, isUser: false, year: 1 },
-  { id: '1-3', name: 'Benjamín Díaz', avatar: '👦', xp: 740, isUser: false, year: 1 },
-  { id: '1-4', name: 'Martina Ruiz', avatar: '👧', xp: 680, isUser: false, year: 1 },
+  { id: '1-1', name: 'Tomás Álvarez', avatar: '🔌', xp: 890, isUser: false, year: 1 },
+  { id: '1-2', name: 'Milagros López', avatar: '🧠', xp: 820, isUser: false, year: 1 },
+  { id: '1-3', name: 'Benjamín Díaz', avatar: '➡️', xp: 740, isUser: false, year: 1 },
+  { id: '1-4', name: 'Martina Ruiz', avatar: '⚙️', xp: 680, isUser: false, year: 1 },
   // 2do Año
-  { id: '2-1', name: 'Agustín Pereyra', avatar: '👦', xp: 1120, isUser: false, year: 2 },
-  { id: '2-2', name: 'Abril Fernández', avatar: '👧', xp: 1050, isUser: false, year: 2 },
-  { id: '2-3', name: 'Santiago Gómez', avatar: '👨‍🔧', xp: 980, isUser: false, year: 2 },
-  { id: '2-4', name: 'Catalina Moreno', avatar: '👧', xp: 920, isUser: false, year: 2 },
+  { id: '2-1', name: 'Agustín Pereyra', avatar: '⚡', xp: 1120, isUser: false, year: 2 },
+  { id: '2-2', name: 'Abril Fernández', avatar: '🚧', xp: 1050, isUser: false, year: 2 },
+  { id: '2-3', name: 'Santiago Gómez', avatar: '🔬', xp: 980, isUser: false, year: 2 },
+  { id: '2-4', name: 'Catalina Moreno', avatar: '🔄', xp: 920, isUser: false, year: 2 },
   // 3er Año
-  { id: '3-1', name: 'Thiago Castro', avatar: '👦', xp: 1450, isUser: false, year: 3 },
-  { id: '3-2', name: 'Mía Sánchez', avatar: '👩‍💻', xp: 1380, isUser: false, year: 3 },
-  { id: '3-3', name: 'Bautista Vargas', avatar: '👨‍🔧', xp: 1290, isUser: false, year: 3 },
-  { id: '3-4', name: 'Emma Rodríguez', avatar: '👧', xp: 1180, isUser: false, year: 3 },
+  { id: '3-1', name: 'Thiago Castro', avatar: '💡', xp: 1450, isUser: false, year: 3 },
+  { id: '3-2', name: 'Mía Sánchez', avatar: '🧲', xp: 1380, isUser: false, year: 3 },
+  { id: '3-3', name: 'Bautista Vargas', avatar: '🔌', xp: 1290, isUser: false, year: 3 },
+  { id: '3-4', name: 'Emma Rodríguez', avatar: '🧠', xp: 1180, isUser: false, year: 3 },
   // 4to Año
-  { id: '4-1', name: 'Iñaki Medina', avatar: '👨‍🔧', xp: 1820, isUser: false, year: 4 },
-  { id: '4-2', name: 'Valentina Ortega', avatar: '👩‍💻', xp: 1740, isUser: false, year: 4 },
-  { id: '4-3', name: 'Lorenzo Herrera', avatar: '👦', xp: 1650, isUser: false, year: 4 },
-  { id: '4-4', name: 'Candela Giménez', avatar: '👩‍🔬', xp: 1520, isUser: false, year: 4 },
+  { id: '4-1', name: 'Iñaki Medina', avatar: '➡️', xp: 1820, isUser: false, year: 4 },
+  { id: '4-2', name: 'Valentina Ortega', avatar: '⚙️', xp: 1740, isUser: false, year: 4 },
+  { id: '4-3', name: 'Lorenzo Herrera', avatar: '⚡', xp: 1650, isUser: false, year: 4 },
+  { id: '4-4', name: 'Candela Giménez', avatar: '🚧', xp: 1520, isUser: false, year: 4 },
   // 5to Año
-  { id: '5-1', name: 'Mateo Fernández', avatar: '👨‍🔧', xp: 2450, isUser: false, year: 5 },
-  { id: '5-2', name: 'Luciana Romero', avatar: '👩‍💻', xp: 2280, isUser: false, year: 5 },
-  { id: '5-3', name: 'Santino Acosta', avatar: '👦', xp: 2150, isUser: false, year: 5 },
-  { id: '5-4', name: 'Julieta Ponce', avatar: '👩‍🔬', xp: 1980, isUser: false, year: 5 },
+  { id: '5-1', name: 'Mateo Fernández', avatar: '🔬', xp: 2450, isUser: false, year: 5 },
+  { id: '5-2', name: 'Luciana Romero', avatar: '🔄', xp: 2280, isUser: false, year: 5 },
+  { id: '5-3', name: 'Santino Acosta', avatar: '💡', xp: 2150, isUser: false, year: 5 },
+  { id: '5-4', name: 'Julieta Ponce', avatar: '🧲', xp: 1980, isUser: false, year: 5 },
   // 6to Año
-  { id: '6-1', name: 'Valentina Gómez', avatar: '👩‍💻', xp: 2890, isUser: false, year: 6 },
-  { id: '6-2', name: 'Nicolás Silva', avatar: '👨‍🔧', xp: 2750, isUser: false, year: 6 },
-  { id: '6-3', name: 'Renata Vega', avatar: '👩‍🔬', xp: 2610, isUser: false, year: 6 },
-  { id: '6-4', name: 'Bruno Molina', avatar: '👦', xp: 2480, isUser: false, year: 6 },
+  { id: '6-1', name: 'Valentina Gómez', avatar: '🔌', xp: 2890, isUser: false, year: 6 },
+  { id: '6-2', name: 'Nicolás Silva', avatar: '🧠', xp: 2750, isUser: false, year: 6 },
+  { id: '6-3', name: 'Renata Vega', avatar: '➡️', xp: 2610, isUser: false, year: 6 },
+  { id: '6-4', name: 'Bruno Molina', avatar: '⚙️', xp: 2480, isUser: false, year: 6 },
   // 7mo Año
-  { id: '7-1', name: 'Joaquín Herrera', avatar: '🤖', xp: 3420, isUser: false, year: 7 },
-  { id: '7-2', name: 'Francesca Ruiz', avatar: '👩‍💻', xp: 3280, isUser: false, year: 7 },
-  { id: '7-3', name: 'Emilio Torres', avatar: '👨‍🔧', xp: 3120, isUser: false, year: 7 },
-  { id: '7-4', name: 'Victoria Márquez', avatar: '👩‍🔬', xp: 2950, isUser: false, year: 7 },
+  { id: '7-1', name: 'Joaquín Herrera', avatar: '⚡', xp: 3420, isUser: false, year: 7 },
+  { id: '7-2', name: 'Francesca Ruiz', avatar: '🚧', xp: 3280, isUser: false, year: 7 },
+  { id: '7-3', name: 'Emilio Torres', avatar: '🔬', xp: 3120, isUser: false, year: 7 },
+  { id: '7-4', name: 'Victoria Márquez', avatar: '🔄', xp: 2950, isUser: false, year: 7 },
   // Usuario actual
-  { id: 'user', name: 'Tú (Estudiante IPET)', avatar: '🧑‍🎓', xp: 0, isUser: true, year: 1 },
+  { id: 'user', name: 'Tú (Estudiante IPET)', avatar: '🔌', xp: 0, isUser: true, year: 1 },
 ];
 
 // Helper para crear 5 niveles estructurados por cada materia

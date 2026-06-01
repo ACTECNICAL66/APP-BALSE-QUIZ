@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Trophy, Timer, Sparkles, Crown, Medal, Award, Flame } from 'lucide-react';
 import { LEADERBOARD_USERS } from '../data/curriculumData';
 import { soundEffects } from '../utils/sound';
+import { AVATAR_OPTIONS } from './AvatarSystem';
 
 interface LeaderboardViewProps {
   userXp: number;
@@ -198,13 +199,22 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
                   {/* Avatar & Info */}
                   <div className="col-span-7 flex items-center gap-3 min-w-0">
-                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-md ${
-                      isCurrentUser 
-                        ? 'bg-gradient-to-tr from-emerald-500 to-teal-400 border border-emerald-300/50' 
-                        : 'bg-slate-800 border border-slate-700'
-                    }`}>
-                      {user.avatar}
-                    </div>
+                    {(() => {
+                      const avatarObj = AVATAR_OPTIONS.find(a => a.emoji === user.avatar);
+                      return (
+                        <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-md ${
+                          isCurrentUser 
+                            ? `bg-gradient-to-tr ${avatarObj ? avatarObj.gradient : 'from-emerald-500 to-teal-400'} border ${avatarObj ? avatarObj.borderColor : 'border-emerald-300/50'}` 
+                            : `bg-slate-800 border ${avatarObj ? avatarObj.borderColor : 'border-slate-700'}`
+                        }`}>
+                          {avatarObj ? (
+                            <img src={avatarObj.image} alt={user.name} className="w-full h-full object-cover rounded-xl" />
+                          ) : (
+                            <span className="text-2xl">{user.avatar}</span>
+                          )}
+                        </div>
+                      );
+                    })()}
                     <div className="truncate">
                       <div className="font-black text-sm text-white flex items-center gap-1.5 truncate">
                         <span className="truncate">{user.name}</span>
@@ -286,11 +296,20 @@ const PodiumCard: React.FC<PodiumCardProps> = ({ user, position }) => {
     <div className="flex flex-col items-center gap-2">
       {/* Avatar with medal */}
       <div className="relative">
-        <div className={`${c.avatarSize} rounded-3xl bg-gradient-to-tr ${c.gradient} flex items-center justify-center shadow-2xl border-2 ${c.border} ${
-          position === 1 ? 'animate-pulse-glow' : ''
-        } ${isUser ? 'ring-4 ring-emerald-400/50' : ''}`}>
-          <span className="drop-shadow-lg">{user.avatar}</span>
-        </div>
+        {(() => {
+          const avatarObj = AVATAR_OPTIONS.find(a => a.emoji === user.avatar);
+          return (
+            <div className={`${c.avatarSize} rounded-3xl bg-gradient-to-tr ${avatarObj ? avatarObj.gradient : c.gradient} flex items-center justify-center shadow-2xl border-2 ${avatarObj ? avatarObj.borderColor : c.border} ${
+              position === 1 ? 'animate-pulse-glow' : ''
+            } ${isUser ? 'ring-4 ring-emerald-400/50' : ''}`}>
+              {avatarObj ? (
+                <img src={avatarObj.image} alt={user.name} className="w-full h-full object-cover rounded-[22px]" />
+              ) : (
+                <span className="drop-shadow-lg">{user.avatar}</span>
+              )}
+            </div>
+          );
+        })()}
         <div className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-slate-950/80 border border-white/10 flex items-center justify-center shadow-lg">
           {c.medal}
         </div>

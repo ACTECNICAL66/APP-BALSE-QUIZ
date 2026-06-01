@@ -3,6 +3,7 @@ import { Trophy, GraduationCap, Flame, Sparkles, LogOut, AlertTriangle, Target, 
 import { ACHIEVEMENTS_DATA, SCHOOL_INFO } from '../data/curriculumData';
 import { APP_ASSETS } from '../data/appAssets';
 import { soundEffects } from '../utils/sound';
+import { AVATAR_OPTIONS } from './AvatarSystem';
 
 interface ProfileViewProps {
   userName: string;
@@ -30,6 +31,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
   onLogout
 }) => {
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
+  const currentAvatarObj = AVATAR_OPTIONS.find(a => a.emoji === userAvatar) || AVATAR_OPTIONS[0];
 
   return (
     <div className="max-w-3xl mx-auto py-8 px-4 pb-24 md:pb-12 space-y-8 animate-in fade-in duration-200 font-sans">
@@ -41,8 +43,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left z-10 relative">
           
           <div className="relative shrink-0">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-slate-800 border-4 border-slate-700 flex items-center justify-center text-6xl shadow-2xl">
-              {userAvatar || '🧑‍🎓'}
+            <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr ${currentAvatarObj.gradient} border-4 ${currentAvatarObj.borderColor} flex items-center justify-center shadow-2xl overflow-hidden`}>
+              <img src={currentAvatarObj.image} alt={currentAvatarObj.name} className="w-full h-full object-cover" />
             </div>
             {hasTesterBadge && (
               <div className="absolute -bottom-3 -right-3 w-14 h-14 rounded-2xl bg-slate-950 border-2 border-cyan-400/60 shadow-xl overflow-hidden animate-pulse-glow" title="Insignia Tester">
