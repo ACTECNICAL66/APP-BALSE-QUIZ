@@ -1,32 +1,37 @@
+function assetUrl(path: string): string {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.replace(/^\//, '')}`;
+}
+
 export const APP_ASSETS = {
   brand: {
-    logo: "/assets/brand/app-logo.svg",
+    logo: assetUrl('assets/brand/app-logo.svg'),
     name: "APP-BALSE-QUIZ",
   },
   mascot: {
-    default: "/assets/characters/Icono.png",
-    happy: "/assets/mascot/voltio-happy.svg",
-    thinking: "/assets/mascot/voltio-thinking.svg",
-    success: "/assets/mascot/voltio-success.svg",
-    fail: "/assets/mascot/voltio-fail.svg",
-    workshop: "/assets/mascot/voltio-workshop.svg",
+    default: assetUrl('assets/characters/Icono.png'),
+    happy: assetUrl('assets/mascot/voltio-happy.svg'),
+    thinking: assetUrl('assets/mascot/voltio-thinking.svg'),
+    success: assetUrl('assets/mascot/voltio-success.svg'),
+    fail: assetUrl('assets/mascot/voltio-fail.svg'),
+    workshop: assetUrl('assets/mascot/voltio-workshop.svg'),
   },
   characters: {
-    capi: "/assets/characters/Perfil_Capi.png",
-    chip: "/assets/characters/Perfil_Chip.png",
-    diodi: "/assets/characters/Perfil_Diodi.png",
-    fpga: "/assets/characters/Perfil_FPGA.png",
-    mos: "/assets/characters/Perfil_MOS.png",
-    resi: "/assets/characters/Perfil_Resi.png",
-    smd: "/assets/characters/Perfil_SMD.png",
-    transi: "/assets/characters/Perfil_Transi.png",
-    led: "/assets/characters/Perfil_Led.png",
-    bobina: "/assets/characters/Perfil_Bobina.png",
+    capi: assetUrl('assets/characters/Perfil_Capi.png'),
+    chip: assetUrl('assets/characters/Perfil_Chip.png'),
+    diodi: assetUrl('assets/characters/Perfil_Diodi.png'),
+    fpga: assetUrl('assets/characters/Perfil_FPGA.png'),
+    mos: assetUrl('assets/characters/Perfil_MOS.png'),
+    resi: assetUrl('assets/characters/Perfil_Resi.png'),
+    smd: assetUrl('assets/characters/Perfil_SMD.png'),
+    transi: assetUrl('assets/characters/Perfil_Transi.png'),
+    led: assetUrl('assets/characters/Perfil_Led.png'),
+    bobina: assetUrl('assets/characters/Perfil_Bobina.png'),
   },
   badges: {
-    tester: "/assets/characters/Icono.png",
+    tester: assetUrl('assets/badges/tester-badge.png'),
   },
-} as const;
+};
 
 export type MascotPose = keyof typeof APP_ASSETS.mascot;
 export type CharacterAsset = keyof typeof APP_ASSETS.characters;
