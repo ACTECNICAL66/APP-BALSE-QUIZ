@@ -9,12 +9,12 @@ export const APP_ASSETS = {
     name: "APP-BALSE-QUIZ",
   },
   mascot: {
-    default: assetUrl('assets/characters/Icono.png'),
-    happy: assetUrl('assets/mascot/voltio-happy.svg'),
-    thinking: assetUrl('assets/mascot/voltio-thinking.svg'),
-    success: assetUrl('assets/mascot/voltio-success.svg'),
-    fail: assetUrl('assets/mascot/voltio-fail.svg'),
-    workshop: assetUrl('assets/mascot/voltio-workshop.svg'),
+    default: assetUrl('assets/mascot/Icono.png'),
+    happy: assetUrl('assets/mascot/Volti_Alegre.png'),
+    thinking: assetUrl('assets/mascot/Volti_duda.png'),
+    success: assetUrl('assets/mascot/Volti_bien_hecho.png'),
+    fail: assetUrl('assets/mascot/Volti_cansado.png'),
+    workshop: assetUrl('assets/mascot/Volti_Taller.png'),
   },
   characters: {
     capi: assetUrl('assets/characters/Perfil_Capi.png'),
