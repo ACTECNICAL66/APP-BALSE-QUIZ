@@ -15,7 +15,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
 
   return (
     <div className="min-h-screen text-slate-100 flex flex-col selection:bg-[#58cc02] selection:text-slate-950 font-sans relative overflow-hidden">
-      
+
       {/* Animated Aurora Background */}
       <AuroraBackground intensity="high" />
 
@@ -61,13 +61,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
       {/* Hero Section with Year Selector */}
       <section className="relative overflow-hidden pt-16 pb-24 px-6 lg:pt-24 lg:pb-32 z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          
+
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full liquid-glass-emerald text-emerald-300 text-xs font-black uppercase tracking-widest mb-8 shadow-xl">
               <Sparkles className="w-4 h-4 text-emerald-400 animate-spin" />
               Plataforma Oficial de {SCHOOL_INFO.name}
             </div>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-8 leading-[1.1] drop-shadow-2xl">
               Domina la técnica <span className="bg-gradient-to-r from-[#58cc02] via-[#1cb0f6] to-[#ffc800] bg-clip-text text-transparent animate-pulse">jugando</span>.
             </h1>
@@ -104,11 +104,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                         setSelectedYear(curr.year);
                         setShowYearPicker(false);
                       }}
-                      className={`p-3 rounded-2xl font-black text-lg transition-all ${
-                        selectedYear === curr.year
+                      className={`p-3 rounded-2xl font-black text-lg transition-all ${selectedYear === curr.year
                           ? 'bg-gradient-to-tr from-emerald-500 to-teal-400 text-white shadow-xl shadow-emerald-500/40 scale-110'
                           : 'liquid-glass text-slate-300 hover:text-white hover:bg-white/10'
-                      }`}
+                        }`}
                     >
                       {curr.year}
                     </button>
@@ -176,7 +175,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   <div className="inline-block px-4 py-1.5 rounded-full liquid-glass-emerald text-emerald-300 text-xs font-black uppercase tracking-widest mb-3 shadow-lg">
                     {MASCOT_INFO.role}
                   </div>
-                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy {MASCOT_INFO.name}!</h3>
+                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy Testi!</h3>
                   <p className="text-sm text-slate-300 italic mb-8 leading-relaxed font-bold">
                     "{MASCOT_INFO.description}"
                   </p>
@@ -200,7 +199,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
       {/* Curriculum Breakdown with Liquid Glass Cards */}
       <section className="py-24 px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
               Un sendero para cada ciclo
@@ -211,7 +210,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Ciclo Basico */}
             <div className="liquid-glass-strong rounded-3xl p-8 border border-white/15 hover:border-emerald-500/50 transition-all flex flex-col justify-between shadow-2xl group hover:scale-105 duration-300">
               <div>
