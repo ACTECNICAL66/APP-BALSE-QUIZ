@@ -3346,6 +3346,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
     ]
   }
 
+
 ];
 
 export const SCHOOL_INFO = {
