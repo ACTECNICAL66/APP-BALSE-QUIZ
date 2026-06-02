@@ -103,8 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <div className="fixed inset-0 z-30" onClick={() => setShowYearDropdown(false)} />
                 <div className="absolute left-0 top-full mt-2 w-80 bg-slate-900/95 liquid-glass rounded-3xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200 border border-slate-700/80 shadow-2xl">
                   <div className="text-[11px] font-black text-slate-400 px-3 py-1.5 uppercase tracking-widest flex items-center justify-between">
-                    <span>Años de Estudio IPET 66</span>
-                    <span className="text-emerald-400">Progreso Secuencial</span>
+                    <span>Años de estudio IPET 66</span>
+                    <span className="text-emerald-400">Progreso secuencial</span>
                   </div>
                   <div className="space-y-1.5 max-h-80 overflow-y-auto pr-1 mt-2">
                     {CURRICULUM_DATA.map((curr) => {
@@ -163,13 +163,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                   ? 'bg-orange-500/15 border-orange-500/40 text-orange-400 scale-105 shadow-md shadow-orange-500/10'
                   : 'bg-slate-800/80 border-slate-700/80 text-slate-400 hover:bg-slate-800'
               }`}
-              title="Combo de Aciertos Seguidos"
+              title="Combo de aciertos seguidos"
             >
               <Flame className={`w-5 h-5 ${comboStreak > 0 ? 'text-orange-500 fill-orange-500 animate-bounce-subtle' : 'text-slate-500'}`} />
               <span className="font-black text-base">{comboStreak}</span>
             </button>
             <div className="absolute right-0 top-full mt-2 w-48 bg-slate-900/95 liquid-glass rounded-2xl p-2 z-50 hidden group-hover:block text-xs text-center border border-slate-700/80 shadow-2xl">
-              <div className="font-extrabold text-orange-400">🔥 Combo de Aciertos</div>
+              <div className="font-extrabold text-orange-400">🔥 Combo de aciertos</div>
               <div className="text-slate-300 text-[11px] mt-1">Ganas más XP al encadenar respuestas correctas.</div>
             </div>
           </div>
@@ -178,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button 
             onClick={onOpenShop}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/80 rounded-2xl border border-amber-500/30 text-amber-400 hover:bg-slate-800 transition-all shadow-inner"
-            title="Tuercas doradas (Gemas para la tienda)"
+            title="Tuercas doradas (gemas para la tienda)"
           >
             <Gem className="w-5 h-5 text-amber-400 fill-amber-400" />
             <span className="font-black text-base">{gems}</span>
@@ -216,7 +216,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={() => setActiveTab('advisor')}
             className="hidden lg:flex items-center gap-1.5 px-3.5 py-1.5 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 border border-purple-500/40 text-purple-300 hover:border-purple-400 rounded-2xl transition-all shadow-md shadow-purple-500/10"
-            title="Consejos y Metodologías IPET 66"
+            title="Consejos y metodologías IPET 66"
           >
             <Sparkles className="w-4 h-4 text-purple-400 animate-spin" />
             <span className="text-xs font-black">Consejero IA</span>

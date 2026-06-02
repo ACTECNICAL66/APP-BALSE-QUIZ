@@ -51,7 +51,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
             <ShoppingBag className="w-4 h-4" />
             <span>Almacén de IPET 66</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-lg">Tienda del Taller</h1>
+          <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-lg">Tienda del taller</h1>
           <p className="text-sm font-bold text-slate-300 max-w-md">
             Usa tus tuercas doradas para recargar corazones, proteger tu racha o desbloquear insignias demostrativas para tu perfil.
           </p>
@@ -88,7 +88,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
             🪙
           </div>
           <div>
-            <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest">Tu Balance</div>
+            <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest">Tu balance</div>
             <div className="text-3xl font-black text-amber-400 drop-shadow-lg">{gems.toLocaleString()}</div>
           </div>
         </div>
@@ -107,7 +107,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
           if (item.type === 'heart_refill') {
             if (hearts >= maxHearts) {
               isOwnedOrMax = true;
-              label = 'Corazones Llenos';
+              label = 'Corazones llenos';
             }
           } else if (item.type === 'streak_freeze') {
             if (hasStreakFreeze) {
@@ -190,7 +190,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
                       : 'bg-slate-700 text-slate-500 cursor-not-allowed border-none'
                   }`}
                 >
-                  <span>{canAfford ? label : 'Faltan Tuercas'}</span>
+                  <span>{canAfford ? label : 'Faltan tuercas'}</span>
                 </button>
               )}
 
@@ -201,7 +201,7 @@ export const ShopView: React.FC<ShopViewProps> = ({
 
       <div className="liquid-glass border border-white/10 rounded-2xl p-4 text-center text-xs font-bold text-slate-300 flex items-center justify-center gap-2 shadow-lg">
         <Sparkles className="w-4 h-4 text-emerald-400" />
-        <span>Los Escudos Anti-Fallo se consumen automáticamente al fallar una pregunta.</span>
+        <span>Los escudos anti-fallo se consumen automáticamente al fallar una pregunta.</span>
       </div>
 
     </div>

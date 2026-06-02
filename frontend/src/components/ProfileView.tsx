@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Trophy, GraduationCap, Flame, Sparkles, LogOut, AlertTriangle, Target, Zap, Star, Crown, Medal, Award } from 'lucide-react';
 import { ACHIEVEMENTS_DATA, SCHOOL_INFO } from '../data/curriculumData';
 import { APP_ASSETS } from '../data/appAssets';
@@ -63,8 +63,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             
             <div className="text-sm font-semibold text-slate-300 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 pt-1">
               <span className="bg-slate-900/90 border border-slate-700 px-3 py-1 rounded-xl text-emerald-400 font-black shadow-inner">{currentYear}º Año</span>
-              <span>•</span>
-              <span className="font-bold">{currentYear <= 3 ? 'Ciclo Básico' : 'Ciclo Superior Especializado'}</span>
+              <span>â€¢</span>
+              <span className="font-bold">{currentYear <= 3 ? 'Ciclo Básico' : 'Ciclo superior especializado'}</span>
             </div>
           </div>
 
@@ -74,10 +74,10 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               setShowLogoutConfirm(true);
             }}
             className="sm:self-start btn-3d-red text-white font-black px-5 py-2.5 rounded-2xl text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-rose-500/20 shrink-0"
-            title="Cerrar Sesión o Cambiar Usuario"
+            title="Cerrar sesión o cambiar usuario"
           >
             <LogOut className="w-4 h-4" />
-            <span>Cerrar Sesión</span>
+            <span>Cerrar sesión</span>
           </button>
 
         </div>
@@ -91,7 +91,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <Flame className="w-7 h-7 fill-orange-500" />
           </div>
           <div className="text-3xl font-black text-white">{streak}</div>
-          <div className="text-[11px] font-black text-orange-400 uppercase tracking-wider mt-1">Combo Actual</div>
+          <div className="text-[11px] font-black text-orange-400 uppercase tracking-wider mt-1">Combo actual</div>
         </div>
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
@@ -99,7 +99,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <Zap className="w-7 h-7 text-amber-400 fill-amber-400" />
           </div>
           <div className="text-3xl font-black text-white">{maxCombo}</div>
-          <div className="text-[11px] font-black text-amber-400 uppercase tracking-wider mt-1">Mayor Racha</div>
+          <div className="text-[11px] font-black text-amber-400 uppercase tracking-wider mt-1">Mayor racha</div>
         </div>
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
@@ -107,7 +107,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <Star className="w-7 h-7 text-emerald-400 fill-emerald-400" />
           </div>
           <div className="text-3xl font-black text-white">{completedLessonsCount}</div>
-          <div className="text-[11px] font-black text-emerald-400 uppercase tracking-wider mt-1">Niveles Superados</div>
+          <div className="text-[11px] font-black text-emerald-400 uppercase tracking-wider mt-1">Niveles superados</div>
         </div>
 
         <div className="bg-slate-900/90 liquid-glass border border-slate-700/80 p-4 rounded-3xl text-center shadow-xl flex flex-col justify-between">
@@ -126,7 +126,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
             <Target className="w-5 h-5 text-white" />
           </div>
-          <h3 className="text-2xl font-black text-white">Tu Año Actual: {currentYear}º</h3>
+          <h3 className="text-2xl font-black text-white">Tu año actual: {currentYear}º</h3>
         </div>
 
         <div className="liquid-glass-strong border border-white/10 rounded-3xl p-5 shadow-xl space-y-4">
@@ -144,7 +144,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
                 {maxCombo >= 10 ? <Flame className="w-7 h-7 text-amber-400 fill-amber-400" /> : maxCombo >= 5 ? <Zap className="w-7 h-7 text-amber-400 fill-amber-400" /> : <Target className="w-7 h-7 text-amber-400" />}
               </div>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">
-                {maxCombo >= 10 ? 'Imparable' : maxCombo >= 5 ? 'En Racha' : 'Constancia'}
+                {maxCombo >= 10 ? 'Imparable' : maxCombo >= 5 ? 'En racha' : 'Constancia'}
               </div>
             </div>
             <div className="liquid-glass p-3 rounded-2xl text-center border border-white/10 shadow-inner">
@@ -159,28 +159,28 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
           <div className="bg-slate-950/50 rounded-2xl p-4 border border-white/5 space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="font-black text-slate-300 uppercase tracking-widest">Nivel de Liga</span>
+              <span className="font-black text-slate-300 uppercase tracking-widest">Nivel de liga</span>
               <span className="font-black text-amber-400">
                 {userXp >= 3000 ? 'Oro' : userXp >= 1500 ? 'Plata' : userXp >= 500 ? 'Bronce' : 'Hierro'}
               </span>
             </div>
             <div className="flex items-center justify-between text-xs">
-              <span className="font-black text-slate-300 uppercase tracking-widest">Año Académico</span>
+              <span className="font-black text-slate-300 uppercase tracking-widest">Año académico</span>
               <span className="font-black text-emerald-400">{currentYear}º Año</span>
             </div>
             <div className="flex items-center justify-between text-xs">
-              <span className="font-black text-slate-300 uppercase tracking-widest">Total de Lecciones</span>
+              <span className="font-black text-slate-300 uppercase tracking-widest">Total de lecciones</span>
               <span className="font-black text-cyan-400">{completedLessonsCount}</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Insignias Demostrativas (PNG) */}
+      {/* Insignias demostrativas (PNG) */}
       <div className="space-y-4">
         <div className="flex items-center gap-2.5">
           <Award className="w-6 h-6 text-cyan-400" />
-          <h3 className="text-2xl font-black text-white">Insignias Demostrativas</h3>
+          <h3 className="text-2xl font-black text-white">Insignias demostrativas</h3>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -215,7 +215,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
         <div className="liquid-glass border border-white/10 rounded-2xl p-4 text-center text-xs font-bold text-slate-300 flex items-center justify-center gap-2 shadow-lg">
           <Award className="w-4 h-4 text-cyan-400" />
-          <span>Adquiere la Insignia Tester en la Tienda del Taller para mostrarla en tu perfil y avatar.</span>
+          <span>Adquiere la insignia Tester en la tienda del taller para mostrarla en tu perfil y avatar.</span>
         </div>
       </div>
 
@@ -265,7 +265,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
                     {progress} / {ach.maxProgress}
                   </div>
                   <div className="text-[10px] font-black text-emerald-400 uppercase tracking-widest mt-0.5">
-                    {isCompleted ? 'Completado' : 'En Progreso'}
+                    {isCompleted ? 'Completado' : 'En progreso'}
                   </div>
                 </div>
               </div>

@@ -149,7 +149,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             </div>
             <div>
               <div className="font-black text-base text-white tracking-tight">
-                {mode === 'register' ? 'Crear Cuenta' : 'Iniciar Sesión'}
+                {mode === 'register' ? 'Crear cuenta' : 'Iniciar sesión'}
               </div>
               <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-cyan-400" />
@@ -194,7 +194,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               <div>
                 <label className="flex items-center gap-2 text-xs font-black text-slate-300 uppercase tracking-widest mb-2">
                   <Mail className="w-4 h-4 text-cyan-400" />
-                  Correo Electrónico
+                  Correo electrónico
                 </label>
                 <input
                   type="email"
@@ -294,7 +294,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               <div>
                 <label className="flex items-center gap-2 text-xs font-black text-slate-300 uppercase tracking-widest mb-2">
                   <User className="w-4 h-4 text-cyan-400" />
-                  Nombre o Apodo
+                  Nombre o apodo
                 </label>
                 <input
                   type="text"
@@ -420,7 +420,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     {unlockAll ? <Unlock className="w-5 h-5 text-white" /> : <Lock className="w-5 h-5 text-slate-400" />}
                   </div>
                   <div>
-                    <div className="font-black text-sm text-white">Pase Libre Total</div>
+                    <div className="font-black text-sm text-white">Pase libre total</div>
                     <div className="text-[11px] text-slate-400 font-bold">Desbloquea del 1º al 7º año</div>
                   </div>
                 </div>
@@ -462,7 +462,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           {mode === 'register' && step === 3 && (
             <div className="space-y-5 animate-in slide-in-from-right-4 duration-300">
               <div className="text-center">
-                <h3 className="text-xl font-black text-white mb-1">Elige tu Identidad</h3>
+                <h3 className="text-xl font-black text-white mb-1">Elige tu identidad</h3>
                 <p className="text-xs text-slate-400 font-bold">Selecciona un avatar para tu perfil</p>
               </div>
 
@@ -502,7 +502,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   className="flex-1 btn-3d-navy text-white font-black py-3.5 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl shadow-blue-900/30"
                 >
                   <UserPlus className="w-4 h-4" />
-                  <span>Crear Cuenta</span>
+                  <span>Crear cuenta</span>
                 </button>
               </div>
             </div>

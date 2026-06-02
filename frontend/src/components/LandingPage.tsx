@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, Cpu, ShieldCheck, Trophy, Sparkles, Zap, Flame, CheckCircle } from 'lucide-react';
 import { MASCOT_INFO, SCHOOL_INFO } from '../data/curriculumData';
 import { APP_ASSETS } from '../data/appAssets';
@@ -63,7 +63,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full liquid-glass-navy text-blue-200 text-xs font-black uppercase tracking-widest mb-8 shadow-xl">
               <Sparkles className="w-4 h-4 text-cyan-300 animate-spin" />
-              Plataforma Oficial de {SCHOOL_INFO.name}
+              Plataforma oficial de {SCHOOL_INFO.name}
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-8 leading-[1.05] drop-shadow-2xl">
@@ -71,15 +71,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
             </h1>
 
             <p className="text-xl text-slate-300 font-bold mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed drop-shadow-lg">
-              Aprende todas las materias del IPET 66 desde 1ro hasta 7mo año con nuestra nueva metodología interactiva. Supera desafíos, compite con tus compañeros y domina el taller técnico.
+              Una app hecha para poner a prueba tus conocimientos del área técnica de las materias del Ipet 66 "Dr. José Antonio Balseiro". Este recorrido comienza con los aprendizajes propios de la especialidad, desde primero hasta séptimo año. Supera desafíos de la mano de Volti, la mascota de esta app.
             </p>
 
-            {/* Trayectoria Académica Timeline */}
+            {/* Trayectoria académica Timeline */}
             <div className="liquid-glass-strong rounded-3xl p-6 mb-8 max-w-2xl mx-auto lg:mx-0 shadow-2xl border border-white/15">
               <div className="flex items-center justify-between mb-5">
                 <div>
-                  <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Ruta Académica</div>
-                  <div className="text-xl font-black text-white drop-shadow-md">7 Años de Especialización</div>
+                  <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Trayectoria Académica</div>
+                  <div className="text-xl font-black text-white drop-shadow-md">7 años de especialización</div>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 ))}
               </div>
               <div className="flex justify-between mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest px-2">
-                <span className="text-amber-400/90">Ciclo Básico</span>
+                <span className="text-amber-400/90">Ciclo básico</span>
                 <span className="text-blue-400/90">Superior</span>
                 <span className="text-purple-400/90">Avanzado</span>
               </div>
@@ -143,7 +143,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-white mb-1">7</div>
-                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Años Bloqueables</div>
+                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Años bloqueables</div>
               </div>
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-emerald-400 mb-1">100%</div>
@@ -151,7 +151,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
               </div>
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-amber-400 mb-1">PWA</div>
-                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">App Instalable</div>
+                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">App instalable</div>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   <div className="liquid-glass p-5 rounded-2xl border border-white/10 text-left shadow-inner">
                     <div className="text-xs font-black text-emerald-400 uppercase tracking-wide mb-2 flex items-center gap-2">
                       <Zap className="w-4 h-4 fill-emerald-400" />
-                      Consejo de Taller
+                      Consejo de taller
                     </div>
                     <p className="text-sm text-slate-200 font-bold leading-snug">
                       "{MASCOT_INFO.quotes[0]}"
@@ -219,24 +219,24 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 <ul className="space-y-4 text-sm text-slate-200 font-bold mb-8">
                   <li className="flex items-center gap-3 text-emerald-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Matemática General</span>
+                    <span>Matemática general</span>
                   </li>
                   <li className="flex items-center gap-3 text-emerald-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Taller de Ajuste, Hojalatería y Soldadura</span>
+                    <span>Taller de ajuste, hojalatería y soldadura</span>
                   </li>
                   <li className="flex items-center gap-3 text-emerald-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Tecnología de los Materiales</span>
+                    <span>Tecnología de los materiales</span>
                   </li>
                   <li className="flex items-center gap-3 text-emerald-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Dibujo Técnico y Normas IRAM</span>
+                    <span>Dibujo técnico y normas IRAM</span>
                   </li>
                 </ul>
               </div>
               <div className="pt-6 border-t border-white/10 text-xs text-slate-400 font-black uppercase tracking-widest">
-                Fundamentos Técnicos
+                Fundamentos técnicos
               </div>
             </div>
 
@@ -249,7 +249,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-500 text-white flex items-center justify-center font-black text-2xl mb-8 shadow-xl shadow-blue-500/40 border-2 border-blue-300/50">
                   4º - 5º
                 </div>
-                <h3 className="text-3xl font-black text-white mb-3">Ciclo Superior</h3>
+                <h3 className="text-3xl font-black text-white mb-3">Ciclo superior</h3>
                 <p className="text-slate-400 text-sm mb-8 leading-relaxed font-bold">
                   Inmersión en los circuitos y la lógica computacional. Cálculos de mallas de Kirchhoff, programación en C++ y electrónica.
                 </p>
@@ -264,20 +264,20 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   </li>
                   <li className="flex items-center gap-3 text-blue-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Electrónica Analógica I y II</span>
+                    <span>Electrónica analógica I y II</span>
                   </li>
                   <li className="flex items-center gap-3 text-blue-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Electrónica Digital I y II</span>
+                    <span>Electrónica digital I y II</span>
                   </li>
                   <li className="flex items-center gap-3 text-blue-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Matemática Avanzada</span>
+                    <span>Matemática avanzada</span>
                   </li>
                 </ul>
               </div>
               <div className="pt-6 border-t border-white/10 text-xs text-slate-400 font-black uppercase tracking-widest">
-                Desarrollo Tecnológico
+                Desarrollo tecnológico
               </div>
             </div>
 
@@ -287,7 +287,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-purple-500 to-pink-500 text-white flex items-center justify-center font-black text-2xl mb-8 shadow-xl shadow-purple-500/40 border-2 border-purple-300/50">
                   6º - 7º
                 </div>
-                <h3 className="text-3xl font-black text-white mb-3">Superior Avanzado</h3>
+                <h3 className="text-3xl font-black text-white mb-3">Superior avanzado</h3>
                 <p className="text-slate-400 text-sm mb-8 leading-relaxed font-bold">
                   Prácticas profesionalizantes y control industrial. Automatización con PLC, variadores de velocidad e IoT en la nube.
                 </p>
@@ -298,11 +298,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Electrónica Industrial I y II (VFD)</span>
+                    <span>Electrónica industrial I y II (VFD)</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Instalaciones Industriales I y II (PLC)</span>
+                    <span>Instalaciones industriales I y II (PLC)</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
@@ -310,12 +310,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Análisis Matemático (Laplace)</span>
+                    <span>Análisis matemático (Laplace)</span>
                   </li>
                 </ul>
               </div>
               <div className="pt-6 border-t border-white/10 text-xs text-slate-400 font-black uppercase tracking-widest">
-                Prácticas Profesionales
+                Prácticas profesionales
               </div>
             </div>
 
@@ -330,7 +330,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="text-xs font-black text-emerald-400 uppercase tracking-widest mb-3">¿Cómo funciona?</div>
             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
-              Metodología Interactiva de Alto Rendimiento
+              Metodología interactiva de alto rendimiento
             </h2>
             <p className="text-xl text-slate-300 font-bold">
               Aprender conceptos técnicos ya no es aburrido. Cada acierto consecutivo multiplica tu combo y tu XP.
@@ -342,7 +342,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-500 text-white flex items-center justify-center mx-auto mb-6 shadow-xl shadow-orange-500/40 border-2 border-orange-300/50">
                 <Flame className="w-8 h-8 fill-white" />
               </div>
-              <h4 className="font-black text-xl text-white mb-3">Combo de Aciertos</h4>
+              <h4 className="font-black text-xl text-white mb-3">Combo de aciertos</h4>
               <p className="text-sm text-slate-400 font-bold">Encadena respuestas correctas sin fallar para encender tu racha y ganar bonificaciones de XP.</p>
             </div>
 
@@ -350,7 +350,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white flex items-center justify-center mx-auto mb-6 shadow-xl shadow-rose-500/40 border-2 border-rose-300/50">
                 <ShieldCheck className="w-8 h-8" />
               </div>
-              <h4 className="font-black text-xl text-white mb-3">Vidas de Taller</h4>
+              <h4 className="font-black text-xl text-white mb-3">Vidas de taller</h4>
               <p className="text-sm text-slate-400 font-bold">Tienes 5 corazones. Si fallas una pregunta de cálculo o seguridad, pierdes uno. ¡Recárgalos practicando!</p>
             </div>
 
@@ -358,7 +358,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-500 text-white flex items-center justify-center mx-auto mb-6 shadow-xl shadow-amber-500/40 border-2 border-amber-300/50">
                 <Trophy className="w-8 h-8" />
               </div>
-              <h4 className="font-black text-xl text-white mb-3">Ligas en Vivo</h4>
+              <h4 className="font-black text-xl text-white mb-3">Ligas en vivo</h4>
               <p className="text-sm text-slate-400 font-bold">Compite semanalmente con tus compañeros de IPET 66 para ascender a las ligas de Plata y Oro.</p>
             </div>
 
@@ -366,7 +366,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-500 to-cyan-500 text-white flex items-center justify-center mx-auto mb-6 shadow-xl shadow-blue-500/40 border-2 border-blue-300/50">
                 <Cpu className="w-8 h-8" />
               </div>
-              <h4 className="font-black text-xl text-white mb-3">Ejercicios Reales</h4>
+              <h4 className="font-black text-xl text-white mb-3">Ejercicios reales</h4>
               <p className="text-sm text-slate-400 font-bold">Preguntas de opción múltiple, emparejamiento de pines y completar fórmulas eléctricas.</p>
             </div>
           </div>

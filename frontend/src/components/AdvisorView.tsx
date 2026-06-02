@@ -30,9 +30,9 @@ export const AdvisorView: React.FC = () => {
         <div className="space-y-2 text-center sm:text-left z-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/20 backdrop-blur text-purple-200 text-xs font-black uppercase tracking-widest">
             <Sparkles className="w-4 h-4 text-purple-300" />
-            <span>Innovación Didáctica IPET 66</span>
+            <span>Innovación didáctica IPET 66</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight">Consejero Técnico IA</h1>
+          <h1 className="text-3xl sm:text-4xl font-black tracking-tight">Consejero técnico IA</h1>
           <p className="text-sm font-medium opacity-90 max-w-md leading-relaxed">
             Sugerencias pedagógicas, recursos externos y propuestas de mejora continua para docentes y alumnos.
           </p>
@@ -49,7 +49,7 @@ export const AdvisorView: React.FC = () => {
           <img src={APP_ASSETS.mascot.thinking} alt={MASCOT_INFO.name} className="w-full h-full rounded-2xl object-cover" />
         </div>
         <div className="space-y-2 text-center sm:text-left">
-          <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">El Análisis de Voltio</div>
+          <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">El análisis de Voltio</div>
           <h3 className="text-xl font-extrabold text-white">¿En qué se puede mejorar o qué conceptos faltan aclarar?</h3>
           <p className="text-sm text-slate-300 leading-relaxed font-normal">
             Esta PWA sienta las bases perfectas para modernizar la educación técnica del IPET 66. También es ideal conectar la app con recursos externos de consulta rápida para el taller y el aula.
@@ -68,7 +68,7 @@ export const AdvisorView: React.FC = () => {
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/40 backdrop-blur border border-cyan-300/20 text-cyan-200 text-xs font-black uppercase tracking-widest">
               <Boxes className="w-4 h-4 text-cyan-300" />
-              <span>Recurso Técnico Recomendado</span>
+              <span>Recurso técnico recomendado</span>
             </div>
 
             <div className="space-y-3">
@@ -83,15 +83,15 @@ export const AdvisorView: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-slate-200">
               <div className="px-3 py-1.5 rounded-xl bg-slate-950/35 border border-white/10 inline-flex items-center gap-2">
                 <Globe className="w-4 h-4 text-cyan-300" />
-                <span>Herramientas Técnicas</span>
+                <span>Herramientas técnicas</span>
               </div>
               <div className="px-3 py-1.5 rounded-xl bg-slate-950/35 border border-white/10 inline-flex items-center gap-2">
                 <QrCode className="w-4 h-4 text-cyan-300" />
-                <span>Acceso Rápido por QR</span>
+                <span>Acceso rápido por QR</span>
               </div>
               <div className="px-3 py-1.5 rounded-xl bg-slate-950/35 border border-white/10 inline-flex items-center gap-2">
                 <Zap className="w-4 h-4 text-cyan-300 fill-cyan-300" />
-                <span>Complemento del Taller</span>
+                <span>Complemento del taller</span>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ export const AdvisorView: React.FC = () => {
                 onClick={handleCopyChipLabs}
                 className="bg-slate-950/40 border border-white/10 hover:border-cyan-300/30 text-slate-100 font-black px-6 py-3.5 rounded-2xl text-sm uppercase tracking-wider transition-all"
               >
-                Copiar Enlace
+                Copiar enlace
               </button>
             </div>
           </div>
@@ -145,7 +145,7 @@ export const AdvisorView: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
             <Cpu className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">1. Simuladores Interactivos</h4>
+          <h4 className="font-extrabold text-lg text-white">1. Simuladores interactivos</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
             Integrar un multímetro virtual donde el alumno deba arrastrar las puntas de prueba para medir voltaje o resistencia en un circuito simulado.
           </p>
@@ -155,7 +155,7 @@ export const AdvisorView: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center">
             <Wrench className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">2. Duelos de Taller (1v1)</h4>
+          <h4 className="font-extrabold text-lg text-white">2. Duelos de taller (1v1)</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
             Un modo arena donde dos estudiantes resuelven cálculos de engranajes o lectura de calibre en tiempo real. El más veloz y preciso gana las tuercas doradas.
           </p>
@@ -165,7 +165,7 @@ export const AdvisorView: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
             <CheckCircle2 className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">3. Validación de Taller Físico</h4>
+          <h4 className="font-extrabold text-lg text-white">3. Validación de taller físico</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
             Los profesores pueden escanear un código QR desde la app del alumno para acreditar que completó satisfactoriamente una práctica de soldadura o torno.
           </p>
@@ -175,7 +175,7 @@ export const AdvisorView: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
             <Lightbulb className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">4. Módulos de PLC y Robótica</h4>
+          <h4 className="font-extrabold text-lg text-white">4. Módulos de PLC y robótica</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
             Para 7mo año, incorporar bloques de arrastrar y soltar para programar rutinas de automatización industrial.
           </p>
@@ -187,7 +187,7 @@ export const AdvisorView: React.FC = () => {
       <div className="space-y-4 pt-6 border-t border-slate-800">
         <div className="flex items-center gap-2">
           <Zap className="w-5 h-5 text-amber-400 fill-amber-400" />
-          <h3 className="text-xl font-black text-white">Sugerencias Metodológicas para Docentes</h3>
+          <h3 className="text-xl font-black text-white">Sugerencias metodológicas para docentes</h3>
         </div>
 
         <div className="space-y-4">
@@ -216,7 +216,7 @@ export const AdvisorView: React.FC = () => {
           onClick={() => alert("Función de exportación de reportes docentes en desarrollo.")}
           className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-xs hover:bg-slate-600 transition-colors"
         >
-          <span>Exportar Planilla de Alumnos</span>
+          <span>Exportar planilla de alumnos</span>
           <ArrowUpRight className="w-4 h-4 text-emerald-400" />
         </button>
       </div>

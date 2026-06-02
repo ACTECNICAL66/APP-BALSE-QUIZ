@@ -64,17 +64,17 @@ export const MASCOT_INFO = {
 };
 
 export const ACHIEVEMENTS_DATA: Achievement[] = [
-  { id: 'first_step', title: 'Técnico Principiante', description: 'Completa tu primera actividad en IPET 66', icon: '🏆', maxProgress: 1 },
-  { id: 'streak_5', title: 'Racha de Fuego', description: 'Logra 5 aciertos seguidos en una lección', icon: '🔥', maxProgress: 5 },
-  { id: 'perfect_lesson', title: 'Soldadura Perfecta', description: 'Completa un nivel sin perder ni un corazón', icon: '⚡', maxProgress: 1 },
-  { id: 'xp_500', title: 'Batería de Alta Carga', description: 'Acumula 500 puntos de XP', icon: '🔋', maxProgress: 500 },
-  { id: 'year_master', title: 'Aprobación de Ciclo', description: 'Completa todas las materias de un año', icon: '🎓', maxProgress: 1 },
+  { id: 'first_step', title: 'Técnico principiante', description: 'Completa tu primera actividad en IPET 66', icon: '🏆', maxProgress: 1 },
+  { id: 'streak_5', title: 'Racha de fuego', description: 'Logra 5 aciertos seguidos en una lección', icon: '🔥', maxProgress: 5 },
+  { id: 'perfect_lesson', title: 'Soldadura perfecta', description: 'Completa un nivel sin perder ni un corazón', icon: '⚡', maxProgress: 1 },
+  { id: 'xp_500', title: 'Batería de alta carga', description: 'Acumula 500 puntos de XP', icon: '🔋', maxProgress: 500 },
+  { id: 'year_master', title: 'Aprobación de ciclo', description: 'Completa todas las materias de un año', icon: '🎓', maxProgress: 1 },
 ];
 
 export const SHOP_ITEMS: ShopItem[] = [
-  { id: 'refill', name: 'Recarga Total de Corazones', description: 'Restaura tus 5 corazones para seguir practicando.', cost: 50, icon: '❤️', type: 'heart_refill' },
-  { id: 'freeze', name: 'Escudo Anti-Fallo', description: 'Mantiene tu combo de racha intacto ante un error de respuesta.', cost: 150, icon: '🛡️', type: 'streak_freeze' },
-  { id: 'frame_gold', name: 'Marco Liquid Gold', description: 'Un marco de vidrio líquido dorado brillante para tu perfil.', cost: 300, icon: '✨', type: 'avatar_frame' },
+  { id: 'refill', name: 'Recarga total de corazones', description: 'Restaura tus 5 corazones para seguir practicando.', cost: 50, icon: '❤️', type: 'heart_refill' },
+  { id: 'freeze', name: 'Escudo anti-fallo', description: 'Mantiene tu combo de racha intacto ante un error de respuesta.', cost: 150, icon: '🛡️', type: 'streak_freeze' },
+  { id: 'frame_gold', name: 'Marco liquid gold', description: 'Un marco de vidrio líquido dorado brillante para tu perfil.', cost: 300, icon: '✨', type: 'avatar_frame' },
   { id: 'badge_tester', name: 'Insignia Tester', description: 'Logro demostrativo del dominio del Tester. Se muestra en tu perfil y avatar como insignia oficial.', cost: 500, icon: '/APP-BALSE-QUIZ/assets/badges/tester-badge.png', type: 'outfit' },
 ];
 
@@ -123,44 +123,44 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
   // 1ER AÑO
   {
     year: 1,
-    title: "1er Año - Ciclo Básico",
+    title: "1er año - ciclo básico",
     subtitle: "Introducción a los talleres y fundamentos técnicos",
     subjects: [
       {
         id: "m-1-taller",
-        name: "Taller General",
+        name: "Taller general",
         description: "Normas de seguridad, herramientas de banco, carpintería y hojalatería.",
         color: "from-amber-500 to-orange-600",
         iconName: "Wrench",
         lessons: [
           {
-            id: "1-tal-1", level: 1, title: "Seguridad y Antiparras", description: "Normas de protección personal.", xp: 25,
+            id: "1-tal-1", level: 1, title: "Seguridad y antiparras", description: "Normas de protección personal.", xp: 25,
             questions: [
               { id: "q1", type: "multiple-choice", question: "¿Cuál es el elemento de protección personal OBLIGATORIO al operar el taladro de banco o amoladora?", options: ["Antiparras de seguridad (Lentes)", "Guantes de lana gruesos", "Gorra con visera", "Auriculares con música"], correctAnswer: "Antiparras de seguridad (Lentes)", explanation: "Las antiparras protegen los ojos contra proyección de virutas. Nunca se usan guantes holgados en máquinas giratorias." },
               { id: "q2", type: "true-false", question: "Al trabajar en el taller, está permitido llevar anillos, pulseras o cadenas colgantes.", correctAnswer: false, explanation: "Falso. Todo objeto colgante puede engancharse en partes móviles y causar accidentes." }
             ]
           },
           {
-            id: "1-tal-2", level: 2, title: "Instrumentos de Medición", description: "El Calibre Pie de Rey y reglas metálicas.", xp: 30,
+            id: "1-tal-2", level: 2, title: "Instrumentos de medición", description: "El Calibre Pie de Rey y reglas metálicas.", xp: 30,
             questions: [
               { id: "q3", type: "multiple-choice", question: "¿En qué unidad del sistema internacional (SI) se expresan normalmente los planos de taller?", options: ["Milímetros (mm)", "Metros (m)", "Pulgadas (in)", "Centímetros (cm)"], correctAnswer: "Milímetros (mm)", explanation: "En dibujo mecánico y taller técnico en Argentina se trabaja bajo normas IRAM utilizando milímetros." },
               { id: "q4", type: "match-pairs", question: "Empareja cada herramienta con su función:", pairs: [{ left: "Calibre Pie de Rey", right: "Medición precisa de diámetros y profundidades" }, { left: "Morsa de banco", right: "Sujeción firme de piezas a trabajar" }, { left: "Escofina", right: "Desbaste de maderas en carpintería" }], explanation: "El calibre mide milímetros y fracciones; la morsa sujeta la pieza; la escofina desbasta madera." }
             ]
           },
           {
-            id: "1-tal-3", level: 3, title: "Herramientas Manuales", description: "Granete, martillos y sierras.", xp: 35,
+            id: "1-tal-3", level: 3, title: "Herramientas manuales", description: "Granete, martillos y sierras.", xp: 35,
             questions: [
               { id: "q5", type: "fill-blanks", question: "Para realizar una marca guía antes de agujerear un metal con el taladro, utilizamos un _______ de marcar y un martillo.", options: ["Punto", "Destornillador", "Formón", "Remache"], correctAnswer: "Punto", explanation: "El punto de marcar (granete) crea una muesca cónica para que la mecha no resbale." }
             ]
           },
           {
-            id: "1-tal-4", level: 4, title: "Hojalatería y Trazado", description: "Plegado y remachado de chapas.", xp: 40,
+            id: "1-tal-4", level: 4, title: "Hojalatería y trazado", description: "Plegado y remachado de chapas.", xp: 40,
             questions: [
               { id: "q6", type: "true-false", question: "Al cortar chapa galvanizada con tijera de hojalatero, se deben utilizar guantes de descarne.", correctAnswer: true, explanation: "Verdadero. Los filos vivos de la chapa recién cortada pueden causar cortes profundos en las manos." }
             ]
           },
           {
-            id: "1-tal-5", level: 5, title: "Evaluación de Taller I", description: "Repaso integral de herramientas y seguridad.", xp: 50,
+            id: "1-tal-5", level: 5, title: "Evaluación de taller I", description: "Repaso integral de herramientas y seguridad.", xp: 50,
             questions: [
               { id: "q7", type: "multiple-choice", question: "¿Qué herramienta se utiliza para verificar ángulos rectos exactos de 90° en una pieza?", options: ["Escuadra de sombrero 90°", "Compás de punta", "Tenaza", "Destornillador plano"], correctAnswer: "Escuadra de sombrero 90°", explanation: "La escuadra de sombrero se apoya sobre el borde rectificado para comprobar perpendicularidad." }
             ]
@@ -169,37 +169,37 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-1-dibujo",
-        name: "Dibujo Técnico",
+        name: "Dibujo técnico",
         description: "Normas IRAM, rotulado, caligrafía técnica y tipos de líneas.",
         color: "from-blue-500 to-indigo-600",
         iconName: "PencilRuler",
         lessons: [
           {
-            id: "1-dib-1", level: 1, title: "Formatos Normalizados", description: "Hojas formato A4 y A3.", xp: 25,
+            id: "1-dib-1", level: 1, title: "Formatos normalizados", description: "Hojas formato A4 y A3.", xp: 25,
             questions: [
               { id: "qd1", type: "multiple-choice", question: "¿Cuáles son las dimensiones exactas de una hoja formato A4 según la norma IRAM?", options: ["210 x 297 mm", "200 x 300 mm", "216 x 279 mm", "250 x 350 mm"], correctAnswer: "210 x 297 mm", explanation: "El formato A4 mide exactamente 210 mm de ancho por 297 mm de alto." }
             ]
           },
           {
-            id: "1-dib-2", level: 2, title: "Tipos de Líneas IRAM", description: "Línea continua, trazos y ejes.", xp: 30,
+            id: "1-dib-2", level: 2, title: "Tipos de líneas IRAM", description: "Línea continua, trazos y ejes.", xp: 30,
             questions: [
               { id: "qd2", type: "match-pairs", question: "Asocia cada tipo de línea normalizada con su aplicación:", pairs: [{ left: "Línea continua gruesa", right: "Contornos y aristas visibles" }, { left: "Línea de trazos cortos", right: "Aristas y contornos ocultos" }, { left: "Línea de trazo y punto", right: "Ejes de simetría y de revolución" }], explanation: "Cada línea en Dibujo Técnico comunica una parte de la geometría de la pieza." }
             ]
           },
           {
-            id: "1-dib-3", level: 3, title: "Rotulado y Caligrafía", description: "Norma IRAM 4503.", xp: 35,
+            id: "1-dib-3", level: 3, title: "Rotulado y caligrafía", description: "Norma IRAM 4503.", xp: 35,
             questions: [
               { id: "qd3", type: "true-false", question: "El rótulo (cuadro de datos) se ubica siempre en el ángulo inferior derecho del plano.", correctAnswer: true, explanation: "Verdadero. Es el estándar para facilitar la lectura al archivar y doblar los planos." }
             ]
           },
           {
-            id: "1-dib-4", level: 4, title: "Uso de Escuadras", description: "Trazados a 30°, 45° y 60°.", xp: 40,
+            id: "1-dib-4", level: 4, title: "Uso de escuadras", description: "Trazados a 30°, 45° y 60°.", xp: 40,
             questions: [
               { id: "qd4", type: "fill-blanks", question: "Al combinar una escuadra de 45° y una de 30°/60° apoyadas en la regla T, podemos trazar líneas inclinadas a _____ grados exactos (ej: 45 + 30).", options: ["75", "90", "10", "100"], correctAnswer: "75", explanation: "Sumando o restando los ángulos de ambas escuadras se obtienen múltiplos de 15°." }
             ]
           },
           {
-            id: "1-dib-5", level: 5, title: "Evaluación de Dibujo I", description: "Examen final de caligrafía e IRAM.", xp: 50,
+            id: "1-dib-5", level: 5, title: "Evaluación de dibujo I", description: "Examen final de caligrafía e IRAM.", xp: 50,
             questions: [
               { id: "qd5", type: "multiple-choice", question: "¿Qué tipo de lápiz o mina se recomienda para trazar líneas guías muy tenues antes de repasar?", options: ["Duro (2H o 3H)", "Blando (2B o 4B)", "Marcador indeleble", "Crayón de cera"], correctAnswer: "Duro (2H o 3H)", explanation: "Los lápices H son duros y de trazo gris claro, ideales para líneas de construcción." }
             ]
@@ -214,23 +214,23 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Calculator",
         lessons: [
           {
-            id: "1-mat-1", level: 1, title: "Fracciones en el Taller", description: "Medidas en pulgadas fraccionales.", xp: 25,
+            id: "1-mat-1", level: 1, title: "Fracciones en el taller", description: "Medidas en pulgadas fraccionales.", xp: 25,
             questions: [{ id: "qm1", type: "multiple-choice", question: "¿Cuánto es la mitad de 1/2 pulgada?", options: ["1/4 pulgada", "1/8 pulgada", "1 pulgada", "3/8 pulgada"], correctAnswer: "1/4 pulgada", explanation: "(1/2) / 2 = 1/4. Es una medida habitual en llaves fijas y bulones." }]
           },
           {
-            id: "1-mat-2", level: 2, title: "Cálculo de Perímetros", description: "Perímetros de chapas y perfiles.", xp: 30,
+            id: "1-mat-2", level: 2, title: "Cálculo de perímetros", description: "Perímetros de chapas y perfiles.", xp: 30,
             questions: [{ id: "qm2", type: "true-false", question: "El perímetro de una chapa rectangular de 3m por 2m es igual a 10 metros.", correctAnswer: true, explanation: "Verdadero. Perímetro = 2x(3+2) = 10 metros." }]
           },
           {
-            id: "1-mat-3", level: 3, title: "Escalas Numéricas", description: "Escalas de ampliación y reducción.", xp: 35,
+            id: "1-mat-3", level: 3, title: "Escalas numéricas", description: "Escalas de ampliación y reducción.", xp: 35,
             questions: [{ id: "qm3", type: "multiple-choice", question: "Si en un plano a escala 1:2 una pieza metálica mide 50 mm, ¿cuánto mide la pieza real en el taller?", options: ["100 mm", "25 mm", "50 mm", "200 mm"], correctAnswer: "100 mm", explanation: "La escala 1:2 significa que el dibujo es la mitad del tamaño real. 50 mm x 2 = 100 mm." }]
           },
           {
-            id: "1-mat-4", level: 4, title: "Cálculo de Áreas", description: "Superficie de piezas planas.", xp: 40,
+            id: "1-mat-4", level: 4, title: "Cálculo de áreas", description: "Superficie de piezas planas.", xp: 40,
             questions: [{ id: "qm4", type: "fill-blanks", question: "Para calcular el área de un triángulo rectangular, multiplicamos la base por la altura y dividimos entre _____.", options: ["2", "3", "4", "5"], correctAnswer: "2", explanation: "Área = (base * altura) / 2." }]
           },
           {
-            id: "1-mat-5", level: 5, title: "Examen de Matemática I", description: "Problemas aplicados al taller.", xp: 50,
+            id: "1-mat-5", level: 5, title: "Examen de matemática I", description: "Problemas aplicados al taller.", xp: 50,
             questions: [{ id: "qm5", type: "multiple-choice", question: "Si 4 tornillos cuestan $120, ¿cuánto costarán 12 tornillos idénticos?", options: ["$360", "$240", "$480", "$300"], correctAnswer: "$360", explanation: "Por regla de tres directa: (12 * 120) / 4 = 360." }]
           }
         ]
@@ -243,23 +243,23 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Cpu",
         lessons: [
           {
-            id: "1-tec-1", level: 1, title: "Propiedades Mecánicas", description: "Dureza, ductilidad y maleabilidad.", xp: 25,
+            id: "1-tec-1", level: 1, title: "Propiedades mecánicas", description: "Dureza, ductilidad y maleabilidad.", xp: 25,
             questions: [{ id: "qt1", type: "multiple-choice", question: "¿Qué propiedad de un metal le permite deformarse formando hilos o alambres sin romperse (como el cobre)?", options: ["Ductilidad", "Maleabilidad", "Dureza", "Tenacidad"], correctAnswer: "Ductilidad", explanation: "La ductilidad forma alambres; la maleabilidad forma láminas o chapas." }]
           },
           {
-            id: "1-tec-2", level: 2, title: "Materiales Ferrosos", description: "Diferencia entre hierro fundido y acero.", xp: 30,
+            id: "1-tec-2", level: 2, title: "Materiales ferrosos", description: "Diferencia entre hierro fundido y acero.", xp: 30,
             questions: [{ id: "qt2", type: "true-false", question: "El acero es una aleación metálica compuesta principalmente por Hierro (Fe) y Carbono (C).", correctAnswer: true, explanation: "Verdadero. El porcentaje de carbono define las propiedades del acero." }]
           },
           {
-            id: "1-tec-3", level: 3, title: "Maderas y Carpintería", description: "Tipos de maderas y uniones.", xp: 35,
+            id: "1-tec-3", level: 3, title: "Maderas y carpintería", description: "Tipos de maderas y uniones.", xp: 35,
             questions: [{ id: "qt3", type: "fill-blanks", question: "Para unir dos piezas de madera de forma permanente en ensamble, se utiliza adhesivo vinílico comúnmente llamado _______ de carpintero.", options: ["Cola", "Silicona", "Resina", "Cemento"], correctAnswer: "Cola", explanation: "La cola vinílica penetra en los poros de la madera logrando una unión muy resistente." }]
           },
           {
-            id: "1-tec-4", level: 4, title: "Plásticos y Polímeros", description: "Termoplásticos vs Termoestables.", xp: 40,
+            id: "1-tec-4", level: 4, title: "Plásticos y polímeros", description: "Termoplásticos vs Termoestables.", xp: 40,
             questions: [{ id: "qt4", type: "match-pairs", question: "Asocia cada tipo de plástico con su propiedad:", pairs: [{ left: "Termoplástico (PVC, PET)", right: "Se reblandece con el calor y puede reciclarse" }, { left: "Termoestable (Baquelita)", right: "No se derrite con el calor una vez curado" }], explanation: "Los termoplásticos se moldean repetidamente con calor." }]
           },
           {
-            id: "1-tec-5", level: 5, title: "Análisis de Producto", description: "Estudio morfológico y funcional.", xp: 50,
+            id: "1-tec-5", level: 5, title: "Análisis de producto", description: "Estudio morfológico y funcional.", xp: 50,
             questions: [{ id: "qt5", type: "multiple-choice", question: "En el análisis de un objeto técnico, el 'análisis funcional' responde a la pregunta:", options: ["¿Para qué sirve y cómo cumple su función?", "¿De qué material está hecho?", "¿Cuánto cuesta fabricarlo?", "¿Qué forma geométrica tiene?"], correctAnswer: "¿Para qué sirve y cómo cumple su función?", explanation: "El análisis funcional indaga el propósito y la utilidad del objeto." }]
           }
         ]
@@ -270,18 +270,18 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
   // 2DO AÑO
     {
     year: 2,
-    title: "2do Año - Ciclo Básico",
+    title: "2do año - ciclo básico",
     subtitle: "Taller eléctrico, dibujo técnico y matemática aplicada",
     subjects: [
       {
         id: "m-2-taller",
-        name: "Taller: Electricidad y Laboratorio",
+        name: "Taller: electricidad y laboratorio",
         description: "Código de colores, circuitos serie/paralelo/mixto, multímetro y leyes fundamentales.",
         color: "from-amber-500 to-orange-600",
         iconName: "Zap",
           lessons: [
             {
-              id: "2-tal-1", level: 1, title: "Código de Colores de Resistencias", description: "Lectura del valor óhmico.", xp: 25,
+              id: "2-tal-1", level: 1, title: "Código de colores de resistencias", description: "Lectura del valor óhmico.", xp: 25,
               questions: [
                 {
                   id: "q21", type: "multiple-choice",
@@ -300,7 +300,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tal-2", level: 2, title: "Circuitos: Serie, Paralelo y Mixto", description: "Identificación de asociaciones.", xp: 30,
+              id: "2-tal-2", level: 2, title: "Circuitos: serie, paralelo y mixto", description: "Identificación de asociaciones.", xp: 30,
               questions: [
                 {
                   id: "q22", type: "multiple-choice",
@@ -319,7 +319,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tal-3", level: 3, title: "El Multímetro (Tester)", description: "Medición de magnitudes eléctricas.", xp: 35,
+              id: "2-tal-3", level: 3, title: "El multímetro (Tester)", description: "Medición de magnitudes eléctricas.", xp: 35,
               questions: [
                 {
                   id: "q23", type: "multiple-choice",
@@ -331,7 +331,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tal-4", level: 4, title: "Ley de Ohm y Potencia", description: "Relación entre V, I, R y P.", xp: 40,
+              id: "2-tal-4", level: 4, title: "Ley de Ohm y potencia", description: "Relación entre V, I, R y P.", xp: 40,
               questions: [
                 {
                   id: "q24", type: "multiple-choice",
@@ -343,7 +343,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tal-5", level: 5, title: "Evaluación de Taller Eléctrico", description: "Circuitos, mediciones y leyes fundamentales.", xp: 50,
+              id: "2-tal-5", level: 5, title: "Evaluación de taller eléctrico", description: "Circuitos, mediciones y leyes fundamentales.", xp: 50,
               questions: [
                 {
                   id: "q25", type: "multiple-choice",
@@ -358,13 +358,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-2-dibujo",
-        name: "Dibujo Técnico II",
+        name: "Dibujo técnico II",
         description: "Normas IRAM/ISO, proyecciones ortogonales, acotaciones y símbolos electrónicos.",
         color: "from-blue-500 to-indigo-600",
         iconName: "Box",
           lessons: [
             {
-              id: "2-dib-1", level: 1, title: "Normas IRAM/ISO en Dibujo Técnico", description: "Unificación de criterios de representación.", xp: 25,
+              id: "2-dib-1", level: 1, title: "Normas IRAM/ISO en dibujo técnico", description: "Unificación de criterios de representación.", xp: 25,
               questions: [
                 {
                   id: "qd21", type: "multiple-choice",
@@ -376,7 +376,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-dib-2", level: 2, title: "Proyecciones Ortogonales", description: "Vistas planas relacionadas.", xp: 30,
+              id: "2-dib-2", level: 2, title: "Proyecciones ortogonales", description: "Vistas planas relacionadas.", xp: 30,
               questions: [
                 {
                   id: "qd22", type: "multiple-choice",
@@ -388,7 +388,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-dib-3", level: 3, title: "Acotaciones en Planos", description: "Dimensiones y medidas normalizadas.", xp: 35,
+              id: "2-dib-3", level: 3, title: "Acotaciones en planos", description: "Dimensiones y medidas normalizadas.", xp: 35,
               questions: [
                 {
                   id: "qd23", type: "multiple-choice",
@@ -400,7 +400,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-dib-4", level: 4, title: "Símbolos en Esquemas Electrónicos", description: "Elementos normalizados de componentes.", xp: 40,
+              id: "2-dib-4", level: 4, title: "Símbolos en esquemas electrónicos", description: "Elementos normalizados de componentes.", xp: 40,
               questions: [
                 {
                   id: "qd24", type: "multiple-choice",
@@ -412,7 +412,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-dib-5", level: 5, title: "Evaluación de Dibujo: Normas y Proyecciones", description: "Examen final de normas y simbolización.", xp: 50,
+              id: "2-dib-5", level: 5, title: "Evaluación de dibujo: normas y proyecciones", description: "Examen final de normas y simbolización.", xp: 50,
               questions: [
                 {
                   id: "qd25", type: "multiple-choice",
@@ -433,7 +433,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Calculator",
           lessons: [
             {
-              id: "2-mat-1", level: 1, title: "Números Enteros Negativos en la Vida Cotidiana", description: "Aplicaciones de negativos en taller.", xp: 25,
+              id: "2-mat-1", level: 1, title: "Números enteros negativos en la vida cotidiana", description: "Aplicaciones de negativos en taller.", xp: 25,
               questions: [
                 {
                   id: "qm21", type: "multiple-choice",
@@ -445,7 +445,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-mat-2", level: 2, title: "Proporcionalidad Directa", description: "Relación entre magnitudes.", xp: 30,
+              id: "2-mat-2", level: 2, title: "Proporcionalidad directa", description: "Relación entre magnitudes.", xp: 30,
               questions: [
                 {
                   id: "qm22", type: "multiple-choice",
@@ -457,7 +457,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-mat-3", level: 3, title: "Números Racionales", description: "Fracciones y expresiones decimales.", xp: 35,
+              id: "2-mat-3", level: 3, title: "Números racionales", description: "Fracciones y expresiones decimales.", xp: 35,
               questions: [
                 {
                   id: "qm23", type: "multiple-choice",
@@ -469,7 +469,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-mat-4", level: 4, title: "Resolución de Ecuaciones", description: "Despeje de variables.", xp: 40,
+              id: "2-mat-4", level: 4, title: "Resolución de ecuaciones", description: "Despeje de variables.", xp: 40,
               questions: [
                 {
                   id: "qm24", type: "fill-blanks",
@@ -481,7 +481,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-mat-5", level: 5, title: "Evaluación de Matemática", description: "Aplicación de proporcionalidad y racionales.", xp: 50,
+              id: "2-mat-5", level: 5, title: "Evaluación de matemática", description: "Aplicación de proporcionalidad y racionales.", xp: 50,
               questions: [
                 {
                   id: "qm25", type: "multiple-choice",
@@ -502,7 +502,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Cog",
           lessons: [
             {
-              id: "2-tec-1", level: 1, title: "El Relé como Componente Electrónico", description: "Activación por bobina.", xp: 25,
+              id: "2-tec-1", level: 1, title: "El relé como componente electrónico", description: "Activación por bobina.", xp: 25,
               questions: [
                 {
                   id: "qt21", type: "multiple-choice",
@@ -514,7 +514,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tec-2", level: 2, title: "Circuitos Integrados: CI 555", description: "Temporizador, oscilador y generador.", xp: 30,
+              id: "2-tec-2", level: 2, title: "Circuitos integrados: CI 555", description: "Temporizador, oscilador y generador.", xp: 30,
               questions: [
                 {
                   id: "qt22", type: "multiple-choice",
@@ -526,7 +526,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tec-3", level: 3, title: "Capacitores: Almacenamiento de Energía", description: "Función principal del capacitor.", xp: 35,
+              id: "2-tec-3", level: 3, title: "Capacitores: almacenamiento de energía", description: "Función principal del capacitor.", xp: 35,
               questions: [
                 {
                   id: "qt23", type: "multiple-choice",
@@ -550,7 +550,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "2-tec-5", level: 5, title: "Programación por Bloques", description: "Instrucciones conectadas visualmente.", xp: 50,
+              id: "2-tec-5", level: 5, title: "Programación por bloques", description: "Instrucciones conectadas visualmente.", xp: 50,
               questions: [
                 {
                   id: "qt25", type: "multiple-choice",
@@ -568,63 +568,63 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 // 3ER AÑO
   {
     year: 3,
-    title: "3er Año - Cierre de Ciclo Básico",
+    title: "3er año - cierre de ciclo básico",
     subtitle: "Preparación para las especialidades técnicas superiores",
     subjects: [
       {
         id: "m-3-taller",
-        name: "Taller: Herrería y Soldadura",
+        name: "Taller: herrería y soldadura",
         description: "Soldadura por arco eléctrico (SMAW), forja y estructuras metálicas.",
         color: "from-amber-500 to-orange-600",
         iconName: "Flame",
         lessons: [
           {
-            id: "3-tal-1", level: 1, title: "Soldadura por Arco", description: "Equipos, masa y pinza portaelectrodo.", xp: 25,
+            id: "3-tal-1", level: 1, title: "Soldadura por arco", description: "Equipos, masa y pinza portaelectrodo.", xp: 25,
             questions: [{ id: "q31", type: "multiple-choice", question: "¿Qué nos indica el número '6013' en un electrodo de soldadura de taller?", options: ["60.000 psi de resistencia a la tracción y apto para todas las posiciones", "60 mm de longitud y 13 mm de espesor", "60 amperios de mínimo y 13 de voltaje", "Código de fábrica sin significado"], correctAnswer: "60.000 psi de resistencia a la tracción y apto para todas las posiciones", explanation: "Norma AWS: 60 indica resistencia en miles de psi; el 1 indica todas las posiciones." }]
           },
           {
-            id: "3-tal-2", level: 2, title: "Caretas Fotolumínicas", description: "Protección contra rayos UV e infrarrojos.", xp: 30,
+            id: "3-tal-2", level: 2, title: "Caretas fotolumínicas", description: "Protección contra rayos UV e infrarrojos.", xp: 30,
             questions: [{ id: "q32", type: "true-false", question: "Al soldar con arco eléctrico, los anteojos de sol comunes brindan protección suficiente contra el destello.", correctAnswer: false, explanation: "Falso. El arco emite rayos UV e infrarrojos intensos que requieren cristales DIN 10 o superior." }]
           },
           {
-            id: "3-tal-3", level: 3, title: "Amperaje y Espesores", description: "Regulación de la máquina soldadora.", xp: 35,
+            id: "3-tal-3", level: 3, title: "Amperaje y espesores", description: "Regulación de la máquina soldadora.", xp: 35,
             questions: [{ id: "q33", type: "fill-blanks", question: "Para soldar caños estructurales de pared delgada (1.2mm) con electrodo de 2.5mm, regulamos la máquina a un amperaje aproximado de ______ A.", options: ["65", "200", "10", "300"], correctAnswer: "65", explanation: "Un amperaje muy alto perforaría el caño delgado." }]
           },
           {
-            id: "3-tal-4", level: 4, title: "Limpieza de Escoria", description: "Piqueta y cepillo de alambre.", xp: 40,
+            id: "3-tal-4", level: 4, title: "Limpieza de escoria", description: "Piqueta y cepillo de alambre.", xp: 40,
             questions: [{ id: "q34", type: "match-pairs", question: "Asocia cada defecto de soldadura con su causa:", pairs: [{ left: "Inclusión de escoria", right: "Falta de limpieza entre pasadas del cordón" }, { left: "Mordedura o socavación", right: "Amperaje excesivamente alto al soldar" }], explanation: "La técnica correcta exige pulso constante y limpieza." }]
           },
           {
-            id: "3-tal-5", level: 5, title: "Evaluación de Soldadura", description: "Examen final de Herrería y SMAW.", xp: 50,
+            id: "3-tal-5", level: 5, title: "Evaluación de soldadura", description: "Examen final de Herrería y SMAW.", xp: 50,
             questions: [{ id: "q35", type: "multiple-choice", question: "¿Qué gas se genera y quema alrededor de la gota fundida en el electrodo revestido para protegerla del oxígeno?", options: ["Gases de combustión del revestimiento (atmósfera protectora)", "Argón puro", "Oxígeno puro", "Helio"], correctAnswer: "Gases de combustión del revestimiento (atmósfera protectora)", explanation: "El fundente exterior del electrodo crea una campana de gas y escoria protectora al arder." }]
           }
         ]
       },
       {
         id: "m-3-dibujo",
-        name: "Dibujo Técnico III",
+        name: "Dibujo técnico III",
         description: "Cortes, secciones, rayados y perspectivas isométricas.",
         color: "from-blue-500 to-indigo-600",
         iconName: "Layers",
         lessons: [
           {
-            id: "3-dib-1", level: 1, title: "Perspectiva Isométrica", description: "Representación 3D a 30 grados.", xp: 25,
+            id: "3-dib-1", level: 1, title: "Perspectiva isométrica", description: "Representación 3D a 30 grados.", xp: 25,
             questions: [{ id: "qd31", type: "fill-blanks", question: "En perspectiva isométrica, los tres ejes de ancho, profundidad y altura forman ángulos iguales de ______ grados entre sí.", options: ["120", "90", "45", "60"], correctAnswer: "120", explanation: "En isometría los tres ejes forman 120° en el papel (líneas base inclinadas 30° respecto a la horizontal)." }]
           },
           {
-            id: "3-dib-2", level: 2, title: "Perspectiva Caballera", description: "Vista frontal en magnitud real.", xp: 30,
+            id: "3-dib-2", level: 2, title: "Perspectiva caballera", description: "Vista frontal en magnitud real.", xp: 30,
             questions: [{ id: "qd32", type: "true-false", question: "En la perspectiva caballera, el eje de profundidad se reduce a la mitad (1/2) para evitar la distorsión visual.", correctAnswer: true, explanation: "Verdadero. Al dibujar la profundidad a 45°, se aplica un coeficiente de reducción (normalmente 0.5)." }]
           },
           {
-            id: "3-dib-3", level: 3, title: "Cortes y Rayados", description: "Norma IRAM para indicar cortes interiores.", xp: 35,
+            id: "3-dib-3", level: 3, title: "Cortes y rayados", description: "Norma IRAM para indicar cortes interiores.", xp: 35,
             questions: [{ id: "qd33", type: "multiple-choice", question: "¿A qué inclinación y con qué tipo de línea se realiza el rayado (achurado) de una sección cortada en metal?", options: ["Línea continua fina a 45°", "Línea gruesa a 90°", "Línea de trazos a 30°", "Rayado a mano alzada"], correctAnswer: "Línea continua fina a 45°", explanation: "Las superficies seccionadas se rayan con trazo fino inclinado a 45°." }]
           },
           {
-            id: "3-dib-4", level: 4, title: "Corte Escalonado", description: "Planos de corte paralelos.", xp: 40,
+            id: "3-dib-4", level: 4, title: "Corte escalonado", description: "Planos de corte paralelos.", xp: 40,
             questions: [{ id: "qd34", type: "match-pairs", question: "Asocia el tipo de corte con su objetivo:", pairs: [{ left: "Corte Total", right: "El plano de corte atraviesa completamente la pieza de lado a lado" }, { left: "Medio Corte (Semicorte)", right: "Muestra la mitad exterior y la mitad interior en piezas simétricas" }], explanation: "Técnicas avanzadas para piezas mecánicas complejas." }]
           },
           {
-            id: "3-dib-5", level: 5, title: "Evaluación de Dibujo III", description: "Examen de perspectivas y cortes.", xp: 50,
+            id: "3-dib-5", level: 5, title: "Evaluación de dibujo III", description: "Examen de perspectivas y cortes.", xp: 50,
             questions: [{ id: "qd35", type: "multiple-choice", question: "¿Con qué letras o símbolos se identifica el plano de corte en las vistas ortogonales?", options: ["Letras mayúsculas en los extremos de la flecha (Ej: A - A)", "Números romanos pequeños", "Colores llamativos", "No se identifica"], correctAnswer: "Letras mayúsculas en los extremos de la flecha (Ej: A - A)", explanation: "El corte se nombra con letras mayúsculas coincidentes en el plano de traza y en la vista cortada." }]
           }
         ]
@@ -637,23 +637,23 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Calculator",
         lessons: [
           {
-            id: "3-mat-1", level: 1, title: "Sistemas Lineales 2x2", description: "Métodos de igualación y sustitución.", xp: 25,
+            id: "3-mat-1", level: 1, title: "Sistemas lineales 2x2", description: "Métodos de igualación y sustitución.", xp: 25,
             questions: [{ id: "qm31", type: "multiple-choice", question: "En el sistema: X + Y = 10 y X - Y = 2, ¿cuáles son los valores de X e Y?", options: ["X=6, Y=4", "X=5, Y=5", "X=8, Y=2", "X=7, Y=3"], correctAnswer: "X=6, Y=4", explanation: "Sumando ambas ecuaciones: 2X = 12 => X = 6. Reemplazando: 6 + Y = 10 => Y = 4." }]
           },
           {
-            id: "3-mat-2", level: 2, title: "Función Lineal y Pendiente", description: "La recta y = mx + b.", xp: 30,
+            id: "3-mat-2", level: 2, title: "Función lineal y pendiente", description: "La recta y = mx + b.", xp: 30,
             questions: [{ id: "qm32", type: "true-false", question: "La pendiente 'm' en la ecuación y = mx + b representa la inclinación de la recta respecto al eje horizontal.", correctAnswer: true, explanation: "Verdadero. Si m es positiva la recta asciende, si es negativa desciende." }]
           },
           {
-            id: "3-mat-3", level: 3, title: "Operaciones con Polinomios", description: "Suma y producto de expresiones algebraicas.", xp: 35,
+            id: "3-mat-3", level: 3, title: "Operaciones con polinomios", description: "Suma y producto de expresiones algebraicas.", xp: 35,
             questions: [{ id: "qm33", type: "fill-blanks", question: "Al multiplicar (X + 2) por (X + 3), el resultado polinómico es X² + _____X + 6.", options: ["5", "6", "1", "4"], correctAnswer: "5", explanation: "X*X + 3X + 2X + 6 = X² + 5X + 6." }]
           },
           {
-            id: "3-mat-4", level: 4, title: "Casos de Factoreo", description: "Factor común y diferencia de cuadrados.", xp: 40,
+            id: "3-mat-4", level: 4, title: "Casos de factoreo", description: "Factor común y diferencia de cuadrados.", xp: 40,
             questions: [{ id: "qm34", type: "match-pairs", question: "Asocia cada expresión con su factorización:", pairs: [{ left: "X² - 9", right: "(X - 3)(X + 3)" }, { left: "2X² + 4X", right: "2X(X + 2)" }], explanation: "Factorizar simplifica el cálculo de estructuras complejas." }]
           },
           {
-            id: "3-mat-5", level: 5, title: "Examen de Matemática III", description: "Aplicaciones físicas y gráficas.", xp: 50,
+            id: "3-mat-5", level: 5, title: "Examen de matemática III", description: "Aplicaciones físicas y gráficas.", xp: 50,
             questions: [{ id: "qm35", type: "multiple-choice", question: "¿Qué representa el punto donde dos rectas se cortan en un gráfico cartesiano de un sistema 2x2?", options: ["La solución única del sistema de ecuaciones", "El origen de coordenadas", "Un error de cálculo", "El infinito"], correctAnswer: "La solución única del sistema de ecuaciones", explanation: "El punto de intersección (x, y) satisface simultáneamente ambas ecuaciones." }]
           }
         ]
@@ -666,23 +666,23 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "BatteryCharging",
         lessons: [
           {
-            id: "3-tec-1", level: 1, title: "Centrales Eléctricas", description: "Hidroeléctricas, térmicas y nucleares.", xp: 25,
+            id: "3-tec-1", level: 1, title: "Centrales eléctricas", description: "Hidroeléctricas, térmicas y nucleares.", xp: 25,
             questions: [{ id: "qt31", type: "match-pairs", question: "Empareja cada central con su fuente primaria de energía:", pairs: [{ left: "Central Hidroeléctrica", right: "Energía potencial y cinética del agua en embalses" }, { left: "Central Fotovoltaica", right: "Radiación solar directa sobre silicio" }, { left: "Central Eólica", right: "Fuerza del viento en aerogeneradores" }], explanation: "Las centrales transforman recursos naturales en corriente eléctrica." }]
           },
           {
-            id: "3-tec-2", level: 2, title: "Ciclo de 4 Tiempos", description: "Motores de combustión interna (Otto).", xp: 30,
+            id: "3-tec-2", level: 2, title: "Ciclo de 4 tiempos", description: "Motores de combustión interna (Otto).", xp: 30,
             questions: [{ id: "qt32", type: "multiple-choice", question: "¿Cuál es el orden correcto de los 4 tiempos en un motor naftero de taller?", options: ["Admisión, Compresión, Expansión (Combustión), Escape", "Escape, Admisión, Expansión, Compresión", "Compresión, Escape, Admisión, Expansión", "Expansión, Escape, Compresión, Admisión"], correctAnswer: "Admisión, Compresión, Expansión (Combustión), Escape", explanation: "Es el ciclo de funcionamiento de los motores térmicos alternativos." }]
           },
           {
-            id: "3-tec-3", level: 3, title: "Turbinas de Vapor", description: "Ciclo Rankine en termoeléctricas.", xp: 35,
+            id: "3-tec-3", level: 3, title: "Turbinas de vapor", description: "Ciclo Rankine en termoeléctricas.", xp: 35,
             questions: [{ id: "qt33", type: "true-false", question: "En una central nuclear, la fisión del uranio genera calor para hervir agua y mover turbinas de vapor.", correctAnswer: true, explanation: "Verdadero. El reactor atómico funciona esencialmente como una gran caldera térmica." }]
           },
           {
-            id: "3-tec-4", level: 4, title: "Energías Renovables", description: "Paneles solares y colectores térmicos.", xp: 40,
+            id: "3-tec-4", level: 4, title: "Energías renovables", description: "Paneles solares y colectores térmicos.", xp: 40,
             questions: [{ id: "qt34", type: "fill-blanks", question: "Un panel solar fotovoltaico transforma los rayos de luz directamente en corriente eléctrica _______ (CC).", options: ["Continua", "Alterna", "Trifásica", "Estática"], correctAnswer: "Continua", explanation: "Las celdas fotovoltaicas generan corriente continua que luego un inversor pasa a alterna." }]
           },
           {
-            id: "3-tec-5", level: 5, title: "Examen de Tecnología III", description: "Matriz energética y eficiencia.", xp: 50,
+            id: "3-tec-5", level: 5, title: "Examen de tecnología III", description: "Matriz energética y eficiencia.", xp: 50,
             questions: [{ id: "qt35", type: "multiple-choice", question: "¿Qué máquina o elemento se utiliza en las centrales para elevar el voltaje de la corriente antes de enviarla por las torres de alta tensión?", options: ["Transformador elevador", "Batería de plomo", "Motor diésel", "Fusible cerámico"], correctAnswer: "Transformador elevador", explanation: "Se eleva el voltaje para minimizar las pérdidas de calor (Efecto Joule) en los cables largos." }]
           }
         ]
@@ -693,8 +693,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
   // 4TO AÑO (Especialidad)
     {
     year: 4,
-    title: "4to Año - Ciclo Superior",
-    subtitle: "Electrotecnia, Informática y Electrónica",
+    title: "4to año - ciclo superior",
+    subtitle: "Electrotecnia, informática y electrónica",
     subjects: [
       {
         id: "m-4-electrotecnia1",
@@ -716,7 +716,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ele-2", level: 2, title: "Medición de Potencia Eléctrica", description: "El vatímetro.", xp: 30,
+              id: "4-ele-2", level: 2, title: "Medición de potencia eléctrica", description: "El vatímetro.", xp: 30,
               questions: [
                 {
                   id: "q42", type: "multiple-choice",
@@ -740,7 +740,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ele-4", level: 4, title: "Capacitores e Inducción", description: "Almacenamiento de energía y campos.", xp: 40,
+              id: "4-ele-4", level: 4, title: "Capacitores e inducción", description: "Almacenamiento de energía y campos.", xp: 40,
               questions: [
                 {
                   id: "q44", type: "multiple-choice",
@@ -759,7 +759,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ele-5", level: 5, title: "Evaluación de Electrotecnia I", description: "Leyes fundamentales de la electricidad.", xp: 50,
+              id: "4-ele-5", level: 5, title: "Evaluación de electrotecnia I", description: "Leyes fundamentales de la electricidad.", xp: 50,
               questions: [
                 {
                   id: "q45", type: "multiple-choice",
@@ -799,7 +799,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-inf-2", level: 2, title: "Diagramas de Flujo", description: "Simbología de algoritmos.", xp: 30,
+              id: "4-inf-2", level: 2, title: "Diagramas de flujo", description: "Simbología de algoritmos.", xp: 30,
               questions: [
                 {
                   id: "qi42", type: "multiple-choice",
@@ -811,7 +811,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-inf-3", level: 3, title: "Lenguaje C: Sintaxis Básica", description: "Punto y coma y estructura.", xp: 35,
+              id: "4-inf-3", level: 3, title: "Lenguaje C: sintaxis básica", description: "Punto y coma y estructura.", xp: 35,
               questions: [
                 {
                   id: "qi43", type: "multiple-choice",
@@ -823,7 +823,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-inf-4", level: 4, title: "Estructuras de Repetición: Bucles", description: "Repetir instrucciones varias veces.", xp: 40,
+              id: "4-inf-4", level: 4, title: "Estructuras de repetición: bucles", description: "Repetir instrucciones varias veces.", xp: 40,
               questions: [
                 {
                   id: "qi44", type: "multiple-choice",
@@ -835,7 +835,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-inf-5", level: 5, title: "Evaluación de Informática I", description: "Conceptos de hardware y algoritmos.", xp: 50,
+              id: "4-inf-5", level: 5, title: "Evaluación de informática I", description: "Conceptos de hardware y algoritmos.", xp: 50,
               questions: [
                 {
                   id: "qi45", type: "multiple-choice",
@@ -850,13 +850,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-4-analog1",
-        name: "Electrónica Analógica I",
+        name: "Electrónica analógica I",
         description: "Multímetro, diodos, Zener, transistores BJT y amplificación.",
         color: "from-emerald-600 to-green-500",
         iconName: "Activity",
           lessons: [
             {
-              id: "4-ana-1", level: 1, title: "El Multímetro Digital", description: "Medición de tensión, corriente y resistencia.", xp: 25,
+              id: "4-ana-1", level: 1, title: "El multímetro digital", description: "Medición de tensión, corriente y resistencia.", xp: 25,
               questions: [
                 {
                   id: "qa41", type: "multiple-choice",
@@ -868,7 +868,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ana-2", level: 2, title: "El Diodo Semiconductor", description: "Polarización y conducción.", xp: 30,
+              id: "4-ana-2", level: 2, title: "El diodo semiconductor", description: "Polarización y conducción.", xp: 30,
               questions: [
                 {
                   id: "qa42", type: "multiple-choice",
@@ -899,7 +899,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ana-4", level: 4, title: "Amplificación de Señales", description: "El transistor como amplificador.", xp: 40,
+              id: "4-ana-4", level: 4, title: "Amplificación de señales", description: "El transistor como amplificador.", xp: 40,
               questions: [
                 {
                   id: "qa44", type: "multiple-choice",
@@ -911,7 +911,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-ana-5", level: 5, title: "Evaluación de Analógica I", description: "Semiconductores y componentes.", xp: 50,
+              id: "4-ana-5", level: 5, title: "Evaluación de analógica I", description: "Semiconductores y componentes.", xp: 50,
               questions: [
                 {
                   id: "qa45", type: "multiple-choice",
@@ -926,13 +926,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-4-digital1",
-        name: "Electrónica Digital I",
+        name: "Electrónica digital I",
         description: "Álgebra de Boole, compuertas lógicas, mapas de Karnaugh y tablas de verdad.",
         color: "from-purple-600 to-indigo-500",
         iconName: "Binary",
           lessons: [
             {
-              id: "4-dig-1", level: 1, title: "Tablas de Verdad y Compuertas", description: "Identificación de compuertas lógicas.", xp: 25,
+              id: "4-dig-1", level: 1, title: "Tablas de verdad y compuertas", description: "Identificación de compuertas lógicas.", xp: 25,
               questions: [
                 {
                   id: "qdi41", type: "multiple-choice",
@@ -968,7 +968,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-dig-4", level: 4, title: "Compuertas Lógicas y Nivel Lógico", description: "Aplicación de compuertas y estados.", xp: 40,
+              id: "4-dig-4", level: 4, title: "Compuertas lógicas y nivel lógico", description: "Aplicación de compuertas y estados.", xp: 40,
               questions: [
                 {
                   id: "qdi44", type: "multiple-choice",
@@ -987,7 +987,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-dig-5", level: 5, title: "Evaluación de Digitales I", description: "Compuertas y simplificación.", xp: 50,
+              id: "4-dig-5", level: 5, title: "Evaluación de digitales I", description: "Compuertas y simplificación.", xp: 50,
               questions: [
                 {
                   id: "qdi45", type: "multiple-choice",
@@ -1008,7 +1008,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Calculator",
           lessons: [
             {
-              id: "4-mat4-1", level: 1, title: "Números Irracionales", description: "Decimales infinitos no periódicos.", xp: 25,
+              id: "4-mat4-1", level: 1, title: "Números irracionales", description: "Decimales infinitos no periódicos.", xp: 25,
               questions: [
                 {
                   id: "qm41", type: "multiple-choice",
@@ -1020,7 +1020,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-mat4-2", level: 2, title: "Números Complejos: Unidad Imaginaria", description: "La unidad imaginaria i.", xp: 30,
+              id: "4-mat4-2", level: 2, title: "Números complejos: unidad imaginaria", description: "La unidad imaginaria i.", xp: 30,
               questions: [
                 {
                   id: "qm42", type: "multiple-choice",
@@ -1032,7 +1032,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-mat4-3", level: 3, title: "Propiedades de Radicales", description: "Producto de raíces.", xp: 35,
+              id: "4-mat4-3", level: 3, title: "Propiedades de radicales", description: "Producto de raíces.", xp: 35,
               questions: [
                 {
                   id: "qm43", type: "multiple-choice",
@@ -1044,7 +1044,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-mat4-4", level: 4, title: "Combinatoria y Logaritmación", description: "Conteo y exponentes.", xp: 40,
+              id: "4-mat4-4", level: 4, title: "Combinatoria y logaritmación", description: "Conteo y exponentes.", xp: 40,
               questions: [
                 {
                   id: "qm44", type: "multiple-choice",
@@ -1063,7 +1063,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "4-mat4-5", level: 5, title: "Evaluación de Matemática IV", description: "Complejos, radicales y logaritmos.", xp: 50,
+              id: "4-mat4-5", level: 5, title: "Evaluación de matemática IV", description: "Complejos, radicales y logaritmos.", xp: 50,
               questions: [
                 {
                   id: "qm45", type: "multiple-choice",
@@ -1081,8 +1081,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 // 5TO AÑO
   {
     year: 5,
-    title: "5to Año - Ciclo Superior",
-    subtitle: "Profundización: Corriente alterna, microcontroladores y amplificadores",
+    title: "5to año - ciclo superior",
+    subtitle: "Profundización: corriente alterna, microcontroladores y amplificadores",
     subjects: [
       {
         id: "m-5-electrotecnia2",
@@ -1092,23 +1092,23 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Zap",
         lessons: [
           {
-            id: "5-ele-1", level: 1, title: "Onda Senoidal de CA", description: "Frecuencia, período y valor eficaz (RMS).", xp: 25,
+            id: "5-ele-1", level: 1, title: "Onda senoidal de CA", description: "Frecuencia, período y valor eficaz (RMS).", xp: 25,
             questions: [{ id: "q51", type: "multiple-choice", question: "¿Cuál es el valor eficaz (RMS) aproximado de una toma de corriente alterna con pico máximo de 311 Voltios?", options: ["220 V", "311 V", "110 V", "380 V"], correctAnswer: "220 V", explanation: "V_rms = V_pico / √2 = 311 / 1.414 ≈ 220 V." }]
           },
           {
-            id: "5-ele-2", level: 2, title: "Reactancia Inductiva (X_L)", description: "Bobinas y desfase de corriente.", xp: 30,
+            id: "5-ele-2", level: 2, title: "Reactancia inductiva (X_L)", description: "Bobinas y desfase de corriente.", xp: 30,
             questions: [{ id: "q52", type: "true-false", question: "En un inductor (bobina) ideal en corriente alterna, la corriente eléctrica ATRASA 90° respecto al voltaje.", correctAnswer: true, explanation: "Verdadero. La autoinducción se opone a los cambios bruscos de corriente." }]
           },
           {
-            id: "5-ele-3", level: 3, title: "Reactancia Capacitiva (X_C)", description: "Condensadores en CA.", xp: 35,
+            id: "5-ele-3", level: 3, title: "Reactancia capacitiva (X_C)", description: "Condensadores en CA.", xp: 35,
             questions: [{ id: "q53", type: "fill-blanks", question: "En un capacitor en corriente alterna senoidal, la corriente _________ (adelanta / atrasa) 90 grados respecto a la tensión.", options: ["Adelanta", "Atrasa", "Se anula", "Queda en fase"], correctAnswer: "Adelanta", explanation: "El capacitor se llena de carga antes de que el voltaje alcance su máximo." }]
           },
           {
-            id: "5-ele-4", level: 4, title: "Factor de Potencia (Cos φ)", description: "Potencia activa, reactiva y aparente.", xp: 40,
+            id: "5-ele-4", level: 4, title: "Factor de potencia (cos φ)", description: "Potencia activa, reactiva y aparente.", xp: 40,
             questions: [{ id: "q54", type: "match-pairs", question: "Asocia cada tipo de potencia en CA con su unidad de medida:", pairs: [{ left: "Potencia Activa (P)", right: "Watts (W) - Trabajo mecánico o calor útil" }, { left: "Potencia Reactiva (Q)", right: "Volt-Amper Reactivo (VAr) - Magnetización de motores" }, { left: "Potencia Aparente (S)", right: "Volt-Amper (VA) - Potencia total de la red" }], explanation: "El triángulo de potencias es clave en el diseño industrial." }]
           },
           {
-            id: "5-ele-5", level: 5, title: "Sistemas Trifásicos", description: "Conexiones Estrella y Triángulo en 380V.", xp: 50,
+            id: "5-ele-5", level: 5, title: "Sistemas trifásicos", description: "Conexiones Estrella y Triángulo en 380V.", xp: 50,
             questions: [{ id: "q55", type: "multiple-choice", question: "En una red trifásica de 380V de línea (entre fases), ¿cuál es el voltaje de fase (entre cualquier fase y el Neutro)?", options: ["220 V", "380 V", "110 V", "500 V"], correctAnswer: "220 V", explanation: "V_fase = V_linea / √3 = 380 / 1.732 ≈ 220 V." }]
           }
         ]
@@ -1121,7 +1121,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Code",
         lessons: [
           {
-            id: "5-inf-1", level: 1, title: "Bucles Iterativos: FOR", description: "Repetición controlada por contador.", xp: 25,
+            id: "5-inf-1", level: 1, title: "Bucles iterativos: FOR", description: "Repetición controlada por contador.", xp: 25,
             questions: [{ id: "qi51", type: "fill-blanks", question: "Para repetir un bloque de código 10 veces en C++, utilizamos el bucle: _______ (int i=0; i<10; i++) { ... }", options: ["for", "while", "do", "switch"], correctAnswer: "for", explanation: "El bucle 'for' es idóneo para iteraciones con número exacto conocido." }]
           },
           {
@@ -1129,7 +1129,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qi52", type: "true-false", question: "El bucle 'do-while' garantiza que el código de su interior se ejecute al menos UNA vez antes de evaluar la condición.", correctAnswer: true, explanation: "Verdadero. La condición se evalúa al final del bloque." }]
           },
           {
-            id: "5-inf-3", level: 3, title: "Arreglos (Arrays / Vectores)", description: "Almacenamiento múltiple en memoria.", xp: 35,
+            id: "5-inf-3", level: 3, title: "Arreglos (arrays / vectores)", description: "Almacenamiento múltiple en memoria.", xp: 35,
             questions: [{ id: "qi53", type: "multiple-choice", question: "En un arreglo en C++ declarado como: int pines[5] = {2, 4, 6, 8, 10}; ¿qué valor se encuentra en la posición pines[2]?", options: ["6", "4", "2", "8"], correctAnswer: "6", explanation: "Los índices en C++ comienzan desde el cero (0:2, 1:4, 2:6)." }]
           },
           {
@@ -1137,20 +1137,20 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qi54", type: "match-pairs", question: "Asocia el tipo de retorno de la función con su significado:", pairs: [{ left: "void", right: "La función ejecuta una tarea pero no devuelve ningún valor" }, { left: "int", right: "La función retorna un número entero al finalizar" }], explanation: "Modular el código mejora su lectura y reutilización en robótica." }]
           },
           {
-            id: "5-inf-5", level: 5, title: "Examen Informática II", description: "Programación en C++ aplicada a sensores.", xp: 50,
+            id: "5-inf-5", level: 5, title: "Examen informática II", description: "Programación en C++ aplicada a sensores.", xp: 50,
             questions: [{ id: "qi55", type: "multiple-choice", question: "¿Qué función principal y obligatoria debe existir en todo programa de C++ para que el sistema operativo inicie su ejecución?", options: ["main()", "start()", "loop()", "setup()"], correctAnswer: "main()", explanation: "La función 'main()' es el punto de entrada estándar en C/C++." }]
           }
         ]
       },
       {
         id: "m-5-analog2",
-        name: "Electrónica Analógica II",
+        name: "Electrónica analógica II",
         description: "Transistores BJT, MOSFET y Amplificadores Operacionales.",
         color: "from-emerald-600 to-green-500",
         iconName: "Activity",
         lessons: [
           {
-            id: "5-ana-1", level: 1, title: "El Transistor BJT", description: "Base, Colector, Emisor y ganancia Beta (h_fe).", xp: 25,
+            id: "5-ana-1", level: 1, title: "El transistor BJT", description: "Base, Colector, Emisor y ganancia Beta (h_fe).", xp: 25,
             questions: [{ id: "qa51", type: "match-pairs", question: "Asocia cada estado del transistor NPN con su comportamiento en un circuito:", pairs: [{ left: "Región de Corte", right: "Actúa como un interruptor abierto (no hay corriente de base ni de colector)" }, { left: "Región de Saturación", right: "Actúa como un interruptor cerrado (máxima corriente entre colector y emisor)" }, { left: "Región Activa", right: "Amplifica señales analógicas proporcionales a la corriente de base" }], explanation: "El BJT se puede usar como llave de conmutación o amplificador lineal." }]
           },
           {
@@ -1158,22 +1158,22 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qa52", type: "true-false", question: "A diferencia del BJT que se controla por corriente, el MOSFET se controla aplicando VOLTAJE en su pin de Puerta (Gate).", correctAnswer: true, explanation: "Verdadero. La alta impedancia del Gate hace que consuma casi nula corriente de control." }]
           },
           {
-            id: "5-ana-3", level: 3, title: "Amplificador Operacional", description: "El circuito integrado LM741 / TL081.", xp: 35,
+            id: "5-ana-3", level: 3, title: "Amplificador operacional", description: "El circuito integrado LM741 / TL081.", xp: 35,
             questions: [{ id: "qa53", type: "multiple-choice", question: "¿Qué característica principal posee la entrada de un Amplificador Operacional ideal?", options: ["Impedancia de entrada infinita (no consume corriente por sus entradas)", "Impedancia nula (cortocircuito)", "Ganancia cero", "Solo funciona en alterna"], correctAnswer: "Impedancia de entrada infinita (no consume corriente por sus entradas)", explanation: "Esto permite medir señales débiles de sensores sin distorsionarlas ni cargar el circuito." }]
           },
           {
-            id: "5-ana-4", level: 4, title: "Configuración Inversora", description: "Ganancia por lazo cerrado (A_v = - Rf / R_in).", xp: 40,
+            id: "5-ana-4", level: 4, title: "Configuración inversora", description: "Ganancia por lazo cerrado (A_v = - Rf / R_in).", xp: 40,
             questions: [{ id: "qa54", type: "fill-blanks", question: "Si en un op-amp inversor la resistencia de realimentación es 10k y la de entrada 1k, la ganancia de voltaje será de -______.", options: ["10", "100", "1", "5"], correctAnswer: "10", explanation: "A_v = - 10k / 1k = -10 (Invierte la fase de la onda)." }]
           },
           {
-            id: "5-ana-5", level: 5, title: "Examen Analógica II", description: "Comparadores e histéresis.", xp: 50,
+            id: "5-ana-5", level: 5, title: "Examen analógica II", description: "Comparadores e histéresis.", xp: 50,
             questions: [{ id: "qa55", type: "multiple-choice", question: "¿Qué ocurre en la salida de un op-amp funcionando como COMPARADOR si la entrada no inversora (+) tiene mayor voltaje que la inversora (-)?", options: ["La salida satura al voltaje positivo de la fuente (+Vcc)", "La salida es cero voltios", "La salida satura a -Vcc", "El integrado se quema"], correctAnswer: "La salida satura al voltaje positivo de la fuente (+Vcc)", explanation: "El comparador sin realimentación compara voltajes y conmuta a los extremos de su alimentación." }]
           }
         ]
       },
       {
         id: "m-5-digital2",
-        name: "Electrónica Digital II",
+        name: "Electrónica digital II",
         description: "Lógica secuencial, Flip-Flops, Contadores y Registros.",
         color: "from-purple-600 to-indigo-500",
         iconName: "Cpu",
@@ -1183,7 +1183,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qdi51", type: "true-false", question: "En un Latch RS con compuertas NOR, activar simultáneamente las entradas Set=1 y Reset=1 genera un estado prohibido o indeterminado.", correctAnswer: true, explanation: "Verdadero. Al intentar encender y apagar a la vez, ambas salidas caen a 0 violando la regla Q y Q_negado." }]
           },
           {
-            id: "5-dig-2", level: 2, title: "El Flip-Flop Tipo D", description: "Transferencia síncrona por flanco de reloj.", xp: 30,
+            id: "5-dig-2", level: 2, title: "El flip-flop tipo D", description: "Transferencia síncrona por flanco de reloj.", xp: 30,
             questions: [{ id: "qdi52", type: "multiple-choice", question: "¿Cuál es el Flip-Flop más utilizado para construir registros de memoria o dividir la frecuencia de reloj a la mitad?", options: ["Flip-Flop tipo D", "Compuerta AND", "Multiplexor", "Decodificador"], correctAnswer: "Flip-Flop tipo D", explanation: "El biestable tipo D copia el dato de entrada a la salida en el instante exacto del flanco de reloj." }]
           },
           {
@@ -1191,11 +1191,11 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qdi53", type: "match-pairs", question: "Asocia el modo del 555 con su aplicación práctica:", pairs: [{ left: "Modo Astable", right: "Genera un tren continuo de pulsos cuadrados (reloj para circuitos digitales)" }, { left: "Modo Monoestable", right: "Genera un único pulso temporizado al presionar un pulsador (temporizador de escalera)" }], explanation: "El circuito integrado más famoso de la electrónica." }]
           },
           {
-            id: "5-dig-4", level: 4, title: "Contadores Binarios", description: "Conexión en cascada de Flip-Flops JK.", xp: 40,
+            id: "5-dig-4", level: 4, title: "Contadores binarios", description: "Conexión en cascada de Flip-Flops JK.", xp: 40,
             questions: [{ id: "qdi54", type: "fill-blanks", question: "Un contador binario construido con 4 Flip-Flops en cascada puede contar desde el 0 hasta el número decimal _______ (1111 en binario).", options: ["15", "8", "16", "10"], correctAnswer: "15", explanation: "2⁴ = 16 estados posibles, numerados del 0 al 15." }]
           },
           {
-            id: "5-dig-5", level: 5, title: "Examen de Digitales II", description: "Registros de desplazamiento (Shift Registers).", xp: 50,
+            id: "5-dig-5", level: 5, title: "Examen de digitales II", description: "Registros de desplazamiento (Shift Registers).", xp: 50,
             questions: [{ id: "qdi55", type: "multiple-choice", question: "¿Para qué sirve un Registro de Desplazamiento como el 74HC595 en proyectos con Arduino?", options: ["Para expandir salidas digitales (Convierte datos serie a paralelo)", "Para medir voltaje analógico", "Para generar sonido", "Para calentar el circuito"], correctAnswer: "Para expandir salidas digitales (Convierte datos serie a paralelo)", explanation: "Con solo 3 pines del microcontrolador se pueden controlar 8 o más LEDs en paralelo." }]
           }
         ]
@@ -1208,11 +1208,11 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Calculator",
         lessons: [
           {
-            id: "5-mat-1", level: 1, title: "Vectores en el Plano", description: "Módulo, dirección y sentido.", xp: 25,
+            id: "5-mat-1", level: 1, title: "Vectores en el plano", description: "Módulo, dirección y sentido.", xp: 25,
             questions: [{ id: "qm51", type: "true-false", question: "Dos vectores con el mismo módulo y dirección, pero con sentidos opuestos, se anulan mutuamente al sumarse.", correctAnswer: true, explanation: "Verdadero. Como dos fuerzas iguales tirando de una cuerda en sentidos opuestos." }]
           },
           {
-            id: "5-mat-2", level: 2, title: "Operaciones Matriciales", description: "Suma y producto de matrices.", xp: 30,
+            id: "5-mat-2", level: 2, title: "Operaciones matriciales", description: "Suma y producto de matrices.", xp: 30,
             questions: [{ id: "qm52", type: "multiple-choice", question: "Para poder multiplicar dos matrices A y B, ¿qué condición dimensional debe cumplirse?", options: ["El número de columnas de A debe ser igual al número de filas de B", "Ambas deben ser cuadradas 3x3", "El número de filas de A debe ser igual al de B", "No hay condiciones"], correctAnswer: "El número de columnas de A debe ser igual al número de filas de B", explanation: "Es la regla fundamental del producto de matrices." }]
           },
           {
@@ -1220,11 +1220,11 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qm53", type: "fill-blanks", question: "El determinante de una matriz de 2x2 con filas (a, b) y (c, d) se calcula restando el producto cruzado: a*d - ______.", options: ["b*c", "a*c", "b*d", "a+b"], correctAnswer: "b*c", explanation: "Det = ad - bc. Es la base de la Regla de Cramer en resolución de mallas eléctricas." }]
           },
           {
-            id: "5-mat-4", level: 4, title: "Sistemas de 3 Mallas (3x3)", description: "Regla de Cramer en electrotecnia.", xp: 40,
+            id: "5-mat-4", level: 4, title: "Sistemas de 3 mallas (3x3)", description: "Regla de Cramer en electrotecnia.", xp: 40,
             questions: [{ id: "qm54", type: "match-pairs", question: "Asocia cada concepto algebraico con su aplicación en circuitos:", pairs: [{ left: "Matriz de Resistencias", right: "Coeficientes que multiplican a las corrientes desconocidas de cada malla" }, { left: "Vector de Voltajes", right: "Términos independientes que representan a las fuentes de cada malla" }], explanation: "El álgebra lineal resuelve redes eléctricas de múltiples nodos y lazos." }]
           },
           {
-            id: "5-mat-5", level: 5, title: "Examen de Matemática V", description: "Aplicación a sistemas complejos.", xp: 50,
+            id: "5-mat-5", level: 5, title: "Examen de matemática V", description: "Aplicación a sistemas complejos.", xp: 50,
             questions: [{ id: "qm55", type: "multiple-choice", question: "¿Qué significa que el determinante principal de un sistema de ecuaciones de mallas sea exactamente igual a cero (Det = 0)?", options: ["Que el sistema no tiene solución única (ecuaciones dependientes o incompatibles)", "Que las corrientes son infinitas", "Que no hay resistencias", "Que todas las corrientes valen 1A"], correctAnswer: "Que el sistema no tiene solución única (ecuaciones dependientes o incompatibles)", explanation: "Si el determinante es cero, la matriz no se puede invertir para hallar una solución única." }]
           }
         ]
@@ -1235,8 +1235,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
   // 6TO AÑO
     {
     year: 6,
-    title: "6to Año - Ciclo Superior Avanzado",
-    subtitle: "Telecomunicaciones, Automatización Industrial y Digitales Avanzados",
+    title: "6to año - ciclo superior avanzado",
+    subtitle: "Telecomunicaciones, automatización industrial y digitales avanzados",
     subjects: [
       {
         id: "m-6-teleco1",
@@ -1246,7 +1246,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Radio",
           lessons: [
             {
-              id: "6-tel-1", level: 1, title: "Longitud de Onda y Frecuencia", description: "Relación entre $\\lambda$, c y f.", xp: 25,
+              id: "6-tel-1", level: 1, title: "Longitud de onda y frecuencia", description: "Relación entre $\\lambda$, c y f.", xp: 25,
               questions: [
                 {
                   id: "qt61", type: "multiple-choice",
@@ -1258,7 +1258,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-tel-2", level: 2, title: "Ruido Térmico y SNR", description: "Relación señal/ruido en receptores.", xp: 30,
+              id: "6-tel-2", level: 2, title: "Ruido térmico y SNR", description: "Relación señal/ruido en receptores.", xp: 30,
               questions: [
                 {
                   id: "qt62", type: "multiple-choice",
@@ -1289,7 +1289,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-tel-4", level: 4, title: "Receptor Superheterodino y FM", description: "Principio de funcionamiento y pre-énfasis.", xp: 40,
+              id: "6-tel-4", level: 4, title: "Receptor superheterodino y FM", description: "Principio de funcionamiento y pre-énfasis.", xp: 40,
               questions: [
                 {
                   id: "qt64", type: "multiple-choice",
@@ -1308,7 +1308,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-tel-5", level: 5, title: "Evaluación de Telecomunicaciones I", description: "Antenas, detector de envuelta y figura de ruido.", xp: 50,
+              id: "6-tel-5", level: 5, title: "Evaluación de telecomunicaciones I", description: "Antenas, detector de envuelta y figura de ruido.", xp: 50,
               questions: [
                 {
                   id: "qt65", type: "multiple-choice",
@@ -1323,13 +1323,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-6-industrial1",
-        name: "Electrónica Industrial I",
+        name: "Electrónica industrial I",
         description: "Tiristores, SCR, rectificadores controlados, fuentes SMPS, Flyback, IGBT y snubber.",
         color: "from-amber-600 to-yellow-500",
         iconName: "Cpu",
           lessons: [
             {
-              id: "6-ind-1", level: 1, title: "Diodo de Potencia vs SCR", description: "Tiristores y conmutación.", xp: 25,
+              id: "6-ind-1", level: 1, title: "Diodo de potencia vs SCR", description: "Tiristores y conmutación.", xp: 25,
               questions: [
                 {
                   id: "qin61", type: "multiple-choice",
@@ -1348,7 +1348,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ind-2", level: 2, title: "Rectificadores Controlados y Fuentes SMPS", description: "Ángulo de disparo y fuentes conmutadas.", xp: 30,
+              id: "6-ind-2", level: 2, title: "Rectificadores controlados y fuentes SMPS", description: "Ángulo de disparo y fuentes conmutadas.", xp: 30,
               questions: [
                 {
                   id: "qin62", type: "multiple-choice",
@@ -1386,7 +1386,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ind-4", level: 4, title: "SVPWM y Transistores IGBT", description: "Modulación vectorial y semiconductores híbridos.", xp: 40,
+              id: "6-ind-4", level: 4, title: "SVPWM y transistores IGBT", description: "Modulación vectorial y semiconductores híbridos.", xp: 40,
               questions: [
                 {
                   id: "qin64", type: "multiple-choice",
@@ -1398,7 +1398,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ind-5", level: 5, title: "Evaluación de Electrónica Industrial I", description: "Resistencia térmica y circuitos Snubber.", xp: 50,
+              id: "6-ind-5", level: 5, title: "Evaluación de electrónica industrial I", description: "Resistencia térmica y circuitos Snubber.", xp: 50,
               questions: [
                 {
                   id: "qin65", type: "multiple-choice",
@@ -1413,13 +1413,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-6-instalaciones1",
-        name: "Instalaciones Industriales I",
+        name: "Instalaciones industriales I",
         description: "Protecciones termomagnéticas, diferencial, enclavamientos, Soft Starter, PLC y energía solar.",
         color: "from-emerald-600 to-teal-500",
         iconName: "ShieldCheck",
           lessons: [
             {
-              id: "6-ins-1", level: 1, title: "Protección Térmica vs Magnética", description: "Interruptor termomagnético.", xp: 25,
+              id: "6-ins-1", level: 1, title: "Protección térmica vs magnética", description: "Interruptor termomagnético.", xp: 25,
               questions: [
                 {
                   id: "qis61", type: "multiple-choice",
@@ -1438,7 +1438,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ins-2", level: 2, title: "Enclavamientos y Relés de Protección", description: "Seguridad en circuitos de mando.", xp: 30,
+              id: "6-ins-2", level: 2, title: "Enclavamientos y relés de protección", description: "Seguridad en circuitos de mando.", xp: 30,
               questions: [
                 {
                   id: "qis62", type: "multiple-choice",
@@ -1457,7 +1457,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ins-3", level: 3, title: "Arrancadores y Conductores", description: "Soft Starter y normativas eléctricas.", xp: 35,
+              id: "6-ins-3", level: 3, title: "Arrancadores y conductores", description: "Soft Starter y normativas eléctricas.", xp: 35,
               questions: [
                 {
                   id: "qis63", type: "multiple-choice",
@@ -1488,7 +1488,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-ins-5", level: 5, title: "Evaluación de Instalaciones I", description: "Energía solar y CADE SIMU.", xp: 50,
+              id: "6-ins-5", level: 5, title: "Evaluación de instalaciones I", description: "Energía solar y CADE SIMU.", xp: 50,
               questions: [
                 {
                   id: "qis65", type: "multiple-choice",
@@ -1503,13 +1503,13 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
       },
       {
         id: "m-6-digital3",
-        name: "Digitales III (Microcontroladores)",
+        name: "Digitales III (microcontroladores)",
         description: "Registros TRIS, USART, PWM, ADC, programación C/C++ y analizador lógico.",
         color: "from-purple-600 to-pink-500",
         iconName: "Server",
           lessons: [
             {
-              id: "6-dig3-1", level: 1, title: "Registros TRIS y Memoria en Microcontroladores", description: "Configuración de direcciones de datos.", xp: 25,
+              id: "6-dig3-1", level: 1, title: "Registros TRIS y memoria en microcontroladores", description: "Configuración de direcciones de datos.", xp: 25,
               questions: [
                 {
                   id: "qdg61", type: "multiple-choice",
@@ -1528,7 +1528,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-dig3-2", level: 2, title: "USART: Comunicación Serie", description: "Modo síncrono vs asíncrono.", xp: 30,
+              id: "6-dig3-2", level: 2, title: "USART: comunicación serie", description: "Modo síncrono vs asíncrono.", xp: 30,
               questions: [
                 {
                   id: "qdg62", type: "multiple-choice",
@@ -1571,7 +1571,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
               ]
             },
             {
-              id: "6-dig3-5", level: 5, title: "Evaluación de Digitales III", description: "Analizador lógico, CCP y registro W.", xp: 50,
+              id: "6-dig3-5", level: 5, title: "Evaluación de digitales III", description: "Analizador lógico, CCP y registro W.", xp: 50,
               questions: [
                 {
                   id: "qdg65", type: "multiple-choice",
@@ -1589,8 +1589,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 // 7MO AÑO (Graduación)
   {
     year: 7,
-    title: "7mo Año - Prácticas Profesionalizantes",
-    subtitle: "El año cumbre: Proyectos de graduación, PLC y automatización total",
+    title: "7mo año - prácticas profesionalizantes",
+    subtitle: "El año cumbre: proyectos de graduación, PLC y automatización total",
     subjects: [
       {
         id: "m-7-teleco2",
@@ -1600,7 +1600,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         iconName: "Wifi",
         lessons: [
           {
-            id: "7-tel-1", level: 1, title: "Arquitectura IoT y Nube", description: "Sensores conectados a bases de datos.", xp: 25,
+            id: "7-tel-1", level: 1, title: "Arquitectura IoT y nube", description: "Sensores conectados a bases de datos.", xp: 25,
             questions: [{ id: "qt71", type: "multiple-choice", question: "¿Cuál es el protocolo de mensajería ligero basado en Publicar/Suscribir más utilizado en sistemas IoT (Internet de las Cosas)?", options: ["MQTT", "HTTP 1.0", "FTP", "SMTP"], correctAnswer: "MQTT", explanation: "MQTT es ideal para microcontroladores con pocos recursos y redes inalámbricas inestables." }]
           },
           {
@@ -1608,7 +1608,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qt72", type: "true-false", question: "Una dirección IPv4 estándar (como 192.168.1.1) está formada por 32 bits divididos en 4 octetos.", correctAnswer: true, explanation: "Verdadero. Cada número separado por un punto puede valer entre 0 y 255 (8 bits)." }]
           },
           {
-            id: "7-tel-3", level: 3, title: "Redes Inalámbricas WiFi", description: "Frecuencias 2.4 GHz y 5 GHz en el ESP32.", xp: 35,
+            id: "7-tel-3", level: 3, title: "Redes inalámbricas WiFi", description: "Frecuencias 2.4 GHz y 5 GHz en el ESP32.", xp: 35,
             questions: [{ id: "qt73", type: "fill-blanks", question: "El microcontrolador ESP32 muy utilizado en los talleres de 7mo año incluye conectividad inalámbrica WiFi y _______ de bajo consumo (BLE).", options: ["Bluetooth", "LoRa", "ZigBee", "NFC"], correctAnswer: "Bluetooth", explanation: "El ESP32 es un SoC dual-core que integra radiofrecuencia WiFi y Bluetooth en un solo chip." }]
           },
           {
@@ -1616,24 +1616,24 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qt74", type: "match-pairs", question: "Asocia cada protocolo inalámbrico con su nicho de aplicación en IoT:", pairs: [{ left: "WiFi (IEEE 802.11)", right: "Alta velocidad de datos a corta distancia (streaming, cámaras)" }, { left: "LoRaWAN", right: "Largo alcance kilométrico con bajísimo consumo de batería (sensores agrícolas)" }], explanation: "Elegir el protocolo correcto es vital en los proyectos integradores de graduación." }]
           },
           {
-            id: "7-tel-5", level: 5, title: "Examen Telecomunicaciones II", description: "Sistemas de telemetría y seguridad.", xp: 50,
+            id: "7-tel-5", level: 5, title: "Examen telecomunicaciones II", description: "Sistemas de telemetría y seguridad.", xp: 50,
             questions: [{ id: "qt75", type: "multiple-choice", question: "¿Qué función cumple un 'Broker' (como Mosquitto) en una arquitectura IoT basada en MQTT?", options: ["Recibe todos los mensajes de los publicadores y los distribuye a los suscriptores correspondientes", "Genera electricidad para el router", "Apaga las antenas de noche", "Traduce código C++ a Python"], correctAnswer: "Recibe todos los mensajes de los publicadores y los distribuye a los suscriptores correspondientes", explanation: "El Broker actúa como la oficina de correos central que clasifica y enruta la telemetría." }]
           }
         ]
       },
       {
         id: "m-7-industrial2",
-        name: "Electrónica Industrial II",
+        name: "Electrónica industrial II",
         description: "Inversores de frecuencia (VFD), servomotores y robótica industrial.",
         color: "from-amber-600 to-yellow-600",
         iconName: "Cpu",
         lessons: [
           {
-            id: "7-ind-1", level: 1, title: "Variadores VFD (Inversores)", description: "Control de velocidad en motores asincrónicos.", xp: 25,
+            id: "7-ind-1", level: 1, title: "Variadores VFD (inversores)", description: "Control de velocidad en motores asincrónicos.", xp: 25,
             questions: [{ id: "qin71", type: "multiple-choice", question: "¿Cómo logra variar la velocidad de giro de un motor trifásico un variador de frecuencia (VFD)?", options: ["Modificando simultáneamente el voltaje y la frecuencia de alimentación (Relación V/f constante)", "Colocando resistencias de alambre gigantes", "Frenando el eje mecánicamente", "Cambiando el aceite del cárter"], correctAnswer: "Modificando simultáneamente el voltaje y la frecuencia de alimentación (Relación V/f constante)", explanation: "La velocidad sincrónica depende directamente de la frecuencia eléctrica (n = 60 * f / p)." }]
           },
           {
-            id: "7-ind-2", level: 2, title: "Servomotores y Encoders", description: "Lazo cerrado de posicionamiento exacto.", xp: 30,
+            id: "7-ind-2", level: 2, title: "Servomotores y encoders", description: "Lazo cerrado de posicionamiento exacto.", xp: 30,
             questions: [{ id: "qin72", type: "true-false", question: "Un servomotor industrial requiere de un sensor de retroalimentación (Encoder o Resolver) para informar al driver la posición exacta de su eje.", correctAnswer: true, explanation: "Verdadero. El control de lazo cerrado corrige instantáneamente los errores de posición en robótica y tornos CNC." }]
           },
           {
@@ -1641,24 +1641,24 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qin73", type: "fill-blanks", question: "El semiconductor híbrido de potencia utilizado en los inversores VFD se conoce por sus siglas en inglés _______ (Insulated Gate Bipolar Transistor).", options: ["IGBT", "MOSFET", "TRIAC", "SCR"], correctAnswer: "IGBT", explanation: "Combina la entrada aislada por voltaje de un MOSFET con la gran capacidad de corriente de salida de un BJT." }]
           },
           {
-            id: "7-ind-4", level: 4, title: "Robótica Industrial: Ejes", description: "Brazos antropomórficos y SCARA.", xp: 40,
+            id: "7-ind-4", level: 4, title: "Robótica industrial: ejes", description: "Brazos antropomórficos y SCARA.", xp: 40,
             questions: [{ id: "qin74", type: "match-pairs", question: "Asocia cada tipo de robot industrial con su geometría de movimiento:", pairs: [{ left: "Robot Articulado (6 ejes)", right: "Brazo flexible que imita el hombro, codo y muñeca humana para soldar y pintar" }, { left: "Robot SCARA", right: "Brazo horizontal de alta rigidez vertical, ultra veloz para tareas de montaje de chips en PCB" }], explanation: "Tecnología punta en las líneas de ensamblaje automotriz y electrónica." }]
           },
           {
-            id: "7-ind-5", level: 5, title: "Examen Industrial II", description: "Sistemas de frenado dinámico y regenerativo.", xp: 50,
+            id: "7-ind-5", level: 5, title: "Examen industrial II", description: "Sistemas de frenado dinámico y regenerativo.", xp: 50,
             questions: [{ id: "qin75", type: "multiple-choice", question: "¿Qué ocurre en un variador VFD con 'frenado regenerativo' cuando un ascensor cargado baja y el motor actúa como generador?", options: ["La energía cinética devuelta se inyecta de regreso a la red eléctrica o se disipa en resistencias de frenado", "El variador explota por sobrevoltaje", "El motor gira al revés indefinidamente", "Se queman los fusibles"], correctAnswer: "La energía cinética devuelta se inyecta de regreso a la red eléctrica o se disipa en resistencias de frenado", explanation: "Aprovechar la energía de frenado de grandes inercias mejora drásticamente la eficiencia industrial." }]
           }
         ]
       },
       {
         id: "m-7-instalaciones2",
-        name: "Instalaciones Industriales II",
+        name: "Instalaciones industriales II",
         description: "Autómatas Programables (PLC), Neumática, Electroneumática y SCADA.",
         color: "from-emerald-600 to-teal-600",
         iconName: "Settings",
         lessons: [
           {
-            id: "7-ins-1", level: 1, title: "PLC: Arquitectura de Hardware", description: "CPU, módulos I/O y fuentes de 24V CC.", xp: 25,
+            id: "7-ins-1", level: 1, title: "PLC: arquitectura de hardware", description: "CPU, módulos I/O y fuentes de 24V CC.", xp: 25,
             questions: [{ id: "qis71", type: "multiple-choice", question: "¿Qué voltaje estándar y tipo de corriente se utiliza mayoritariamente en las entradas digitales de los sensores conectados a un PLC industrial?", options: ["24 Voltios de Corriente Continua (24V CC)", "220 Voltios Alternos", "5 Voltios", "380 Voltios Trifásicos"], correctAnswer: "24 Voltios de Corriente Continua (24V CC)", explanation: "El estándar industrial de 24V CC ofrece gran inmunidad al ruido y seguridad ante contactos accidentales." }]
           },
           {
@@ -1666,28 +1666,28 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qis72", type: "match-pairs", question: "Asocia el símbolo de programación Ladder (Escalera) con su elemento equivalente en el tablero:", pairs: [{ left: "-[ ]- Contacto Normalmente Abierto", right: "Pulsador de arranque o sensor sin activar" }, { left: "-[ / ]- Contacto Normalmente Cerrado", right: "Pulsador de parada de emergencia o fin de carrera NC" }, { left: "-( )- Bobina de Salida", right: "Relé, contactor o electroválvula neumática" }], explanation: "El lenguaje Ladder imita esquemas de relés para facilitar la transición de los técnicos electricistas." }]
           },
           {
-            id: "7-ins-3", level: 3, title: "Circuitos de Enclavamiento", description: "Auto-retención (memoria) en Ladder.", xp: 35,
+            id: "7-ins-3", level: 3, title: "Circuitos de enclavamiento", description: "Auto-retención (memoria) en Ladder.", xp: 35,
             questions: [{ id: "qis73", type: "fill-blanks", question: "Para mantener activada una salida en el PLC después de soltar el botón de marcha, colocamos un contacto de la propia salida en paralelo llamado _______ o auto-retención.", options: ["Enclavamiento", "Inversor", "Bypass", "Cortocircuito"], correctAnswer: "Enclavamiento", explanation: "El enclavamiento en paralelo permite que la bobina siga energizada hasta pulsar la parada." }]
           },
           {
-            id: "7-ins-4", level: 4, title: "Electroneumática Industrial", description: "Cilindros y electroválvulas 5/2 monostables.", xp: 40,
+            id: "7-ins-4", level: 4, title: "Electroneumática industrial", description: "Cilindros y electroválvulas 5/2 monostables.", xp: 40,
             questions: [{ id: "qis74", type: "true-false", question: "Una electroválvula 5/2 monostable con retorno por muelle regresa automáticamente a su posición original al cortar la corriente de su solenoide.", correctAnswer: true, explanation: "Verdadero. El resorte interior empuja la corredera garantizando una posición de reposo segura." }]
           },
           {
-            id: "7-ins-5", level: 5, title: "Examen Instalaciones II", description: "Temporizadores TON y contadores CTU en PLC.", xp: 50,
+            id: "7-ins-5", level: 5, title: "Examen instalaciones II", description: "Temporizadores TON y contadores CTU en PLC.", xp: 50,
             questions: [{ id: "qis75", type: "multiple-choice", question: "¿Qué hace un temporizador tipo TON (Timer On Delay) en un programa de PLC?", options: ["Retarda la activación de su contacto de salida un tiempo prefijado desde que recibe señal en su entrada", "Corta la energía de todo el PLC", "Cuenta piezas en una cinta transportadora", "Mide la presión del compresor neumático"], correctAnswer: "Retarda la activación de su contacto de salida un tiempo prefijado desde que recibe señal en su entrada", explanation: "El TON (retardo a la conexión) es clave para secuencias de arranque escalonado de motores." }]
           }
         ]
       },
       {
         id: "m-7-analisis2",
-        name: "Análisis Matemático Avanzado",
+        name: "Análisis matemático avanzado",
         description: "Ecuaciones diferenciales, Transformada de Laplace y control de lazo cerrado.",
         color: "from-rose-600 to-red-700",
         iconName: "TrendingUp",
         lessons: [
           {
-            id: "7-ana-1", level: 1, title: "Ecuaciones Diferenciales", description: "Modelado de sistemas dinámicos RLC.", xp: 25,
+            id: "7-ana-1", level: 1, title: "Ecuaciones diferenciales", description: "Modelado de sistemas dinámicos RLC.", xp: 25,
             questions: [{ id: "qam71", type: "true-false", question: "Una ecuación diferencial relaciona una función matemática desconocida con sus propias derivadas en el tiempo.", correctAnswer: true, explanation: "Verdadero. Describe sistemas donde el ritmo de cambio depende del estado actual del sistema." }]
           },
           {
@@ -1695,15 +1695,15 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qam72", type: "multiple-choice", question: "¿Qué enorme simplificación nos brinda la Transformada de Laplace al analizar circuitos eléctricos y control?", options: ["Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", "Elimina las resistencias del circuito", "Hacer que el voltaje sea infinito", "Enfriar los transistores"], correctAnswer: "Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", explanation: "Laplace convierte las derivadas en multiplicaciones por 's' y las integrales en divisiones por 's'." }]
           },
           {
-            id: "7-ana-3", level: 3, title: "Función de Transferencia (G_s)", description: "Relación entre Salida y Entrada en el plano 's'.", xp: 35,
+            id: "7-ana-3", level: 3, title: "Función de transferencia (G_s)", description: "Relación entre Salida y Entrada en el plano 's'.", xp: 35,
             questions: [{ id: "qam73", type: "fill-blanks", question: "En un sistema de control, la Función de Transferencia G(s) se define como el cociente entre la transformada de la _________ (Salida / Entrada) y la transformada de la entrada.", options: ["Salida", "Frecuencia", "Masa", "Tensión"], correctAnswer: "Salida", explanation: "G(s) = Y(s) / U(s). Resume el comportamiento dinámico interno de una planta o motor." }]
           },
           {
-            id: "7-ana-4", level: 4, title: "Estabilidad de Sistemas: Polos", description: "Raíces del denominador en el semiplano izquierdo.", xp: 40,
+            id: "7-ana-4", level: 4, title: "Estabilidad de sistemas: polos", description: "Raíces del denominador en el semiplano izquierdo.", xp: 40,
             questions: [{ id: "qam74", type: "match-pairs", question: "Asocia la ubicación de los Polos en el plano complejo 's' con la estabilidad del sistema:", pairs: [{ left: "Polos en el semiplano izquierdo (Re < 0)", right: "Sistema Estable (las oscilaciones se amortiguan y se detienen en un valor seguro)" }, { left: "Polos en el semiplano derecho (Re > 0)", right: "Sistema Inestable (las oscilaciones crecen exponencialmente hasta destruir el sistema)" }], explanation: "El diseño de controladores PID en automatización busca mantener todos los polos en la zona estable." }]
           },
           {
-            id: "7-ana-5", level: 5, title: "Examen Final de Graduación", description: "Control PID en procesos industriales.", xp: 50,
+            id: "7-ana-5", level: 5, title: "Examen final de graduación", description: "Control PID en procesos industriales.", xp: 50,
             questions: [{ id: "qam75", type: "multiple-choice", question: "En un controlador industrial PID, ¿qué función cumple la acción 'I' (Integral)?", options: ["Elimina el error en estado estacionario (suma el error a lo largo del tiempo hasta llevarlo a cero)", "Aumenta las oscilaciones violentas al arrancar", "Frena el motor bruscamente", "Mide la temperatura ambiente"], correctAnswer: "Elimina el error en estado estacionario (suma el error a lo largo del tiempo hasta llevarlo a cero)", explanation: "El término Integral asegura que el motor o válvula alcance milimétricamente el valor deseado (setpoint)." }]
           }
         ]
@@ -1714,26 +1714,26 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 
 export const SCHOOL_INFO = {
   name: "IPET 66",
-  motto: "Escuela de Educación Técnica - Formando el Futuro Tecnológico",
+  motto: "Escuela de educación técnica - formando el futuro tecnológico",
   location: "Córdoba, Argentina",
   description: "Una institución dedicada a la excelencia en formación técnica profesional, integrando talleres prácticos, ciencias duras y la tecnología de vanguardia."
 };
 
 export const AI_TUTOR_TIPS = [
   {
-    title: "Progresión y Candados por Años",
+    title: "Progresión y candados por años",
     content: "En IPET 66 TecnoLingo, cada año está bloqueado hasta que apruebes el año anterior. Si eres un alumno de cursos superiores (ej: 4to), al iniciar sesión tu perfil desbloqueará automáticamente los años del 1 al 4 para que repases tus bases o hagas tu especialidad."
   },
   {
-    title: "Racha por Aciertos (Combo Streak)",
+    title: "Racha por aciertos (combo streak)",
     content: "¡Cada respuesta correcta consecutiva en una lección eleva tu medidor de combo! Lograr rachas de x3 o x5 aciertos multiplica tus tuercas doradas y XP al terminar el nivel."
   },
   {
-    title: "5 Niveles de Maestría por Materia",
+    title: "5 niveles de maestría por materia",
     content: "Cada asignatura cuenta con 5 niveles de dificultad creciente (desde seguridad e introducción hasta el examen de graduación). Completa las 5 coronas para dominar el taller."
   },
   {
-    title: "Modo Dios / Examen Libre",
+    title: "Modo Dios / examen libre",
     content: "Si deseas explorar el contenido de 7mo año sin haber cursado los anteriores, puedes usar el botón 'Desbloquear Todo' en la vista de aprendizaje o tu perfil para tener acceso total como Examen Libre."
   }
 ];

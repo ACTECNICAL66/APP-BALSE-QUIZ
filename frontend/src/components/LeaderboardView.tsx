@@ -47,13 +47,13 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
   const yearTabs: { id: FilterType; label: string; color: string }[] = [
     { id: 'general', label: 'General', color: 'bg-emerald-400' },
-    { id: 1, label: '1º Año', color: 'bg-green-400' },
-    { id: 2, label: '2º Año', color: 'bg-blue-400' },
-    { id: 3, label: '3º Año', color: 'bg-yellow-400' },
-    { id: 4, label: '4º Año', color: 'bg-orange-400' },
-    { id: 5, label: '5º Año', color: 'bg-red-400' },
-    { id: 6, label: '6º Año', color: 'bg-purple-400' },
-    { id: 7, label: '7º Año', color: 'bg-slate-300' },
+    { id: 1, label: '1º año', color: 'bg-green-400' },
+    { id: 2, label: '2º año', color: 'bg-blue-400' },
+    { id: 3, label: '3º año', color: 'bg-yellow-400' },
+    { id: 4, label: '4º año', color: 'bg-orange-400' },
+    { id: 5, label: '5º año', color: 'bg-red-400' },
+    { id: 6, label: '6º año', color: 'bg-purple-400' },
+    { id: 7, label: '7º año', color: 'bg-slate-300' },
   ];
 
   return (
@@ -67,10 +67,10 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         <div className="space-y-2 text-center sm:text-left z-10">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-xs font-black uppercase tracking-widest shadow-lg">
             <Trophy className="w-4 h-4" />
-            <span>Liga de Oro IPET 66</span>
+            <span>Liga de oro IPET 66</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-lg">
-            {filter === 'general' ? 'Clasificación General' : `Liga de ${filter}º Año`}
+            {filter === 'general' ? 'Clasificación general' : `Liga de ${filter}º año`}
           </h1>
           <p className="text-sm font-bold text-slate-300 max-w-md">
             {filter === 'general' 
@@ -91,7 +91,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             <Timer className="w-6 h-6 text-white" />
           </div>
           <div className="flex-1">
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tiempo Restante</div>
+            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tiempo restante</div>
             <div className="text-lg font-black text-white">3d 14h</div>
           </div>
         </div>
@@ -101,7 +101,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             #{userIsInList ? userRank : '-'}
           </div>
           <div className="flex-1">
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tu Posición</div>
+            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tu posición</div>
             <div className="text-lg font-black text-emerald-400">
               {userRank <= 3 ? '¡Podio!' : userRank <= 10 ? 'Top 10' : userIsInList ? 'Subiendo' : 'Juega!'}
             </div>
@@ -113,7 +113,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             <Flame className="w-6 h-6 text-white fill-white" />
           </div>
           <div className="flex-1">
-            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tu Combo</div>
+            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tu combo</div>
             <div className="text-lg font-black text-orange-400">x{comboStreak}</div>
           </div>
         </div>
@@ -225,7 +225,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
                         )}
                       </div>
                       <div className="text-[11px] text-slate-400 font-bold">
-                        {user.year}º Año
+                        {user.year}º año
                       </div>
                     </div>
                   </div>
@@ -326,7 +326,7 @@ const PodiumCard: React.FC<PodiumCardProps> = ({ user, position }) => {
           {user.name}
         </div>
         <div className="text-[10px] text-slate-400 font-bold">
-          {user.year}º Año
+          {user.year}º año
         </div>
       </div>
 

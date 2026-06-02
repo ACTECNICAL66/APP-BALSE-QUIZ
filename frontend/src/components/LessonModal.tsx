@@ -248,7 +248,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             </div>
             <div className="space-y-2">
               <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">
-                ¡Nivel {lesson.level} Superado con Éxito!
+                ¡Nivel {lesson.level} superado con éxito!
               </div>
               <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
                 ¡Dominaste la lección de {subjectName}!
@@ -257,7 +257,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             
             <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
               <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl p-4 text-center shadow-xl">
-                <div className="text-xs font-bold text-slate-400 uppercase mb-1">XP Total</div>
+                <div className="text-xs font-bold text-slate-400 uppercase mb-1">XP total</div>
                 <div className="text-2xl font-black text-amber-400 flex items-center justify-center gap-1">
                   <Award className="w-6 h-6" />
                   <span>+{totalEarnedXp}</span>
@@ -321,7 +321,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
 
             <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
               <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl p-4 text-center shadow-xl">
-                <div className="text-xs font-bold text-slate-400 uppercase mb-1">XP Ganado</div>
+                <div className="text-xs font-bold text-slate-400 uppercase mb-1">XP ganado</div>
                 <div className="text-2xl font-black text-rose-400">+0</div>
               </div>
               <div className="bg-slate-900 liquid-glass border border-slate-700/80 rounded-3xl p-4 text-center shadow-xl">
@@ -357,6 +357,16 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             <h2 className="text-2xl sm:text-3xl font-black text-white leading-snug">
               <MathRenderer text={currentQuestion.question} />
             </h2>
+            
+            {currentQuestion.image && (
+              <div className="flex justify-center my-6">
+                <img 
+                  src={`/assets/question-images/${currentQuestion.image}`} 
+                  alt="Question image" 
+                  className="max-h-64 rounded-xl border border-slate-700 shadow-lg object-contain bg-white"
+                />
+              </div>
+            )}
 
             {/* Multiple Choice & Fill in the Blanks */}
             {(currentQuestion.type === 'multiple-choice' || currentQuestion.type === 'fill-blanks') && (
@@ -425,7 +435,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                 
                 {/* Left side */}
                 <div className="space-y-3">
-                  <div className="text-xs font-black text-slate-400 uppercase tracking-wider px-2">Concepto / Pin</div>
+                  <div className="text-xs font-black text-slate-400 uppercase tracking-wider px-2">Concepto / pin</div>
                   {currentQuestion.pairs?.map((pair) => {
                     const isMatched = matchedPairs.some((p) => p.left === pair.left);
                     const isSelected = selectedLeft === pair.left;
@@ -450,7 +460,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
 
                 {/* Right side */}
                 <div className="space-y-3">
-                  <div className="text-xs font-black text-slate-400 uppercase tracking-wider px-2">Definición / Función</div>
+                  <div className="text-xs font-black text-slate-400 uppercase tracking-wider px-2">Definición / función</div>
                   {currentQuestion.pairs?.map((pair) => {
                     const isMatched = matchedPairs.some((p) => p.right === pair.right);
                     const isSelected = selectedRight === pair.right;
@@ -594,7 +604,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                 }}
                 className="w-full btn-3d-green text-white font-black py-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/30"
               >
-                Recargar 5 ❤️ con Tuercas
+                Recargar 5 ❤️ con tuercas
               </button>
               <button
                 onClick={() => {

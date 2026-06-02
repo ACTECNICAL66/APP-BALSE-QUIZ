@@ -68,7 +68,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
             <div className="space-y-1">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-black uppercase tracking-widest shadow-sm">
                 <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span>Plan de Estudios IPET 66</span>
+                <span>Plan de estudios IPET 66</span>
               </div>
               <h1 className="text-3xl sm:text-4xl font-black text-white">{currentCurriculum.title}</h1>
               <p className="text-sm text-slate-300 font-bold">{currentCurriculum.subtitle}</p>
@@ -80,7 +80,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
                   {completedLessons.filter(l => currentCurriculum.subjects.some(s => s.lessons.some(les => les.id === l))).length}
                   <span className="text-lg text-emerald-300">/{currentCurriculum.subjects.length * 5}</span>
                 </div>
-                <div className="text-[10px] font-black text-emerald-300 uppercase tracking-widest">Niveles Superados</div>
+                <div className="text-[10px] font-black text-emerald-300 uppercase tracking-widest">Niveles superados</div>
               </div>
             )}
           </div>
@@ -97,7 +97,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
                 />
               </div>
               <div className="flex items-center justify-between text-[11px] font-black text-slate-400 uppercase tracking-widest">
-                <span>{currentCurriculum.subjects.filter(s => s.lessons.every(l => completedLessons.includes(l.id))).length} / {currentCurriculum.subjects.length} Materias Dominadas</span>
+                <span>{currentCurriculum.subjects.filter(s => s.lessons.every(l => completedLessons.includes(l.id))).length} / {currentCurriculum.subjects.length} Materias dominadas</span>
                 <span className="inline-flex items-center gap-1"><Crown className="w-3.5 h-3.5 text-amber-400" /> {Math.round((completedLessons.filter(l => currentCurriculum.subjects.some(s => s.lessons.some(les => les.id === l))).length / (currentCurriculum.subjects.length * 5)) * 100)}%</span>
               </div>
             </div>
@@ -131,7 +131,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
             }}
             className="btn-3d-yellow text-slate-950 font-black px-6 py-3 rounded-2xl text-xs uppercase tracking-wider shrink-0"
           >
-            Activar Pase Libre
+            Activar pase libre
           </button>
         </div>
       )}
@@ -150,7 +150,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
                 <div className="text-xs font-black uppercase tracking-widest text-white/90 flex items-center gap-1.5">
                   <span>Módulo {unitIndex + 1}</span>
                   <span>•</span>
-                  <span>5 Niveles</span>
+                  <span>5 niveles</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-white">{unit.name}</h2>
                 <p className="text-xs sm:text-sm font-bold text-white/90 max-w-md line-clamp-2">{unit.description}</p>
@@ -267,7 +267,7 @@ export const LearnView: React.FC<LearnViewProps> = ({
             </div>
 
             <div className="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between shadow-inner">
-              <span className="text-xs font-black text-slate-400 uppercase">Recompensa Estimada</span>
+              <span className="text-xs font-black text-slate-400 uppercase">Recompensa estimada</span>
               <span className="text-sm font-black text-amber-400 flex items-center gap-1">
                 <Gem className="w-4 h-4 fill-amber-400 text-amber-400" /> +15 | <Star className="w-4 h-4 fill-amber-400 text-amber-400" /> +{selectedLessonInfo.lesson.xp} XP
               </span>
