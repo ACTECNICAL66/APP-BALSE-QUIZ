@@ -120,7 +120,7 @@ export const LEADERBOARD_USERS = [
 ];
 
 // Helper para crear 5 niveles estructurados por cada materia
-export const CURRICULUM_DATA: YearCurriculum[
+export const CURRICULUM_DATA: YearCurriculum[] = [
 {
   year: 1,
   title: "1er Año - Ciclo Básico",

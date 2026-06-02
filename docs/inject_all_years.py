@@ -33,8 +33,9 @@ if start_idx == -1:
 y7_match = re.search(r'\{\s*year:\s*7,.*?(?=\]\s*;)', text, re.DOTALL)
 y7_text = y7_match.group(0) if y7_match else ""
 
-# The start of the array content
-array_start = text.find("[", start_idx) + 1
+# The start of the array content (find the '[' after '= [')
+eq_pos = text.find("= [", start_idx)
+array_start = text.find("[", eq_pos) + 1
 
 # The end of the array
 # We need to find the matching '];' for CURRICULUM_DATA
