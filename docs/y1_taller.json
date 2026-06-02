@@ -1,0 +1,111 @@
+[
+  {
+    "id": "1-tal-1",
+    "level": 1,
+    "title": "Taller Laboratorio",
+    "description": "Herramientas y seguridad.",
+    "xp": 25,
+    "questions": [
+      {
+        "id": "q11",
+        "type": "multiple-choice",
+        "question": "¿Cómo se clasifican las herramientas principales que se utilizan en el taller?",
+        "options": [
+          "Tracción, universal, corte, desbaste, precisión, alargue.",
+          "Corte, desbaste, sujeción, medición, golpe, montaje.",
+          "Corte, sujeción, soldadura, limpieza, desbaste.",
+          "Ninguna es correcta."
+        ],
+        "correctAnswer": "Corte, desbaste, sujeción, medición, golpe, montaje.",
+        "explanation": "Las herramientas de taller se clasifican según su función en corte, desbaste, sujeción, medición, golpe y montaje."
+      }
+    ]
+  },
+  {
+    "id": "1-tal-2",
+    "level": 2,
+    "title": "Ley de Ohm",
+    "description": "Cálculos básicos de corriente.",
+    "xp": 30,
+    "questions": [
+      {
+        "id": "q12",
+        "type": "multiple-choice",
+        "question": "¿Cual de las siguientes expresiones corresponde al cálculo de Intensidad de corriente según la ley de Ohm?",
+        "options": [
+          "i = V/R",
+          "i = V² / 2xR",
+          "i = P x V",
+          "i = ∫V.dx"
+        ],
+        "correctAnswer": "i = V/R",
+        "explanation": "La Ley de Ohm establece que la intensidad (I) es igual al voltaje (V) dividido por la resistencia (R)."
+      }
+    ]
+  },
+  {
+    "id": "1-tal-3",
+    "level": 3,
+    "title": "Empalmes Eléctricos",
+    "description": "Uniones y derivaciones.",
+    "xp": 35,
+    "questions": [
+      {
+        "id": "q13",
+        "type": "multiple-choice",
+        "question": "Si se quiere unir un cable a una línea ya existente (derivación) ¿Qué empalme se puede realizar?",
+        "options": [
+          "Cola de ratón",
+          "Empalme en T",
+          "Empalme de Western"
+        ],
+        "correctAnswer": "Empalme en T",
+        "explanation": "El empalme en T se utiliza específicamente para derivar una línea secundaria a partir de una línea principal."
+      }
+    ]
+  },
+  {
+    "id": "1-tal-4",
+    "level": 4,
+    "title": "Magnitudes Principales",
+    "description": "Conceptos fundamentales.",
+    "xp": 40,
+    "questions": [
+      {
+        "id": "q14",
+        "type": "multiple-choice",
+        "question": "¿Cuáles son las 3 magnitudes eléctricas principales?",
+        "options": [
+          "Corriente, Potencia, Frecuencia",
+          "Voltaje, Resistencia, Amplitud",
+          "Voltaje, Corriente, Resistencia",
+          "Frecuencia, Temperatura, Altitud"
+        ],
+        "correctAnswer": "Voltaje, Corriente, Resistencia",
+        "explanation": "Las 3 magnitudes fundamentales de la electricidad que relaciona la Ley de Ohm son el Voltaje, la Corriente y la Resistencia."
+      }
+    ]
+  },
+  {
+    "id": "1-tal-5",
+    "level": 5,
+    "title": "Normas de Seguridad",
+    "description": "Comportamiento en el taller.",
+    "xp": 50,
+    "questions": [
+      {
+        "id": "q15",
+        "type": "multiple-choice",
+        "question": "En un taller-laboratorio de electrónica donde estaba teniendo lugar una clase. Raulito tenía sed y sacó su botella para beber agua. ¿Qué regla de seguridad el laboratorio rompió Raulito?",
+        "options": [
+          "No interrumpir la clase",
+          "No trabajar sin elementos de seguridad",
+          "No operar maquinaria eléctrica sin aprobación y autorización del profesor",
+          "No ingerir alimentos ni bebidas en el taller"
+        ],
+        "correctAnswer": "No ingerir alimentos ni bebidas en el taller",
+        "explanation": "Por normas de seguridad está terminantemente prohibido ingerir alimentos o bebidas dentro del taller para evitar accidentes."
+      }
+    ]
+  }
+]

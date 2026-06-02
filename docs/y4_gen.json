@@ -1,0 +1,536 @@
+{
+  "year": 4,
+  "title": "4to Año - Ciclo Orientado",
+  "subtitle": "Especialización y Desarrollo",
+  "subjects": [
+    {
+      "id": "m-4-digital",
+      "name": "Electrónica Digital",
+      "description": "Compuertas lógicas y Karnaugh.",
+      "color": "from-blue-500 to-indigo-600",
+      "iconName": "Cpu",
+      "lessons": [
+        {
+          "id": "4-dig-1",
+          "level": 1,
+          "title": "Tablas de Verdad y Compuertas",
+          "description": "Identificación de compuertas lógicas.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qdi41",
+              "type": "multiple-choice",
+              "question": "Observá la siguiente tabla de verdad: A=0,B=0→0; A=0,B=1→1; A=1,B=0→1; A=1,B=1→1. ¿Qué compuerta representa?",
+              "options": [
+                "OR",
+                "AND",
+                "NAND",
+                "XOR"
+              ],
+              "correctAnswer": "OR",
+              "explanation": "La compuerta OR da salida 1 cuando al menos una entrada es 1. Solo da 0 cuando ambas entradas son 0."
+            }
+          ]
+        },
+        {
+          "id": "4-dig-2",
+          "level": 2,
+          "title": "Mapas de Karnaugh",
+          "description": "Simplificación de funciones lógicas.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qdi42",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirve un mapa de Karnaugh?",
+              "options": [
+                "Simplificar funciones lógicas",
+                "Convertir números binarios a decimales",
+                "Sumar señales eléctricas",
+                "Amplificar voltaje"
+              ],
+              "correctAnswer": "Simplificar funciones lógicas",
+              "explanation": "Permite reducir la cantidad de compuertas necesarias en un circuito agrupando combinaciones de valores iguales, logrando circuitos más simples y económicos."
+            }
+          ]
+        },
+        {
+          "id": "4-dig-3",
+          "level": 3,
+          "title": "Álgebra de Boole",
+          "description": "Comportamiento lógico de variables binarias.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qdi43",
+              "type": "multiple-choice",
+              "question": "¿Qué estudia el Álgebra de Boole?",
+              "options": [
+                "El comportamiento lógico de variables binarias",
+                "Circuitos eléctricos de potencia",
+                "Operaciones matemáticas con números complejos",
+                "El movimiento de electrones"
+              ],
+              "correctAnswer": "El comportamiento lógico de variables binarias",
+              "explanation": "Se utiliza para analizar y diseñar circuitos digitales mediante operaciones lógicas como AND, OR y NOT. Es la base matemática de la electrónica digital."
+            }
+          ]
+        },
+        {
+          "id": "4-dig-4",
+          "level": 4,
+          "title": "Compuertas Lógicas y Nivel Lógico",
+          "description": "Aplicación de compuertas y estados.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qdi44",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utilizan las compuertas lógicas?",
+              "options": [
+                "Para realizar operaciones lógicas en circuitos digitales",
+                "Para almacenar energía",
+                "Para aumentar corriente eléctrica",
+                "Para medir tensión"
+              ],
+              "correctAnswer": "Para realizar operaciones lógicas en circuitos digitales",
+              "explanation": "Las compuertas lógicas procesan señales binarias de entrada y generan una salida según una operación lógica determinada."
+            },
+            {
+              "id": "qdi44b",
+              "type": "multiple-choice",
+              "question": "¿Qué representa un '1' lógico en electrónica digital?",
+              "options": [
+                "Un estado alto o activado",
+                "Ausencia de señal",
+                "Estado indefinido",
+                "Circuito desconectado"
+              ],
+              "correctAnswer": "Un estado alto o activado",
+              "explanation": "El '1' lógico representa normalmente la presencia de tensión o un nivel alto de voltaje. Indica que una señal está activada."
+            }
+          ]
+        },
+        {
+          "id": "4-dig-5",
+          "level": 5,
+          "title": "Evaluación de Digitales I",
+          "description": "Compuertas y simplificación.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qdi45",
+              "type": "multiple-choice",
+              "question": "¿Qué compuerta tiene la forma de una AND con un círculo en la salida (inversión)?",
+              "options": [
+                "NAND",
+                "NOR",
+                "NOT",
+                "XOR"
+              ],
+              "correctAnswer": "NAND",
+              "explanation": "La compuerta NAND se reconoce porque tiene la forma de una AND y un pequeño círculo en la salida que representa la inversión lógica."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-4-electro",
+      "name": "Electrotecnia I",
+      "description": "Leyes de Kirchhoff, potencia y capacitores.",
+      "color": "from-amber-500 to-orange-600",
+      "iconName": "Zap",
+      "lessons": [
+        {
+          "id": "4-ele-1",
+          "level": 1,
+          "title": "Ley de Ohm",
+          "description": "Tensión, corriente y resistencia.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "q41",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la ley que relaciona tensión, corriente y resistencia?",
+              "options": [
+                "Ley de Ohm",
+                "Ley de Kirchhoff",
+                "Ley de Faraday",
+                "Ley de Joule"
+              ],
+              "correctAnswer": "Ley de Ohm",
+              "explanation": "La Ley de Ohm establece que $V = I \\times R$, relacionando voltaje, intensidad de corriente y resistencia."
+            }
+          ]
+        },
+        {
+          "id": "4-ele-2",
+          "level": 2,
+          "title": "Medición de Potencia Eléctrica",
+          "description": "El vatímetro.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "q42",
+              "type": "multiple-choice",
+              "question": "¿Qué instrumento se utiliza para medir potencia eléctrica?",
+              "options": [
+                "Vatímetro",
+                "Voltímetro",
+                "Amperímetro",
+                "Capacitor"
+              ],
+              "correctAnswer": "Vatímetro",
+              "explanation": "El vatímetro es el instrumento diseñado para medir potencia eléctrica activa en watts (W)."
+            }
+          ]
+        },
+        {
+          "id": "4-ele-3",
+          "level": 3,
+          "title": "Leyes de Kirchhoff",
+          "description": "Nodos y mallas.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "q43",
+              "type": "multiple-choice",
+              "question": "¿Qué establece una de las leyes de Kirchhoff en un nodo?",
+              "options": [
+                "La suma de corrientes que entran es igual a la suma que salen",
+                "La suma de voltajes es siempre cero",
+                "La resistencia total es la suma de todas",
+                "La corriente se divide por igual"
+              ],
+              "correctAnswer": "La suma de corrientes que entran es igual a la suma que salen",
+              "explanation": "La primera ley de Kirchhoff (Ley de Nodos) establece que la suma de las corrientes que entran a un nodo es igual a la suma de las corrientes que salen."
+            }
+          ]
+        },
+        {
+          "id": "4-ele-4",
+          "level": 4,
+          "title": "Capacitores e Inducción",
+          "description": "Almacenamiento de energía y campos.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "q44",
+              "type": "multiple-choice",
+              "question": "¿Qué componente almacena energía en forma de campo eléctrico?",
+              "options": [
+                "Capacitor",
+                "Resistor",
+                "Bobina",
+                "Transformador"
+              ],
+              "correctAnswer": "Capacitor",
+              "explanation": "Los capacitores almacenan energía electrostática en forma de campo eléctrico entre sus placas."
+            },
+            {
+              "id": "q44b",
+              "type": "multiple-choice",
+              "question": "¿Cuál de las siguientes leyes explica la inducción electromagnética?",
+              "options": [
+                "Leyes de Faraday y Lenz",
+                "Ley de Ohm",
+                "Ley de Coulomb",
+                "Ley de Joule"
+              ],
+              "correctAnswer": "Leyes de Faraday y Lenz",
+              "explanation": "Faraday descubrió que un campo magnético variable induce una corriente; Lenz determinó el sentido de esa corriente inducida."
+            }
+          ]
+        },
+        {
+          "id": "4-ele-5",
+          "level": 5,
+          "title": "Evaluación de Electrotecnia I",
+          "description": "Leyes fundamentales de la electricidad.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "q45",
+              "type": "multiple-choice",
+              "question": "Si por un resistor de 10 $\\Omega$ circulan 2 A, ¿cuál es la potencia disipada?",
+              "options": [
+                "40 W",
+                "20 W",
+                "10 W",
+                "5 W"
+              ],
+              "correctAnswer": "40 W",
+              "explanation": "$P = I^2 \\times R = 2^2 \\times 10 = 4 \\times 10 = 40$ W."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-4-analog",
+      "name": "Electrónica Analógica I",
+      "description": "Semiconductores, diodos, transistores.",
+      "color": "from-purple-500 to-pink-600",
+      "iconName": "Wrench",
+      "lessons": [
+        {
+          "id": "4-ana-1",
+          "level": 1,
+          "title": "El Multímetro Digital",
+          "description": "Medición de tensión, corriente y resistencia.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qa41",
+              "type": "multiple-choice",
+              "question": "¿Qué instrumento se utiliza para medir tensión, corriente y resistencia eléctrica?",
+              "options": [
+                "Multímetro",
+                "Osciloscopio",
+                "Generador de funciones",
+                "Transformador"
+              ],
+              "correctAnswer": "Multímetro",
+              "explanation": "El multímetro permite medir distintas magnitudes eléctricas como tensión, corriente y resistencia en un circuito."
+            }
+          ]
+        },
+        {
+          "id": "4-ana-2",
+          "level": 2,
+          "title": "El Diodo Semiconductor",
+          "description": "Polarización y conducción.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qa42",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal de un diodo?",
+              "options": [
+                "Permitir el paso de corriente en un solo sentido",
+                "Amplificar señales",
+                "Almacenar energía",
+                "Medir tensión"
+              ],
+              "correctAnswer": "Permitir el paso de corriente en un solo sentido",
+              "explanation": "El diodo conduce corriente cuando está polarizado correctamente (directa) y bloquea el paso en sentido contrario.",
+              "image": "4to_ano_q2.png"
+            },
+            {
+              "id": "qa42b",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utiliza comúnmente un diodo Zener?",
+              "options": [
+                "Regular tensión (mantener voltaje constante)",
+                "Generar sonido",
+                "Aumentar corriente",
+                "Encender motores"
+              ],
+              "correctAnswer": "Regular tensión (mantener voltaje constante)",
+              "explanation": "El diodo Zener se utiliza como regulador de voltaje manteniendo una tensión estable en el circuito cuando se polariza en inversa."
+            }
+          ]
+        },
+        {
+          "id": "4-ana-3",
+          "level": 3,
+          "title": "Transistores BJT",
+          "description": "PNP y NPN.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qa43",
+              "type": "multiple-choice",
+              "question": "¿Qué tipos principales de transistor BJT existen?",
+              "options": [
+                "PNP y NPN",
+                "AC y DC",
+                "Serie y paralelo",
+                "Digital y analógico"
+              ],
+              "correctAnswer": "PNP y NPN",
+              "explanation": "Los transistores BJT se clasifican principalmente en PNP y NPN según la disposición de sus materiales semiconductores."
+            }
+          ]
+        },
+        {
+          "id": "4-ana-4",
+          "level": 4,
+          "title": "Amplificación de Señales",
+          "description": "El transistor como amplificador.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qa44",
+              "type": "multiple-choice",
+              "question": "¿Qué componente se utiliza para amplificar señales eléctricas?",
+              "options": [
+                "Transistor",
+                "Resistor",
+                "Capacitor",
+                "Fusible"
+              ],
+              "correctAnswer": "Transistor",
+              "explanation": "El transistor puede funcionar como amplificador, aumentando la intensidad de una señal eléctrica en un circuito."
+            }
+          ]
+        },
+        {
+          "id": "4-ana-5",
+          "level": 5,
+          "title": "Evaluación de Analógica I",
+          "description": "Semiconductores y componentes.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qa45",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la caída de tensión típica de un diodo de silicio polarizado en directa?",
+              "options": [
+                "0.7 V",
+                "0.3 V",
+                "1.5 V",
+                "5 V"
+              ],
+              "correctAnswer": "0.7 V",
+              "explanation": "Los diodos de silicio tienen una barrera de potencial de aproximadamente 0.7 V a temperatura ambiente cuando conducen en directa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-4-info",
+      "name": "Informática",
+      "description": "Programación en C++, sistemas digitales.",
+      "color": "from-emerald-500 to-teal-600",
+      "iconName": "Monitor",
+      "lessons": [
+        {
+          "id": "4-inf-1",
+          "level": 1,
+          "title": "Memoria RAM y CPU",
+          "description": "Componentes fundamentales de una PC.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qi41",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal de la memoria RAM?",
+              "options": [
+                "Almacenar datos y programas temporalmente mientras se usan",
+                "Guardar archivos permanentes",
+                "Ejecutar operaciones matemáticas",
+                "Controlar dispositivos externos"
+              ],
+              "correctAnswer": "Almacenar datos y programas temporalmente mientras se usan",
+              "explanation": "La memoria RAM guarda información de manera temporal para que el procesador pueda acceder rápidamente mientras la computadora está funcionando."
+            },
+            {
+              "id": "qi41b",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal del procesador (CPU) en una computadora?",
+              "options": [
+                "Ejecutar instrucciones y procesar datos",
+                "Almacenar archivos permanentemente",
+                "Mostrar imágenes en pantalla",
+                "Conectar dispositivos externos"
+              ],
+              "correctAnswer": "Ejecutar instrucciones y procesar datos",
+              "explanation": "El procesador es el componente encargado de realizar cálculos y ejecutar las instrucciones necesarias para el funcionamiento de la computadora."
+            }
+          ]
+        },
+        {
+          "id": "4-inf-2",
+          "level": 2,
+          "title": "Diagramas de Flujo",
+          "description": "Simbología de algoritmos.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qi42",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utilizan los símbolos y flechas en un diagrama de flujo?",
+              "options": [
+                "Para representar el paso a paso del algoritmo",
+                "Para decorar el algoritmo",
+                "Para guardar información en la memoria",
+                "Para reiniciar el algoritmo"
+              ],
+              "correctAnswer": "Para representar el paso a paso del algoritmo",
+              "explanation": "Para hacer un diagrama de flujo se usan símbolos y flechas mostrando el paso a paso de un algoritmo."
+            }
+          ]
+        },
+        {
+          "id": "4-inf-3",
+          "level": 3,
+          "title": "Lenguaje C: Sintaxis Básica",
+          "description": "Punto y coma y estructura.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qi43",
+              "type": "multiple-choice",
+              "question": "¿Qué símbolo se usa para finalizar una instrucción en lenguaje C?",
+              "options": [
+                ";",
+                ".",
+                ":",
+                ","
+              ],
+              "correctAnswer": ";",
+              "explanation": "En C, cada instrucción debe terminar con punto y coma (;) para indicar el final de la línea de código."
+            }
+          ]
+        },
+        {
+          "id": "4-inf-4",
+          "level": 4,
+          "title": "Estructuras de Repetición: Bucles",
+          "description": "Repetir instrucciones varias veces.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qi44",
+              "type": "multiple-choice",
+              "question": "¿Qué estructura se utiliza para repetir instrucciones varias veces en un programa?",
+              "options": [
+                "Bucle",
+                "Variable",
+                "Clase",
+                "Librería"
+              ],
+              "correctAnswer": "Bucle",
+              "explanation": "Un bucle permite ejecutar varias veces un bloque de instrucciones mientras se cumpla una condición determinada."
+            }
+          ]
+        },
+        {
+          "id": "4-inf-5",
+          "level": 5,
+          "title": "Evaluación de Informática I",
+          "description": "Conceptos de hardware y algoritmos.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qi45",
+              "type": "multiple-choice",
+              "question": "¿Qué tipo de dato usarías en C para almacenar un valor lógico de verdadero o falso?",
+              "options": [
+                "int",
+                "float",
+                "char",
+                "double"
+              ],
+              "correctAnswer": "int",
+              "explanation": "En C no existe el tipo bool nativo; se usa int (0 = falso, cualquier otro valor = verdadero)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

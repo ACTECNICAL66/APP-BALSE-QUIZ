@@ -1,0 +1,485 @@
+{
+  "year": 5,
+  "title": "5to Año - Especialización",
+  "subtitle": "Análisis Avanzado y Proyectos",
+  "subjects": [
+    {
+      "id": "m-5-electro",
+      "name": "Electrónica Analógica II",
+      "description": "Transistores FET, Op-Amps, osciladores y filtros.",
+      "color": "from-amber-500 to-orange-600",
+      "iconName": "Wrench",
+      "lessons": [
+        {
+          "id": "5-ele-1",
+          "level": 1,
+          "title": "Diferencia FET y BJT",
+          "description": "Tipos de transistores.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qe51",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la principal diferencia operativa entre un Transistor de Efecto de Campo (FET) y un Transistor de Unión Bipolar (BJT)?",
+              "options": [
+                "El FET se controla por corriente de base.",
+                "El FET es un dispositivo controlado por voltaje (tensión en el Gate).",
+                "El BJT tiene una impedancia de entrada mucho más alta que el FET.",
+                "El FET sólo puede conducir en una dirección de la corriente."
+              ],
+              "correctAnswer": "El FET es un dispositivo controlado por voltaje (tensión en el Gate).",
+              "explanation": "A diferencia de los BJT que dependen de la corriente de base, los FET utilizan un campo eléctrico creado por el voltaje en el Gate para controlar la corriente."
+            }
+          ]
+        },
+        {
+          "id": "5-ele-2",
+          "level": 2,
+          "title": "Amplificador Operacional Ideal",
+          "description": "Impedancias.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qe52",
+              "type": "multiple-choice",
+              "question": "En un Amplificador Operacional (Op-Amp) ideal, ¿cómo se definen la impedancia de entrada y la impedancia de salida?",
+              "image": "5to_ano_q2.png",
+              "options": [
+                "Entrada baja y salida alta.",
+                "Entrada cero y salida infinita.",
+                "Impedancia de entrada infinita e impedancia de salida cero.",
+                "Ambas son de 50 ohms."
+              ],
+              "correctAnswer": "Impedancia de entrada infinita e impedancia de salida cero.",
+              "explanation": "Un Op-Amp ideal busca no cargar a la fuente de señal y poder entregar toda su tensión a la carga."
+            }
+          ]
+        },
+        {
+          "id": "5-ele-3",
+          "level": 3,
+          "title": "Amplificador Inversor",
+          "description": "Ganancia de voltaje.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qe53",
+              "type": "multiple-choice",
+              "question": "Para un amplificador inversor con una resistencia de realimentación (Rf) de 100 kΩ y una resistencia de entrada (Ri) de 10 kΩ, ¿cuál es la ganancia de voltaje (Av)?",
+              "options": [
+                "10",
+                "-10",
+                "11",
+                "-0.1"
+              ],
+              "correctAnswer": "-10",
+              "explanation": "La ganancia del amplificador inversor es -(Rf/Ri) = -(100k/10k) = -10."
+            }
+          ]
+        },
+        {
+          "id": "5-ele-4",
+          "level": 4,
+          "title": "Osciladores",
+          "description": "Criterio de Barkhausen.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qe54",
+              "type": "multiple-choice",
+              "question": "¿Cuál de los siguientes es un requisito indispensable para que un circuito se considere un Oscilador según el criterio de Barkhausen?",
+              "options": [
+                "Que la ganancia de lazo sea exactamente cero.",
+                "Que no tenga realimentación.",
+                "Que el desfase total alrededor del lazo sea de 0° (o 360°) y la ganancia de lazo sea 1.",
+                "Que utilice solo resistencias y capacitores pasivos sin fuente de energía."
+              ],
+              "correctAnswer": "Que el desfase total alrededor del lazo sea de 0° (o 360°) y la ganancia de lazo sea 1.",
+              "explanation": "Para mantener oscilaciones, la señal que regresa a la entrada debe estar en fase y compensar pérdidas."
+            }
+          ]
+        },
+        {
+          "id": "5-ele-5",
+          "level": 5,
+          "title": "Filtros Activos",
+          "description": "Ventajas.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qe55",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la ventaja fundamental de un filtro activo frente a un filtro pasivo?",
+              "image": "5to_ano_q5.png",
+              "options": [
+                "No requiere alimentación externa.",
+                "Puede proporcionar ganancia y evita que la carga afecte la respuesta del filtro.",
+                "Solo utiliza inductores de gran tamaño.",
+                "Es más sencillo de construir porque no usa Amplificadores Operacionales."
+              ],
+              "correctAnswer": "Puede proporcionar ganancia y evita que la carga afecte la respuesta del filtro.",
+              "explanation": "Los filtros activos utilizan componentes que permiten amplificar la señal y ofrecen aislamiento."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-5-electrotecnia",
+      "name": "Electrotecnia II",
+      "description": "Líneas de distribución, acometidas y planos.",
+      "color": "from-blue-500 to-indigo-600",
+      "iconName": "PencilRuler",
+      "lessons": [
+        {
+          "id": "5-et-1",
+          "level": 1,
+          "title": "Líneas de Distribución",
+          "description": "Marco Legal.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qet51",
+              "type": "multiple-choice",
+              "question": "En el eje de Líneas de Distribución (Unidad II), ¿cuál es el marco legal principal que rige las instalaciones eléctricas en baja tensión?",
+              "options": [
+                "La Ley de Ohm y Kirchhoff.",
+                "La Ley de Seguridad Eléctrica 10281.",
+                "El criterio de Barkhausen.",
+                "La norma ISO 9001."
+              ],
+              "correctAnswer": "La Ley de Seguridad Eléctrica 10281.",
+              "explanation": "La Ley 10281 es la normativa fundamental que rige las instalaciones eléctricas domiciliarias."
+            }
+          ]
+        },
+        {
+          "id": "5-et-2",
+          "level": 2,
+          "title": "Acometida Domiciliaria",
+          "description": "Componentes mínimos.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qet52",
+              "type": "multiple-choice",
+              "question": "¿Qué componentes técnicos mínimos debe contener una Acometida Domiciliaria?",
+              "options": [
+                "Solo un transformador de 220/12V.",
+                "Elementos de conexión a la red, medidor y las protecciones correspondientes.",
+                "Un amplificador de instrumentación y filtros activos.",
+                "Únicamente el cable de puesta a tierra."
+              ],
+              "correctAnswer": "Elementos de conexión a la red, medidor y las protecciones correspondientes.",
+              "explanation": "La acometida incluye el cálculo de conductores y los elementos de protección necesarios."
+            }
+          ]
+        },
+        {
+          "id": "5-et-3",
+          "level": 3,
+          "title": "Planos Eléctricos",
+          "description": "Simbología.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qet53",
+              "type": "multiple-choice",
+              "question": "En la representación de planos eléctricos, ¿qué norma técnica se sigue para asegurar que la simbología sea universalmente comprendida?",
+              "options": [
+                "Normas de dibujo artístico.",
+                "Simbología Eléctrica Normalizada (vinculada a reglamentaciones y normas en BT).",
+                "No se sigue ninguna norma, el diseño es libre.",
+                "Solo las especificaciones del fabricante del motor."
+              ],
+              "correctAnswer": "Simbología Eléctrica Normalizada (vinculada a reglamentaciones y normas en BT).",
+              "explanation": "El reconocimiento de la Simbología Eléctrica es central para interpretar planos."
+            }
+          ]
+        },
+        {
+          "id": "5-et-4",
+          "level": 4,
+          "title": "Protección Diferencial",
+          "description": "Seguridad contra fugas.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qet54",
+              "type": "multiple-choice",
+              "question": "¿Qué dispositivo de protección es obligatorio según las normas de seguridad para proteger a las personas contra fugas de corriente a tierra?",
+              "options": [
+                "Interruptor termomagnético.",
+                "Fusible de alta capacidad.",
+                "Interruptor diferencial (Disyuntor).",
+                "Voltímetro de panel."
+              ],
+              "correctAnswer": "Interruptor diferencial (Disyuntor).",
+              "explanation": "El interruptor diferencial detecta la diferencia de corriente entre fase y neutro, protegiendo la vida."
+            }
+          ]
+        },
+        {
+          "id": "5-et-5",
+          "level": 5,
+          "title": "Transformadores",
+          "description": "Relación de transformación.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qet55",
+              "type": "multiple-choice",
+              "question": "En un transformador monofásico de 220V/12V, si el bobinado primario tiene 1100 vueltas, ¿cuántas vueltas debe tener aproximadamente el secundario?",
+              "options": [
+                "1100 vueltas.",
+                "220 vueltas.",
+                "60 vueltas.",
+                "12 vueltas."
+              ],
+              "correctAnswer": "60 vueltas.",
+              "explanation": "N2 = N1 * (V2/V1) = 1100 * (12/220) = 60 vueltas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-5-info",
+      "name": "Informática",
+      "description": "Lógica digital, compuertas XOR y memorias.",
+      "color": "from-purple-500 to-pink-600",
+      "iconName": "Cpu",
+      "lessons": [
+        {
+          "id": "5-inf-1",
+          "level": 1,
+          "title": "Compuertas Lógicas",
+          "description": "Operación XOR.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qi51",
+              "type": "multiple-choice",
+              "question": "En el álgebra de Boole, ¿cuál es la operación lógica que produce una salida de nivel alto (1) únicamente cuando sus entradas son diferentes entre sí?",
+              "options": [
+                "Operación OR",
+                "Operación NAND",
+                "Operación XOR (OR Exclusiva)",
+                "Operación NXOR"
+              ],
+              "correctAnswer": "Operación XOR (OR Exclusiva)",
+              "explanation": "La operación XOR da un resultado verdadero solo cuando las entradas son distintas."
+            }
+          ]
+        },
+        {
+          "id": "5-inf-2",
+          "level": 2,
+          "title": "Sistemas Embebidos",
+          "description": "Microcontroladores.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qi52",
+              "type": "multiple-choice",
+              "question": "¿Qué es un microcontrolador?",
+              "options": [
+                "Una memoria RAM gigante.",
+                "Una computadora completa en un solo chip (CPU, memoria y periféricos).",
+                "Un dispositivo solo para emitir luz.",
+                "Un tipo de resistor variable."
+              ],
+              "correctAnswer": "Una computadora completa en un solo chip (CPU, memoria y periféricos).",
+              "explanation": "Un microcontrolador es un circuito integrado programable que contiene todos los componentes de un computador."
+            }
+          ]
+        },
+        {
+          "id": "5-inf-3",
+          "level": 3,
+          "title": "Lenguajes de Programación",
+          "description": "C y C++.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qi53",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utiliza comúnmente el lenguaje C/C++ en electrónica?",
+              "options": [
+                "Para hacer dibujos artísticos.",
+                "Para programar páginas web.",
+                "Para programar microcontroladores y sistemas embebidos.",
+                "Para editar videos."
+              ],
+              "correctAnswer": "Para programar microcontroladores y sistemas embebidos.",
+              "explanation": "C y C++ son lenguajes de bajo nivel muy utilizados para programar hardware directamente."
+            }
+          ]
+        },
+        {
+          "id": "5-inf-4",
+          "level": 4,
+          "title": "Memorias",
+          "description": "Tipos de memoria.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qi54",
+              "type": "multiple-choice",
+              "question": "¿Qué diferencia principal hay entre una memoria RAM y una ROM?",
+              "options": [
+                "La RAM es de solo lectura.",
+                "La ROM es volátil y pierde los datos al apagar.",
+                "La RAM es volátil (pierde datos al apagar) y la ROM es no volátil.",
+                "Ambas son iguales."
+              ],
+              "correctAnswer": "La RAM es volátil (pierde datos al apagar) y la ROM es no volátil.",
+              "explanation": "La RAM necesita energía constante para mantener los datos, la ROM los retiene permanentemente."
+            }
+          ]
+        },
+        {
+          "id": "5-inf-5",
+          "level": 5,
+          "title": "Protocolos de Comunicación",
+          "description": "I2C y SPI.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qi55",
+              "type": "multiple-choice",
+              "question": "¿Qué son I2C y SPI en el contexto de microcontroladores?",
+              "options": [
+                "Protocolos de comunicación serial para conectar componentes.",
+                "Tipos de baterías.",
+                "Marcas de microprocesadores.",
+                "Herramientas de soldadura."
+              ],
+              "correctAnswer": "Protocolos de comunicación serial para conectar componentes.",
+              "explanation": "Son buses de comunicación serial ampliamente usados para transferir datos entre circuitos integrados."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-5-mate",
+      "name": "Matemática",
+      "description": "Estadística, funciones cuadráticas y trigonometría.",
+      "color": "from-emerald-500 to-teal-600",
+      "iconName": "Calculator",
+      "lessons": [
+        {
+          "id": "5-mat-1",
+          "level": 1,
+          "title": "Estadística Básica",
+          "description": "Medidas de tendencia.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qm51",
+              "type": "multiple-choice",
+              "question": "¿Qué es el promedio (media) de un conjunto de datos?",
+              "options": [
+                "El valor que más se repite.",
+                "La suma de todos los valores dividida por la cantidad de valores.",
+                "El valor que está en el medio ordenando de menor a mayor.",
+                "El valor máximo."
+              ],
+              "correctAnswer": "La suma de todos los valores dividida por la cantidad de valores.",
+              "explanation": "La media aritmética se calcula sumando todos los datos y dividiendo por la cantidad total de datos."
+            }
+          ]
+        },
+        {
+          "id": "5-mat-2",
+          "level": 2,
+          "title": "Funciones Cuadráticas",
+          "description": "Parábolas.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qm52",
+              "type": "multiple-choice",
+              "question": "¿Qué forma geométrica describe la gráfica de una función cuadrática (ej. y = x²)?",
+              "options": [
+                "Línea recta.",
+                "Círculo.",
+                "Parábola.",
+                "Onda senoidal."
+              ],
+              "correctAnswer": "Parábola.",
+              "explanation": "Toda función cuadrática tiene como gráfica una curva llamada parábola."
+            }
+          ]
+        },
+        {
+          "id": "5-mat-3",
+          "level": 3,
+          "title": "Trigonometría Avanzada",
+          "description": "Seno y Coseno.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qm53",
+              "type": "multiple-choice",
+              "question": "En un triángulo rectángulo, ¿cómo se calcula el Seno de un ángulo agudo?",
+              "options": [
+                "Cateto opuesto / Hipotenusa.",
+                "Cateto adyacente / Hipotenusa.",
+                "Cateto opuesto / Cateto adyacente.",
+                "Hipotenusa / Cateto opuesto."
+              ],
+              "correctAnswer": "Cateto opuesto / Hipotenusa.",
+              "explanation": "Por definición, el seno de un ángulo en un triángulo rectángulo es la razón entre el cateto opuesto y la hipotenusa."
+            }
+          ]
+        },
+        {
+          "id": "5-mat-4",
+          "level": 4,
+          "title": "Logaritmos",
+          "description": "Definición.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qm54",
+              "type": "multiple-choice",
+              "question": "Si log₁₀(100) = 2, esto significa que:",
+              "options": [
+                "10 * 2 = 100",
+                "10 / 2 = 100",
+                "10² = 100",
+                "100² = 10"
+              ],
+              "correctAnswer": "10² = 100",
+              "explanation": "El logaritmo busca el exponente al que hay que elevar la base para obtener el argumento."
+            }
+          ]
+        },
+        {
+          "id": "5-mat-5",
+          "level": 5,
+          "title": "Sistemas de Ecuaciones",
+          "description": "Soluciones.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qm55",
+              "type": "multiple-choice",
+              "question": "Un sistema de dos ecuaciones lineales con dos incógnitas puede tener:",
+              "options": [
+                "Siempre una única solución.",
+                "Ninguna solución, una solución o infinitas soluciones.",
+                "Solo infinitas soluciones.",
+                "Siempre dos soluciones exactas."
+              ],
+              "correctAnswer": "Ninguna solución, una solución o infinitas soluciones.",
+              "explanation": "Las rectas pueden ser paralelas (0 soluciones), secantes (1 solución) o coincidentes (infinitas)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

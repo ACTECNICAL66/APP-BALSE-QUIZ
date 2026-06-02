@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+import json
+
+# Y1 Data
+y1_taller = [
+    {"id": "1-tal-1", "level": 1, "title": "Taller Laboratorio", "description": "Herramientas y seguridad.", "xp": 25, "questions": [{"id": "q11", "type": "multiple-choice", "question": "¿Cómo se clasifican las herramientas principales que se utilizan en el taller?", "options": ["Tracción, universal, corte, desbaste, precisión, alargue.", "Corte, desbaste, sujeción, medición, golpe, montaje.", "Corte, sujeción, soldadura, limpieza, desbaste.", "Ninguna es correcta."], "correctAnswer": "Corte, desbaste, sujeción, medición, golpe, montaje.", "explanation": "Las herramientas de taller se clasifican según su función en corte, desbaste, sujeción, medición, golpe y montaje."}]},
+    {"id": "1-tal-2", "level": 2, "title": "Ley de Ohm", "description": "Cálculos básicos de corriente.", "xp": 30, "questions": [{"id": "q12", "type": "multiple-choice", "question": "¿Cual de las siguientes expresiones corresponde al cálculo de Intensidad de corriente según la ley de Ohm?", "options": ["i = V/R", "i = V² / 2xR", "i = P x V", "i = ∫V.dx"], "correctAnswer": "i = V/R", "explanation": "La Ley de Ohm establece que la intensidad (I) es igual al voltaje (V) dividido por la resistencia (R)."}]},
+    {"id": "1-tal-3", "level": 3, "title": "Empalmes Eléctricos", "description": "Uniones y derivaciones.", "xp": 35, "questions": [{"id": "q13", "type": "multiple-choice", "question": "Si se quiere unir un cable a una línea ya existente (derivación) ¿Qué empalme se puede realizar?", "options": ["Cola de ratón", "Empalme en T", "Empalme de Western"], "correctAnswer": "Empalme en T", "explanation": "El empalme en T se utiliza específicamente para derivar una línea secundaria a partir de una línea principal."}]},
+    {"id": "1-tal-4", "level": 4, "title": "Magnitudes Principales", "description": "Conceptos fundamentales.", "xp": 40, "questions": [{"id": "q14", "type": "multiple-choice", "question": "¿Cuáles son las 3 magnitudes eléctricas principales?", "options": ["Corriente, Potencia, Frecuencia", "Voltaje, Resistencia, Amplitud", "Voltaje, Corriente, Resistencia", "Frecuencia, Temperatura, Altitud"], "correctAnswer": "Voltaje, Corriente, Resistencia", "explanation": "Las 3 magnitudes fundamentales de la electricidad que relaciona la Ley de Ohm son el Voltaje, la Corriente y la Resistencia."}]},
+    {"id": "1-tal-5", "level": 5, "title": "Normas de Seguridad", "description": "Comportamiento en el taller.", "xp": 50, "questions": [{"id": "q15", "type": "multiple-choice", "question": "En un taller-laboratorio de electrónica donde estaba teniendo lugar una clase. Raulito tenía sed y sacó su botella para beber agua. ¿Qué regla de seguridad el laboratorio rompió Raulito?", "options": ["No interrumpir la clase", "No trabajar sin elementos de seguridad", "No operar maquinaria eléctrica sin aprobación y autorización del profesor", "No ingerir alimentos ni bebidas en el taller"], "correctAnswer": "No ingerir alimentos ni bebidas en el taller", "explanation": "Por normas de seguridad está terminantemente prohibido ingerir alimentos o bebidas dentro del taller para evitar accidentes."}]}
+]
+
+y1_dibujo = [
+    {"id": "1-dib-1", "level": 1, "title": "Normas IRAM", "description": "Propósito de las normas.", "xp": 25, "questions": [{"id": "qd11", "type": "multiple-choice", "question": "¿Cuál es el propósito de las normas IRAM?", "options": ["Decorar los dibujos con líneas cuidadas", "Escribir más rápido", "Profundizar sobre el sentido de los centímetros", "Profundizar sobre la prolijidad y uso de medidas"], "correctAnswer": "Profundizar sobre la prolijidad y uso de medidas", "explanation": "Las normas IRAM buscan unificar y estandarizar la representación gráfica."}]},
+    {"id": "1-dib-2", "level": 2, "title": "Tipos de Lápices", "description": "Clasificación de minas.", "xp": 30, "questions": [{"id": "qd12", "type": "multiple-choice", "question": "¿En que afecta a un lápiz las siglas HB?", "options": ["Afecta al largo del lápiz y su vida útil", "Afecta a la dureza y a la punta del lápiz", "Afecta a la dureza y oscuridad del trazo", "Afecta al peso del lápiz y cuánto daña la hoja"], "correctAnswer": "Afecta a la dureza y oscuridad del trazo", "explanation": "HB (Hard Black) indica un equilibrio medio entre dureza y oscuridad del trazo."}]},
+    {"id": "1-dib-3", "level": 3, "title": "Tipos de Líneas", "description": "Líneas en dibujo técnico.", "xp": 35, "questions": [{"id": "qd13", "type": "multiple-choice", "question": "¿Qué tipos de líneas se utilizan en dibujo técnico?", "options": ["Línea larga, alta, baja y punteada", "Línea discontinua, de trazo y punto, continua y punteada", "Línea perpendicular, transversal, hexagonal", "Línea de cota y continua"], "correctAnswer": "Línea discontinua, de trazo y punto, continua y punteada", "explanation": "Las normas establecen líneas continuas (contornos), de trazos (ocultas) y de trazo y punto (ejes)."}]},
+    {"id": "1-dib-4", "level": 4, "title": "Instrumentos", "description": "Uso de escuadras.", "xp": 40, "questions": [{"id": "qd14", "type": "multiple-choice", "question": "¿Qué escuadras se utilizan para las láminas?", "options": ["45° y 30°", "90° y 120°", "360° y 30°", "45° y 120°"], "correctAnswer": "45° y 30°", "explanation": "Las escuadras estándar en dibujo técnico son la de 45° (isósceles) y la de 30°/60° (cartabón)."}]},
+    {"id": "1-dib-5", "level": 5, "title": "Formatos Normalizados", "description": "Tamaños de hojas.", "xp": 50, "questions": [{"id": "qd15", "type": "multiple-choice", "question": "¿Qué tamaño de hojas se utiliza para realizar las láminas habitualmente?", "options": ["A1", "A2", "A3", "A4"], "correctAnswer": "A4", "explanation": "El formato A4 (210x297mm) es el estándar habitual para prácticas básicas y entrega de láminas."}]}
+]
+
+y1_tecno = [
+    {"id": "1-tec-1", "level": 1, "title": "Circuitos en Serie", "description": "Cálculo de resistencia total.", "xp": 25, "questions": [{"id": "qt11", "type": "multiple-choice", "question": "¿Cual es la expresión correcta para un circuito serie de 3 resistencias?", "options": ["Rt= R1x R2xR3", "Rt= R1+R2+R3", "Rt= 1 ÷ (R1÷1 + R2÷1 + R3÷1)", "Rt= R1xR2 ÷ (R1+R2)"], "correctAnswer": "Rt= R1+R2+R3", "explanation": "En un circuito en serie, la resistencia total es la suma aritmética de todas las resistencias."}]},
+    {"id": "1-tec-2", "level": 2, "title": "Circuitos en Paralelo", "description": "Cálculo de resistencia total.", "xp": 30, "questions": [{"id": "qt12", "type": "multiple-choice", "question": "¿Cual es la expresión correcta para un circuito paralelo de 3 resistencias?", "options": ["Rt= R1xR2xR3", "Rt= R1+R2+R3", "Rt= 1 ÷ (1/R1 + 1/R2 + 1/R3)", "Rt= R1xR2 ÷ (R1+R2)"], "correctAnswer": "Rt= 1 ÷ (1/R1 + 1/R2 + 1/R3)", "explanation": "En paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada resistencia."}]},
+    {"id": "1-tec-3", "level": 3, "title": "Uso del Multímetro", "description": "Mediciones de magnitudes.", "xp": 35, "questions": [{"id": "qt13", "type": "multiple-choice", "question": "En un circuito cerrado con fuente y una resistencia, ¿Como se mide VT, IT y R con un tester?", "options": ["IT en serie abriendo el circuito, VT en paralelo a la fuente, R en paralelo a la resistencia.", "IT en paralelo al circuito, VT en paralelo a la fuente, R en serie con la resistencia", "IT en serie con la fuente, VT en paralelo con la resistencia, R en paralelo con la resistencia"], "correctAnswer": "IT en serie abriendo el circuito, VT en paralelo a la fuente, R en paralelo a la resistencia.", "explanation": "La corriente (IT) se mide en serie (el tester es parte del circuito), el voltaje (VT) en paralelo."}]},
+    {"id": "1-tec-4", "level": 4, "title": "Cálculos Prácticos I", "description": "Análisis de circuito 1.", "xp": 40, "questions": [{"id": "qt14", "type": "multiple-choice", "question": "En el siguiente circuito calcular RT, IT y VT.", "image": "1er_ano_q4.png", "options": ["RT= 3k Ω; IT= 5mA; VT= 40v", "RT= 2,4k Ω; IT= 5mA; VT= 10v", "RT= 2,2k Ω; IT= 20mA; VT= 40v", "RT= 2,4k Ω; IT= 5mA; VT= 12v"], "correctAnswer": "RT= 2,4k Ω; IT= 5mA; VT= 12v", "explanation": "Aplicando las leyes de los circuitos mixtos y la Ley de Ohm se obtienen los valores de 2.4k ohms, 5mA y 12v."}]},
+    {"id": "1-tec-5", "level": 5, "title": "Cálculos Prácticos II", "description": "Análisis de circuito 2.", "xp": 50, "questions": [{"id": "qt15", "type": "multiple-choice", "question": "En el siguiente circuito calcular RT, IT y VT.", "image": "1er_ano_q5.png", "options": ["RT= 183,33Ω; IT= 65,545mA; VT= 12v", "RT= 100Ω; IT= 6mA; VT= 24v", "RT= 183,33Ω; IT= 65,545mA; VT= 6v", "RT= 200Ω; IT= 65,545mA; VT= 12v"], "correctAnswer": "RT= 183,33Ω; IT= 65,545mA; VT= 12v", "explanation": "Resolviendo el circuito mixto paso a paso se llega a la resistencia equivalente de 183.33 ohms y una corriente de 65.545mA a 12v."}]}
+]
+
+y1_mate = [
+    {"id": "1-mat-1", "level": 1, "title": "Números Primos", "description": "Conceptos básicos.", "xp": 25, "questions": [{"id": "qm11", "type": "multiple-choice", "question": "¿Cual de los siguientes números es primo?", "options": ["17", "15", "12", "21"], "correctAnswer": "17", "explanation": "Los números primos son solo divisibles por 1 y por ellos mismos, por lo tanto el único primo es el 17."}]},
+    {"id": "1-mat-2", "level": 2, "title": "Resolución de Ecuaciones", "description": "Despeje de incógnitas.", "xp": 30, "questions": [{"id": "qm12", "type": "multiple-choice", "question": "Resolver la ecuación: 3x + 5 = 20", "options": ["x = 3", "x = 5", "x = 7", "x = 15"], "correctAnswer": "x = 5", "explanation": "Restando 5 a ambos lados queda 3x = 15. Luego dividiendo por 3 queda x = 5."}]},
+    {"id": "1-mat-3", "level": 3, "title": "Probabilidad", "description": "Probabilidad de eventos.", "xp": 35, "questions": [{"id": "qm13", "type": "multiple-choice", "question": "Al lanzar un dado común de 6 lados ¿cual es la probabilidad que caiga en 5?", "options": ["1/2", "1/4", "1/6", "4/6"], "correctAnswer": "1/6", "explanation": "La probabilidad de que caiga en 5 o en cualquier otro numero es 1 en 6 (un caso favorable sobre 6 casos posibles)."}]},
+    {"id": "1-mat-4", "level": 4, "title": "Expresiones Algebraicas", "description": "Definición.", "xp": 40, "questions": [{"id": "qm14", "type": "multiple-choice", "question": "¿Que es una expresión algebraica?", "options": ["Una operación matemática que siempre tiene una respuesta numérica única", "Una combinación de números, letras y operaciones matemáticas que representa una cantidad o relación", "Una igualdad entre dos expresiones matemáticas", "Un conjunto de datos organizados en una tabla"], "correctAnswer": "Una combinación de números, letras y operaciones matemáticas que representa una cantidad o relación", "explanation": "Las expresiones algebraicas están constituidas por números, letras y operaciones matemáticas."}]},
+    {"id": "1-mat-5", "level": 5, "title": "Tipos de Ángulos", "description": "Clasificación.", "xp": 50, "questions": [{"id": "qm15", "type": "match-pairs", "question": "Seleccionar el tipo de ángulo con su definición correcta:", "pairs": [{"left": "Ángulo obtuso", "right": "mide más de 90° y menos de 180°"}, {"left": "Ángulo llano", "right": "mide exactamente 180°"}, {"left": "Ángulo recto", "right": "mide exactamente 90°"}, {"left": "Ángulo agudo", "right": "mide menos de 90°"}], "explanation": "La clasificación de los ángulos se realiza según su medida en grados."}]}
+]
+
+y1_subjects = [
+    {
+        "id": "m-1-taller",
+        "name": "Taller Laboratorio",
+        "description": "Herramientas de taller, ley de ohm, y normas de seguridad.",
+        "color": "from-amber-500 to-orange-600",
+        "iconName": "Wrench",
+        "lessons": y1_taller
+    },
+    {
+        "id": "m-1-dibujo",
+        "name": "Dibujo Técnico",
+        "description": "Normas IRAM, lápices, tipos de líneas y formatos de hoja.",
+        "color": "from-blue-500 to-indigo-600",
+        "iconName": "PencilRuler",
+        "lessons": y1_dibujo
+    },
+    {
+        "id": "m-1-tecno",
+        "name": "Tecnología",
+        "description": "Circuitos en serie, paralelo, uso del multímetro y cálculos prácticos.",
+        "color": "from-purple-500 to-pink-600",
+        "iconName": "Cpu",
+        "lessons": y1_tecno
+    },
+    {
+        "id": "m-1-mate",
+        "name": "Matemática",
+        "description": "Números primos, ecuaciones, probabilidad y expresiones algebraicas.",
+        "color": "from-emerald-500 to-teal-600",
+        "iconName": "Calculator",
+        "lessons": y1_mate
+    }
+]
+
+y1 = {
+    "year": 1,
+    "title": "1er Año - Ciclo Básico",
+    "subtitle": "Conocimientos Básicos y Seguridad",
+    "subjects": y1_subjects
+}
+
+with open("y1_gen.json", "w", encoding="utf-8") as f:
+    json.dump(y1, f, indent=2, ensure_ascii=False)

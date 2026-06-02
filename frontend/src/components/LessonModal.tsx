@@ -361,7 +361,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             {currentQuestion.image && (
               <div className="flex justify-center my-6">
                 <img 
-                  src={`/assets/question-images/${currentQuestion.image}`} 
+                  src={`${import.meta.env.BASE_URL}assets/question-images/${currentQuestion.image}`} 
                   alt="Question image" 
                   className="max-h-64 rounded-xl border border-slate-700 shadow-lg object-contain bg-white"
                 />

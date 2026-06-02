@@ -1,0 +1,511 @@
+{
+  "year": 2,
+  "title": "2do Año - Ciclo Básico",
+  "subtitle": "Fundamentos y Herramientas",
+  "subjects": [
+    {
+      "id": "m-2-dibujo",
+      "name": "Dibujo Técnico",
+      "description": "Normas IRAM/ISO, proyecciones y simbología.",
+      "color": "from-blue-500 to-indigo-600",
+      "iconName": "Box",
+      "lessons": [
+        {
+          "id": "2-dib-1",
+          "level": 1,
+          "title": "Normas IRAM/ISO en Dibujo Técnico",
+          "description": "Unificación de criterios de representación.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qd21",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirven las normas IRAM/ISO en dibujo técnico?",
+              "options": [
+                "Para unificar la representación técnica",
+                "Mejorar la estética de los planos industriales",
+                "Reemplazar completamente el uso de instrumentos de dibujo técnico",
+                "Para permitir que cada técnico utilice su propio sistema gráfico"
+              ],
+              "correctAnswer": "Para unificar la representación técnica",
+              "explanation": "Las normas IRAM/ISO buscan unificar criterios de representación para que cualquier plano técnico pueda ser entendido correctamente por distintas personas, empresas o países."
+            }
+          ]
+        },
+        {
+          "id": "2-dib-2",
+          "level": 2,
+          "title": "Proyecciones Ortogonales",
+          "description": "Vistas planas relacionadas.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qd22",
+              "type": "multiple-choice",
+              "question": "¿Qué función cumplen las proyecciones ortogonales?",
+              "options": [
+                "Representar un objeto mediante vistas planas relacionadas entre sí",
+                "Generar una representación tridimensional artística del objeto",
+                "Mostrar únicamente las dimensiones exteriores de la pieza",
+                "Sustituir completamente las perspectivas isométricas"
+              ],
+              "correctAnswer": "Representar un objeto mediante vistas planas relacionadas entre sí",
+              "explanation": "Las proyecciones ortogonales permiten representar un objeto desde planta, alzada y perfil para entender completamente su forma."
+            }
+          ]
+        },
+        {
+          "id": "2-dib-3",
+          "level": 3,
+          "title": "Acotaciones en Planos",
+          "description": "Dimensiones y medidas normalizadas.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qd23",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirven las acotaciones en un plano técnico?",
+              "options": [
+                "Definir las dimensiones necesarias para fabricar o interpretar una pieza",
+                "Mejorar la presentación visual del plano",
+                "Establecer el tipo de material utilizado en cada componente",
+                "Diferenciar las vistas principales de las secundarias"
+              ],
+              "correctAnswer": "Definir las dimensiones necesarias para fabricar o interpretar una pieza",
+              "explanation": "Las acotaciones indican tamaños, distancias y medidas exactas necesarias para fabricar o interpretar correctamente una pieza."
+            }
+          ]
+        },
+        {
+          "id": "2-dib-4",
+          "level": 4,
+          "title": "Símbolos en Esquemas Electrónicos",
+          "description": "Elementos normalizados de componentes.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qd24",
+              "type": "multiple-choice",
+              "question": "¿Qué representan los símbolos en un esquema electrónico?",
+              "options": [
+                "Elementos normalizados que identifican componentes y conexiones eléctricas",
+                "Referencias gráficas para indicar profundidad y perspectiva",
+                "Indicaciones exclusivas sobre el tamaño físico de los componentes",
+                "Recursos gráficos para organizar visualmente el plano"
+              ],
+              "correctAnswer": "Elementos normalizados que identifican componentes y conexiones eléctricas",
+              "explanation": "Los símbolos electrónicos son representaciones normalizadas que permiten reconocer componentes como resistencias, capacitores y transistores en cualquier circuito."
+            }
+          ]
+        },
+        {
+          "id": "2-dib-5",
+          "level": 5,
+          "title": "Evaluación de Dibujo: Normas y Proyecciones",
+          "description": "Examen final de normas y simbolización.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qd25",
+              "type": "multiple-choice",
+              "question": "Las normas IRAM/ISO buscan unificar criterios de representación para que cualquier plano pueda ser entendido internacionalmente. ¿Cuál es su principal beneficio?",
+              "options": [
+                "Que cualquier técnico del mundo pueda interpretar el mismo plano sin ambigüedades",
+                "Que los planos sean más coloridos",
+                "Que solo se usen lápices HB",
+                "Que no sea necesario usar escuadras"
+              ],
+              "correctAnswer": "Que cualquier técnico del mundo pueda interpretar el mismo plano sin ambigüedades",
+              "explanation": "La normalización garantiza que un dibujo técnico creado en Argentina sea interpretado correctamente en cualquier otro país sin necesidad de aclaraciones adicionales."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2-mate",
+      "name": "Matemática",
+      "description": "Números enteros, proporciones, ecuaciones y gráficos.",
+      "color": "from-emerald-500 to-teal-600",
+      "iconName": "Calculator",
+      "lessons": [
+        {
+          "id": "2-mat-1",
+          "level": 1,
+          "title": "Números Enteros Negativos en la Vida Cotidiana",
+          "description": "Aplicaciones de negativos en taller.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qm21",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirven los números enteros negativos en la vida cotidiana?",
+              "options": [
+                "Para representar cantidades menores que cero (temperatura, deudas, profundidad)",
+                "Solo para geometría",
+                "Para medir gases",
+                "Para escribir operaciones"
+              ],
+              "correctAnswer": "Para representar cantidades menores que cero (temperatura, deudas, profundidad)",
+              "explanation": "Los números enteros negativos permiten expresar situaciones cotidianas como temperaturas bajo cero, deudas económicas o altitudes por debajo del nivel del mar."
+            }
+          ]
+        },
+        {
+          "id": "2-mat-2",
+          "level": 2,
+          "title": "Proporcionalidad Directa",
+          "description": "Relación entre magnitudes.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qm22",
+              "type": "multiple-choice",
+              "question": "La relación de proporcionalidad directa indica que cuando una magnitud aumenta, la otra ____________ en la misma proporción.",
+              "options": [
+                "Aumenta",
+                "Disminuye",
+                "Desaparece",
+                "Se divide"
+              ],
+              "correctAnswer": "Aumenta",
+              "explanation": "En una proporcionalidad directa, ambas magnitudes cambian en el mismo sentido: si una aumenta, la otra también aumenta proporcionalmente."
+            }
+          ]
+        },
+        {
+          "id": "2-mat-3",
+          "level": 3,
+          "title": "Números Racionales",
+          "description": "Fracciones y expresiones decimales.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qm23",
+              "type": "multiple-choice",
+              "question": "¿Cuál de las siguientes opciones describe correctamente a los números racionales?",
+              "options": [
+                "Son números que pueden expresarse como una fracción de números enteros",
+                "Son números que solo pueden ser enteros positivos",
+                "Son números que no pueden escribirse como fracción",
+                "Son únicamente los números decimales infinitos no periódicos"
+              ],
+              "correctAnswer": "Son números que pueden expresarse como una fracción de números enteros",
+              "explanation": "Los números racionales incluyen enteros, fracciones y decimales finitos o periódicos que pueden expresarse como cociente de dos números enteros."
+            }
+          ]
+        },
+        {
+          "id": "2-mat-4",
+          "level": 4,
+          "title": "Resolución de Ecuaciones",
+          "description": "Despeje de variables.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qm24",
+              "type": "fill-blanks",
+              "question": "Al resolver la ecuación $2x + 10 = 30$, despejamos $x$ restando 10 y luego dividiendo entre ____.",
+              "options": [
+                "2",
+                "10",
+                "5",
+                "20"
+              ],
+              "correctAnswer": "2",
+              "explanation": "$2x + 10 = 30 \\rightarrow 2x = 20 \\rightarrow x = 10$."
+            }
+          ]
+        },
+        {
+          "id": "2-mat-5",
+          "level": 5,
+          "title": "Evaluación de Matemática",
+          "description": "Aplicación de proporcionalidad y racionales.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qm25",
+              "type": "multiple-choice",
+              "question": "Si en el taller 3 metros de cable cuestan $450, ¿cuánto costarán 8 metros del mismo cable?",
+              "options": [
+                "$1200",
+                "$900",
+                "$1500",
+                "$600"
+              ],
+              "correctAnswer": "$1200",
+              "explanation": "Por proporcionalidad directa: $450 \\div 3 = 150$ por metro; $150 \\times 8 = 1200$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2-taller",
+      "name": "Taller Laboratorio",
+      "description": "Componentes, instrumentos de medición y seguridad.",
+      "color": "from-amber-500 to-orange-600",
+      "iconName": "Wrench",
+      "lessons": [
+        {
+          "id": "2-tal-1",
+          "level": 1,
+          "title": "Código de Colores de Resistencias",
+          "description": "Lectura del valor óhmico.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "q21",
+              "type": "multiple-choice",
+              "question": "El código de color de una resistencia es: naranja, verde, marrón. ¿Qué valor indican estos colores?",
+              "options": [
+                "350 $\\Omega$",
+                "650 $\\Omega$",
+                "150 $\\Omega$",
+                "530 $\\Omega$"
+              ],
+              "correctAnswer": "350 $\\Omega$",
+              "explanation": "Naranja = 3, Verde = 5, Marrón = ×10 → 35 × 10 = 350 $\\Omega$.",
+              "image": "2do_ano_q1.png"
+            },
+            {
+              "id": "q21b",
+              "type": "multiple-choice",
+              "question": "¿En qué magnitud eléctrica se mide la resistencia?",
+              "options": [
+                "Ohmios ($\\Omega$)",
+                "Amperes (A)",
+                "Volts (V)",
+                "Watts (W)"
+              ],
+              "correctAnswer": "Ohmios ($\\Omega$)",
+              "explanation": "La resistencia eléctrica se mide en Ohmios, representados por la letra griega Omega ($\\Omega$)."
+            }
+          ]
+        },
+        {
+          "id": "2-tal-2",
+          "level": 2,
+          "title": "Circuitos: Serie, Paralelo y Mixto",
+          "description": "Identificación de asociaciones.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "q22",
+              "type": "multiple-choice",
+              "question": "¿Qué es un circuito mixto?",
+              "options": [
+                "Combinación de resistencias en serie y paralelo",
+                "Resistencias conectadas en serie",
+                "Resistencias conectadas en paralelo",
+                "Un circuito sin resistencias"
+              ],
+              "correctAnswer": "Combinación de resistencias en serie y paralelo",
+              "explanation": "Un circuito mixto contiene resistencias conectadas tanto en serie como en paralelo dentro del mismo circuito.",
+              "image": "2do_ano_q2.png"
+            },
+            {
+              "id": "q22b",
+              "type": "multiple-choice",
+              "question": "En un circuito en serie, la corriente que circula por cada resistencia es:",
+              "options": [
+                "La misma en todas",
+                "Diferente en cada una",
+                "Siempre cero",
+                "Alterna"
+              ],
+              "correctAnswer": "La misma en todas",
+              "explanation": "En serie solo hay un camino para los electrones, por lo tanto la corriente es idéntica en cada componente."
+            }
+          ]
+        },
+        {
+          "id": "2-tal-3",
+          "level": 3,
+          "title": "El Multímetro (Tester)",
+          "description": "Medición de magnitudes eléctricas.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "q23",
+              "type": "multiple-choice",
+              "question": "¿A qué dispositivo electrónico corresponde la función de medir voltios, ohmios y amperios?",
+              "options": [
+                "Multímetro (tester)",
+                "Osciloscopio",
+                "Fuente de alimentación",
+                "Generador de funciones"
+              ],
+              "correctAnswer": "Multímetro (tester)",
+              "explanation": "El multímetro es un instrumento que permite medir distintas magnitudes eléctricas como tensión (V), corriente (A) y resistencia ($\\Omega$)."
+            }
+          ]
+        },
+        {
+          "id": "2-tal-4",
+          "level": 4,
+          "title": "Ley de Ohm y Potencia",
+          "description": "Relación entre V, I, R y P.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "q24",
+              "type": "multiple-choice",
+              "question": "¿Qué relaciona la Ley de Ohm?",
+              "options": [
+                "Voltaje, corriente y resistencia",
+                "Potencia y calor",
+                "Tiempo y frecuencia",
+                "Voltaje, corriente y potencia"
+              ],
+              "correctAnswer": "Voltaje, corriente y resistencia",
+              "explanation": "La Ley de Ohm establece que $V = I \\times R$, relacionando voltaje, intensidad de corriente y resistencia eléctrica."
+            }
+          ]
+        },
+        {
+          "id": "2-tal-5",
+          "level": 5,
+          "title": "Evaluación de Taller Eléctrico",
+          "description": "Circuitos, mediciones y leyes fundamentales.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "q25",
+              "type": "multiple-choice",
+              "question": "Las leyes de Kirchhoff ayudan a:",
+              "options": [
+                "Analizar circuitos complejos",
+                "Crear componentes",
+                "Reparar baterías",
+                "Resolver placas"
+              ],
+              "correctAnswer": "Analizar circuitos complejos",
+              "explanation": "Las leyes de Kirchhoff (nodos y mallas) permiten analizar y calcular tensiones y corrientes en circuitos eléctricos complejos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-2-tecno",
+      "name": "Tecnología",
+      "description": "Sistemas mecánicos, eléctricos básicos y programación.",
+      "color": "from-purple-500 to-pink-600",
+      "iconName": "Cog",
+      "lessons": [
+        {
+          "id": "2-tec-1",
+          "level": 1,
+          "title": "El Relé como Componente Electrónico",
+          "description": "Activación por bobina.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qt21",
+              "type": "multiple-choice",
+              "question": "El relé es un componente electrónico que se activa cuando:",
+              "options": [
+                "La bobina recibe corriente",
+                "Se calienta",
+                "Se desconecta la batería",
+                "Baja la resistencia"
+              ],
+              "correctAnswer": "La bobina recibe corriente",
+              "explanation": "El relé funciona mediante un electroimán (bobina) que al recibir corriente atrae un contacto conmutador."
+            }
+          ]
+        },
+        {
+          "id": "2-tec-2",
+          "level": 2,
+          "title": "Circuitos Integrados: CI 555",
+          "description": "Temporizador, oscilador y generador.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qt22",
+              "type": "multiple-choice",
+              "question": "El CI 555 se puede usar como:",
+              "options": [
+                "Todas las anteriores",
+                "Temporizador",
+                "Oscilador",
+                "Generador de pulsos"
+              ],
+              "correctAnswer": "Todas las anteriores",
+              "explanation": "El CI 555 es un circuito integrado versátil que puede funcionar como temporizador, oscilador o generador de pulsos según su configuración."
+            }
+          ]
+        },
+        {
+          "id": "2-tec-3",
+          "level": 3,
+          "title": "Capacitores: Almacenamiento de Energía",
+          "description": "Función principal del capacitor.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qt23",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal de un capacitor?",
+              "options": [
+                "Almacenar energía eléctrica",
+                "Generar corriente",
+                "Aumentar la resistencia",
+                "Accionar motores"
+              ],
+              "correctAnswer": "Almacenar energía eléctrica",
+              "explanation": "Los capacitores almacenan energía en forma de campo eléctrico entre sus placas y la liberan cuando el circuito lo requiere."
+            }
+          ]
+        },
+        {
+          "id": "2-tec-4",
+          "level": 4,
+          "title": "Ley de Watt",
+          "description": "Relación entre potencia, voltaje y corriente.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qt24",
+              "type": "multiple-choice",
+              "question": "¿Qué relaciona la Ley de Watt?",
+              "options": [
+                "Potencia, voltaje y corriente, creada por James Watt",
+                "Una ley sobre temperatura creada por Alessandro Volta",
+                "Una ley de movimiento creada por Watt",
+                "Voltaje y resistencia únicamente"
+              ],
+              "correctAnswer": "Potencia, voltaje y corriente, creada por James Watt",
+              "explanation": "La Ley de Watt establece que $P = V \\times I$, donde P es potencia en watts, V es voltaje y I es corriente."
+            }
+          ]
+        },
+        {
+          "id": "2-tec-5",
+          "level": 5,
+          "title": "Programación por Bloques",
+          "description": "Instrucciones conectadas visualmente.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qt25",
+              "type": "multiple-choice",
+              "question": "Los bloques en la programación visual, ¿para qué se usan?",
+              "options": [
+                "Representan instrucciones conectadas para crear algoritmos",
+                "Apagar circuitos",
+                "Reiniciar la PC o notebooks",
+                "Medir magnitudes"
+              ],
+              "correctAnswer": "Representan instrucciones conectadas para crear algoritmos",
+              "explanation": "La programación por bloques une visualmente instrucciones como piezas de rompecabezas para crear algoritmos sin escribir código textual."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

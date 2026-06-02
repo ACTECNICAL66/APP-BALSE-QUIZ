@@ -1,0 +1,614 @@
+{
+  "year": 6,
+  "title": "6to Año - Profesionalización",
+  "subtitle": "Proyectos y Prácticas",
+  "subjects": [
+    {
+      "id": "m-6-teleco",
+      "name": "Telecomunicaciones",
+      "description": "Redes complejas, microondas y sistemas satelitales.",
+      "color": "from-blue-500 to-indigo-600",
+      "iconName": "Wifi",
+      "lessons": [
+        {
+          "id": "6-tel-1",
+          "level": 1,
+          "title": "Longitud de Onda y Frecuencia",
+          "description": "Relación entre $\\lambda$, c y f.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qt61",
+              "type": "multiple-choice",
+              "question": "¿Qué es la longitud de onda ($\\lambda$) en una señal de telecomunicaciones?",
+              "options": [
+                "La distancia entre dos crestas consecutivas de la onda ($\\lambda = c / f$)",
+                "La altura máxima de la onda",
+                "El tiempo que tarda un ciclo",
+                "La potencia de la señal"
+              ],
+              "correctAnswer": "La distancia entre dos crestas consecutivas de la onda ($\\lambda = c / f$)",
+              "explanation": "La longitud de onda es la distancia física entre dos puntos equivalentes de una onda, calculada como $\\lambda = c / f$, donde c es la velocidad de la luz y f la frecuencia."
+            }
+          ]
+        },
+        {
+          "id": "6-tel-2",
+          "level": 2,
+          "title": "Ruido Térmico y SNR",
+          "description": "Relación señal/ruido en receptores.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qt62",
+              "type": "multiple-choice",
+              "question": "¿Qué es el ruido térmico (ruido blanco) y cómo afecta a la relación señal/ruido (SNR)?",
+              "options": [
+                "Es el ruido generado por la agitación molecular; a mayor temperatura, menor SNR",
+                "Es el ruido de las antenas; no afecta al SNR",
+                "Es la interferencia de radio FM; mejora el SNR",
+                "Es el ruido de las fuentes conmutadas; duplica la SNR"
+              ],
+              "correctAnswer": "Es el ruido generado por la agitación molecular; a mayor temperatura, menor SNR",
+              "explanation": "El ruido térmico es producido por la agitación aleatoria de los electrones. Cuanto mayor es la temperatura, más ruido y peor relación señal/ruido."
+            }
+          ]
+        },
+        {
+          "id": "6-tel-3",
+          "level": 3,
+          "title": "Modulación AM y BLU/SSB",
+          "description": "Índice de modulación y banda lateral única.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qt63",
+              "type": "multiple-choice",
+              "question": "En modulación AM, ¿qué ocurre si el índice de modulación supera el 100% (sobremodulación)?",
+              "options": [
+                "Se produce distorsión por sobremodulación (la envolvente se corta)",
+                "La señal se amplifica al doble",
+                "La portadora desaparece",
+                "Aumenta la frecuencia"
+              ],
+              "correctAnswer": "Se produce distorsión por sobremodulación (la envolvente se corta)",
+              "explanation": "Cuando el índice de modulación supera el 100%, la envolvente de la señal AM se distorsiona, generando armónicos no deseados."
+            },
+            {
+              "id": "qt63b",
+              "type": "multiple-choice",
+              "question": "¿Qué ventaja tiene la Banda Lateral Única (BLU/SSB) frente a AM convencional?",
+              "options": [
+                "Menor ancho de banda y mayor eficiencia de potencia",
+                "Mayor calidad de sonido estéreo",
+                "No necesita antena",
+                "Funciona sin electricidad"
+              ],
+              "correctAnswer": "Menor ancho de banda y mayor eficiencia de potencia",
+              "explanation": "BLU/SSB transmite solo una banda lateral, ocupando la mitad del espectro y concentrando toda la potencia en la información útil."
+            }
+          ]
+        },
+        {
+          "id": "6-tel-4",
+          "level": 4,
+          "title": "Receptor Superheterodino y FM",
+          "description": "Principio de funcionamiento y pre-énfasis.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qt64",
+              "type": "multiple-choice",
+              "question": "Explica el principio del Receptor Superheterodino. ¿Qué rol cumple el oscilador local?",
+              "options": [
+                "Genera una frecuencia que se mezcla con la señal recibida para convertirla a una Frecuencia Intermedia (FI) fija",
+                "Amplifica el audio directamente",
+                "Sintoniza las estaciones manualmente",
+                "Apaga el receptor cuando no hay señal"
+              ],
+              "correctAnswer": "Genera una frecuencia que se mezcla con la señal recibida para convertirla a una Frecuencia Intermedia (FI) fija",
+              "explanation": "El oscilador local genera una frecuencia que, al mezclarse con la señal recibida, produce una Frecuencia Intermedia fija que es más fácil de amplificar y filtrar."
+            },
+            {
+              "id": "qt64b",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utilizan las redes de pre-énfasis en FM y de-énfasis en el receptor?",
+              "options": [
+                "Para mejorar la relación señal/ruido amplificando las frecuencias altas antes de transmitir",
+                "Para eliminar los graves",
+                "Para aumentar la potencia de salida",
+                "Para reducir el tamaño de la antena"
+              ],
+              "correctAnswer": "Para mejorar la relación señal/ruido amplificando las frecuencias altas antes de transmitir",
+              "explanation": "El pre-énfasis amplifica las frecuencias altas en el transmisor y el de-énfasis las atenúa en el receptor, mejorando la relación señal/ruido."
+            }
+          ]
+        },
+        {
+          "id": "6-tel-5",
+          "level": 5,
+          "title": "Evaluación de Telecomunicaciones I",
+          "description": "Antenas, detector de envuelta y figura de ruido.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qt65",
+              "type": "multiple-choice",
+              "question": "¿De qué depende la longitud física ideal de una antena dipolo de media onda ($\\lambda/2$)?",
+              "options": [
+                "De la frecuencia de operación ($L = c / 2f$)",
+                "Del color del aislante",
+                "Del material del mástil",
+                "De la potencia del transmisor"
+              ],
+              "correctAnswer": "De la frecuencia de operación ($L = c / 2f$)",
+              "explanation": "La longitud de una antena dipolo de media onda es $L = \\lambda/2 = c / (2f)$. A mayor frecuencia, más corta la antena."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-6-instal",
+      "name": "Instalaciones Eléctricas",
+      "description": "Planos, tableros y protecciones.",
+      "color": "from-amber-500 to-orange-600",
+      "iconName": "Zap",
+      "lessons": [
+        {
+          "id": "6-ins-1",
+          "level": 1,
+          "title": "Protección Térmica vs Magnética",
+          "description": "Interruptor termomagnético.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qis61",
+              "type": "multiple-choice",
+              "question": "¿Qué diferencia hay entre la protección térmica y la magnética dentro de un interruptor termomagnético?",
+              "options": [
+                "Térmica protege contra sobrecargas lentas; magnética contra cortocircuitos rápidos",
+                "Térmica protege contra cortocircuitos; magnética contra sobrecargas",
+                "Ambas protegen contra lo mismo",
+                "Térmica desconecta instantáneamente; magnética es lenta"
+              ],
+              "correctAnswer": "Térmica protege contra sobrecargas lentas; magnética contra cortocircuitos rápidos",
+              "explanation": "La protección térmica usa un bimetal que se calienta lentamente con sobrecargas. La magnética usa una bobina que reacciona instantáneamente ante cortocircuitos."
+            },
+            {
+              "id": "qis61b",
+              "type": "multiple-choice",
+              "question": "¿Cómo funciona un interruptor diferencial y por qué es vital para la seguridad?",
+              "options": [
+                "Compara la corriente de fase y neutro; desconecta si hay diferencia (fuga a tierra)",
+                "Mide la temperatura del cable",
+                "Regula el voltaje de la red",
+                "Indica el consumo eléctrico"
+              ],
+              "correctAnswer": "Compara la corriente de fase y neutro; desconecta si hay diferencia (fuga a tierra)",
+              "explanation": "El interruptor diferencial (DISYUNTOR) compara la corriente que entra por fase con la que vuelve por neutro. Si hay diferencia, significa que hay fuga a tierra y desconecta."
+            }
+          ]
+        },
+        {
+          "id": "6-ins-2",
+          "level": 2,
+          "title": "Enclavamientos y Relés de Protección",
+          "description": "Seguridad en circuitos de mando.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qis62",
+              "type": "multiple-choice",
+              "question": "Al diseñar la inversión de giro de un motor trifásico mediante contactores, ¿por qué es obligatorio hacer un 'enclavamiento eléctrico'?",
+              "options": [
+                "Para impedir que ambos contactores se activen simultáneamente (cortocircuito entre fases)",
+                "Para ahorrar energía",
+                "Para que el motor gire más rápido",
+                "Para reducir el ruido"
+              ],
+              "correctAnswer": "Para impedir que ambos contactores se activen simultáneamente (cortocircuito entre fases)",
+              "explanation": "El enclavamiento eléctrico usa contactos NC cruzados que impiden que los dos contactores de inversión se cierren al mismo tiempo, evitando un cortocircuito."
+            },
+            {
+              "id": "qis62b",
+              "type": "multiple-choice",
+              "question": "¿Qué daño evita un Relé de Falta de Fase en un motor trifásico?",
+              "options": [
+                "El sobrecalentamiento y destrucción del bobinado al funcionar con solo dos fases",
+                "El exceso de velocidad",
+                "La vibración excesiva",
+                "El ruido eléctrico"
+              ],
+              "correctAnswer": "El sobrecalentamiento y destrucción del bobinado al funcionar con solo dos fases",
+              "explanation": "Si falta una fase, el motor sigue girando pero con sobrecorriente que quema los bobinados. El relé de falta de fase desconecta antes de que ocurra el daño."
+            }
+          ]
+        },
+        {
+          "id": "6-ins-3",
+          "level": 3,
+          "title": "Arrancadores y Conductores",
+          "description": "Soft Starter y normativas eléctricas.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qis63",
+              "type": "multiple-choice",
+              "question": "¿Qué ventaja ofrece un Arrancador Suave (Soft Starter) frente a un arranque directo?",
+              "options": [
+                "Reduce el pico de corriente de arranque y evita golpes mecánicos",
+                "Duplica la velocidad del motor",
+                "Elimina la necesidad de contactores",
+                "Funciona sin cableado"
+              ],
+              "correctAnswer": "Reduce el pico de corriente de arranque y evita golpes mecánicos",
+              "explanation": "El Soft Starter incrementa la tensión gradualmente, evitando los picos de corriente y los golpes mecánicos del arranque directo.",
+              "image": "6to_ano_q3.png"
+            },
+            {
+              "id": "qis63b",
+              "type": "multiple-choice",
+              "question": "¿Para qué se utilizan los ábacos y tablas de conductores según normativas eléctricas?",
+              "options": [
+                "Para dimensionar correctamente la sección del cable según corriente y distancia",
+                "Para decorar los planos",
+                "Para medir la temperatura ambiente",
+                "Para calcular el peso del cable"
+              ],
+              "correctAnswer": "Para dimensionar correctamente la sección del cable según corriente y distancia",
+              "explanation": "Las tablas de conductores (basadas en normas IRAM) indican la sección mínima de cable necesaria para una corriente y longitud dadas, evitando sobrecalentamientos."
+            }
+          ]
+        },
+        {
+          "id": "6-ins-4",
+          "level": 4,
+          "title": "Automatismos y PLC",
+          "description": "Lógica de contactos NC/NA en Ladder.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qis64",
+              "type": "multiple-choice",
+              "question": "En automatismos por PLC (Ladder), ¿qué diferencia hay entre usar un contacto NA y NC en una parada de emergencia?",
+              "options": [
+                "NC (Normal Cerrado) es más seguro porque si se corta el cable, el circuito se abre y detiene la máquina",
+                "NA siempre es más seguro",
+                "No hay diferencia",
+                "NC se usa solo para motores chicos"
+              ],
+              "correctAnswer": "NC (Normal Cerrado) es más seguro porque si se corta el cable, el circuito se abre y detiene la máquina",
+              "explanation": "Las paradas de emergencia usan contactos NC por seguridad: si el cable se corta, el circuito se abre y la máquina se detiene (falla segura)."
+            }
+          ]
+        },
+        {
+          "id": "6-ins-5",
+          "level": 5,
+          "title": "Evaluación de Instalaciones I",
+          "description": "Energía solar y CADE SIMU.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qis65",
+              "type": "multiple-choice",
+              "question": "¿Qué diferencia fundamental existe entre un sistema solar fotovoltaico Off-Grid y On-Grid?",
+              "options": [
+                "Off-Grid usa baterías y no está conectado a la red; On-Grid inyecta excedentes a la red eléctrica",
+                "Off-Grid es más caro; On-Grid es más barato",
+                "Off-Grid usa paneles azules; On-Grid usa paneles negros",
+                "No hay diferencia"
+              ],
+              "correctAnswer": "Off-Grid usa baterías y no está conectado a la red; On-Grid inyecta excedentes a la red eléctrica",
+              "explanation": "Off-Grid es autónomo con baterías. On-Grid está conectado a la red y puede vender excedentes según la Ley de Generación Distribuida."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-6-digital3",
+      "name": "Electrónica Digital III",
+      "description": "Microcontroladores y memorias.",
+      "color": "from-purple-500 to-pink-600",
+      "iconName": "Cpu",
+      "lessons": [
+        {
+          "id": "6-dig3-1",
+          "level": 1,
+          "title": "Registros TRIS y Memoria en Microcontroladores",
+          "description": "Configuración de direcciones de datos.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qdg61",
+              "type": "multiple-choice",
+              "question": "¿Qué función cumplen los registros de configuración de dirección de datos (como TRIS en micros PIC)?",
+              "options": [
+                "Configuran cada pin como entrada o salida digital",
+                "Almacenan el programa principal",
+                "Generan la frecuencia de reloj",
+                "Controlan la comunicación USB"
+              ],
+              "correctAnswer": "Configuran cada pin como entrada o salida digital",
+              "explanation": "El registro TRIS determina si cada pin del microcontrolador funciona como entrada (1) o como salida (0)."
+            },
+            {
+              "id": "qdg61b",
+              "type": "multiple-choice",
+              "question": "¿Qué diferencia hay entre la memoria Flash y la EEPROM en un microcontrolador?",
+              "options": [
+                "Flash almacena el programa (no volátil); EEPROM guarda datos que se modifican en ejecución",
+                "Flash es volátil; EEPROM no",
+                "Ambas almacenan lo mismo",
+                "Flash es más lenta que EEPROM"
+              ],
+              "correctAnswer": "Flash almacena el programa (no volátil); EEPROM guarda datos que se modifican en ejecución",
+              "explanation": "La memoria Flash guarda el firmware del microcontrolador. La EEPROM permite leer/escribir datos variables que deben conservarse al apagar."
+            }
+          ]
+        },
+        {
+          "id": "6-dig3-2",
+          "level": 2,
+          "title": "USART: Comunicación Serie",
+          "description": "Modo síncrono vs asíncrono.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qdg62",
+              "type": "multiple-choice",
+              "question": "En el módulo USART, ¿cuál es la diferencia clave entre modo Síncrono y Asíncrono?",
+              "options": [
+                "Síncrono usa una línea de reloj compartida; Asíncrono no necesita reloj (usa baud rate)",
+                "Síncrono es más lento",
+                "Asíncrono necesita más cables",
+                "No hay diferencia"
+              ],
+              "correctAnswer": "Síncrono usa una línea de reloj compartida; Asíncrono no necesita reloj (usa baud rate)",
+              "explanation": "En modo síncrono, el maestro genera el reloj. En asíncrono, ambos dispositivos deben estar configurados a la misma velocidad (baud rate)."
+            }
+          ]
+        },
+        {
+          "id": "6-dig3-3",
+          "level": 3,
+          "title": "PWM y ADC",
+          "description": "Modulación por ancho de pulso y conversión analógica.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qdg63",
+              "type": "multiple-choice",
+              "question": "¿Cómo funciona la modulación PWM para simular una salida analógica usando un pin digital?",
+              "options": [
+                "Conmutando muy rápido entre 0 y 1; el promedio depende del ciclo de trabajo (duty cycle)",
+                "Variando el voltaje máximo",
+                "Usando una resistencia variable",
+                "Conectando múltiples pines en paralelo"
+              ],
+              "correctAnswer": "Conmutando muy rápido entre 0 y 1; el promedio depende del ciclo de trabajo (duty cycle)",
+              "explanation": "PWM conmuta el pin entre HIGH y LOW a alta frecuencia. El valor promedio depende del duty cycle: 50% da 2.5V, 100% da 5V."
+            },
+            {
+              "id": "qdg63b",
+              "type": "multiple-choice",
+              "question": "En un ADC de 10 bits, ¿cuántos niveles de cuantificación tiene y cómo se calcula el paso?",
+              "options": [
+                "1024 niveles; paso = V_ref / 1024",
+                "256 niveles; paso = V_ref / 256",
+                "10 niveles; paso = V_ref / 10",
+                "1000 niveles; paso = V_ref / 1000"
+              ],
+              "correctAnswer": "1024 niveles; paso = V_ref / 1024",
+              "explanation": "Un ADC de 10 bits tiene $2^{10} = 1024$ niveles. El paso de cuantificación es $V_{ref} / 1024$ volts por división."
+            }
+          ]
+        },
+        {
+          "id": "6-dig3-4",
+          "level": 4,
+          "title": "Programación C/C++ vs Assembler",
+          "description": "Ventajas del alto nivel.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qdg64",
+              "type": "multiple-choice",
+              "question": "¿Qué ventajas tiene programar microcontroladores en C/C++ comparado con Assembler?",
+              "options": [
+                "Mayor portabilidad, legibilidad y productividad; el compilador optimiza el código máquina",
+                "Es más rápido siempre",
+                "Ocupa menos memoria",
+                "No necesita compilador"
+              ],
+              "correctAnswer": "Mayor portabilidad, legibilidad y productividad; el compilador optimiza el código máquina",
+              "explanation": "C/C++ permite escribir código más legible y portable entre distintos microcontroladores, delegando la optimización al compilador."
+            }
+          ]
+        },
+        {
+          "id": "6-dig3-5",
+          "level": 5,
+          "title": "Evaluación de Digitales III",
+          "description": "Analizador lógico, CCP y registro W.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qdg65",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirve un Analizador Lógico y en qué situaciones es indispensable?",
+              "options": [
+                "Captura señales digitales en múltiples canales para analizar protocolos serie (I2C, SPI, UART)",
+                "Mide voltajes analógicos de alta precisión",
+                "Genera señales de audio",
+                "Solda componentes SMD"
+              ],
+              "correctAnswer": "Captura señales digitales en múltiples canales para analizar protocolos serie (I2C, SPI, UART)",
+              "explanation": "El analizador lógico captura simultáneamente muchas señales digitales, ideal para depurar buses de comunicación donde un osciloscopio no basta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-6-industrial",
+      "name": "Electrónica Industrial",
+      "description": "Control de potencia y automatización.",
+      "color": "from-emerald-500 to-teal-600",
+      "iconName": "Cog",
+      "lessons": [
+        {
+          "id": "6-ind-1",
+          "level": 1,
+          "title": "Diodo de Potencia vs SCR",
+          "description": "Tiristores y conmutación.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qin61",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la principal diferencia operativa entre un diodo común de potencia y un Tiristor (SCR)?",
+              "options": [
+                "El SCR necesita un pulso en el Gate para activarse; el diodo conduce cuando está polarizado en directa",
+                "El diodo necesita Gate; el SCR no",
+                "Ambos funcionan igual",
+                "El SCR solo conduce en CA"
+              ],
+              "correctAnswer": "El SCR necesita un pulso en el Gate para activarse; el diodo conduce cuando está polarizado en directa",
+              "explanation": "El diodo conduce automáticamente en directa. El SCR requiere un pulso de disparo en el Gate y una vez activado sigue conduciendo hasta que la corriente principal se anule."
+            },
+            {
+              "id": "qin61b",
+              "type": "multiple-choice",
+              "question": "¿Por qué se daña un transistor si no se coloca un diodo de carrera libre en paralelo a una bobina?",
+              "options": [
+                "La bobina genera un pico de tensión inversa al desconectarse que puede superar la tensión máxima del transistor",
+                "La bobina explota",
+                "El transistor se sobrecalienta por la corriente continua",
+                "El diodo evita que la bobina se queme"
+              ],
+              "correctAnswer": "La bobina genera un pico de tensión inversa al desconectarse que puede superar la tensión máxima del transistor",
+              "explanation": "Al cortar la corriente de una bobina, el campo magnético colapsa generando un pico de alta tensión (Ley de Lenz). El diodo flyback recircula esa energía protegiendo el transistor."
+            }
+          ]
+        },
+        {
+          "id": "6-ind-2",
+          "level": 2,
+          "title": "Rectificadores Controlados y Fuentes SMPS",
+          "description": "Ángulo de disparo y fuentes conmutadas.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qin62",
+              "type": "multiple-choice",
+              "question": "En un rectificador controlado por tiristores, ¿qué es el 'ángulo de disparo' ($\\alpha$) y cómo modifica la tensión media?",
+              "options": [
+                "Es el retardo en la activación del SCR dentro del ciclo; a mayor $\\alpha$, menor tensión media",
+                "Es la frecuencia de conmutación; no afecta la tensión",
+                "Es el voltaje de alimentación",
+                "Es la corriente de puerta"
+              ],
+              "correctAnswer": "Es el retardo en la activación del SCR dentro del ciclo; a mayor $\\alpha$, menor tensión media",
+              "explanation": "El ángulo de disparo $\\alpha$ es el tiempo que se espera antes de activar el SCR. Cuanto más se retrasa el disparo, menor es la tensión media entregada a la carga."
+            },
+            {
+              "id": "qin62b",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la ventaja fundamental de una Fuente Conmutada (SMPS) frente a una lineal?",
+              "options": [
+                "Mayor eficiencia (menos pérdidas) y menor peso/volumen",
+                "Es más silenciosa",
+                "Genera menos ruido electromagnético",
+                "Es más simple de construir"
+              ],
+              "correctAnswer": "Mayor eficiencia (menos pérdidas) y menor peso/volumen",
+              "explanation": "Las SMPS conmutan a alta frecuencia, lo que permite transformadores más pequeños y menor disipación de calor, alcanzando eficiencias del 85-95%."
+            }
+          ]
+        },
+        {
+          "id": "6-ind-3",
+          "level": 3,
+          "title": "Topología Flyback y VSI",
+          "description": "Fuentes conmutadas Flyback e inversores.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qin63",
+              "type": "multiple-choice",
+              "question": "En una fuente Flyback, ¿cuándo se almacena la energía y cuándo se entrega a la carga?",
+              "options": [
+                "Se almacena cuando el transistor conduce (en el primario); se entrega cuando el transistor corta (al secundario)",
+                "Se almacena al cortar; se entrega al conducir",
+                "Siempre está entregando energía",
+                "Almacena en el secundario y entrega en el primario"
+              ],
+              "correctAnswer": "Se almacena cuando el transistor conduce (en el primario); se entrega cuando el transistor corta (al secundario)",
+              "explanation": "En Flyback, cuando el MOSFET conduce, la corriente circula por el primario almacenando energía. Al cortar, el campo colapsa y la energía se transfiere al secundario."
+            },
+            {
+              "id": "qin63b",
+              "type": "multiple-choice",
+              "question": "¿Qué es un Inversor de Fuente de Tensión (VSI) y para qué se usa en la industria?",
+              "options": [
+                "Convierte CC en CA variable para controlar motores o inyectar energía a la red",
+                "Convierte CA en CC para fuentes de alimentación",
+                "Mide la velocidad del motor",
+                "Protege contra cortocircuitos"
+              ],
+              "correctAnswer": "Convierte CC en CA variable para controlar motores o inyectar energía a la red",
+              "explanation": "Un VSI convierte corriente continua en alterna con frecuencia y voltaje variables, usado en variadores de velocidad (VFD) y sistemas solares fotovoltaicos."
+            }
+          ]
+        },
+        {
+          "id": "6-ind-4",
+          "level": 4,
+          "title": "SVPWM y Transistores IGBT",
+          "description": "Modulación vectorial y semiconductores híbridos.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qin64",
+              "type": "multiple-choice",
+              "question": "¿Qué es un IGBT y por qué combina las mejores características del MOSFET y BJT?",
+              "options": [
+                "Entrada aislada por voltaje (MOSFET) con alta capacidad de corriente de salida (BJT)",
+                "Es un diodo de alta potencia",
+                "Es un capacitor variable",
+                "Es un relé de estado sólido"
+              ],
+              "correctAnswer": "Entrada aislada por voltaje (MOSFET) con alta capacidad de corriente de salida (BJT)",
+              "explanation": "El IGBT tiene la alta impedancia de entrada del MOSFET (control por voltaje) y la baja caída de saturación del BJT (alta corriente)."
+            }
+          ]
+        },
+        {
+          "id": "6-ind-5",
+          "level": 5,
+          "title": "Evaluación de Electrónica Industrial I",
+          "description": "Resistencia térmica y circuitos Snubber.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qin65",
+              "type": "multiple-choice",
+              "question": "En las hojas de datos de componentes de potencia, ¿qué representa la resistencia térmica juntura-carcasa ($R_{\\theta JC}$)?",
+              "options": [
+                "La oposición al flujo de calor entre el chip semiconductor y la carcasa del componente",
+                "La resistencia eléctrica del componente",
+                "La temperatura máxima de operación",
+                "La capacidad de corriente"
+              ],
+              "correctAnswer": "La oposición al flujo de calor entre el chip semiconductor y la carcasa del componente",
+              "explanation": "$R_{\\theta JC}$ indica cuántos grados Celsius se eleva la juntura por cada watt disipado, permitiendo calcular el disipador térmico necesario."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "year": 3,
+  "title": "3er Año - Ciclo Básico",
+  "subtitle": "Integración y Aplicación Técnica",
+  "subjects": [
+    {
+      "id": "m-3-dibujo",
+      "name": "Dibujo Técnico",
+      "description": "Normas IRAM, cortes y acotaciones.",
+      "color": "from-blue-500 to-indigo-600",
+      "iconName": "PencilRuler",
+      "lessons": [
+        {
+          "id": "3-dib-1",
+          "level": 1,
+          "title": "Norma IRAM 4503",
+          "description": "Escritura técnica.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qd31",
+              "type": "multiple-choice",
+              "question": "¿Qué establece la norma IRAM 4503 y cuál es su objetivo?",
+              "options": [
+                "Establece el trazado a regla y apoyo de palabras...",
+                "Establece las pautas para el trazado a mano alzada de caras...",
+                "Establece las pautas para el trazado a mano alzada de letras, números y símbolos en dibujo técnico. Su objetivo es garantizar la máxima legibilidad, uniformidad y facilitar la reproducción de los planos.",
+                "Establece las pautas para el trazado a mano alzada de letras... edificios."
+              ],
+              "correctAnswer": "Establece las pautas para el trazado a mano alzada de letras, números y símbolos en dibujo técnico. Su objetivo es garantizar la máxima legibilidad, uniformidad y facilitar la reproducción de los planos.",
+              "explanation": "La norma IRAM 4503 regula la caligrafía o escritura técnica."
+            }
+          ]
+        },
+        {
+          "id": "3-dib-2",
+          "level": 2,
+          "title": "Norma IRAM 4504",
+          "description": "Formatos y rótulos.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qd32",
+              "type": "multiple-choice",
+              "question": "¿Qué es la norma IRAM 4504?",
+              "options": [
+                "Es la norma que regula los formatos, márgenes y rótulos...",
+                "Es la norma que regula los trazados, líneas y tamaños en el dibujo técnico en Argentina...",
+                "Es la norma que averigua e investiga...",
+                "Es la ley que regula formatos, márgenes y rótulos... tamaño A3"
+              ],
+              "correctAnswer": "Es la norma que regula los trazados, líneas y tamaños en el dibujo técnico en Argentina...",
+              "explanation": "Contiene la información técnica correcta sobre la norma que regula los formatos."
+            }
+          ]
+        },
+        {
+          "id": "3-dib-3",
+          "level": 3,
+          "title": "Perspectivas",
+          "description": "Isométrica vs Caballera.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qd33",
+              "type": "multiple-choice",
+              "question": "¿Cual es la diferencia entre perspectiva isométrica y caballera?",
+              "options": [
+                "La perspectiva caballera deforma todas las caras por igual...",
+                "La perspectiva isométrica mantiene una cara sin deformación...",
+                "La perspectiva isométrica deforma todas las caras del objeto por igual, mientras que la perspectiva caballera mantiene una cara intacta y solo altera la profundidad.",
+                "Ambas perspectivas mantienen las caras intactas..."
+              ],
+              "correctAnswer": "La perspectiva isométrica deforma todas las caras del objeto por igual, mientras que la perspectiva caballera mantiene una cara intacta y solo altera la profundidad.",
+              "explanation": "La perspectiva isométrica altera todas las caras por igual."
+            }
+          ]
+        },
+        {
+          "id": "3-dib-4",
+          "level": 4,
+          "title": "Norma IRAM 4507",
+          "description": "Cortes y secciones.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qd34",
+              "type": "multiple-choice",
+              "question": "¿Cuál es el objetivo principal de los cortes y secciones establecido por la norma IRAM 4507?",
+              "options": [
+                "Excluir por completo las líneas invisibles...",
+                "Detallar únicamente las vistas exteriores...",
+                "Unificar los criterios de fabricación...",
+                "Eliminar ficticiamente partes de una pieza para clarificar su geometría interior y facilitar su acotación."
+              ],
+              "correctAnswer": "Eliminar ficticiamente partes de una pieza para clarificar su geometría interior y facilitar su acotación.",
+              "explanation": "Cuando una pieza tiene formas complejas en su interior, usar un corte clarifica su geometría."
+            }
+          ]
+        },
+        {
+          "id": "3-dib-5",
+          "level": 5,
+          "title": "Norma IRAM 4513",
+          "description": "Acotaciones.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qd35",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal de la norma IRAM 4513 en el dibujo tecnológico?",
+              "options": [
+                "Establecer los códigos de programación...",
+                "Unificar los criterios para plasmar las dimensiones y medidas exactas de un objeto en planos.",
+                "Diseñar la geometría interior...",
+                "Regular los procedimientos para la fabricación..."
+              ],
+              "correctAnswer": "Unificar los criterios para plasmar las dimensiones y medidas exactas de un objeto en planos.",
+              "explanation": "La norma IRAM 4513 regula la indicación de cotas y tolerancias."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-3-taller",
+      "name": "Taller Laboratorio",
+      "description": "Multímetro, Ohm, y fuentes de alimentación.",
+      "color": "from-amber-500 to-orange-600",
+      "iconName": "Wrench",
+      "lessons": [
+        {
+          "id": "3-tal-1",
+          "level": 1,
+          "title": "Uso del Multímetro",
+          "description": "Medición de magnitudes.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qt31",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la función principal del tester (multímetro)?",
+              "options": [
+                "Cortar cables",
+                "Medir magnitudes eléctricas",
+                "Generar electricidad",
+                "Soldar componentes"
+              ],
+              "correctAnswer": "Medir magnitudes eléctricas",
+              "explanation": "El tester sirve para medir tensión, corriente y resistencia."
+            }
+          ]
+        },
+        {
+          "id": "3-tal-2",
+          "level": 2,
+          "title": "Ley de Ohm",
+          "description": "Ecuación fundamental.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qt32",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la fórmula correcta de la Ley de Ohm?",
+              "options": [
+                "P = V · R",
+                "I = V + R",
+                "R = V · I",
+                "V = I · R"
+              ],
+              "correctAnswer": "V = I · R",
+              "explanation": "La Ley de Ohm establece que el voltaje es igual a la corriente multiplicada por la resistencia."
+            }
+          ]
+        },
+        {
+          "id": "3-tal-3",
+          "level": 3,
+          "title": "Circuitos en Paralelo",
+          "description": "Tensión en derivaciones.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qt33",
+              "type": "multiple-choice",
+              "question": "En un circuito paralelo la tensión:",
+              "options": [
+                "Es distinta en cada rama",
+                "Es igual en todas las ramas",
+                "Desaparece",
+                "Es cero"
+              ],
+              "correctAnswer": "Es igual en todas las ramas",
+              "explanation": "En un circuito paralelo todos los componentes están conectados a la misma fuente."
+            }
+          ]
+        },
+        {
+          "id": "3-tal-4",
+          "level": 4,
+          "title": "Fuentes de Alimentación",
+          "description": "Conversión de corriente.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qt34",
+              "type": "multiple-choice",
+              "question": "Una fuente de alimentación se utiliza para convertir:",
+              "options": [
+                "Corriente continua en alterna",
+                "Calor en electricidad",
+                "Corriente alterna en continua",
+                "Luz en sonido"
+              ],
+              "correctAnswer": "Corriente alterna en continua",
+              "explanation": "Transforma CA en CC para los circuitos electrónicos."
+            }
+          ]
+        },
+        {
+          "id": "3-tal-5",
+          "level": 5,
+          "title": "Algoritmos",
+          "description": "Conceptos de programación.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qt35",
+              "type": "multiple-choice",
+              "question": "Un algoritmo es:",
+              "options": [
+                "Una secuencia de pasos para resolver un problema",
+                "Un componente eléctrico",
+                "Un sensor del robot",
+                "Un tipo de circuito eléctrico"
+              ],
+              "correctAnswer": "Una secuencia de pasos para resolver un problema",
+              "explanation": "En programación, un algoritmo es una lista ordenada de pasos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-3-tecno",
+      "name": "Tecnología",
+      "description": "Seguridad eléctrica, análisis de producto y simulación.",
+      "color": "from-purple-500 to-pink-600",
+      "iconName": "Cpu",
+      "lessons": [
+        {
+          "id": "3-tec-1",
+          "level": 1,
+          "title": "Seguridad Eléctrica",
+          "description": "Precauciones iniciales.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qtec31",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la medida más importante antes de trabajar en un circuito eléctrico?",
+              "options": [
+                "Tocar los cables para comprobar si hay corriente.",
+                "Cortar la alimentación eléctrica y revisar las herramientas.",
+                "Trabajar rápido para terminar antes.",
+                "Usar cualquier herramienta aunque esté dañada."
+              ],
+              "correctAnswer": "Cortar la alimentación eléctrica y revisar las herramientas.",
+              "explanation": "Antes de trabajar se debe cortar la corriente para evitar accidentes."
+            }
+          ]
+        },
+        {
+          "id": "3-tec-2",
+          "level": 2,
+          "title": "Análisis de Producto",
+          "description": "Objetivos del desmontaje.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qtec32",
+              "type": "multiple-choice",
+              "question": "¿Cuál es el objetivo principal de desmontar y analizar un producto tecnológico?",
+              "options": [
+                "Romper el producto para ver sus piezas.",
+                "Comprender cómo funciona, identificar componentes y analizar su fabricación.",
+                "Cambiar el diseño del producto.",
+                "Solamente conocer la marca del producto."
+              ],
+              "correctAnswer": "Comprender cómo funciona, identificar componentes y analizar su fabricación.",
+              "explanation": "Permite entender el funcionamiento interno de un sistema."
+            }
+          ]
+        },
+        {
+          "id": "3-tec-3",
+          "level": 3,
+          "title": "Proyecto Tecnológico",
+          "description": "Etapas de un proyecto.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qtec33",
+              "type": "multiple-choice",
+              "question": "¿Qué etapas debe tener un proyecto tecnológico bien realizado?",
+              "options": [
+                "Construcción solamente.",
+                "Diseño y decoración.",
+                "Planificación, diseño, construcción, prueba y presentación.",
+                "Compra de materiales únicamente."
+              ],
+              "correctAnswer": "Planificación, diseño, construcción, prueba y presentación.",
+              "explanation": "Un proyecto necesita organización y planificación a través de varias etapas."
+            }
+          ]
+        },
+        {
+          "id": "3-tec-4",
+          "level": 4,
+          "title": "Simulación y Programación",
+          "description": "Herramientas de software.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qtec34",
+              "type": "multiple-choice",
+              "question": "¿Para qué sirven Proteus y Arduino en electrónica?",
+              "options": [
+                "Para dibujar circuitos sin utilidad práctica.",
+                "Para jugar y diseñar imágenes.",
+                "Para simular, programar y probar circuitos electrónicos.",
+                "Para reemplazar completamente los componentes electrónicos."
+              ],
+              "correctAnswer": "Para simular, programar y probar circuitos electrónicos.",
+              "explanation": "Proteus permite simular circuitos y Arduino permite programarlos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-3-mate",
+      "name": "Matemática",
+      "description": "Porcentajes, plano cartesiano, Pitágoras y funciones.",
+      "color": "from-emerald-500 to-teal-600",
+      "iconName": "Calculator",
+      "lessons": [
+        {
+          "id": "3-mat-1",
+          "level": 1,
+          "title": "Proporcionalidad",
+          "description": "Cálculo de porcentajes.",
+          "xp": 25,
+          "questions": [
+            {
+              "id": "qm31",
+              "type": "multiple-choice",
+              "question": "Si un producto cuesta $1000 y aumenta un 20%, ¿cuál es el nuevo precio?",
+              "options": [
+                "$1300",
+                "$1500",
+                "$1100",
+                "$1200"
+              ],
+              "correctAnswer": "$1200",
+              "explanation": "El 20% de 1000 es 200. Entonces: 1000 + 200 = 1200."
+            }
+          ]
+        },
+        {
+          "id": "3-mat-2",
+          "level": 2,
+          "title": "Plano Cartesiano",
+          "description": "Ubicación de puntos.",
+          "xp": 30,
+          "questions": [
+            {
+              "id": "qm32",
+              "type": "multiple-choice",
+              "question": "El punto (3, -2) se encuentra en el:",
+              "options": [
+                "Primer cuadrante",
+                "Segundo cuadrante",
+                "Cuarto cuadrante",
+                "Tercer cuadrante"
+              ],
+              "correctAnswer": "Cuarto cuadrante",
+              "explanation": "x positiva y negativa corresponde al cuarto cuadrante."
+            }
+          ]
+        },
+        {
+          "id": "3-mat-3",
+          "level": 3,
+          "title": "Teorema de Pitágoras",
+          "description": "Triángulos rectángulos.",
+          "xp": 35,
+          "questions": [
+            {
+              "id": "qm33",
+              "type": "multiple-choice",
+              "question": "Si en un triángulo rectángulo los catetos miden 3 y 4, la hipotenusa mide:",
+              "options": [
+                "6",
+                "7",
+                "5",
+                "8"
+              ],
+              "correctAnswer": "5",
+              "explanation": "Teorema de Pitágoras: h² = 3² + 4² = 25 -> h = 5."
+            }
+          ]
+        },
+        {
+          "id": "3-mat-4",
+          "level": 4,
+          "title": "Ecuación de la Recta",
+          "description": "Ordenada al origen.",
+          "xp": 40,
+          "questions": [
+            {
+              "id": "qm34",
+              "type": "multiple-choice",
+              "question": "La ecuación de una recta es y = 2x + 1. ¿Cuál es su ordenada al origen?",
+              "options": [
+                "-1",
+                "1",
+                "0",
+                "2"
+              ],
+              "correctAnswer": "1",
+              "explanation": "En la ecuación y = mx + b, el valor b es 1."
+            }
+          ]
+        },
+        {
+          "id": "3-mat-5",
+          "level": 5,
+          "title": "Notación Científica",
+          "description": "Expresión de números.",
+          "xp": 50,
+          "questions": [
+            {
+              "id": "qm35",
+              "type": "multiple-choice",
+              "question": "¿Cuál es la notación científica de 3000?",
+              "options": [
+                "3 × 10³",
+                "30 × 10³",
+                "0,3 × 10³",
+                "3 × 10²"
+              ],
+              "correctAnswer": "3 × 10³",
+              "explanation": "3000 = 3 × 1000 = 3 × 10³."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
