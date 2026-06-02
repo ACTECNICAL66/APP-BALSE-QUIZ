@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame, RotateCcw, XCircle, Crown } from 'lucide-react';
 import { Lesson, Question, MASCOT_INFO } from '../data/curriculumData';
+import { APP_ASSETS } from '../data/appAssets';
 import { soundEffects } from '../utils/sound';
 import { triggerConfetti } from '../utils/confetti';
 import { MathRenderer } from './MathRenderer';
@@ -508,10 +509,14 @@ export const LessonModal: React.FC<LessonModalProps> = ({
                 <div className="flex items-start gap-4">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0 shadow-lg ${
                     isCorrect ? 'bg-[#58cc02] text-slate-950' : 'bg-[#ff4b4b] text-white'
-                  }`}>
-                    {MASCOT_INFO.avatar}
-                  </div>
-                  <div>
+                   }`}>
+                     <img 
+                       src={isCorrect ? APP_ASSETS.mascot.success : APP_ASSETS.mascot.fail} 
+                       alt="Volti" 
+                       className="w-10 h-10 object-contain"
+                     />
+                   </div>
+                   <div>
                     <div className={`font-black text-xl ${isCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
                       {isCorrect ? '¡Correcto! Combo +1' : 'Respuesta incorrecta'}
                     </div>

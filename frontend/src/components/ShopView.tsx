@@ -51,7 +51,10 @@ export const ShopView: React.FC<ShopViewProps> = ({
             <ShoppingBag className="w-4 h-4" />
             <span>Almacén de IPET 66</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-lg">Tienda del taller</h1>
+          <div className="flex items-center gap-3">
+            <img src={APP_ASSETS.mascot.happy} alt="Volti" className="w-14 h-14 object-contain drop-shadow-xl" />
+            <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight drop-shadow-lg">Tienda del taller</h1>
+          </div>
           <p className="text-sm font-bold text-slate-300 max-w-md">
             Usa tus tuercas doradas para recargar corazones, proteger tu racha o desbloquear insignias demostrativas para tu perfil.
           </p>
