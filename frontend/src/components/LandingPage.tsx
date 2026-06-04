@@ -67,7 +67,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-8 leading-[1.05] drop-shadow-2xl">
-              Domina la técnica <span className="bg-gradient-to-r from-[#7db5ff] via-[#1cb0f6] to-[#c9e6ff] bg-clip-text text-transparent animate-pulse">jugando</span>.
+              ¡Domina la técnica <span className="bg-gradient-to-r from-[#7db5ff] via-[#1cb0f6] to-[#c9e6ff] bg-clip-text text-transparent animate-pulse">jugando </span>!
             </h1>
 
             <p className="text-xl text-slate-300 font-bold mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed drop-shadow-lg">
@@ -143,11 +143,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-white mb-1">7</div>
-                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Años bloqueables</div>
+                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Años desbloqueables</div>
               </div>
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-emerald-400 mb-1">100%</div>
-                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Gratis sin anuncios</div>
+                <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Gratis </div>
               </div>
               <div className="liquid-glass-strong p-5 rounded-3xl border border-white/15 text-center shadow-xl">
                 <div className="text-3xl font-black text-amber-400 mb-1">PWA</div>

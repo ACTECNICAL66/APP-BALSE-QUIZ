@@ -118,7 +118,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   const handleGoogleSignIn = () => {
     soundEffects.playVictory();
-    const mockNames = ['Mateo Técnico', 'Valentina IPET', 'Lucas del Taller', 'Camila 66'];
+    const mockNames = ['Mateo Técnico', 'Valentina IPET', 'Lucas del Taller', 'Camila 66', 'Sofía Circuito', 'Benjamín Robot', 'Isabella Innovación'];
     const randomName = mockNames[Math.floor(Math.random() * mockNames.length)];
     const unlocked = unlockAll ? 7 : selectedYear;
     onComplete(randomName, selectedYear, selectedAvatar.emoji, 50, unlocked);
