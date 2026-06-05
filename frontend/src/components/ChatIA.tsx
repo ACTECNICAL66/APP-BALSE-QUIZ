@@ -12,6 +12,10 @@ const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = import.meta.env.VITE_AI_MODEL || 'google/gemma-4-31b-it';
 
+if (!API_KEY) {
+  console.warn('ChatIA: VITE_GEMINI_API_KEY no está configurada');
+}
+
 const SYSTEM_PROMPT = `Sos Volti, la mascota oficial del IPET 66 (Instituto Provincial de Educación Técnica N° 66 "Dr. José Antonio Balseiro"). Sos un robot de taller amigable y entusiasta. Ayudás a estudiantes y docentes con la app educativa TecnoLingo.
 
 La app:
@@ -53,8 +57,12 @@ export const AIChat: React.FC = () => {
     const chatHistory = messages.map(m => ({ role: m.role, content: m.content }));
     chatHistory.push({ role: 'user', content: userMessage });
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+
     try {
       const res = await fetch(API_URL, {
+        signal: controller.signal,
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,11 +80,15 @@ export const AIChat: React.FC = () => {
         }),
       });
 
+      clearTimeout(timeout);
+
       if (!res.ok) throw new Error(`API error: ${res.status}`);
 
       const data = await res.json();
       return data.choices?.[0]?.message?.content || 'No pude procesar tu consulta. ¿Podés repetirla?';
-    } catch {
+    } catch (err) {
+      clearTimeout(timeout);
+      console.error('ChatIA error:', err);
       return 'Ups, tuve un problema de conexión. ¿Podés intentarlo de nuevo?';
     }
   };
