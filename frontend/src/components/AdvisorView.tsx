@@ -52,7 +52,7 @@ export const AdvisorView: React.FC = () => {
           <img src={APP_ASSETS.mascot.thinking} alt={MASCOT_INFO.name} className="w-full h-full rounded-2xl object-cover" />
         </div>
         <div className="space-y-2 text-center sm:text-left">
-          <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">El análisis de Voltio</div>
+          <div className="text-xs font-black text-emerald-400 uppercase tracking-widest">El análisis de Volti</div>
           <h3 className="text-xl font-extrabold text-white">¿En qué se puede mejorar o qué conceptos faltan aclarar?</h3>
           <p className="text-sm text-slate-300 leading-relaxed font-normal">
             Esta PWA sienta las bases perfectas para modernizar la educación técnica del IPET 66. También es ideal conectar la app con recursos externos de consulta rápida para el taller y el aula.
@@ -146,7 +146,7 @@ export const AdvisorView: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <MessageCircle className="w-5 h-5 text-emerald-400" />
-            <h3 className="text-xl font-black text-white">Chat con Voltio</h3>
+            <h3 className="text-xl font-black text-white">Chat con Volti</h3>
           </div>
           <button
             onClick={() => setShowChat(!showChat)}
@@ -221,23 +221,11 @@ export const AdvisorView: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
-          <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
-            <Cloud className="w-6 h-6" />
-          </div>
-          <h4 className="font-extrabold text-lg text-white">7. Sincronización en la nube</h4>
-          <p className="text-sm text-slate-300 leading-relaxed">
-            Todo el progreso se guarda en localStorage. Agregar respaldo en línea para preservar avances al cambiar de dispositivo o navegador.
-          </p>
-        </div>
-
-      </div>
-
       {/* Didactic Tips Section */}
       <div className="space-y-4 pt-6 border-t border-slate-800">
         <div className="flex items-center gap-2">
           <Zap className="w-5 h-5 text-amber-400 fill-amber-400" />
-          <h3 className="text-xl font-black text-white">Sugerencias metodológicas para docentes</h3>
+          <h3 className="text-xl font-black text-white">Sugerencias metodológicas</h3>
         </div>
 
         <div className="space-y-4">

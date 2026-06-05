@@ -52,7 +52,7 @@ export interface ShopItem {
 }
 
 export const MASCOT_INFO = {
-  name: "Voltio",
+  name: "Volti",
   role: "Mascota Oficial de IPET 66",
   description: "Un pequeño robot de taller con engranajes, circuitos y mucho corazón. ¡Te acompañará a dominar la técnica con energía pura!",
   avatar: "🤖",

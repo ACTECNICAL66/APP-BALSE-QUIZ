@@ -56,15 +56,15 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <div className="space-y-2 flex-1">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-black uppercase tracking-wider shadow-sm">
               <GraduationCap className="w-4 h-4" />
-              <span>Estudiante de {SCHOOL_INFO.name}</span>
+              <span>Estudiante del {SCHOOL_INFO.name}</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl font-black text-white">{userName || 'Estudiante IPET'}</h1>
             
             <div className="text-sm font-semibold text-slate-300 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 pt-1">
               <span className="bg-slate-900/90 border border-slate-700 px-3 py-1 rounded-xl text-emerald-400 font-black shadow-inner">{currentYear}º Año</span>
-              <span>â€¢</span>
-              <span className="font-bold">{currentYear <= 3 ? 'Ciclo Básico' : 'Ciclo superior especializado'}</span>
+              <span>•</span>
+              <span className="font-bold">{currentYear <= 3 ? 'Ciclo básico' : 'Ciclo superior especializado'}</span>
             </div>
           </div>
 

@@ -63,7 +63,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full liquid-glass-navy text-blue-200 text-xs font-black uppercase tracking-widest mb-8 shadow-xl">
               <Sparkles className="w-4 h-4 text-cyan-300 animate-spin" />
-              Plataforma oficial de {SCHOOL_INFO.name}
+              Plataforma hecha por estudiantes del {SCHOOL_INFO.name}
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-8 leading-[1.05] drop-shadow-2xl">
@@ -170,7 +170,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                   <div className="inline-block px-4 py-1.5 rounded-full liquid-glass-emerald text-emerald-300 text-xs font-black uppercase tracking-widest mb-3 shadow-lg">
                     {MASCOT_INFO.role}
                   </div>
-                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy Testi!</h3>
+                  <h3 className="text-3xl font-black text-white mb-3 drop-shadow-lg">¡Hola, soy Volti!</h3>
                   <p className="text-sm text-slate-300 italic mb-8 leading-relaxed font-bold">
                     "{MASCOT_INFO.description}"
                   </p>

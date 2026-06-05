@@ -8,89 +8,38 @@ interface Message {
   content: string;
 }
 
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
+const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const MODEL = import.meta.env.VITE_AI_MODEL || 'google/gemma-4-31b-it';
+
+const SYSTEM_PROMPT = `Sos Volti, la mascota oficial del IPET 66 (Instituto Provincial de Educación Técnica N° 66 "Dr. José Antonio Balseiro"). Sos un robot de taller amigable y entusiasta. Ayudás a estudiantes y docentes con la app educativa TecnoLingo.
+
+La app:
+- Tiene 7 años de currícula técnica con 28 materias, 139 lecciones.
+- Tipos de preguntas: opción múltiple, verdadero/falso, emparejamiento y completar.
+- Moneda: tuercas doradas. Se ganan 15 por lección.
+- Tienda: recarga de corazones (50 tuercas), escudo de racha (150), marco dorado (300), insignia tester (500).
+- XP por respuestas correctas, combo de racha da +5 XP extra desde 3 aciertos.
+- Corazones: 5 iniciales, se pierden al fallar.
+- 5 logros: primera lección, 10, 25, 50 y 100 lecciones completadas.
+- Liga con 28 alumnos ficticios filtrable por año.
+- Perfil con estadísticas, avatar y objetos cosméticos.
+- Pase libre total para desbloquear todos los años.
+- 11 poses de Volti: alegre, pensativo, cansado, programando, midiendo, etc.
+- Consejero IA con sugerencias metodológicas y recursos como ChipLabs 66.
+
+Respondé de forma breve, clara y con entusiasmo.`;
+
 const greetings = [
-  "¡Hola! Soy Voltio, el asistente virtual de IPET 66. Preguntame sobre el plan de estudios, los años, las materias o cómo funciona la app.",
+  "¡Hola! Soy Volti, el asistente virtual de IPET 66. Preguntame sobre el plan de estudios, los años, las materias o cómo funciona la app.",
   "¡Bienvenido! Puedo ayudarte con información sobre TecnoLingo. ¿Sobre qué curso o materia querés saber?",
   "¡Hola! ¿Necesitás ayuda con algún tema técnico o querés conocer más sobre la app y sus funciones?",
 ];
 
-function getResponse(input: string): string {
-  const lower = input.toLowerCase();
-
-  if (lower.match(/^(hola|buenas|hey|buen[ads])/)) {
-    return "¡Hola! Soy Voltio, tu asistente técnico. Preguntame sobre las materias, los años, o cómo funciona la app.";
-  }
-
-  if (lower.includes('qué es') || lower.includes('que es') || lower.includes('tecnoling') || lower.includes('app') || lower.includes('esto')) {
-    return "TecnoLingo es una PWA educativa gamificada del IPET 66. Tiene 7 años de currícula técnica con 28 materias, 139 lecciones y más de 150 preguntas. Incluye experiencia (XP), tuercas doradas, combo racha, corazones y una tienda de objetos.";
-  }
-
-  if (lower.includes('año') || lower.includes('curso') || lower.includes('años')) {
-    return "La app tiene 7 años: 1° Taller Básico, 2° Dibujo y Materiales, 3° Mecánica y Electricidad, 4° Electrotecnia y Electrónica, 5° Sistemas Digitales, 6° Telecomunicaciones e Industrial, 7° Automatización y Control. Cada año tiene 4 materias con 5 niveles.";
-  }
-
-  if (lower.includes('pregunta') || lower.includes('ejercicio') || lower.includes('quiz') || lower.includes('lección') || lower.includes('leccion')) {
-    return "Hay 4 tipos de preguntas: opción múltiple, verdadero/falso, emparejamiento y completar espacios. Cada lección tiene 1 a 3 preguntas. Al responder bien sumás XP y mantenés el combo. Si fallás, perdés un corazón.";
-  }
-
-  if (lower.includes('corazón') || lower.includes('corazones') || lower.includes('vidas') || lower.includes('heart')) {
-    return "Comenzás con 5 corazones. Cada respuesta incorrecta consume uno. Si llegás a 0, perdés la lección. Podés recargar corazones en la Tienda por 50 tuercas doradas. El timer de 3 minutos está visible pero la recarga automática aún no está activa.";
-  }
-
-  if (lower.includes('tuerca') || lower.includes('gema') || lower.includes('moneda') || lower.includes('shop') || lower.includes('tienda') || lower.includes('compr')) {
-    return "Las tuercas doradas son la moneda de la app. Ganás 15 por lección completada. En la Tienda podés comprar: recarga de corazones (50), escudo de racha (150), marco dorado (300) e insignia tester (500).";
-  }
-
-  if (lower.includes('xp') || lower.includes('experiencia') || lower.includes('punt')) {
-    return "Ganás XP por cada respuesta correcta. Con combo de 3 o más aciertos consecutivos ganás +5 XP extra por respuesta. Completar una lección te da entre 25 y 50 XP base.";
-  }
-
-  if (lower.includes('combo') || lower.includes('racha') || lower.includes('streak')) {
-    return "El combo aumenta con cada respuesta correcta consecutiva. Si fallás, el combo se reinicia. Con combo de 3 o más, cada acierto da +5 XP extra. Podés comprar un Escudo de Racha en la Tienda por 150 tuercas para protegerlo una vez.";
-  }
-
-  if (lower.includes('docente') || lower.includes('profesor') || lower.includes('maestr') || lower.includes('aula')) {
-    return "Los docentes pueden usar la app como herramienta complementaria. El plan de estudios está en archivos de datos editables. Se pueden agregar nuevos cuestionarios por materia sin tocar el código principal. La sección Consejero IA tiene sugerencias metodológicas para el aula.";
-  }
-
-  if (lower.includes('materia') || lower.includes('asignatura') || lower.includes('taller')) {
-    return "Cada año tiene 4 materias técnicas. Por ejemplo: Taller (soldadura, herramientas), Dibujo Técnico (normas, proyecciones), Matemática (números primos, transformadas), Electricidad (Ley de Ohm, Kirchhoff), Electrónica (amplificadores, compuertas), Informática (C++, microcontroladores), y más para los años superiores.";
-  }
-
-  if (lower.includes('desbloqu') || lower.includes('bloque') || lower.includes('pase libre') || lower.includes('unlock') || lower.includes('acceso')) {
-    return "Los años se desbloquean secuencialmente: completá el nivel 5 de un año para desbloquear el siguiente. También existe el 'Pase libre total' durante el registro que desbloquea todos los años. Ideal para examen libre o repaso general.";
-  }
-
-  if (lower.includes('logro') || lower.includes('logros') || lower.includes('achievement') || lower.includes('insignia') || lower.includes('medalla')) {
-    return "Hay 5 logros: Primera lección, 10 lecciones, 25 lecciones, 50 lecciones y 100 lecciones. También hay objetos cosméticos como el Marco Dorado (300 tuercas) y la Insignia Tester (500 tuercas) que se ven en tu perfil.";
-  }
-
-  if (lower.includes('voltio') || lower.includes('mascota') || lower.includes('robot')) {
-    return "¡Soy yo! Voltio, la mascota oficial del IPET 66. Soy un pequeño robot de taller con engranajes, circuitos y mucho corazón. Tengo 11 poses diferentes: alegre, pensativo, cansado, programando, midiendo, y más. Mi frase favorita: 'La ley de Ohm es como el café de la mañana: fundamental y necesaria.'";
-  }
-
-  if (lower.includes('liga') || lower.includes('leaderboard') || lower.includes('ranking') || lower.includes('tabla') || lower.includes('posiciones')) {
-    return "La liga muestra 28 alumnos distribuidos en los 7 años. Hay filtros por año y un podio con los 3 primeros. Tu posición se calcula según las tuercas doradas acumuladas.";
-  }
-
-  if (lower.includes('perfil') || lower.includes('avatar') || lower.includes('personaje') || lower.includes('mascot')) {
-    return "En tu perfil podés ver tus estadísticas: combo actual, combo máximo, lecciones completadas y lecciones perfectas. También mostrás tu avatar, logros desbloqueados y los objetos cosméticos que hayas comprado en la tienda.";
-  }
-
-  if (lower.includes('sonido') || lower.includes('audio') || lower.includes('música') || lower.includes('musica') || lower.includes('efecto')) {
-    return "La app tiene efectos de sonido para acciones como responder correctamente, fallar, subir de nivel y completar lecciones. Se activan automáticamente al interactuar.";
-  }
-
-  if (lower.includes('chip') || lower.includes('chiplabs')) {
-    return "ChipLabs 66 es un recurso externo recomendado con herramientas, elementos y utilidades del área técnica. Podés acceder desde la tarjeta destacada en esta misma página o escaneando el código QR.";
-  }
-
-  return "No entendí bien tu consulta. Podés preguntarme sobre: los años y materias, cómo funcionan los corazones y el combo, la tienda de tuercas doradas, los logros, cómo desbloquear contenido, el perfil, Voltio, o los efectos de sonido. ¡Decime qué te interesa!";
-}
-
 export const AIChat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: greetings[Math.floor(Math.random() * greetings.length)] }
+    { role: 'assistant', content: greetings[Math.floor(Math.random() * greetings.length)] },
+    { role: 'assistant', content: 'Recordá que también podés ver el análisis completo y las propuestas de mejora en las secciones de más abajo.' },
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -100,7 +49,39 @@ export const AIChat: React.FC = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
 
-  const handleSend = () => {
+  const callAI = async (userMessage: string) => {
+    const chatHistory = messages.map(m => ({ role: m.role, content: m.content }));
+    chatHistory.push({ role: 'user', content: userMessage });
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`,
+          'HTTP-Referer': window.location.origin,
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT },
+            ...chatHistory,
+          ],
+          max_tokens: 512,
+          temperature: 0.7,
+        }),
+      });
+
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+
+      const data = await res.json();
+      return data.choices?.[0]?.message?.content || 'No pude procesar tu consulta. ¿Podés repetirla?';
+    } catch {
+      return 'Ups, tuve un problema de conexión. ¿Podés intentarlo de nuevo?';
+    }
+  };
+
+  const handleSend = async () => {
     const text = input.trim();
     if (!text || isTyping) return;
 
@@ -108,10 +89,9 @@ export const AIChat: React.FC = () => {
     setMessages(prev => [...prev, { role: 'user', content: text }]);
     setIsTyping(true);
 
-    setTimeout(() => {
-      setMessages(prev => [...prev, { role: 'assistant', content: getResponse(text) }]);
-      setIsTyping(false);
-    }, 800 + Math.random() * 1200);
+    const response = await callAI(text);
+    setMessages(prev => [...prev, { role: 'assistant', content: response }]);
+    setIsTyping(false);
   };
 
   return (
@@ -122,7 +102,7 @@ export const AIChat: React.FC = () => {
         </div>
         <div>
           <div className="flex items-center gap-1.5">
-            <span className="font-bold text-white text-sm">Voltio</span>
+            <span className="font-bold text-white text-sm">Volti</span>
             <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
           </div>
           <span className="text-[11px] text-slate-400 font-medium">Asistente virtual IPET 66</span>
@@ -139,7 +119,7 @@ export const AIChat: React.FC = () => {
             }`}>
               {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
             </div>
-            <div className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+            <div className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
               msg.role === 'user'
                 ? 'bg-blue-600/30 text-blue-50 rounded-tr-md'
                 : 'bg-slate-700/60 text-slate-200 rounded-tl-md'
@@ -170,8 +150,13 @@ export const AIChat: React.FC = () => {
           type="text"
           value={input}
           onChange={e => setInput(e.target.value)}
-          onKeyDown={e => e.key === 'Enter' && handleSend()}
-          placeholder="Preguntale a Voltio..."
+          onKeyDown={e => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              handleSend();
+            }
+          }}
+          placeholder="Preguntale a Volti..."
           className="flex-1 bg-slate-900/60 border border-slate-600 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 font-medium outline-none focus:border-emerald-500/50 transition-colors"
         />
         <button
