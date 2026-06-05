@@ -123,8 +123,8 @@ export const LEADERBOARD_USERS = [
 export const CURRICULUM_DATA: YearCurriculum[] = [
 {
   year: 1,
-  title: "1er Año - Ciclo Básico",
-  subtitle: "Conocimientos Básicos y Seguridad",
+  title: "1er año - ciclo básico",
+  subtitle: "Conocimientos básicos y seguridad",
   subjects: [
     {
       id: "m-1-taller",
@@ -136,7 +136,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tal-1",
           level: 1,
-          title: "Taller Laboratorio",
+          title: "Taller laboratorio",
           description: "Herramientas y seguridad.",
           xp: 25,
           questions: [
@@ -180,7 +180,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tal-3",
           level: 3,
-          title: "Empalmes Eléctricos",
+          title: "Empalmes eléctricos",
           description: "Uniones y derivaciones.",
           xp: 35,
           questions: [
@@ -201,7 +201,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tal-4",
           level: 4,
-          title: "Magnitudes Principales",
+          title: "Magnitudes principales",
           description: "Conceptos fundamentales.",
           xp: 40,
           questions: [
@@ -223,7 +223,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tal-5",
           level: 5,
-          title: "Normas de Seguridad",
+          title: "Normas de seguridad",
           description: "Comportamiento en el taller.",
           xp: 50,
           questions: [
@@ -276,7 +276,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-dib-2",
           level: 2,
-          title: "Tipos de Lápices",
+          title: "Tipos de lápices",
           description: "Clasificación de minas.",
           xp: 30,
           questions: [
@@ -298,7 +298,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-dib-3",
           level: 3,
-          title: "Tipos de Líneas",
+          title: "Tipos de líneas",
           description: "Líneas en dibujo técnico.",
           xp: 35,
           questions: [
@@ -342,7 +342,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-dib-5",
           level: 5,
-          title: "Formatos Normalizados",
+          title: "Formatos normalizados",
           description: "Tamaños de hojas.",
           xp: 50,
           questions: [
@@ -373,7 +373,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tec-1",
           level: 1,
-          title: "Circuitos en Serie",
+          title: "Circuitos en serie",
           description: "Cálculo de resistencia total.",
           xp: 25,
           questions: [
@@ -395,7 +395,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tec-2",
           level: 2,
-          title: "Circuitos en Paralelo",
+          title: "Circuitos en paralelo",
           description: "Cálculo de resistencia total.",
           xp: 30,
           questions: [
@@ -417,7 +417,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tec-3",
           level: 3,
-          title: "Uso del Multímetro",
+          title: "Uso del multímetro",
           description: "Mediciones de magnitudes.",
           xp: 35,
           questions: [
@@ -438,7 +438,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tec-4",
           level: 4,
-          title: "Cálculos Prácticos I",
+          title: "Cálculos prácticos I",
           description: "Análisis de circuito 1.",
           xp: 40,
           questions: [
@@ -461,7 +461,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-tec-5",
           level: 5,
-          title: "Cálculos Prácticos II",
+          title: "Cálculos prácticos II",
           description: "Análisis de circuito 2.",
           xp: 50,
           questions: [
@@ -493,7 +493,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-mat-1",
           level: 1,
-          title: "Números Primos",
+          title: "Números primos",
           description: "Conceptos básicos.",
           xp: 25,
           questions: [
@@ -515,7 +515,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-mat-2",
           level: 2,
-          title: "Resolución de Ecuaciones",
+          title: "Resolución de ecuaciones",
           description: "Despeje de incógnitas.",
           xp: 30,
           questions: [
@@ -559,7 +559,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-mat-4",
           level: 4,
-          title: "Expresiones Algebraicas",
+          title: "Expresiones algebraicas",
           description: "Definición.",
           xp: 40,
           questions: [
@@ -581,7 +581,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "1-mat-5",
           level: 5,
-          title: "Tipos de Ángulos",
+          title: "Tipos de ángulos",
           description: "Clasificación.",
           xp: 50,
           questions: [
@@ -617,8 +617,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 },
 {
   year: 2,
-  title: "2do Año - Ciclo Básico",
-  subtitle: "Fundamentos y Herramientas",
+  title: "2do año - ciclo básico",
+  subtitle: "Fundamentos y herramientas",
   subjects: [
     {
       id: "m-2-dibujo",
@@ -630,7 +630,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-dib-1",
           level: 1,
-          title: "Normas IRAM/ISO en Dibujo Técnico",
+          title: "Normas IRAM/ISO en dibujo técnico",
           description: "Unificación de criterios de representación.",
           xp: 25,
           questions: [
@@ -652,7 +652,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-dib-2",
           level: 2,
-          title: "Proyecciones Ortogonales",
+          title: "Proyecciones ortogonales",
           description: "Vistas planas relacionadas.",
           xp: 30,
           questions: [
@@ -674,7 +674,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-dib-3",
           level: 3,
-          title: "Acotaciones en Planos",
+          title: "Acotaciones en planos",
           description: "Dimensiones y medidas normalizadas.",
           xp: 35,
           questions: [
@@ -696,7 +696,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-dib-4",
           level: 4,
-          title: "Símbolos en Esquemas Electrónicos",
+          title: "Símbolos en esquemas electrónicos",
           description: "Elementos normalizados de componentes.",
           xp: 40,
           questions: [
@@ -718,7 +718,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-dib-5",
           level: 5,
-          title: "Evaluación de Dibujo: Normas y Proyecciones",
+          title: "Evaluación de dibujo: normas y proyecciones",
           description: "Examen final de normas y simbolización.",
           xp: 50,
           questions: [
@@ -749,7 +749,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-mat-1",
           level: 1,
-          title: "Números Enteros Negativos en la Vida Cotidiana",
+          title: "Números enteros negativos en la vida cotidiana",
           description: "Aplicaciones de negativos en taller.",
           xp: 25,
           questions: [
@@ -771,7 +771,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-mat-2",
           level: 2,
-          title: "Proporcionalidad Directa",
+          title: "Proporcionalidad directa",
           description: "Relación entre magnitudes.",
           xp: 30,
           questions: [
@@ -793,7 +793,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-mat-3",
           level: 3,
-          title: "Números Racionales",
+          title: "Números racionales",
           description: "Fracciones y expresiones decimales.",
           xp: 35,
           questions: [
@@ -815,7 +815,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-mat-4",
           level: 4,
-          title: "Resolución de Ecuaciones",
+          title: "Resolución de ecuaciones",
           description: "Despeje de variables.",
           xp: 40,
           questions: [
@@ -837,7 +837,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-mat-5",
           level: 5,
-          title: "Evaluación de Matemática",
+          title: "Evaluación de matemática",
           description: "Aplicación de proporcionalidad y racionales.",
           xp: 50,
           questions: [
@@ -868,7 +868,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tal-1",
           level: 1,
-          title: "Código de Colores de Resistencias",
+          title: "Código de colores de resistencias",
           description: "Lectura del valor óhmico.",
           xp: 25,
           questions: [
@@ -904,7 +904,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tal-2",
           level: 2,
-          title: "Circuitos: Serie, Paralelo y Mixto",
+          title: "Circuitos: serie, paralelo y mixto",
           description: "Identificación de asociaciones.",
           xp: 30,
           questions: [
@@ -940,7 +940,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tal-3",
           level: 3,
-          title: "El Multímetro (Tester)",
+          title: "El multímetro (tester)",
           description: "Medición de magnitudes eléctricas.",
           xp: 35,
           questions: [
@@ -962,7 +962,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tal-4",
           level: 4,
-          title: "Ley de Ohm y Potencia",
+          title: "Ley de Ohm y potencia",
           description: "Relación entre V, I, R y P.",
           xp: 40,
           questions: [
@@ -984,7 +984,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tal-5",
           level: 5,
-          title: "Evaluación de Taller Eléctrico",
+          title: "Evaluación de taller eléctrico",
           description: "Circuitos, mediciones y leyes fundamentales.",
           xp: 50,
           questions: [
@@ -1015,7 +1015,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tec-1",
           level: 1,
-          title: "El Relé como Componente Electrónico",
+          title: "El relé como componente electrónico",
           description: "Activación por bobina.",
           xp: 25,
           questions: [
@@ -1037,7 +1037,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tec-2",
           level: 2,
-          title: "Circuitos Integrados: CI 555",
+          title: "Circuitos integrados: CI 555",
           description: "Temporizador, oscilador y generador.",
           xp: 30,
           questions: [
@@ -1059,7 +1059,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tec-3",
           level: 3,
-          title: "Capacitores: Almacenamiento de Energía",
+          title: "Capacitores: almacenamiento de energía",
           description: "Función principal del capacitor.",
           xp: 35,
           questions: [
@@ -1103,7 +1103,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "2-tec-5",
           level: 5,
-          title: "Programación por Bloques",
+          title: "Programación por bloques",
           description: "Instrucciones conectadas visualmente.",
           xp: 50,
           questions: [
@@ -1128,8 +1128,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 },
 {
   year: 3,
-  title: "3er Año - Ciclo Básico",
-  subtitle: "Integración y Aplicación Técnica",
+  title: "3er año - ciclo básico",
+  subtitle: "Integración y aplicación técnica",
   subjects: [
     {
       id: "m-3-dibujo",
@@ -1260,7 +1260,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tal-1",
           level: 1,
-          title: "Uso del Multímetro",
+          title: "Uso del multímetro",
           description: "Medición de magnitudes.",
           xp: 25,
           questions: [
@@ -1304,7 +1304,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tal-3",
           level: 3,
-          title: "Circuitos en Paralelo",
+          title: "Circuitos en paralelo",
           description: "Tensión en derivaciones.",
           xp: 35,
           questions: [
@@ -1326,7 +1326,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tal-4",
           level: 4,
-          title: "Fuentes de Alimentación",
+          title: "Fuentes de alimentación",
           description: "Conversión de corriente.",
           xp: 40,
           questions: [
@@ -1379,7 +1379,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tec-1",
           level: 1,
-          title: "Seguridad Eléctrica",
+          title: "Seguridad eléctrica",
           description: "Precauciones iniciales.",
           xp: 25,
           questions: [
@@ -1401,7 +1401,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tec-2",
           level: 2,
-          title: "Análisis de Producto",
+          title: "Análisis de producto",
           description: "Objetivos del desmontaje.",
           xp: 30,
           questions: [
@@ -1423,7 +1423,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tec-3",
           level: 3,
-          title: "Proyecto Tecnológico",
+          title: "Proyecto tecnológico",
           description: "Etapas de un proyecto.",
           xp: 35,
           questions: [
@@ -1445,7 +1445,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-tec-4",
           level: 4,
-          title: "Simulación y Programación",
+          title: "Simulación y programación",
           description: "Herramientas de software.",
           xp: 40,
           questions: [
@@ -1498,7 +1498,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-mat-2",
           level: 2,
-          title: "Plano Cartesiano",
+          title: "Plano cartesiano",
           description: "Ubicación de puntos.",
           xp: 30,
           questions: [
@@ -1542,7 +1542,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-mat-4",
           level: 4,
-          title: "Ecuación de la Recta",
+          title: "Ecuación de la recta",
           description: "Ordenada al origen.",
           xp: 40,
           questions: [
@@ -1564,7 +1564,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "3-mat-5",
           level: 5,
-          title: "Notación Científica",
+          title: "Notación científica",
           description: "Expresión de números.",
           xp: 50,
           questions: [
@@ -1589,8 +1589,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 },
 {
   year: 4,
-  title: "4to Año - Ciclo Orientado",
-  subtitle: "Especialización y Desarrollo",
+  title: "4to año - ciclo orientado",
+  subtitle: "Especialización y desarrollo",
   subjects: [
     {
       id: "m-4-digital",
@@ -1602,7 +1602,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-dig-1",
           level: 1,
-          title: "Tablas de Verdad y Compuertas",
+          title: "Tablas de verdad y compuertas",
           description: "Identificación de compuertas lógicas.",
           xp: 25,
           questions: [
@@ -1668,7 +1668,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-dig-4",
           level: 4,
-          title: "Compuertas Lógicas y Nivel Lógico",
+          title: "Compuertas lógicas y nivel lógico",
           description: "Aplicación de compuertas y estados.",
           xp: 40,
           questions: [
@@ -1703,7 +1703,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-dig-5",
           level: 5,
-          title: "Evaluación de Digitales I",
+          title: "Evaluación de digitales I",
           description: "Compuertas y simplificación.",
           xp: 50,
           questions: [
@@ -1756,7 +1756,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ele-2",
           level: 2,
-          title: "Medición de Potencia Eléctrica",
+          title: "Medición de potencia eléctrica",
           description: "El vatímetro.",
           xp: 30,
           questions: [
@@ -1800,7 +1800,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ele-4",
           level: 4,
-          title: "Capacitores e Inducción",
+          title: "Capacitores e inducción",
           description: "Almacenamiento de energía y campos.",
           xp: 40,
           questions: [
@@ -1835,7 +1835,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ele-5",
           level: 5,
-          title: "Evaluación de Electrotecnia I",
+          title: "Evaluación de electrotecnia I",
           description: "Leyes fundamentales de la electricidad.",
           xp: 50,
           questions: [
@@ -1866,7 +1866,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ana-1",
           level: 1,
-          title: "El Multímetro Digital",
+          title: "El multímetro digital",
           description: "Medición de tensión, corriente y resistencia.",
           xp: 25,
           questions: [
@@ -1888,7 +1888,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ana-2",
           level: 2,
-          title: "El Diodo Semiconductor",
+          title: "El diodo semiconductor",
           description: "Polarización y conducción.",
           xp: 30,
           questions: [
@@ -1946,7 +1946,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ana-4",
           level: 4,
-          title: "Amplificación de Señales",
+          title: "Amplificación de señales",
           description: "El transistor como amplificador.",
           xp: 40,
           questions: [
@@ -1968,7 +1968,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-ana-5",
           level: 5,
-          title: "Evaluación de Analógica I",
+          title: "Evaluación de analógica I",
           description: "Semiconductores y componentes.",
           xp: 50,
           questions: [
@@ -2034,7 +2034,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-inf-2",
           level: 2,
-          title: "Diagramas de Flujo",
+          title: "Diagramas de flujo",
           description: "Simbología de algoritmos.",
           xp: 30,
           questions: [
@@ -2056,7 +2056,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-inf-3",
           level: 3,
-          title: "Lenguaje C: Sintaxis Básica",
+          title: "Lenguaje C: sintaxis básica",
           description: "Punto y coma y estructura.",
           xp: 35,
           questions: [
@@ -2078,7 +2078,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-inf-4",
           level: 4,
-          title: "Estructuras de Repetición: Bucles",
+          title: "Estructuras de repetición: bucles",
           description: "Repetir instrucciones varias veces.",
           xp: 40,
           questions: [
@@ -2100,7 +2100,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "4-inf-5",
           level: 5,
-          title: "Evaluación de Informática I",
+          title: "Evaluación de informática I",
           description: "Conceptos de hardware y algoritmos.",
           xp: 50,
           questions: [
@@ -2125,8 +2125,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 },
 {
   year: 5,
-  title: "5to Año - Especialización",
-  subtitle: "Análisis Avanzado y Proyectos",
+  title: "5to año - especialización",
+  subtitle: "Análisis avanzado y proyectos",
   subjects: [
     {
       id: "m-5-electro",
@@ -2160,7 +2160,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-ele-2",
           level: 2,
-          title: "Amplificador Operacional Ideal",
+          title: "Amplificador operacional ideal",
           description: "Impedancias.",
           xp: 30,
           questions: [
@@ -2183,7 +2183,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-ele-3",
           level: 3,
-          title: "Amplificador Inversor",
+          title: "Amplificador inversor",
           description: "Ganancia de voltaje.",
           xp: 35,
           questions: [
@@ -2227,7 +2227,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-ele-5",
           level: 5,
-          title: "Filtros Activos",
+          title: "Filtros activos",
           description: "Ventajas.",
           xp: 50,
           questions: [
@@ -2259,7 +2259,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-et-1",
           level: 1,
-          title: "Líneas de Distribución",
+          title: "Líneas de distribución",
           description: "Marco Legal.",
           xp: 25,
           questions: [
@@ -2281,7 +2281,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-et-2",
           level: 2,
-          title: "Acometida Domiciliaria",
+          title: "Acometida domiciliaria",
           description: "Componentes mínimos.",
           xp: 30,
           questions: [
@@ -2303,7 +2303,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-et-3",
           level: 3,
-          title: "Planos Eléctricos",
+          title: "Planos eléctricos",
           description: "Simbología.",
           xp: 35,
           questions: [
@@ -2325,7 +2325,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-et-4",
           level: 4,
-          title: "Protección Diferencial",
+          title: "Protección diferencial",
           description: "Seguridad contra fugas.",
           xp: 40,
           questions: [
@@ -2378,7 +2378,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-inf-1",
           level: 1,
-          title: "Compuertas Lógicas",
+          title: "Compuertas lógicas",
           description: "Operación XOR.",
           xp: 25,
           questions: [
@@ -2400,7 +2400,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-inf-2",
           level: 2,
-          title: "Sistemas Embebidos",
+          title: "Sistemas embebidos",
           description: "Microcontroladores.",
           xp: 30,
           questions: [
@@ -2422,7 +2422,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-inf-3",
           level: 3,
-          title: "Lenguajes de Programación",
+          title: "Lenguajes de programación",
           description: "C y C++.",
           xp: 35,
           questions: [
@@ -2466,7 +2466,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-inf-5",
           level: 5,
-          title: "Protocolos de Comunicación",
+          title: "Protocolos de comunicación",
           description: "I2C y SPI.",
           xp: 50,
           questions: [
@@ -2497,7 +2497,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-mat-1",
           level: 1,
-          title: "Estadística Básica",
+          title: "Estadística básica",
           description: "Medidas de tendencia.",
           xp: 25,
           questions: [
@@ -2519,7 +2519,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-mat-2",
           level: 2,
-          title: "Funciones Cuadráticas",
+          title: "Funciones cuadráticas",
           description: "Parábolas.",
           xp: 30,
           questions: [
@@ -2541,7 +2541,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-mat-3",
           level: 3,
-          title: "Trigonometría Avanzada",
+          title: "Trigonometría avanzada",
           description: "Seno y Coseno.",
           xp: 35,
           questions: [
@@ -2585,7 +2585,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "5-mat-5",
           level: 5,
-          title: "Sistemas de Ecuaciones",
+          title: "Sistemas de ecuaciones",
           description: "Soluciones.",
           xp: 50,
           questions: [
@@ -2610,8 +2610,8 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
 },
 {
   year: 6,
-  title: "6to Año - Profesionalización",
-  subtitle: "Proyectos y Prácticas",
+  title: "6to año - profesionalización",
+  subtitle: "Proyectos y prácticas",
   subjects: [
     {
       id: "m-6-teleco",
@@ -2623,7 +2623,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-tel-1",
           level: 1,
-          title: "Longitud de Onda y Frecuencia",
+          title: "Longitud de onda y frecuencia",
           description: "Relación entre $\\lambda$, c y f.",
           xp: 25,
           questions: [
@@ -2645,7 +2645,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-tel-2",
           level: 2,
-          title: "Ruido Térmico y SNR",
+          title: "Ruido térmico y SNR",
           description: "Relación señal/ruido en receptores.",
           xp: 30,
           questions: [
@@ -2702,7 +2702,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-tel-4",
           level: 4,
-          title: "Receptor Superheterodino y FM",
+          title: "Receptor superheterodino y FM",
           description: "Principio de funcionamiento y pre-énfasis.",
           xp: 40,
           questions: [
@@ -2737,7 +2737,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-tel-5",
           level: 5,
-          title: "Evaluación de Telecomunicaciones I",
+          title: "Evaluación de telecomunicaciones I",
           description: "Antenas, detector de envuelta y figura de ruido.",
           xp: 50,
           questions: [
@@ -2768,7 +2768,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ins-1",
           level: 1,
-          title: "Protección Térmica vs Magnética",
+          title: "Protección térmica vs magnética",
           description: "Interruptor termomagnético.",
           xp: 25,
           questions: [
@@ -2803,7 +2803,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ins-2",
           level: 2,
-          title: "Enclavamientos y Relés de Protección",
+          title: "Enclavamientos y relés de protección",
           description: "Seguridad en circuitos de mando.",
           xp: 30,
           questions: [
@@ -2838,7 +2838,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ins-3",
           level: 3,
-          title: "Arrancadores y Conductores",
+          title: "Arrancadores y conductores",
           description: "Soft Starter y normativas eléctricas.",
           xp: 35,
           questions: [
@@ -2896,7 +2896,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ins-5",
           level: 5,
-          title: "Evaluación de Instalaciones I",
+          title: "Evaluación de instalaciones I",
           description: "Energía solar y CADE SIMU.",
           xp: 50,
           questions: [
@@ -2927,7 +2927,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-dig3-1",
           level: 1,
-          title: "Registros TRIS y Memoria en Microcontroladores",
+          title: "Registros TRIS y memoria en microcontroladores",
           description: "Configuración de direcciones de datos.",
           xp: 25,
           questions: [
@@ -2962,7 +2962,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-dig3-2",
           level: 2,
-          title: "USART: Comunicación Serie",
+          title: "USART: comunicación serie",
           description: "Modo síncrono vs asíncrono.",
           xp: 30,
           questions: [
@@ -3019,7 +3019,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-dig3-4",
           level: 4,
-          title: "Programación C/C++ vs Assembler",
+          title: "Programación C/C++ vs assembler",
           description: "Ventajas del alto nivel.",
           xp: 40,
           questions: [
@@ -3041,7 +3041,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-dig3-5",
           level: 5,
-          title: "Evaluación de Digitales III",
+          title: "Evaluación de digitales III",
           description: "Analizador lógico, CCP y registro W.",
           xp: 50,
           questions: [
@@ -3072,7 +3072,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ind-1",
           level: 1,
-          title: "Diodo de Potencia vs SCR",
+          title: "Diodo de potencia vs SCR",
           description: "Tiristores y conmutación.",
           xp: 25,
           questions: [
@@ -3107,7 +3107,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ind-2",
           level: 2,
-          title: "Rectificadores Controlados y Fuentes SMPS",
+          title: "Rectificadores controlados y fuentes SMPS",
           description: "Ángulo de disparo y fuentes conmutadas.",
           xp: 30,
           questions: [
@@ -3142,7 +3142,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ind-3",
           level: 3,
-          title: "Topología Flyback y VSI",
+          title: "Topología flyback y VSI",
           description: "Fuentes conmutadas Flyback e inversores.",
           xp: 35,
           questions: [
@@ -3177,7 +3177,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ind-4",
           level: 4,
-          title: "SVPWM y Transistores IGBT",
+          title: "SVPWM y transistores IGBT",
           description: "Modulación vectorial y semiconductores híbridos.",
           xp: 40,
           questions: [
@@ -3199,7 +3199,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         {
           id: "6-ind-5",
           level: 5,
-          title: "Evaluación de Electrónica Industrial I",
+          title: "Evaluación de electrónica industrial I",
           description: "Resistencia térmica y circuitos Snubber.",
           xp: 50,
           questions: [
@@ -3297,7 +3297,7 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qis71", type: "multiple-choice", question: "¿Qué voltaje estándar y tipo de corriente se utiliza mayoritariamente en las entradas digitales de los sensores conectados a un PLC industrial?", options: ["24 Voltios de Corriente Continua (24V CC)", "220 Voltios Alternos", "5 Voltios", "380 Voltios Trifásicos"], correctAnswer: "24 Voltios de Corriente Continua (24V CC)", explanation: "El estándar industrial de 24V CC ofrece gran inmunidad al ruido y seguridad ante contactos accidentales." }]
           },
           {
-            id: "7-ins-2", level: 2, title: "Programación en Ladder", description: "Contactos NA, NC y bobinas de salida.", xp: 30,
+            id: "7-ins-2", level: 2, title: "Programación en ladder", description: "Contactos NA, NC y bobinas de salida.", xp: 30,
             questions: [{ id: "qis72", type: "match-pairs", question: "Asocia el símbolo de programación Ladder (Escalera) con su elemento equivalente en el tablero:", pairs: [{ left: "-[ ]- Contacto Normalmente Abierto", right: "Pulsador de arranque o sensor sin activar" }, { left: "-[ / ]- Contacto Normalmente Cerrado", right: "Pulsador de parada de emergencia o fin de carrera NC" }, { left: "-( )- Bobina de Salida", right: "Relé, contactor o electroválvula neumática" }], explanation: "El lenguaje Ladder imita esquemas de relés para facilitar la transición de los técnicos electricistas." }]
           },
           {
@@ -3326,11 +3326,11 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             questions: [{ id: "qam71", type: "true-false", question: "Una ecuación diferencial relaciona una función matemática desconocida con sus propias derivadas en el tiempo.", correctAnswer: true, explanation: "Verdadero. Describe sistemas donde el ritmo de cambio depende del estado actual del sistema." }]
           },
           {
-            id: "7-ana-2", level: 2, title: "Transformada de Laplace", description: "Paso del dominio del tiempo 't' a la frecuencia compleja 's'.", xp: 30,
+            id: "7-ana-2", level: 2, title: "Transformada de laplace", description: "Paso del dominio del tiempo 't' a la frecuencia compleja 's'.", xp: 30,
             questions: [{ id: "qam72", type: "multiple-choice", question: "¿Qué enorme simplificación nos brinda la Transformada de Laplace al analizar circuitos eléctricos y control?", options: ["Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", "Elimina las resistencias del circuito", "Hacer que el voltaje sea infinito", "Enfriar los transistores"], correctAnswer: "Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", explanation: "Laplace convierte las derivadas en multiplicaciones por 's' y las integrales en divisiones por 's'." }]
           },
           {
-            id: "7-ana-3", level: 3, title: "Función de transferencia (G_s)", description: "Relación entre Salida y Entrada en el plano 's'.", xp: 35,
+            id: "7-ana-3", level: 3, title: "Función de transferencia (g_s)", description: "Relación entre Salida y Entrada en el plano 's'.", xp: 35,
             questions: [{ id: "qam73", type: "fill-blanks", question: "En un sistema de control, la Función de Transferencia G(s) se define como el cociente entre la transformada de la _________ (Salida / Entrada) y la transformada de la entrada.", options: ["Salida", "Frecuencia", "Masa", "Tensión"], correctAnswer: "Salida", explanation: "G(s) = Y(s) / U(s). Resume el comportamiento dinámico interno de una planta o motor." }]
           },
           {
