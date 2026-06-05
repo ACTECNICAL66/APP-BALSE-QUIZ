@@ -10,9 +10,11 @@ def convert_to_ts(obj):
     ts_str = re.sub(r'"([a-zA-Z0-9_]+)":', r'\1:', json_str)
     return ts_str
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(script_dir, "..", "data")
 y_data = []
 for i in range(1, 7):
-    with open(f"docs/y{i}_gen.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(data_dir, f"y{i}_gen.json"), "r", encoding="utf-8") as f:
         y_data.append(convert_to_ts(json.load(f)))
 
 # Combine all into the array format

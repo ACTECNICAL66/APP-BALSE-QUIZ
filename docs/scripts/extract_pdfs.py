@@ -5,17 +5,16 @@ import os
 import sys
 
 pdf_files = [
-    "Preguntas de conocimientos básicos de 1er año.pdf",
-    "Preguntas para 2do año.pdf",
-    "Preguntas y respuestas 3° año.pdf",
-    "Preguntas y respuestas de 4to (1).pdf",
-    "5to año -  Lysek, Olsak, Vargas.pdf",
-    "Preguntas y respuestas 6to.pdf",
-    "RESPUESTAS 6TO AÑO.docx.pdf",
+    "../pdfs/Preguntas de conocimientos básicos de 1er año.pdf",
+    "../pdfs/Preguntas para 2do año.pdf",
+    "../pdfs/Preguntas y respuestas 3° año.pdf",
+    "../pdfs/5to año -  Lysek, Olsak, Vargas.pdf",
+    "../pdfs/Preguntas y respuestas 6to.pdf",
+    "../pdfs/RESPUESTAS 6TO AÑO.docx.pdf",
 ]
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-output_path = os.path.join(script_dir, "all_pdfs_extracted.txt")
+output_path = os.path.join(script_dir, "..", "data", "all_pdfs_extracted.txt")
 
 with open(output_path, 'w', encoding='utf-8') as out:
     for pdf_file in pdf_files:

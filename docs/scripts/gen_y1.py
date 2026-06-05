@@ -76,5 +76,9 @@ y1 = {
     "subjects": y1_subjects
 }
 
-with open("y1_gen.json", "w", encoding="utf-8") as f:
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(script_dir, "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+with open(os.path.join(data_dir, "y1_gen.json", "w", encoding="utf-8") as f:
     json.dump(y1, f, indent=2, ensure_ascii=False)

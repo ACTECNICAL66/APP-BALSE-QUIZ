@@ -46,7 +46,11 @@ y2 = {
 y2['subjects'][2]['lessons'][0]['questions'][0]['image'] = '2do_ano_q1.png'
 y2['subjects'][2]['lessons'][1]['questions'][0]['image'] = '2do_ano_q2.png'
 
-with open("y2_gen.json", "w", encoding="utf-8") as f:
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(script_dir, "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+with open(os.path.join(data_dir, "y2_gen.json", "w", encoding="utf-8") as f:
     json.dump(y2, f, indent=2, ensure_ascii=False)
 
 y4 = {
@@ -92,7 +96,11 @@ y4 = {
 # Add image to Year 4
 y4['subjects'][2]['lessons'][1]['questions'][0]['image'] = '4to_ano_q2.png'
 
-with open("y4_gen.json", "w", encoding="utf-8") as f:
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(script_dir, "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+with open(os.path.join(data_dir, "y4_gen.json", "w", encoding="utf-8") as f:
     json.dump(y4, f, indent=2, ensure_ascii=False)
 
 y6 = {
@@ -141,5 +149,9 @@ try:
 except:
     pass
 
-with open("y6_gen.json", "w", encoding="utf-8") as f:
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(script_dir, "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+with open(os.path.join(data_dir, "y6_gen.json", "w", encoding="utf-8") as f:
     json.dump(y6, f, indent=2, ensure_ascii=False)

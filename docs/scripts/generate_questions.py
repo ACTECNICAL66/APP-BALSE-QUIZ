@@ -2,6 +2,7 @@
 """Generate curriculum data for years 2, 4, 6 from PDF extractions."""
 
 import json
+import os
 
 # ─── 2DO AÑO ───────────────────────────────────────────────────────────────────
 
@@ -1506,8 +1507,10 @@ const GENERATED_CURRICULUM: YearCurriculum[] = [
 ];
 """
 
-with open("docs/generated_curriculum.txt", "w", encoding="utf-8") as f:
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+os.makedirs(output_dir, exist_ok=True)
+with open(os.path.join(output_dir, "generated_curriculum.txt"), "w", encoding="utf-8") as f:
     f.write(output)
 
-print("Generated curriculum data written to docs/generated_curriculum.txt")
+print("Generated curriculum data written to docs/data/generated_curriculum.txt")
 print(f"Total: 2nd year ({len(Y2_TALLER_LESSONS)+len(Y2_DIBUJO_LESSONS)+len(Y2_MATE_LESSONS)+len(Y2_TECNO_LESSONS)} lessons), 4th year ({len(Y4_ELECTRO_LESSONS)+len(Y4_INFO_LESSONS)+len(Y4_ANALOG_LESSONS)+len(Y4_DIGITAL_LESSONS)+len(Y4_MATE_LESSONS)} lessons), 6th year ({len(Y6_TELECO_LESSONS)+len(Y6_INDUSTRIAL_LESSONS)+len(Y6_INSTAL_LESSONS)+len(Y6_DIGITAL3_LESSONS)} lessons)")

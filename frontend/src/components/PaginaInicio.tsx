@@ -21,8 +21,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
       <header className="border-b border-white/10 liquid-glass-strong sticky top-0 z-50 px-6 py-4 shadow-2xl relative">
         <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/40 border border-emerald-300/50 animate-pulse-glow">
-              <img src={APP_ASSETS.brand.logo} alt="APP-BALSE-QUIZ" className="w-full h-full rounded-2xl object-cover" />
+            <div className="w-16 h-16 flex items-center justify-center">
+              <img src={APP_ASSETS.brand.logo} alt="APP-BALSE-QUIZ" className="w-full h-full object-contain" />
             </div>
             <div>
               <span className="font-black text-2xl tracking-wider bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent drop-shadow-lg">
@@ -212,7 +212,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 text-white flex items-center justify-center font-black text-2xl mb-8 shadow-xl shadow-amber-500/40 border-2 border-amber-300/50">
                   1º - 3º
                 </div>
-                <h3 className="text-3xl font-black text-white mb-3">Ciclo Básico</h3>
+                <h3 className="text-3xl font-black text-white mb-3">Ciclo básico</h3>
                 <p className="text-slate-400 text-sm mb-8 leading-relaxed font-bold">
                   Los primeros pasos en la técnica. Normas de seguridad, manejo de herramientas de banco y expresión gráfica IRAM.
                 </p>
@@ -289,28 +289,28 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                 </div>
                 <h3 className="text-3xl font-black text-white mb-3">Superior avanzado</h3>
                 <p className="text-slate-400 text-sm mb-8 leading-relaxed font-bold">
-                  Prácticas profesionalizantes y control industrial. Automatización con PLC, variadores de velocidad e IoT en la nube.
+                  Prácticas profesionalizantes con telecomunicaciones, control industrial, sistemas digitales avanzados e inglés técnico.
                 </p>
                 <ul className="space-y-4 text-sm text-slate-200 font-bold mb-8">
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Telecomunicaciones I y II (IoT)</span>
+                    <span>Telecomunicaciones I y II</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Electrónica industrial I y II (VFD)</span>
+                    <span>Electrónica industrial I y II</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Instalaciones industriales I y II (PLC)</span>
+                    <span>Instalaciones eléctricas e industriales</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Digitales III (Microcontroladores)</span>
+                    <span>Digitales III y IV</span>
                   </li>
                   <li className="flex items-center gap-3 text-purple-400">
                     <CheckCircle className="w-5 h-5 shrink-0" />
-                    <span>Análisis matemático (Laplace)</span>
+                    <span>Inglés Técnico</span>
                   </li>
                 </ul>
               </div>

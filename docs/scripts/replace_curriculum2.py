@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Replace years 2, 4, 6 in curriculumData.ts - robust version."""
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Read the generated content
-with open("docs/generated_curriculum.txt", "r", encoding="utf-8") as f:
+with open(os.path.join(script_dir, "..", "data", "generated_curriculum.txt"), "r", encoding="utf-8") as f:
     gen_text = f.read()
 
 # Extract year objects: each starts with "  {" on its own line
