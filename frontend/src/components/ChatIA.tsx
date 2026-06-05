@@ -1,7 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Send, Sparkles, Bot, User } from 'lucide-react';
 import { APP_ASSETS } from '../data/recursosApp';
 import { MASCOT_INFO } from '../data/datosCurriculares';
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -32,7 +34,32 @@ La app:
 - 11 poses de Volti: alegre, pensativo, cansado, programando, midiendo, etc.
 - Consejero IA con sugerencias metodológicas y recursos como ChipLabs 66.
 
-Respondé de forma breve, clara y con entusiasmo.`;
+Respondé SIEMPRE en español, de forma breve, clara y con entusiasmo. Usá notación LaTeX ($$...$$ para ecuaciones en bloque y $...$ para fórmulas inline) cuando necesites expresar fórmulas matemáticas o eléctricas.`;
+
+function renderLatex(text: string): (string | { html: string; display: boolean })[] {
+  const parts: (string | { html: string; display: boolean })[] = [];
+  const regex = /\$\$([\s\S]+?)\$\$|\$([^\s$][^$]*?[^\s$])\$/g;
+  let lastIdx = 0;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIdx) parts.push(text.slice(lastIdx, match.index));
+    const expr = match[1] || match[2];
+    const display = !!match[1];
+    try {
+      parts.push({ html: katex.renderToString(expr, { throwOnError: false, displayMode: display }), display });
+    } catch {
+      parts.push(text.slice(match.index, match.index + match[0].length));
+    }
+    lastIdx = regex.lastIndex;
+  }
+  if (lastIdx < text.length) parts.push(text.slice(lastIdx));
+  return parts;
+}
+
+const LatexContent: React.FC<{ text: string }> = ({ text }) => {
+  const parts = useMemo(() => renderLatex(text), [text]);
+  return <>{parts.map((part, i) => typeof part === 'string' ? <span key={i}>{part}</span> : <span key={i} dangerouslySetInnerHTML={{ __html: part.html }} className={part.display ? 'block my-2 text-center' : 'inline'} />)}</>;
+};
 
 const greetings = [
   "¡Hola! Soy Volti, el asistente virtual de IPET 66. Preguntame sobre el plan de estudios, los años, las materias o cómo funciona la app.",
@@ -131,7 +158,7 @@ export const AIChat: React.FC = () => {
                 ? 'bg-blue-600/30 text-blue-50 rounded-tr-md'
                 : 'bg-slate-700/60 text-slate-200 rounded-tl-md'
             }`}>
-              {msg.content}
+              <LatexContent text={msg.content} />
             </div>
           </div>
         ))}
