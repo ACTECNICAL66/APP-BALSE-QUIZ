@@ -9,7 +9,7 @@ interface Message {
 }
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
-const MODEL = import.meta.env.VITE_AI_MODEL || 'gemini-2.0-flash';
+const MODEL = import.meta.env.VITE_AI_MODEL || 'gemma-4-31b-it';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
 if (!API_KEY) {
