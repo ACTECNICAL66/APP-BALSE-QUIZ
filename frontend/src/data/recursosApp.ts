@@ -5,7 +5,7 @@ function assetUrl(path: string): string {
 
 export const APP_ASSETS = {
   brand: {
-    logo: assetUrl('assets/brand/app-logo.svg'),
+    logo: assetUrl('assets/brand/Logo.png'),
     name: "APP-BALSE-QUIZ",
   },
   mascot: {

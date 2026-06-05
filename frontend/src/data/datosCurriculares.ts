@@ -3219,127 +3219,156 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           ]
         }
       ]
+    },
+    {
+      id: "m-6-ingles",
+      name: "Inglés Técnico",
+      description: "Vocabulario técnico, instrucciones en inglés y comprensión de textos de electrónica.",
+      color: "from-rose-500 to-pink-600",
+      iconName: "Globe",
+      lessons: [
+        {
+          id: "6-ing-1", level: 1, title: "Vocabulario técnico básico", description: "Componentes electrónicos en inglés.", xp: 25,
+          questions: [{ id: "qie61", type: "multiple-choice", question: "¿Cuál es la traducción correcta de 'resistencia eléctrica' al inglés?", options: ["Electrical resistor", "Electrical resistance", "Electric power", "Electric current"], correctAnswer: "Electrical resistance", explanation: "'Resistance' es la propiedad de oponerse al flujo de corriente; 'resistor' es el componente físico." }]
+        },
+        {
+          id: "6-ing-2", level: 2, title: "Presente Simple en manuales técnicos", description: "Descripción de procesos.", xp: 30,
+          questions: [{ id: "qie62", type: "multiple-choice", question: "En un manual técnico en inglés, la oración 'The multimeter measures voltage, current and resistance' usa el tiempo verbal:", options: ["Presente Simple (Simple Present)", "Pasado Simple (Simple Past)", "Futuro (Future Will)", "Presente Continuo (Present Continuous)"], correctAnswer: "Presente Simple (Simple Present)", explanation: "El Presente Simple se usa para describir hechos generales y funciones de equipos, común en manuales técnicos." }]
+        },
+        {
+          id: "6-ing-3", level: 3, title: "Imperativos en instructivos", description: "Instrucciones paso a paso.", xp: 35,
+          questions: [{ id: "qie63", type: "multiple-choice", question: "En un manual de instalación, la frase 'Connect the red wire to terminal A' está en modo:", options: ["Imperativo (Imperative)", "Condicional (Conditional)", "Pasado (Past tense)", "Gerundio (Gerund)"], correctAnswer: "Imperativo (Imperative)", explanation: "El modo imperativo se usa para dar instrucciones directas, muy común en guías de instalación y manuales." }]
+        },
+        {
+          id: "6-ing-4", level: 4, title: "Preposiciones de lugar en circuitos", description: "Ubicación de componentes.", xp: 40,
+          questions: [{ id: "qie64", type: "multiple-choice", question: "¿Qué preposición completa correctamente la frase: 'The capacitor is located _____ the resistor and the transistor'?", options: ["Between", "On", "Under", "Above"], correctAnswer: "Between", explanation: "'Between' se usa para indicar que algo está en medio de dos elementos, muy usado en descripciones de circuitos." }]
+        },
+        {
+          id: "6-ing-5", level: 5, title: "Comprensión de textos técnicos", description: "Lectura de datasheets básicos.", xp: 50,
+          questions: [{ id: "qie65", type: "multiple-choice", question: "En un datasheet, la sigla 'Max. Operating Voltage' indica:", options: ["El voltaje máximo que el componente puede soportar sin dañarse", "El voltaje mínimo de operación", "La corriente máxima del componente", "La temperatura de funcionamiento"], correctAnswer: "El voltaje máximo que el componente puede soportar sin dañarse", explanation: "'Max. Operating Voltage' es un parámetro crítico en hojas de datos que indica el límite seguro de tensión de alimentación." }]
+        }
+      ]
     }
   ]
 },
 {
     year: 7,
     title: "7mo año - prácticas profesionalizantes",
-    subtitle: "El año cumbre: proyectos de graduación, PLC y automatización total",
+    subtitle: "Proyectos de graduación, automatización y sistemas embebidos",
     subjects: [
       {
         id: "m-7-teleco2",
         name: "Telecomunicaciones II",
-        description: "Redes IP, telefonía celular, IoT (Internet de las Cosas) y satélites.",
+        description: "Modulación digital, redes, TCP/IP y direccionamiento IP.",
         color: "from-indigo-600 to-blue-700",
         iconName: "Wifi",
         lessons: [
           {
-            id: "7-tel-1", level: 1, title: "Arquitectura IoT y nube", description: "Sensores conectados a bases de datos.", xp: 25,
-            questions: [{ id: "qt71", type: "multiple-choice", question: "¿Cuál es el protocolo de mensajería ligero basado en Publicar/Suscribir más utilizado en sistemas IoT (Internet de las Cosas)?", options: ["MQTT", "HTTP 1.0", "FTP", "SMTP"], correctAnswer: "MQTT", explanation: "MQTT es ideal para microcontroladores con pocos recursos y redes inalámbricas inestables." }]
+            id: "7-tel-1", level: 1, title: "Modulación digital", description: "Transmisión de información digital.", xp: 25,
+            questions: [{ id: "qt71", type: "multiple-choice", question: "¿Qué es la modulación digital y para qué se utiliza?", options: ["Es un método para aumentar el tamaño de los cables de red.", "Es una técnica para enfriar equipos electrónicos.", "Es el proceso de transmitir información digital modificando una señal portadora.", "Es un sistema para almacenar datos en discos duros."], correctAnswer: "Es el proceso de transmitir información digital modificando una señal portadora.", explanation: "La modulación digital consiste en modificar una señal portadora para transmitir información digital a través de un medio de comunicación." }]
           },
           {
-            id: "7-tel-2", level: 2, title: "Direccionamiento IP", description: "IPv4 vs IPv6 y máscaras de subred.", xp: 30,
-            questions: [{ id: "qt72", type: "true-false", question: "Una dirección IPv4 estándar (como 192.168.1.1) está formada por 32 bits divididos en 4 octetos.", correctAnswer: true, explanation: "Verdadero. Cada número separado por un punto puede valer entre 0 y 255 (8 bits)." }]
+            id: "7-tel-2", level: 2, title: "Router y enrutamiento", description: "Direccionamiento de paquetes de datos.", xp: 30,
+            questions: [{ id: "qt72", type: "multiple-choice", question: "¿Cuál es la función de un router dentro de una red?", options: ["Convertir corriente alterna en continua.", "Medir la intensidad de una señal eléctrica.", "Almacenar archivos de los usuarios.", "Dirigir y enrutar paquetes de datos entre diferentes redes."], correctAnswer: "Dirigir y enrutar paquetes de datos entre diferentes redes.", explanation: "Un router se encarga de dirigir los paquetes de datos entre distintas redes para que lleguen a su destino." }]
           },
           {
-            id: "7-tel-3", level: 3, title: "Redes inalámbricas WiFi", description: "Frecuencias 2.4 GHz y 5 GHz en el ESP32.", xp: 35,
-            questions: [{ id: "qt73", type: "fill-blanks", question: "El microcontrolador ESP32 muy utilizado en los talleres de 7mo año incluye conectividad inalámbrica WiFi y _______ de bajo consumo (BLE).", options: ["Bluetooth", "LoRa", "ZigBee", "NFC"], correctAnswer: "Bluetooth", explanation: "El ESP32 es un SoC dual-core que integra radiofrecuencia WiFi y Bluetooth en un solo chip." }]
+            id: "7-tel-3", level: 3, title: "Señales analógicas y digitales", description: "Diferencias fundamentales.", xp: 35,
+            questions: [{ id: "qt73", type: "multiple-choice", question: "¿Qué diferencia existe entre una señal analógica y una digital?", options: ["La analógica funciona solo en computadoras.", "La analógica es continua y la digital utiliza valores discretos (0 y 1).", "La digital es continua y la analógica es binaria.", "No existe ninguna diferencia entre ambas."], correctAnswer: "La analógica es continua y la digital utiliza valores discretos (0 y 1).", explanation: "Las señales analógicas pueden tomar infinitos valores dentro de un rango, mientras que las digitales trabajan con niveles discretos representados generalmente por 0 y 1." }]
           },
           {
-            id: "7-tel-4", level: 4, title: "Tecnología LoRaWAN", description: "Largo alcance y bajo consumo.", xp: 40,
-            questions: [{ id: "qt74", type: "match-pairs", question: "Asocia cada protocolo inalámbrico con su nicho de aplicación en IoT:", pairs: [{ left: "WiFi (IEEE 802.11)", right: "Alta velocidad de datos a corta distancia (streaming, cámaras)" }, { left: "LoRaWAN", right: "Largo alcance kilométrico con bajísimo consumo de batería (sensores agrícolas)" }], explanation: "Elegir el protocolo correcto es vital en los proyectos integradores de graduación." }]
+            id: "7-tel-4", level: 4, title: "Protocolo TCP/IP", description: "Comunicación en Internet y redes.", xp: 40,
+            questions: [{ id: "qt74", type: "multiple-choice", question: "¿Qué significa TCP/IP y dónde se utiliza?", options: ["Un lenguaje de programación para robots.", "Un sistema de almacenamiento industrial.", "Un protocolo para controlar motores eléctricos.", "Es el conjunto de protocolos de comunicación utilizado en Internet y redes informáticas."], correctAnswer: "Es el conjunto de protocolos de comunicación utilizado en Internet y redes informáticas.", explanation: "TCP/IP es el conjunto de protocolos que permite la comunicación entre dispositivos en Internet y otras redes informáticas." }]
           },
           {
-            id: "7-tel-5", level: 5, title: "Examen telecomunicaciones II", description: "Sistemas de telemetría y seguridad.", xp: 50,
-            questions: [{ id: "qt75", type: "multiple-choice", question: "¿Qué función cumple un 'Broker' (como Mosquitto) en una arquitectura IoT basada en MQTT?", options: ["Recibe todos los mensajes de los publicadores y los distribuye a los suscriptores correspondientes", "Genera electricidad para el router", "Apaga las antenas de noche", "Traduce código C++ a Python"], correctAnswer: "Recibe todos los mensajes de los publicadores y los distribuye a los suscriptores correspondientes", explanation: "El Broker actúa como la oficina de correos central que clasifica y enruta la telemetría." }]
+            id: "7-tel-5", level: 5, title: "Direccionamiento IP", description: "Identificación única de dispositivos.", xp: 50,
+            questions: [{ id: "qt75", type: "multiple-choice", question: "¿Qué función cumple una dirección IP en una red?", options: ["Almacenar archivos multimedia.", "Identificar de manera única a un dispositivo dentro de una red.", "Aumentar la velocidad de procesamiento del equipo.", "Enfriar los componentes electrónicos."], correctAnswer: "Identificar de manera única a un dispositivo dentro de una red.", explanation: "Una dirección IP permite identificar y localizar dispositivos dentro de una red para que puedan intercambiar información." }]
           }
         ]
       },
       {
         id: "m-7-industrial2",
         name: "Electrónica industrial II",
-        description: "Inversores de frecuencia (VFD), servomotores y robótica industrial.",
+        description: "PLC, sensores, actuadores, variadores de velocidad y neumática.",
         color: "from-amber-600 to-yellow-600",
         iconName: "Cpu",
         lessons: [
           {
-            id: "7-ind-1", level: 1, title: "Variadores VFD (inversores)", description: "Control de velocidad en motores asincrónicos.", xp: 25,
-            questions: [{ id: "qin71", type: "multiple-choice", question: "¿Cómo logra variar la velocidad de giro de un motor trifásico un variador de frecuencia (VFD)?", options: ["Modificando simultáneamente el voltaje y la frecuencia de alimentación (Relación V/f constante)", "Colocando resistencias de alambre gigantes", "Frenando el eje mecánicamente", "Cambiando el aceite del cárter"], correctAnswer: "Modificando simultáneamente el voltaje y la frecuencia de alimentación (Relación V/f constante)", explanation: "La velocidad sincrónica depende directamente de la frecuencia eléctrica (n = 60 * f / p)." }]
+            id: "7-ind-1", level: 1, title: "PLC: controlador lógico programable", description: "Automatización de procesos industriales.", xp: 25,
+            questions: [{ id: "qin71", type: "multiple-choice", question: "¿Qué es un PLC y cuál es su función en la automatización industrial?", options: ["Un sensor para medir temperatura.", "Un tipo de motor eléctrico.", "Un controlador lógico programable utilizado para automatizar procesos industriales.", "Un dispositivo para almacenar energía."], correctAnswer: "Un controlador lógico programable utilizado para automatizar procesos industriales.", explanation: "Un PLC es un controlador programable diseñado para automatizar procesos industriales." }]
           },
           {
-            id: "7-ind-2", level: 2, title: "Servomotores y encoders", description: "Lazo cerrado de posicionamiento exacto.", xp: 30,
-            questions: [{ id: "qin72", type: "true-false", question: "Un servomotor industrial requiere de un sensor de retroalimentación (Encoder o Resolver) para informar al driver la posición exacta de su eje.", correctAnswer: true, explanation: "Verdadero. El control de lazo cerrado corrige instantáneamente los errores de posición en robótica y tornos CNC." }]
+            id: "7-ind-2", level: 2, title: "Sensores y actuadores", description: "Diferencia entre detección y acción.", xp: 30,
+            questions: [{ id: "qin72", type: "multiple-choice", question: "¿Qué diferencia existe entre un sensor y un actuador?", options: ["Ambos realizan exactamente la misma función.", "El sensor genera movimiento y el actuador mide variables.", "El sensor almacena datos y el actuador los procesa.", "El sensor detecta variables físicas y el actuador ejecuta acciones sobre el sistema."], correctAnswer: "El sensor detecta variables físicas y el actuador ejecuta acciones sobre el sistema.", explanation: "Los sensores captan variables físicas del entorno y los actuadores realizan acciones sobre el sistema." }]
           },
           {
-            id: "7-ind-3", level: 3, title: "Transistores IGBT", description: "El corazón de los variadores modernos.", xp: 35,
-            questions: [{ id: "qin73", type: "fill-blanks", question: "El semiconductor híbrido de potencia utilizado en los inversores VFD se conoce por sus siglas en inglés _______ (Insulated Gate Bipolar Transistor).", options: ["IGBT", "MOSFET", "TRIAC", "SCR"], correctAnswer: "IGBT", explanation: "Combina la entrada aislada por voltaje de un MOSFET con la gran capacidad de corriente de salida de un BJT." }]
+            id: "7-ind-3", level: 3, title: "Variadores de velocidad", description: "Control de motores eléctricos.", xp: 35,
+            questions: [{ id: "qin73", type: "multiple-choice", question: "¿Para qué se utilizan los variadores de velocidad en motores eléctricos?", options: ["Para aumentar el tamaño del motor.", "Para convertir corriente continua en alterna únicamente.", "Para controlar la velocidad y el funcionamiento del motor eléctrico.", "Para medir la temperatura ambiente."], correctAnswer: "Para controlar la velocidad y el funcionamiento del motor eléctrico.", explanation: "Los variadores permiten regular la velocidad y otras condiciones de funcionamiento de los motores eléctricos." }]
           },
           {
-            id: "7-ind-4", level: 4, title: "Robótica industrial: ejes", description: "Brazos antropomórficos y SCARA.", xp: 40,
-            questions: [{ id: "qin74", type: "match-pairs", question: "Asocia cada tipo de robot industrial con su geometría de movimiento:", pairs: [{ left: "Robot Articulado (6 ejes)", right: "Brazo flexible que imita el hombro, codo y muñeca humana para soldar y pintar" }, { left: "Robot SCARA", right: "Brazo horizontal de alta rigidez vertical, ultra veloz para tareas de montaje de chips en PCB" }], explanation: "Tecnología punta en las líneas de ensamblaje automotriz y electrónica." }]
+            id: "7-ind-4", level: 4, title: "Neumática industrial", description: "Aire comprimido para automatización.", xp: 40,
+            questions: [{ id: "qin74", type: "multiple-choice", question: "¿Qué es la neumática y dónde se aplica?", options: ["Una técnica de programación de PLC.", "Un método de transmisión de datos por Internet.", "Un sistema de generación de energía solar.", "Es la tecnología que utiliza aire comprimido para accionar mecanismos, aplicada en automatización industrial."], correctAnswer: "Es la tecnología que utiliza aire comprimido para accionar mecanismos, aplicada en automatización industrial.", explanation: "La neumática utiliza aire comprimido para generar movimiento y controlar mecanismos en procesos industriales." }]
           },
           {
-            id: "7-ind-5", level: 5, title: "Examen industrial II", description: "Sistemas de frenado dinámico y regenerativo.", xp: 50,
-            questions: [{ id: "qin75", type: "multiple-choice", question: "¿Qué ocurre en un variador VFD con 'frenado regenerativo' cuando un ascensor cargado baja y el motor actúa como generador?", options: ["La energía cinética devuelta se inyecta de regreso a la red eléctrica o se disipa en resistencias de frenado", "El variador explota por sobrevoltaje", "El motor gira al revés indefinidamente", "Se queman los fusibles"], correctAnswer: "La energía cinética devuelta se inyecta de regreso a la red eléctrica o se disipa en resistencias de frenado", explanation: "Aprovechar la energía de frenado de grandes inercias mejora drásticamente la eficiencia industrial." }]
+            id: "7-ind-5", level: 5, title: "Sensores de proximidad", description: "Detección sin contacto físico.", xp: 50,
+            questions: [{ id: "qin75", type: "multiple-choice", question: "¿Cuál es la función principal de un sensor de proximidad?", options: ["Detectar la presencia o cercanía de un objeto sin contacto físico.", "Aumentar la potencia de un motor.", "Generar energía eléctrica.", "Almacenar información digital."], correctAnswer: "Detectar la presencia o cercanía de un objeto sin contacto físico.", explanation: "Los sensores de proximidad permiten detectar objetos cercanos sin necesidad de contacto físico." }]
           }
         ]
       },
       {
-        id: "m-7-instalaciones2",
-        name: "Instalaciones industriales II",
-        description: "Autómatas Programables (PLC), Neumática, Electroneumática y SCADA.",
+        id: "m-7-digital4",
+        name: "Electrónica Digital IV",
+        description: "Microcontroladores, Arduino, comunicación serial y programación.",
         color: "from-emerald-600 to-teal-600",
-        iconName: "Settings",
+        iconName: "Binary",
         lessons: [
           {
-            id: "7-ins-1", level: 1, title: "PLC: arquitectura de hardware", description: "CPU, módulos I/O y fuentes de 24V CC.", xp: 25,
-            questions: [{ id: "qis71", type: "multiple-choice", question: "¿Qué voltaje estándar y tipo de corriente se utiliza mayoritariamente en las entradas digitales de los sensores conectados a un PLC industrial?", options: ["24 Voltios de Corriente Continua (24V CC)", "220 Voltios Alternos", "5 Voltios", "380 Voltios Trifásicos"], correctAnswer: "24 Voltios de Corriente Continua (24V CC)", explanation: "El estándar industrial de 24V CC ofrece gran inmunidad al ruido y seguridad ante contactos accidentales." }]
+            id: "7-dig-1", level: 1, title: "Microcontroladores", description: "Circuitos integrados programables.", xp: 25,
+            questions: [{ id: "qdi71", type: "multiple-choice", question: "¿Qué es un microcontrolador y cuál es su función?", options: ["Un componente que solo almacena imágenes.", "Un dispositivo utilizado exclusivamente para redes.", "Un sensor de temperatura digital.", "Un circuito integrado programable que controla y ejecuta tareas en sistemas electrónicos."], correctAnswer: "Un circuito integrado programable que controla y ejecuta tareas en sistemas electrónicos.", explanation: "Un microcontrolador es un circuito integrado programable que contiene procesador, memoria y puertos de entrada y salida, permitiendo controlar y ejecutar tareas en sistemas electrónicos." }]
           },
           {
-            id: "7-ins-2", level: 2, title: "Programación en ladder", description: "Contactos NA, NC y bobinas de salida.", xp: 30,
-            questions: [{ id: "qis72", type: "match-pairs", question: "Asocia el símbolo de programación Ladder (Escalera) con su elemento equivalente en el tablero:", pairs: [{ left: "-[ ]- Contacto Normalmente Abierto", right: "Pulsador de arranque o sensor sin activar" }, { left: "-[ / ]- Contacto Normalmente Cerrado", right: "Pulsador de parada de emergencia o fin de carrera NC" }, { left: "-( )- Bobina de Salida", right: "Relé, contactor o electroválvula neumática" }], explanation: "El lenguaje Ladder imita esquemas de relés para facilitar la transición de los técnicos electricistas." }]
+            id: "7-dig-2", level: 2, title: "Arduino UNO vs MEGA", description: "Diferencias entre placas Arduino.", xp: 30,
+            questions: [{ id: "qdi72", type: "multiple-choice", question: "¿Qué diferencia existe entre Arduino UNO y Arduino MEGA?", options: ["El UNO tiene más entradas y memoria que el MEGA.", "Ambos poseen exactamente las mismas características.", "El MEGA no puede programarse.", "El Arduino MEGA dispone de más pines de entrada/salida y mayor memoria que el Arduino UNO."], correctAnswer: "El Arduino MEGA dispone de más pines de entrada/salida y mayor memoria que el Arduino UNO.", explanation: "El Arduino MEGA cuenta con una mayor cantidad de pines de entrada y salida, además de más memoria, lo que le permite desarrollar proyectos más complejos que el Arduino UNO." }]
           },
           {
-            id: "7-ins-3", level: 3, title: "Circuitos de enclavamiento", description: "Auto-retención (memoria) en Ladder.", xp: 35,
-            questions: [{ id: "qis73", type: "fill-blanks", question: "Para mantener activada una salida en el PLC después de soltar el botón de marcha, colocamos un contacto de la propia salida en paralelo llamado _______ o auto-retención.", options: ["Enclavamiento", "Inversor", "Bypass", "Cortocircuito"], correctAnswer: "Enclavamiento", explanation: "El enclavamiento en paralelo permite que la bobina siga energizada hasta pulsar la parada." }]
+            id: "7-dig-3", level: 3, title: "Comunicación serial", description: "Intercambio de datos con Arduino.", xp: 35,
+            questions: [{ id: "qdi73", type: "multiple-choice", question: "¿Para qué sirve la comunicación serial en Arduino?", options: ["Para alimentar eléctricamente el Arduino.", "Para enfriar el microcontrolador.", "Para aumentar la memoria RAM.", "Para intercambiar datos entre Arduino y otros dispositivos."], correctAnswer: "Para intercambiar datos entre Arduino y otros dispositivos.", explanation: "La comunicación serial permite enviar y recibir información entre el Arduino y otros dispositivos, como computadoras, sensores, módulos de comunicación u otros microcontroladores." }]
           },
           {
-            id: "7-ins-4", level: 4, title: "Electroneumática industrial", description: "Cilindros y electroválvulas 5/2 monostables.", xp: 40,
-            questions: [{ id: "qis74", type: "true-false", question: "Una electroválvula 5/2 monostable con retorno por muelle regresa automáticamente a su posición original al cortar la corriente de su solenoide.", correctAnswer: true, explanation: "Verdadero. El resorte interior empuja la corredera garantizando una posición de reposo segura." }]
+            id: "7-dig-4", level: 4, title: "Estructuras condicionales", description: "Toma de decisiones en programación.", xp: 40,
+            questions: [{ id: "qdi74", type: "multiple-choice", question: "¿Qué función cumple una estructura condicional 'if' en programación?", options: ["Repetir instrucciones indefinidamente.", "Crear gráficos en pantalla.", "Almacenar datos en memoria.", "Evaluar una condición y ejecutar instrucciones según el resultado."], correctAnswer: "Evaluar una condición y ejecutar instrucciones según el resultado.", explanation: "La estructura condicional if permite tomar decisiones dentro de un programa evaluando una condición lógica y ejecutando determinadas instrucciones cuando esta se cumple." }]
           },
           {
-            id: "7-ins-5", level: 5, title: "Examen instalaciones II", description: "Temporizadores TON y contadores CTU en PLC.", xp: 50,
-            questions: [{ id: "qis75", type: "multiple-choice", question: "¿Qué hace un temporizador tipo TON (Timer On Delay) en un programa de PLC?", options: ["Retarda la activación de su contacto de salida un tiempo prefijado desde que recibe señal en su entrada", "Corta la energía de todo el PLC", "Cuenta piezas en una cinta transportadora", "Mide la presión del compresor neumático"], correctAnswer: "Retarda la activación de su contacto de salida un tiempo prefijado desde que recibe señal en su entrada", explanation: "El TON (retardo a la conexión) es clave para secuencias de arranque escalonado de motores." }]
+            id: "7-dig-5", level: 5, title: "Variables en programación", description: "Almacenamiento de información variable.", xp: 50,
+            questions: [{ id: "qdi75", type: "multiple-choice", question: "¿Qué función cumple una variable en programación?", options: ["Generar corriente eléctrica.", "Almacenar información que puede cambiar durante la ejecución del programa.", "Crear automáticamente gráficos en pantalla.", "Reemplazar al microcontrolador."], correctAnswer: "Almacenar información que puede cambiar durante la ejecución del programa.", explanation: "Una variable es un espacio de memoria utilizado para almacenar datos que pueden modificarse durante la ejecución de un programa." }]
           }
         ]
       },
       {
-        id: "m-7-analisis2",
-        name: "Análisis matemático avanzado",
-        description: "Ecuaciones diferenciales, Transformada de Laplace y control de lazo cerrado.",
+        id: "m-7-ingles",
+        name: "Inglés Técnico Avanzado",
+        description: "Voz pasiva en manuales, condicionales para troubleshooting y reportes técnicos profesionales.",
         color: "from-rose-600 to-red-700",
-        iconName: "TrendingUp",
+        iconName: "Globe",
         lessons: [
           {
-            id: "7-ana-1", level: 1, title: "Ecuaciones diferenciales", description: "Modelado de sistemas dinámicos RLC.", xp: 25,
-            questions: [{ id: "qam71", type: "true-false", question: "Una ecuación diferencial relaciona una función matemática desconocida con sus propias derivadas en el tiempo.", correctAnswer: true, explanation: "Verdadero. Describe sistemas donde el ritmo de cambio depende del estado actual del sistema." }]
+            id: "7-ing-1", level: 1, title: "Voz pasiva en manuales técnicos", description: "Descripción de procesos industriales.", xp: 25,
+            questions: [{ id: "qie71", type: "multiple-choice", question: "En un manual técnico, la frase 'The voltage is regulated by the Zener diode' usa la voz pasiva. ¿Por qué es común la voz pasiva en textos técnicos en inglés?", options: ["Porque enfoca el proceso o resultado, no quién realiza la acción.", "Porque es más corta que la voz activa.", "Porque solo se usa en manuales de electrónica.", "Porque elimina todos los verbos."], correctAnswer: "Porque enfoca el proceso o resultado, no quién realiza la acción.", explanation: "La voz pasiva (to be + past participle) es muy usada en technical writing para enfatizar el procedimiento o resultado sobre el agente." }]
           },
           {
-            id: "7-ana-2", level: 2, title: "Transformada de laplace", description: "Paso del dominio del tiempo 't' a la frecuencia compleja 's'.", xp: 30,
-            questions: [{ id: "qam72", type: "multiple-choice", question: "¿Qué enorme simplificación nos brinda la Transformada de Laplace al analizar circuitos eléctricos y control?", options: ["Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", "Elimina las resistencias del circuito", "Hacer que el voltaje sea infinito", "Enfriar los transistores"], correctAnswer: "Convierte ecuaciones diferenciales complejas del tiempo en ecuaciones algebraicas sencillas (multiplicar o dividir por 's')", explanation: "Laplace convierte las derivadas en multiplicaciones por 's' y las integrales en divisiones por 's'." }]
+            id: "7-ing-2", level: 2, title: "Condicionales para troubleshooting", description: "Diagnóstico de fallas en inglés.", xp: 30,
+            questions: [{ id: "qie72", type: "multiple-choice", question: "En un manual de troubleshooting, la oración 'If the LED does not light up, check the polarity of the diode' expresa:", options: ["Una condición real (1st Conditional: if + present, imperative)", "Una condición imposible (3rd Conditional)", "Una sugerencia en pasado", "Una orden directa sin condición"], correctAnswer: "Una condición real (1st Conditional: if + present, imperative)", explanation: "El primer condicional (if + present simple, imperative/ future) se usa para troubleshooting: expresa una condición real y su acción correctiva." }]
           },
           {
-            id: "7-ana-3", level: 3, title: "Función de transferencia (g_s)", description: "Relación entre Salida y Entrada en el plano 's'.", xp: 35,
-            questions: [{ id: "qam73", type: "fill-blanks", question: "En un sistema de control, la Función de Transferencia G(s) se define como el cociente entre la transformada de la _________ (Salida / Entrada) y la transformada de la entrada.", options: ["Salida", "Frecuencia", "Masa", "Tensión"], correctAnswer: "Salida", explanation: "G(s) = Y(s) / U(s). Resume el comportamiento dinámico interno de una planta o motor." }]
+            id: "7-ing-3", level: 3, title: "Comparativos y superlativos en especificaciones", description: "Selección de componentes según specs.", xp: 35,
+            questions: [{ id: "qie73", type: "multiple-choice", question: "En una hoja de datos: 'The IGBT has a lower switching loss than the MOSFET at high voltages.' ¿Qué estructura gramatical se usa?", options: ["Comparativo de inferioridad (comparative adjective + than)", "Superlativo (the + -est)", "Igualdad (as...as)", "Pasado simple"], correctAnswer: "Comparativo de inferioridad (comparative adjective + than)", explanation: "Los comparativos (lower...than, higher...than) son esenciales para comparar especificaciones técnicas entre componentes." }]
           },
           {
-            id: "7-ana-4", level: 4, title: "Estabilidad de sistemas: polos", description: "Raíces del denominador en el semiplano izquierdo.", xp: 40,
-            questions: [{ id: "qam74", type: "match-pairs", question: "Asocia la ubicación de los Polos en el plano complejo 's' con la estabilidad del sistema:", pairs: [{ left: "Polos en el semiplano izquierdo (Re < 0)", right: "Sistema Estable (las oscilaciones se amortiguan y se detienen en un valor seguro)" }, { left: "Polos en el semiplano derecho (Re > 0)", right: "Sistema Inestable (las oscilaciones crecen exponencialmente hasta destruir el sistema)" }], explanation: "El diseño de controladores PID en automatización busca mantener todos los polos en la zona estable." }]
+            id: "7-ing-4", level: 4, title: "Phrasal verbs en electrónica", description: "Verbos compuestos en contextos técnicos.", xp: 40,
+            questions: [{ id: "qie74", type: "multiple-choice", question: "En un contexto técnico, 'to power up' significa:", options: ["Encender o activar un equipo eléctrico.", "Apagar un dispositivo.", "Medir el consumo de energía.", "Desconectar la fuente de alimentación."], correctAnswer: "Encender o activar un equipo eléctrico.", explanation: "'Power up' es un phrasal verb muy común en Technical English que significa 'encender' o 'energizar' un sistema." }]
           },
           {
-            id: "7-ana-5", level: 5, title: "Examen final de graduación", description: "Control PID en procesos industriales.", xp: 50,
-            questions: [{ id: "qam75", type: "multiple-choice", question: "En un controlador industrial PID, ¿qué función cumple la acción 'I' (Integral)?", options: ["Elimina el error en estado estacionario (suma el error a lo largo del tiempo hasta llevarlo a cero)", "Aumenta las oscilaciones violentas al arrancar", "Frena el motor bruscamente", "Mide la temperatura ambiente"], correctAnswer: "Elimina el error en estado estacionario (suma el error a lo largo del tiempo hasta llevarlo a cero)", explanation: "El término Integral asegura que el motor o válvula alcance milimétricamente el valor deseado (setpoint)." }]
+            id: "7-ing-5", level: 5, title: "Reportes técnicos y comunicación profesional", description: "Redacción de informes en inglés.", xp: 50,
+            questions: [{ id: "qie75", type: "multiple-choice", question: "Al redactar un reporte técnico en inglés, la expresión 'The system failed due to a short circuit in the power supply' utiliza:", options: ["Pasado Simple con 'due to' para indicar causa", "Presente Perfecto para acciones recientes", "Futuro Will para predicciones", "Voz pasiva exclusivamente"], correctAnswer: "Pasado Simple con 'due to' para indicar causa", explanation: "En reportes técnicos se usa el Pasado Simple para describir fallas ocurridas y 'due to' para expresar la causa raíz del problema." }]
           }
         ]
       }
