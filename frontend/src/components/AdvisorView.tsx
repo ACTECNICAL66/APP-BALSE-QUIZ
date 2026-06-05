@@ -221,6 +221,8 @@ export const AdvisorView: React.FC = () => {
           </p>
         </div>
 
+      </div>
+
       {/* Didactic Tips Section */}
       <div className="space-y-4 pt-6 border-t border-slate-800">
         <div className="flex items-center gap-2">
