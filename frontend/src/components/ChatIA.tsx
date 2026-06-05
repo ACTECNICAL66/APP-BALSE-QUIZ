@@ -9,8 +9,8 @@ interface Message {
 }
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
-const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const MODEL = import.meta.env.VITE_AI_MODEL || 'google/gemma-4-31b-it';
+const MODEL = import.meta.env.VITE_AI_MODEL || 'gemini-2.0-flash';
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
 if (!API_KEY) {
   console.warn('ChatIA: VITE_GEMINI_API_KEY no está configurada');
@@ -54,8 +54,11 @@ export const AIChat: React.FC = () => {
   }, [messages, isTyping]);
 
   const callAI = async (userMessage: string) => {
-    const chatHistory = messages.map(m => ({ role: m.role, content: m.content }));
-    chatHistory.push({ role: 'user', content: userMessage });
+    const chatHistory = messages.map(m => ({
+      role: m.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: m.content }],
+    }));
+    chatHistory.push({ role: 'user', parts: [{ text: userMessage }] });
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
@@ -64,19 +67,11 @@ export const AIChat: React.FC = () => {
       const res = await fetch(API_URL, {
         signal: controller.signal,
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${API_KEY}`,
-          'HTTP-Referer': window.location.origin,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: MODEL,
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            ...chatHistory,
-          ],
-          max_tokens: 512,
-          temperature: 0.7,
+          contents: chatHistory,
+          systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+          generationConfig: { maxOutputTokens: 512, temperature: 0.7 },
         }),
       });
 
@@ -85,7 +80,7 @@ export const AIChat: React.FC = () => {
       if (!res.ok) throw new Error(`API error: ${res.status}`);
 
       const data = await res.json();
-      return data.choices?.[0]?.message?.content || 'No pude procesar tu consulta. ¿Podés repetirla?';
+      return data.candidates?.[0]?.content?.parts?.[0]?.text || 'No pude procesar tu consulta. ¿Podés repetirla?';
     } catch (err) {
       clearTimeout(timeout);
       console.error('ChatIA error:', err);
