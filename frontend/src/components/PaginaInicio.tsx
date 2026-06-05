@@ -312,6 +312,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
                     <CheckCircle className="w-5 h-5 shrink-0" />
                     <span>Inglés Técnico</span>
                   </li>
+                  <li className="flex items-center gap-3 text-purple-400">
+                    <CheckCircle className="w-5 h-5 shrink-0" />
+                    <span>Análisis matemático avanzado</span>
+                  </li>
                 </ul>
               </div>
               <div className="pt-6 border-t border-white/10 text-xs text-slate-400 font-black uppercase tracking-widest">

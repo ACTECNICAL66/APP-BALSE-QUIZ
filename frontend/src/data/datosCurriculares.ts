@@ -3344,6 +3344,35 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
         ]
       },
       {
+        id: "m-7-analisis",
+        name: "Análisis matemático avanzado",
+        description: "Fasores, transformada de Laplace, Fourier, matrices y modelado de sistemas.",
+        color: "from-rose-600 to-red-700",
+        iconName: "TrendingUp",
+        lessons: [
+          {
+            id: "7-ana-1", level: 1, title: "Fasores y números complejos en CA", description: "Representación de señales alternas.", xp: 25,
+            questions: [{ id: "qam71", type: "multiple-choice", question: "¿Qué representa un fasor en el análisis de circuitos de corriente alterna?", options: ["Una magnitud que combina amplitud y fase de una señal senoidal.", "La resistencia total del circuito.", "La frecuencia de la señal.", "El valor promedio de la tensión."], correctAnswer: "Una magnitud que combina amplitud y fase de una señal senoidal.", explanation: "Un fasor es una representación compleja (módulo y ángulo) de una señal senoidal que simplifica el cálculo en circuitos de CA." }]
+          },
+          {
+            id: "7-ana-2", level: 2, title: "Transformada de Laplace en control", description: "Análisis de sistemas en el dominio 's'.", xp: 30,
+            questions: [{ id: "qam72", type: "multiple-choice", question: "¿Qué ventaja aporta la Transformada de Laplace al analizar un sistema de control como un VFD?", options: ["Convierte ecuaciones diferenciales en algebraicas, facilitando el cálculo de la respuesta del sistema.", "Elimina la necesidad de sensores.", "Duplica la potencia del motor.", "Mide directamente la temperatura del variador."], correctAnswer: "Convierte ecuaciones diferenciales en algebraicas, facilitando el cálculo de la respuesta del sistema.", explanation: "La Transformada de Laplace simplifica el modelado matemático de sistemas dinámicos como motores y controladores PID." }]
+          },
+          {
+            id: "7-ana-3", level: 3, title: "Series de Fourier en señales", description: "Descomposición de ondas en componentes frecuenciales.", xp: 35,
+            questions: [{ id: "qam73", type: "multiple-choice", question: "En telecomunicaciones, ¿para qué se utiliza el análisis de Fourier?", options: ["Para descomponer una señal compleja en suma de senos y cosenos de distintas frecuencias.", "Para medir la potencia de la señal.", "Para codificar datos en binario.", "Para amplificar la señal de radio."], correctAnswer: "Para descomponer una señal compleja en suma de senos y cosenos de distintas frecuencias.", explanation: "Fourier permite analizar el contenido espectral de una señal, esencial en modulación, filtrado y compresión." }]
+          },
+          {
+            id: "7-ana-4", level: 4, title: "Matrices y sistemas de ecuaciones", description: "Resolución de redes eléctricas complejas.", xp: 40,
+            questions: [{ id: "qam74", type: "multiple-choice", question: "En el análisis de una red eléctrica mallada, ¿cómo se utiliza el álgebra de matrices?", options: ["Se plantean las ecuaciones de malla en forma matricial A·x = b y se resuelve con métodos como Gauss.", "Se dibujan las matrices en el plano cartesiano.", "Se multiplican las resistencias por las corrientes.", "Se suman todos los voltajes directamente."], correctAnswer: "Se plantean las ecuaciones de malla en forma matricial A·x = b y se resuelve con métodos como Gauss.", explanation: "Las matrices permiten resolver sistemas de múltiples ecuaciones de malla de forma sistemática y eficiente." }]
+          },
+          {
+            id: "7-ana-5", level: 5, title: "Modelado de sistemas dinámicos", description: "Ecuaciones diferenciales en automatización.", xp: 50,
+            questions: [{ id: "qam75", type: "multiple-choice", question: "¿Cómo se modela matemáticamente la velocidad de un motor DC controlado por armadura?", options: ["Mediante una ecuación diferencial de primer orden que relaciona voltaje de entrada y velocidad de salida.", "Con una suma de resistencias.", "Con una tabla de valores discretos.", "Con un polinomio de quinto grado."], correctAnswer: "Mediante una ecuación diferencial de primer orden que relaciona voltaje de entrada y velocidad de salida.", explanation: "Los sistemas dinámicos industriales se modelan con ecuaciones diferenciales que describen su evolución temporal, base del diseño de controladores." }]
+          }
+        ]
+      },
+      {
         id: "m-7-ingles",
         name: "Inglés Técnico Avanzado",
         description: "Voz pasiva en manuales, condicionales para troubleshooting y reportes técnicos profesionales.",
