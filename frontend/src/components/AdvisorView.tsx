@@ -1,12 +1,15 @@
-import React from 'react';
-import { Sparkles, Cpu, Wrench, Lightbulb, CheckCircle2, MessageSquare, ArrowUpRight, Zap, QrCode, Globe, Boxes } from 'lucide-react';
+import React, { useState } from 'react';
+import { Sparkles, ArrowUpRight, Zap, QrCode, Globe, Boxes, Database, FileText, Heart, Trophy, Users, BookOpen, Cloud, MessageCircle } from 'lucide-react';
 import QRCode from 'react-qr-code';
 import { AI_TUTOR_TIPS, MASCOT_INFO } from '../data/curriculumData';
 import { APP_ASSETS } from '../data/appAssets';
+import { AIChat } from './AIChat';
 
 const CHIPLABS_URL = 'https://chiplabs66.pages.dev/';
 
 export const AdvisorView: React.FC = () => {
+  const [showChat, setShowChat] = useState(false);
+
   const handleOpenChipLabs = () => {
     window.open(CHIPLABS_URL, '_blank', 'noopener,noreferrer');
   };
@@ -138,46 +141,93 @@ export const AdvisorView: React.FC = () => {
         </div>
       </div>
 
+      {/* AI Chat Section */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <MessageCircle className="w-5 h-5 text-emerald-400" />
+            <h3 className="text-xl font-black text-white">Chat con Voltio</h3>
+          </div>
+          <button
+            onClick={() => setShowChat(!showChat)}
+            className="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors uppercase tracking-wider"
+          >
+            {showChat ? 'Cerrar' : 'Abrir chat'}
+          </button>
+        </div>
+        {showChat && <AIChat />}
+      </div>
+
       {/* Improvement Areas Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         
         <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
           <div className="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
-            <Cpu className="w-6 h-6" />
+            <Database className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">1. Simuladores interactivos</h4>
+          <h4 className="font-extrabold text-lg text-white">1. Ampliar banco de preguntas</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Integrar un multímetro virtual donde el alumno deba arrastrar las puntas de prueba para medir voltaje o resistencia en un circuito simulado.
+            Actualmente hay 155 preguntas en 139 lecciones. Se pueden agregar más preguntas por lección y nuevas materias al plan de estudios existente.
           </p>
         </div>
 
         <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
           <div className="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center">
-            <Wrench className="w-6 h-6" />
+            <FileText className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">2. Duelos de taller (1v1)</h4>
+          <h4 className="font-extrabold text-lg text-white">2. Preguntas de desarrollo</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Un modo arena donde dos estudiantes resuelven cálculos de engranajes o lectura de calibre en tiempo real. El más veloz y preciso gana las tuercas doradas.
+            Hoy hay opción múltiple, verdadero/falso y emparejamiento. Agregar preguntas con respuesta escrita para evaluar definiciones técnicas y conceptos complejos.
           </p>
         </div>
 
         <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
           <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-            <CheckCircle2 className="w-6 h-6" />
+            <Heart className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">3. Validación de taller físico</h4>
+          <h4 className="font-extrabold text-lg text-white">3. Recarga automática de corazones</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Los profesores pueden escanear un código QR desde la app del alumno para acreditar que completó satisfactoriamente una práctica de soldadura o torno.
+            El contador de 3 minutos está visible pero no recupera corazones automáticamente. Implementar la regeneración en segundo plano para mejorar la experiencia.
           </p>
         </div>
 
         <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
           <div className="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
-            <Lightbulb className="w-6 h-6" />
+            <Trophy className="w-6 h-6" />
           </div>
-          <h4 className="font-extrabold text-lg text-white">4. Módulos de PLC y robótica</h4>
+          <h4 className="font-extrabold text-lg text-white">4. Más logros y recompensas</h4>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Para 7mo año, incorporar bloques de arrastrar y soltar para programar rutinas de automatización industrial.
+            Actualmente hay 5 logros y 4 objetos en la tienda. Se pueden añadir nuevos desafíos semanales, recompensas desbloqueables y cosméticos.
+          </p>
+        </div>
+
+        <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
+          <div className="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+            <Users className="w-6 h-6" />
+          </div>
+          <h4 className="font-extrabold text-lg text-white">5. Liga multidispositivo</h4>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            La tabla de posiciones muestra 28 alumnos ficticios. Conectar entre dispositivos para competencia real entre compañeros del mismo curso en tiempo real.
+          </p>
+        </div>
+
+        <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
+          <div className="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center">
+            <BookOpen className="w-6 h-6" />
+          </div>
+          <h4 className="font-extrabold text-lg text-white">6. Más lecciones por materia</h4>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            Cada materia tiene 5 lecciones con 1 a 3 preguntas. Expandir con más lecciones y niveles de dificultad para profundizar cada tema técnico.
+          </p>
+        </div>
+
+        <div className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 shadow-lg">
+          <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <Cloud className="w-6 h-6" />
+          </div>
+          <h4 className="font-extrabold text-lg text-white">7. Sincronización en la nube</h4>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            Todo el progreso se guarda en localStorage. Agregar respaldo en línea para preservar avances al cambiar de dispositivo o navegador.
           </p>
         </div>
 
@@ -203,22 +253,6 @@ export const AdvisorView: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* PWA Feedback Notice */}
-      <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-6 text-center space-y-3 shadow-xl">
-        <MessageSquare className="w-8 h-8 text-emerald-400 mx-auto" />
-        <h4 className="text-lg font-black text-white">¿Eres docente o directivo de IPET 66?</h4>
-        <p className="text-xs text-slate-300 max-w-lg mx-auto">
-          Esta plataforma gamificada está diseñada con arquitectura modular. Se pueden agregar nuevos cuestionarios de materias específicas editando los archivos de datos en tiempo real.
-        </p>
-        <button
-          onClick={() => alert("Función de exportación de reportes docentes en desarrollo.")}
-          className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-slate-700 text-slate-200 font-bold text-xs hover:bg-slate-600 transition-colors"
-        >
-          <span>Exportar planilla de alumnos</span>
-          <ArrowUpRight className="w-4 h-4 text-emerald-400" />
-        </button>
       </div>
 
     </div>
