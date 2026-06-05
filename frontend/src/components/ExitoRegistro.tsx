@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Sparkles, Flame, Award, Zap } from 'lucide-react';
-import { soundEffects } from '../utils/sound';
-import { triggerConfetti } from '../utils/confetti';
-import { AuroraBackground } from './AuroraBackground';
-import { AVATAR_OPTIONS } from './AvatarSystem';
+import { soundEffects } from '../utils/sonido';
+import { triggerConfetti } from '../utils/confeti';
+import { AuroraBackground } from './FondoAurora';
+import { AVATAR_OPTIONS } from './SistemaAvatar';
 
 interface OnboardingSuccessProps {
   userName: string;

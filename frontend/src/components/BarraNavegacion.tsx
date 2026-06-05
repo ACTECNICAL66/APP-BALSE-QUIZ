@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Flame, Gem, Heart, ChevronDown, Sparkles, AlertCircle, Lock } from 'lucide-react';
-import { soundEffects } from '../utils/sound';
-import { CURRICULUM_DATA } from '../data/curriculumData';
+import { soundEffects } from '../utils/sonido';
+import { CURRICULUM_DATA } from '../data/datosCurriculares';
 
-import { AVATAR_OPTIONS } from './AvatarSystem';
-import { APP_ASSETS } from '../data/appAssets';
+import { AVATAR_OPTIONS } from './SistemaAvatar';
+import { APP_ASSETS } from '../data/recursosApp';
 
 interface NavbarProps {
   currentYear: number;

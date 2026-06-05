@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Trophy, Timer, Sparkles, Crown, Medal, Award, Flame } from 'lucide-react';
-import { LEADERBOARD_USERS } from '../data/curriculumData';
-import { soundEffects } from '../utils/sound';
-import { AVATAR_OPTIONS } from './AvatarSystem';
+import { LEADERBOARD_USERS } from '../data/datosCurriculares';
+import { soundEffects } from '../utils/sonido';
+import { AVATAR_OPTIONS } from './SistemaAvatar';
 
 interface LeaderboardViewProps {
   userXp: number;

@@ -1,1 +1,0 @@
-export { OnboardingSuccess } from '../OnboardingSuccess';

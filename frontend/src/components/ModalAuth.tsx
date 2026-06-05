@@ -3,11 +3,11 @@ import {
   X, Sparkles, Mail, Lock, Unlock, Eye, EyeOff,
   LogIn, UserPlus, ChevronRight, User, AlertCircle
 } from 'lucide-react';
-import { CURRICULUM_DATA, MASCOT_INFO } from '../data/curriculumData';
-import { soundEffects } from '../utils/sound';
-import { AvatarBadge, AVATAR_OPTIONS } from './AvatarSystem';
-import { AuroraBackground } from './AuroraBackground';
-import { APP_ASSETS } from '../data/appAssets';
+import { CURRICULUM_DATA, MASCOT_INFO } from '../data/datosCurriculares';
+import { soundEffects } from '../utils/sonido';
+import { AvatarBadge, AVATAR_OPTIONS } from './SistemaAvatar';
+import { AuroraBackground } from './FondoAurora';
+import { APP_ASSETS } from '../data/recursosApp';
 
 interface AuthModalProps {
   isOpen: boolean;

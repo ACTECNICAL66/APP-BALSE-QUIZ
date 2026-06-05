@@ -5,8 +5,8 @@ import {
   Radio, ShieldCheck, Server, TrendingUp, Wifi, Settings, 
   Lock, Check, Star, Play, Sparkles, AlertTriangle, Crown, Gem
 } from 'lucide-react';
-import { CURRICULUM_DATA, SubjectUnit, Lesson } from '../data/curriculumData';
-import { soundEffects } from '../utils/sound';
+import { CURRICULUM_DATA, SubjectUnit, Lesson } from '../data/datosCurriculares';
+import { soundEffects } from '../utils/sonido';
 
 interface LearnViewProps {
   currentYear: number;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Gem, Check, ShoppingBag, Sparkles, Crown, Heart, Shield, CircleUserRound } from 'lucide-react';
-import { SHOP_ITEMS, ShopItem } from '../data/curriculumData';
-import { soundEffects } from '../utils/sound';
-import { triggerConfetti } from '../utils/confetti';
-import { AVATAR_OPTIONS } from './AvatarSystem';
-import { APP_ASSETS } from '../data/appAssets';
+import { SHOP_ITEMS, ShopItem } from '../data/datosCurriculares';
+import { soundEffects } from '../utils/sonido';
+import { triggerConfetti } from '../utils/confeti';
+import { AVATAR_OPTIONS } from './SistemaAvatar';
+import { APP_ASSETS } from '../data/recursosApp';
 
 // Iconos lucide consistentes para cada tipo de item
 const ITEM_ICON_CONFIG: Record<string, { Icon: React.ComponentType<any>; gradient: string }> = {

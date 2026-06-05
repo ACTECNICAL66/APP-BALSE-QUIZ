@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Sparkles, Bot, User } from 'lucide-react';
-import { APP_ASSETS } from '../data/appAssets';
-import { MASCOT_INFO } from '../data/curriculumData';
+import { APP_ASSETS } from '../data/recursosApp';
+import { MASCOT_INFO } from '../data/datosCurriculares';
 
 interface Message {
   role: 'user' | 'assistant';

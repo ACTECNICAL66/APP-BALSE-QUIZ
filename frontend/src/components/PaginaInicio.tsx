@@ -1,9 +1,9 @@
 ﻿import React from 'react';
 import { ArrowRight, Cpu, ShieldCheck, Trophy, Sparkles, Zap, Flame, CheckCircle } from 'lucide-react';
-import { MASCOT_INFO, SCHOOL_INFO } from '../data/curriculumData';
-import { APP_ASSETS } from '../data/appAssets';
-import { soundEffects } from '../utils/sound';
-import { AuroraBackground } from './AuroraBackground';
+import { MASCOT_INFO, SCHOOL_INFO } from '../data/datosCurriculares';
+import { APP_ASSETS } from '../data/recursosApp';
+import { soundEffects } from '../utils/sonido';
+import { AuroraBackground } from './FondoAurora';
 
 interface LandingPageProps {
   onStart: () => void;
@@ -378,7 +378,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onLogin }) =>
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
             <div className="font-black text-2xl text-white mb-1 drop-shadow-lg">IPET 66 TecnoLingo</div>
-            <div className="text-xs text-slate-400 font-bold">Creado para la comunidad de la Escuela Técnica IPET 66, Córdoba. Diseño Liquid Glass iOS 26.</div>
+            <div className="text-xs text-slate-400 font-bold">Creado para la comunidad de la Escuela Técnica IPET 66, Córdoba. Alejandro Cantón.</div>
           </div>
           <button
             onClick={() => {

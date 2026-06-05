@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Navbar } from './components/layout/Navbar';
-import { Sidebar } from './components/layout/Sidebar';
-import { LandingPage } from './components/views/LandingPage';
-import { AuthModal } from './components/auth/AuthModal';
-import { LearnView } from './components/views/LearnView';
-import { LessonModal } from './components/lesson/LessonModal';
-import { LeaderboardView } from './components/views/LeaderboardView';
-import { ShopView } from './components/views/ShopView';
-import { AdvisorView } from './components/views/AdvisorView';
-import { ProfileView } from './components/views/ProfileView';
-import { OnboardingSuccess } from './components/auth/OnboardingSuccess';
-import { Lesson, ShopItem } from './data/curriculumData';
-import { soundEffects } from './utils/sound';
+import { Navbar } from './components/layout/BarraNavegacion';
+import { Sidebar } from './components/layout/BarraLateral';
+import { LandingPage } from './components/views/PaginaInicio';
+import { AuthModal } from './components/auth/ModalAuth';
+import { LearnView } from './components/views/VistaAprendizaje';
+import { LessonModal } from './components/lesson/ModalLeccion';
+import { LeaderboardView } from './components/views/VistaLiga';
+import { ShopView } from './components/views/VistaTienda';
+import { AdvisorView } from './components/views/VistaConsejero';
+import { ProfileView } from './components/views/VistaPerfil';
+import { OnboardingSuccess } from './components/auth/ExitoRegistro';
+import { Lesson, ShopItem } from './data/datosCurriculares';
+import { soundEffects } from './utils/sonido';
 
 export function App() {
   // App state

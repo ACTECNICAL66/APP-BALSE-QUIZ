@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, Wrench, Cpu, Zap, Code, FlaskConical, Cog, Activity, CircuitBoard, Binary, User } from 'lucide-react';
-import { APP_ASSETS } from '../data/appAssets';
+import { APP_ASSETS } from '../data/recursosApp';
 
 export interface AvatarOption {
   id: string;

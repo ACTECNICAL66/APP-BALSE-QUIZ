@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Sparkles, ArrowUpRight, Zap, QrCode, Globe, Boxes, Database, FileText, Heart, Trophy, Users, BookOpen, Cloud, MessageCircle } from 'lucide-react';
 import QRCode from 'react-qr-code';
-import { AI_TUTOR_TIPS, MASCOT_INFO } from '../data/curriculumData';
-import { APP_ASSETS } from '../data/appAssets';
-import { AIChat } from './AIChat';
+import { AI_TUTOR_TIPS, MASCOT_INFO } from '../data/datosCurriculares';
+import { APP_ASSETS } from '../data/recursosApp';
+import { AIChat } from './ChatIA';
 
 const CHIPLABS_URL = 'https://chiplabs66.pages.dev/';
 

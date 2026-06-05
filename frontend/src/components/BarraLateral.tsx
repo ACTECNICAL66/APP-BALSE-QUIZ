@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, Trophy, ShoppingBag, Sparkles, User, PanelLeftClose, PanelLeft } from 'lucide-react';
-import { soundEffects } from '../utils/sound';
+import { soundEffects } from '../utils/sonido';
 
 interface SidebarProps {
   activeTab: string;

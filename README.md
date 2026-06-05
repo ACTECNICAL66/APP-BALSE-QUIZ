@@ -2,93 +2,132 @@
 
 **Plataforma educativa interactiva y gamificada para el IPET 66**
 
-Una Progressive Web App (PWA) interactiva diseñada para que los estudiantes del IPET 66 aprendan y dominen las materias técnicas desde 1º hasta 7º año, con sistema de gamificación completo: combos, rachas, ligas, tienda y logros.
+PWA interactiva para que estudiantes del IPET 66 aprendan materias técnicas (1º a 7º año) con sistema de gamificación: combos, rachas, ligas, tienda y logros.
 
 ---
 
 ## 🚀 Características
 
-- 🎮 **Sistema Gamificado**: Combos de aciertos, vidas (corazones), XP, gemas y ligas semanales.
-- 📚 **Currículo completo IPET 66**: 7 años con materias técnicas específicas, cada una con 5 niveles de dificultad.
-- 🔒 **Progresión bloqueada**: Los años se desbloquean secuencialmente al completar niveles.
-- 🆓 **Modo Examen Libre**: Opción de desbloquear todos los años.
-- 🪟 **Diseño Liquid Glass**: Interfaz moderna con efectos de vidrio esmerilado y aurora animada.
+- 🎮 **Sistema gamificado**: Combos, corazones, XP, tuercas doradas y ligas.
+- 📚 **Currículo completo**: 7 años con materias técnicas, 5 niveles cada una.
+- 🔒 **Progresión bloqueada**: Años se desbloquean secuencialmente.
+- 🆓 **Modo examen libre**: Desbloquea todos los años.
+- 🪟 **Diseño Liquid Glass**: Interfaz con vidrio esmerilado y aurora animada.
 - 📱 **PWA**: Instalable en dispositivos móviles.
-- 🎨 **Avatares temáticos**: 10 identidades visuales del taller técnico.
-- 🔐 **Autenticación**: Login con Google o apodo personalizado.
+- 🎨 **Avatares temáticos**: 10 identidades del taller técnico.
+- 🤖 **Chat IA con Volti**: Asistente virtual con Gemma 4 31B.
 
-## 📁 Estructura del Proyecto
+## 📁 Estructura del proyecto
 
 ```
 APP-BALSE-QUIZ/
-├── frontend/                   # Cliente React + Vite + TailwindCSS
-│   ├── public/                 # Activos estáticos
+├── frontend/                          # Cliente React + Vite + TailwindCSS
+│   ├── public/                        # Activos estáticos (imágenes, iconos)
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── layout/         # Navbar, Sidebar, AuroraBackground
-│   │   │   ├── auth/           # AuthModal, OnboardingSuccess
-│   │   │   ├── views/          # LearnView, LeaderboardView, ShopView, etc.
-│   │   │   ├── lesson/         # LessonModal (motor de preguntas)
-│   │   │   └── ui/             # AvatarSystem y componentes base
-│   │   ├── data/               # Datos del currículo y preguntas
-│   │   ├── utils/              # Utilidades (sonido, confetti, cn)
-│   │   ├── App.tsx             # Componente raíz
-│   │   ├── main.tsx            # Punto de entrada
-│   │   └── index.css           # Estilos globales + Liquid Glass
+│   │   │   ├── layout/                # Barra de navegación y menú lateral
+│   │   │   │   ├── BarraNavegacion.tsx  → Navbar: año, combo, gemas, corazones
+│   │   │   │   ├── BarraLateral.tsx     → Sidebar: menú de pestañas
+│   │   │   │   └── FondoAurora.tsx      → AuroraBackground: fondo animado
+│   │   │   ├── auth/                  # Autenticación y registro
+│   │   │   │   ├── ModalAuth.tsx        → AuthModal: login/registro
+│   │   │   │   └── ExitoRegistro.tsx    → OnboardingSuccess: bienvenida
+│   │   │   ├── views/                 # Vistas principales de la app
+│   │   │   │   ├── PaginaInicio.tsx     → LandingPage: pantalla de bienvenida
+│   │   │   │   ├── VistaAprendizaje.tsx → LearnView: árbol de materias
+│   │   │   │   ├── VistaLiga.tsx        → LeaderboardView: tabla de posiciones
+│   │   │   │   ├── VistaTienda.tsx      → ShopView: tienda de objetos
+│   │   │   │   ├── VistaConsejero.tsx   → AdvisorView: consejero técnico IA
+│   │   │   │   └── VistaPerfil.tsx      → ProfileView: perfil del usuario
+│   │   │   ├── lesson/               # Motor de preguntas
+│   │   │   │   └── ModalLeccion.tsx     → LessonModal: preguntas y respuestas
+│   │   │   ├── ui/                   # Componentes reutilizables
+│   │   │   │   └── SistemaAvatar.tsx    → AvatarSystem: selección de avatar
+│   │   │   ├── ChatIA.tsx              → AIChat: chat con Volti (Gemma 4 31B)
+│   │   │   └── RenderizadorMath.tsx    → MathRenderer: renderizado LaTeX
+│   │   ├── data/                     # Datos de la aplicación
+│   │   │   ├── datosCurriculares.ts    → curriculumData: 7 años, materias, preguntas
+│   │   │   └── recursosApp.ts          → appAssets: rutas de imágenes y recursos
+│   │   ├── utils/                    # Utilidades
+│   │   │   ├── sonido.ts               → sound: efectos de sonido
+│   │   │   └── confeti.ts              → confetti: animación de celebración
+│   │   ├── App.tsx                    → Estado global y ruteo por pestañas
+│   │   ├── main.tsx                   → Punto de entrada React
+│   │   └── index.css                  → Estilos Liquid Glass + Tailwind
 │   ├── index.html
 │   ├── package.json
 │   ├── vite.config.ts
 │   └── tsconfig.json
 │
-├── backend/                    # Servidor Node.js (API futura)
+├── backend/                          # Servidor Express (API futura)
 │   ├── src/
-│   │   ├── server.ts
+│   │   ├── servidor.ts                 → server: configuración Express
 │   │   ├── routes/
+│   │   │   └── salud.ts                → health: endpoint de salud
 │   │   └── config/
+│   │       └── indice.ts               → index: configuración del servidor
 │   ├── package.json
 │   └── tsconfig.json
 │
 ├── docs/
 │   └── ARCHITECTURE.md
-│
 ├── .gitignore
 └── README.md
 ```
 
+## 🧠 Explicación del código
+
+### Frontend — `frontend/src/`
+
+| Archivo | Función |
+|---------|---------|
+| **App.tsx** | Estado global (gemas, XP, corazones, combo). Persiste todo en localStorage. Renderiza la vista según `activeTab` y controla autenticación. |
+| **BarraNavegacion.tsx** | Barra superior con selector de año, indicador de combo 🔥, gemas 🪙, corazones ❤️ y acceso al perfil. |
+| **BarraLateral.tsx** | Menú lateral con pestañas: Aprender, Ligas, Tienda, Consejero IA, Perfil. Soporta colapso en escritorio y barra inferior en móvil. |
+| **FondoAurora.tsx** | Fondo animado con ondas de luz tipo aurora boreal usando SVG y CSS. |
+| **PaginaInicio.tsx** | Pantalla de landing con héroe, grid de años, tarjeta de Volti y botones de inicio/login. |
+| **ModalAuth.tsx** | Modal de 3 pasos: datos de cuenta → selección de año → avatar. Soporta login local y mock de Google. |
+| **ExitoRegistro.tsx** | Pantalla de bienvenida post-registro con confeti y mensaje motivacional. |
+| **VistaAprendizaje.tsx** | Árbol de materias por año con nodos circulares, progreso por materia y bloqueo de años. |
+| **ModalLeccion.tsx** | Motor de preguntas: múltiple opción, V/F, emparejamiento y completar. Maneja combo, corazones, XP y lecciones perfectas. |
+| **VistaLiga.tsx** | Tabla de posiciones con 28 alumnos ficticios, filtro por año y podio top 3. |
+| **VistaTienda.tsx** | Tienda con 4 objetos: recarga de corazones, escudo de racha, marco dorado e insignia tester. |
+| **VistaConsejero.tsx** | Consejero técnico con tarjeta de ChipLabs 66, chat IA con Volti, cards de mejora y tips docentes. |
+| **VistaPerfil.tsx** | Perfil con estadísticas, avatar, logros desbloqueados y objetos cosméticos equipados. |
+| **ChatIA.tsx** | Chat con Volti usando OpenRouter + Gemma 4 31B. Sistema de prompt con contexto de la app. |
+| **RenderizadorMath.tsx** | Renderiza notación matemática (fracciones, raíces, potencias, letras griegas) sin librerías externas. |
+| **SistemaAvatar.tsx** | 10 avatares técnicos con emoji, nombre, descripción e imagen. |
+| **datosCurriculares.ts** | Contiene tipos (Question, Lesson, SubjectUnit) y datos completos: 7 años, 28 materias, 139 lecciones, 155+ preguntas. |
+| **recursosApp.ts** | Mapeo de rutas de imágenes de Volti (11 poses) y recursos de la app. |
+| **sonido.ts** | Clase SoundEffects con Web Audio API para efectos: victoria, error, clic, combo, logro. |
+| **confeti.ts** | Animación de confeti con canvas al completar lecciones o comprar en tienda. |
+
+### Backend — `backend/src/`
+
+| Archivo | Función |
+|---------|---------|
+| **servidor.ts** | Servidor Express con CORS, rutas placeholder y escucha en puerto configurable. |
+| **salud.ts** | Endpoint `/api/health` que verifica el estado del servidor. |
+| **indice.ts** | Configuración: puerto, origen CORS y entorno. |
+
 ## 🛠️ Instalación
 
 ```bash
-# Clonar repositorio
 git clone https://github.com/tu-usuario/APP-BALSE-QUIZ.git
-cd APP-BALSE-QUIZ
-
-# Instalar dependencias del frontend
-cd frontend
+cd APP-BALSE-QUIZ/frontend
 npm install
-
-# Iniciar en modo desarrollo
-npm run dev
-
-# Construir para producción
-npm run build
+npm run dev     # Desarrollo
+npm run build   # Producción
 ```
 
-## 🎯 Materias por Ciclo
+## 🎮 Sistema de gamificación
 
-| Ciclo | Años | Materias |
-|-------|------|----------|
-| **Básico** | 1º - 3º | Matemática, Taller General, Tecnología, Dibujo Técnico |
-| **Superior** | 4º - 5º | Electrotecnia I/II, Informática I/II, Electrónica Analógica I/II, Electrónica Digital I/II, Matemática |
-| **Avanzado** | 6º - 7º | Telecomunicaciones I/II, Electrónica Industrial I/II, Instalaciones Industriales I/II, Digitales III, Análisis Matemático |
-
-## 🎮 Sistema de Gamificación
-
-- **🔥 Combo de Aciertos**: Respuestas correctas consecutivas multiplican tu XP.
-- **❤️ Vidas**: 5 corazones por nivel. Fallar cuesta uno.
-- **🪙 Tuercas Doradas**: Moneda para la tienda (recargar vidas, escudos, marcos).
-- **🏆 Ligas**: Compite semanalmente en tu año o en la general.
-- **👑 Logros**: Desbloquea trofeos al alcanzar metas.
+- **🔥 Combo**: Respuestas correctas consecutivas multiplican XP.
+- **❤️ Corazones**: 5 por nivel. Fallar cuesta uno. Recargar en tienda.
+- **🪙 Tuercas doradas**: Moneda para tienda (15 por lección).
+- **🏆 Ligas**: Tabla de posiciones por año.
+- **👑 Logros**: 5 logros desbloqueables al completar lecciones.
 
 ## 📄 Licencia
 
-Proyecto educativo desarrollado para la comunidad del IPET 66, Córdoba, Argentina.
+Proyecto educativo para la comunidad del IPET 66, Córdoba, Argentina.

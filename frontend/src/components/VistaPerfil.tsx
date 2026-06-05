@@ -1,9 +1,9 @@
 ﻿import React, { useState } from 'react';
 import { Trophy, GraduationCap, Flame, Sparkles, LogOut, AlertTriangle, Target, Zap, Star, Crown, Medal, Award } from 'lucide-react';
-import { ACHIEVEMENTS_DATA, SCHOOL_INFO } from '../data/curriculumData';
-import { APP_ASSETS } from '../data/appAssets';
-import { soundEffects } from '../utils/sound';
-import { AVATAR_OPTIONS } from './AvatarSystem';
+import { ACHIEVEMENTS_DATA, SCHOOL_INFO } from '../data/datosCurriculares';
+import { APP_ASSETS } from '../data/recursosApp';
+import { soundEffects } from '../utils/sonido';
+import { AVATAR_OPTIONS } from './SistemaAvatar';
 
 interface ProfileViewProps {
   userName: string;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { X, Heart, Check, AlertTriangle, ArrowRight, Sparkles, Zap, Award, Flame, RotateCcw, XCircle, Crown } from 'lucide-react';
-import { Lesson, Question, MASCOT_INFO } from '../data/curriculumData';
-import { APP_ASSETS } from '../data/appAssets';
-import { soundEffects } from '../utils/sound';
-import { triggerConfetti } from '../utils/confetti';
-import { MathRenderer } from './MathRenderer';
+import { Lesson, Question, MASCOT_INFO } from '../data/datosCurriculares';
+import { APP_ASSETS } from '../data/recursosApp';
+import { soundEffects } from '../utils/sonido';
+import { triggerConfetti } from '../utils/confeti';
+import { MathRenderer } from './RenderizadorMath';
 
 interface LessonModalProps {
   lesson: Lesson | null;
