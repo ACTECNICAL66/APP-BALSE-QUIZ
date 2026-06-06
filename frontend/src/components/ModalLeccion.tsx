@@ -42,10 +42,21 @@ export const LessonModal: React.FC<LessonModalProps> = ({
   const [showNoHeartsModal, setShowNoHeartsModal] = useState(false);
   const [isLessonFinished, setIsLessonFinished] = useState(false);
   const [lessonFailed, setLessonFailed] = useState(false);
+  const [shuffledOptions, setShuffledOptions] = useState<string[] | undefined>(undefined);
 
   // Live combo streak tracking inside lesson
   const [liveCombo, setLiveCombo] = useState<number>(comboStreak);
   const [xpBonus, setXpBonus] = useState<number>(0);
+
+  // Fisher-Yates shuffle
+  const shuffleArray = <T,>(arr: T[]): T[] => {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
   useEffect(() => {
     if (lesson) {
@@ -60,8 +71,26 @@ export const LessonModal: React.FC<LessonModalProps> = ({
       setLessonFailed(false);
       setLiveCombo(comboStreak);
       setXpBonus(0);
+      const firstQ = lesson.questions[0];
+      if (firstQ && (firstQ.type === 'multiple-choice' || firstQ.type === 'fill-blanks') && firstQ.options) {
+        setShuffledOptions(shuffleArray(firstQ.options));
+      } else {
+        setShuffledOptions(undefined);
+      }
     }
   }, [lesson, comboStreak]);
+
+  // Shuffle options when moving to a new question
+  useEffect(() => {
+    if (lesson && !isChecked) {
+      const q = lesson.questions[currentIndex];
+      if (q && (q.type === 'multiple-choice' || q.type === 'fill-blanks') && q.options) {
+        setShuffledOptions(shuffleArray(q.options));
+      } else {
+        setShuffledOptions(undefined);
+      }
+    }
+  }, [currentIndex]);
 
   if (!lesson) return null;
 
@@ -147,6 +176,12 @@ export const LessonModal: React.FC<LessonModalProps> = ({
     setLessonFailed(false);
     setLiveCombo(hasStreakFreeze ? liveCombo : 0);
     setXpBonus(0);
+    const firstQ = lesson?.questions[0];
+    if (firstQ && (firstQ.type === 'multiple-choice' || firstQ.type === 'fill-blanks') && firstQ.options) {
+      setShuffledOptions(shuffleArray(firstQ.options));
+    } else {
+      setShuffledOptions(undefined);
+    }
   };
 
   const handlePairSelection = (item: string, side: 'left' | 'right') => {
@@ -372,7 +407,7 @@ export const LessonModal: React.FC<LessonModalProps> = ({
             {/* Multiple Choice & Fill in the Blanks */}
             {(currentQuestion.type === 'multiple-choice' || currentQuestion.type === 'fill-blanks') && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {currentQuestion.options?.map((option) => {
+                {(shuffledOptions || currentQuestion.options)?.map((option) => {
                   const isSelected = selectedOption === option;
                   return (
                     <button

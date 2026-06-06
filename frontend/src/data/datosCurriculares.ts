@@ -186,15 +186,14 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "q13",
-              type: "multiple-choice",
-              question: "Si se quiere unir un cable a una línea ya existente (derivación) ¿Qué empalme se puede realizar?",
-              options: [
-                "Cola de ratón",
-                "Empalme en T",
-                "Empalme de Western"
+              type: "match-pairs",
+              question: "Uní cada tipo de empalme eléctrico con su función correspondiente:",
+              pairs: [
+                { left: "Cola de ratón", right: "Unir dos cables en sus extremos" },
+                { left: "Empalme en T", right: "Derivar un cable de una línea existente" },
+                { left: "Empalme de Western", right: "Unir dos cables de forma prolongada" }
               ],
-              correctAnswer: "Empalme en T",
-              explanation: "El empalme en T se utiliza específicamente para derivar una línea secundaria a partir de una línea principal."
+              explanation: "La cola de ratón une extremos, el empalme en T deriva de una línea principal, y el Western prolonga cables."
             }
           ]
         },
@@ -282,16 +281,10 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qd12",
-              type: "multiple-choice",
-              question: "¿En que afecta a un lápiz las siglas HB?",
-              options: [
-                "Afecta al largo del lápiz y su vida útil",
-                "Afecta a la dureza y a la punta del lápiz",
-                "Afecta a la dureza y oscuridad del trazo",
-                "Afecta al peso del lápiz y cuánto daña la hoja"
-              ],
-              correctAnswer: "Afecta a la dureza y oscuridad del trazo",
-              explanation: "HB (Hard Black) indica un equilibrio medio entre dureza y oscuridad del trazo."
+              type: "true-false",
+              question: "Las siglas HB en un lápiz indican el largo del lápiz y su vida útil.",
+              correctAnswer: false,
+              explanation: "HB (Hard Black) indica un equilibrio medio entre dureza y oscuridad del trazo, no el largo ni la vida útil."
             }
           ]
         },
@@ -304,16 +297,15 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qd13",
-              type: "multiple-choice",
-              question: "¿Qué tipos de líneas se utilizan en dibujo técnico?",
-              options: [
-                "Línea larga, alta, baja y punteada",
-                "Línea discontinua, de trazo y punto, continua y punteada",
-                "Línea perpendicular, transversal, hexagonal",
-                "Línea de cota y continua"
+              type: "match-pairs",
+              question: "Uní cada tipo de línea de dibujo técnico con su uso correspondiente:",
+              pairs: [
+                { left: "Línea continua", right: "Contornos y aristas visibles" },
+                { left: "Línea discontinua (de trazos)", right: "Aristas ocultas" },
+                { left: "Línea de trazo y punto", right: "Ejes de simetría y centros" },
+                { left: "Línea punteada", right: "Posiciones extremas de piezas móviles" }
               ],
-              correctAnswer: "Línea discontinua, de trazo y punto, continua y punteada",
-              explanation: "Las normas establecen líneas continuas (contornos), de trazos (ocultas) y de trazo y punto (ejes)."
+              explanation: "Las normas establecen líneas continuas para contornos visibles, discontinuas para aristas ocultas, de trazo y punto para ejes, y punteadas para posiciones extremas."
             }
           ]
         },
@@ -401,16 +393,16 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qt12",
-              type: "multiple-choice",
-              question: "¿Cual es la expresión correcta para un circuito paralelo de 3 resistencias?",
+              type: "fill-blanks",
+              question: "Para un circuito paralelo de 3 resistencias, la resistencia total se calcula como: $Rt = 1 \\div (1/R1 + 1/R2 +$ _____$)$",
               options: [
-                "Rt= R1xR2xR3",
-                "Rt= R1+R2+R3",
-                "Rt= 1 ÷ (1/R1 + 1/R2 + 1/R3)",
-                "Rt= R1xR2 ÷ (R1+R2)"
+                "1/R3",
+                "R3",
+                "1/R2",
+                "R1 + R2"
               ],
-              correctAnswer: "Rt= 1 ÷ (1/R1 + 1/R2 + 1/R3)",
-              explanation: "En paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada resistencia."
+              correctAnswer: "1/R3",
+              explanation: "En paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada resistencia: $1/Rt = 1/R1 + 1/R2 + 1/R3$."
             }
           ]
         },
@@ -499,16 +491,10 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qm11",
-              type: "multiple-choice",
-              question: "¿Cual de los siguientes números es primo?",
-              options: [
-                "17",
-                "15",
-                "12",
-                "21"
-              ],
-              correctAnswer: "17",
-              explanation: "Los números primos son solo divisibles por 1 y por ellos mismos, por lo tanto el único primo es el 17."
+              type: "true-false",
+              question: "El número 17 es un número primo porque solo es divisible por 1 y por sí mismo.",
+              correctAnswer: true,
+              explanation: "Los números primos son solo divisibles por 1 y por ellos mismos. 17 solo puede dividirse por 1 y 17."
             }
           ]
         },
@@ -888,16 +874,10 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
             },
             {
               id: "q21b",
-              type: "multiple-choice",
-              question: "¿En qué magnitud eléctrica se mide la resistencia?",
-              options: [
-                "Ohmios ($\\Omega$)",
-                "Amperes (A)",
-                "Volts (V)",
-                "Watts (W)"
-              ],
-              correctAnswer: "Ohmios ($\\Omega$)",
-              explanation: "La resistencia eléctrica se mide en Ohmios, representados por la letra griega Omega ($\\Omega$)."
+              type: "true-false",
+              question: "La resistencia eléctrica se mide en Amperes (A).",
+              correctAnswer: false,
+              explanation: "La resistencia eléctrica se mide en Ohmios ($\\Omega$), representados por la letra griega Omega. Los Amperes miden corriente eléctrica."
             }
           ]
         },
@@ -1310,16 +1290,10 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qt33",
-              type: "multiple-choice",
-              question: "En un circuito paralelo la tensión:",
-              options: [
-                "Es distinta en cada rama",
-                "Es igual en todas las ramas",
-                "Desaparece",
-                "Es cero"
-              ],
-              correctAnswer: "Es igual en todas las ramas",
-              explanation: "En un circuito paralelo todos los componentes están conectados a la misma fuente."
+              type: "true-false",
+              question: "En un circuito paralelo, la tensión es distinta en cada rama.",
+              correctAnswer: false,
+              explanation: "En un circuito paralelo todos los componentes están conectados a la misma fuente, por lo que la tensión es igual en todas las ramas."
             }
           ]
         },
@@ -1608,16 +1582,15 @@ export const CURRICULUM_DATA: YearCurriculum[] = [
           questions: [
             {
               id: "qdi41",
-              type: "multiple-choice",
-              question: "Observá la siguiente tabla de verdad: A=0,B=0→0; A=0,B=1→1; A=1,B=0→1; A=1,B=1→1. ¿Qué compuerta representa?",
-              options: [
-                "OR",
-                "AND",
-                "NAND",
-                "XOR"
+              type: "match-pairs",
+              question: "Uní cada compuerta lógica con su tabla de verdad correspondiente:",
+              pairs: [
+                { left: "AND", right: "A=0,B=0→0; A=0,B=1→0; A=1,B=0→0; A=1,B=1→1" },
+                { left: "OR", right: "A=0,B=0→0; A=0,B=1→1; A=1,B=0→1; A=1,B=1→1" },
+                { left: "XOR", right: "A=0,B=0→0; A=0,B=1→1; A=1,B=0→1; A=1,B=1→0" },
+                { left: "NAND", right: "A=0,B=0→1; A=0,B=1→1; A=1,B=0→1; A=1,B=1→0" }
               ],
-              correctAnswer: "OR",
-              explanation: "La compuerta OR da salida 1 cuando al menos una entrada es 1. Solo da 0 cuando ambas entradas son 0."
+              explanation: "AND da 1 solo con ambas entradas en 1; OR da 1 si al menos una entrada es 1; XOR da 1 si las entradas son distintas; NAND es la negación de AND."
             }
           ]
         },
